@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>raikiriww&#39;s blog</title>
+    <link>http://example.com/</link>
+    
+    <image>
+      <url>http://example.com/icon.png</url>
+      <title>raikiriww&#39;s blog</title>
+      <link>http://example.com/</link>
+    </image>
+    
+    <atom:link href="http://example.com/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <description></description>
+    <pubDate>Fri, 10 Mar 2023 07:13:58 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>hexo+github搭建个人博客</title>
+      <link>http://example.com/2022/12/14/hexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <guid>http://example.com/2022/12/14/hexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <pubDate>Wed, 14 Dec 2022 21:00:00 GMT</pubDate>
+      
+      <description>&lt;h1 id=&quot;hexo-github搭建个人博客&quot;&gt;&lt;a href=&quot;#hexo-github搭建个人博客&quot; class=&quot;headerlink&quot; title=&quot;hexo+github搭建个人博客&quot;&gt;&lt;/a&gt;hexo+github搭建个人博客&lt;/h1&gt;</description>
+      
+      
+      
+      
+      <category domain="http://example.com/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">个人博客</category>
+      
+      
+      <category domain="http://example.com/tags/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">搭建个人博客</category>
+      
+      
+      <comments>http://example.com/2022/12/14/hexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>
