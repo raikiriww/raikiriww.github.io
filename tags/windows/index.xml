@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>windows on raikiriww&#39;s blog</title>
+    <link>https://blog.raikiriww.net/tags/windows/</link>
+    <description>Recent content in windows on raikiriww&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 03 Mar 2024 13:09:25 +0800</lastBuildDate><atom:link href="https://blog.raikiriww.net/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows 系统使用 Socat</title>
+      <link>https://blog.raikiriww.net/post/7f48681db0ca9a86/</link>
+      <pubDate>Sun, 03 Mar 2024 13:09:25 +0800</pubDate>
+      
+      <guid>https://blog.raikiriww.net/post/7f48681db0ca9a86/</guid>
+      <description>&lt;p&gt;最近在自己家中的迷你主机上部署了一些自己用的服务，使用 frp 做内网穿透将迷你主机的服务映射到公网供自己使用。frp 支持 SSH 的端口复用，但需要使用到 Socat 这个工具。Socat 在 linux 和 mac 环境下都可以使用命令直接下载使用，但 windows 没有现成的库，网上找到的都是别人自己编译，也不知道靠不靠谱，所以决定使用 Github action 全自动，透明的编译一版 windows 能直接用的 Socat 。目前已经做好了，项目地址：&lt;a href=&#34;https://github.com/raikiriww/socat_windows&#34;&gt;https://github.com/raikiriww/socat_windows&lt;/a&gt; 。&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>最近在自己家中的迷你主机上部署了一些自己用的服务，使用 frp 做内网穿透将迷你主机的服务映射到公网供自己使用。frp 支持 SSH 的端口复用，但需要使用到 Socat 这个工具。Socat 在 linux 和 mac 环境下都可以使用命令直接下载使用，但 windows 没有现成的库，网上找到的都是别人自己编译，也不知道靠不靠谱，所以决定使用 Github action 全自动，透明的编译一版 windows 能直接用的 Socat 。目前已经做好了，项目地址：<a href="https://github.com/raikiriww/socat_windows">https://github.com/raikiriww/socat_windows</a> 。</p>
+<h2 id="项目介绍">项目介绍</h2>
+<p>整个项目目前（2024-03-03）只有一个 readme 和 Github action 的执行文件。具体为：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Cygwin Build</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># Triggers the workflow on push or pull request events but only for the &#34;main&#34; branch</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&#34;main&#34;</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&#34;main&#34;</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># Allows you to run this workflow manually from the Actions tab</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">workflow_dispatch</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">build</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">permissions</span><span class="p">:</span><span class="w"> </span><span class="l">write-all</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">windows-latest</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Install Cygwin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">        choco install cygwin
+</span></span></span><span class="line"><span class="cl"><span class="sd">        choco install cyg-get
+</span></span></span><span class="line"><span class="cl"><span class="sd">        cyg-get gcc-g++ gcc-core cygwin32-gcc-g++ cygwin32-gcc-core make gcc-fortran gcc-objc gcc-objc++ libkrb5-devel libkrb5_3 libreadline-devel libssl-devel libwrap-devel tcp_wrappers </span><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Configure Environment</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">        echo &#34;C:\tools\cygwin\bin&#34; &gt;&gt; $GITHUB_PATH</span><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Download and Extract the archive</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">        curl -O http://www.dest-unreach.org/socat/download/socat-1.8.0.0.tar.gz
+</span></span></span><span class="line"><span class="cl"><span class="sd">        tar -xvzf socat-1.8.0.0.tar.gz</span><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Execute Build Script in Cygwin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">        C:\tools\cygwin\bin\bash -lc &#34;cd /cygdrive/d/a/socat_windows/socat_windows/socat-1.8.0.0 &amp;&amp; ./configure &amp;&amp; make &amp;&amp; make install&#34;
+</span></span></span><span class="line"><span class="cl"><span class="sd">        </span><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Copy Cygwin DLLs</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">        Copy-Item &#34;C:\tools\cygwin\bin\cygcrypto-3.dll&#34; -Destination &#34;D:\a\socat_windows\socat_windows\socat-1.8.0.0&#34;
+</span></span></span><span class="line"><span class="cl"><span class="sd">        Copy-Item &#34;C:\tools\cygwin\bin\cygwin1.dll&#34; -Destination &#34;D:\a\socat_windows\socat_windows\socat-1.8.0.0&#34;
+</span></span></span><span class="line"><span class="cl"><span class="sd">        Copy-Item &#34;C:\tools\cygwin\bin\cygssl-3.dll&#34; -Destination &#34;D:\a\socat_windows\socat_windows\socat-1.8.0.0&#34;
+</span></span></span><span class="line"><span class="cl"><span class="sd">        Copy-Item &#34;C:\tools\cygwin\bin\cygreadline7.dll&#34; -Destination &#34;D:\a\socat_windows\socat_windows\socat-1.8.0.0&#34;
+</span></span></span><span class="line"><span class="cl"><span class="sd">        Copy-Item &#34;C:\tools\cygwin\bin\cygwrap-0.dll&#34; -Destination &#34;D:\a\socat_windows\socat_windows\socat-1.8.0.0&#34;
+</span></span></span><span class="line"><span class="cl"><span class="sd">        Copy-Item &#34;C:\tools\cygwin\bin\cygncursesw-10.dll&#34; -Destination &#34;D:\a\socat_windows\socat_windows\socat-1.8.0.0&#34;
+</span></span></span><span class="line"><span class="cl"><span class="sd">        Copy-Item &#34;C:\tools\cygwin\bin\cygz.dll&#34; -Destination &#34;D:\a\socat_windows\socat_windows\socat-1.8.0.0&#34;</span><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="l">pwsh</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Upload Artifacts</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l">${{  success() }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/upload-artifact@v2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">socat-1.8.0.0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">socat-1.8.0.0/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Archive production artifacts</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l">${{  success() }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l">7z a socat-1.8.0.0.zip D:\a\socat_windows\socat_windows\socat-1.8.0.0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Upload Release</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">softprops/action-gh-release@v1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l">${{  success() }}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">tag_name</span><span class="p">:</span><span class="w"> </span><span class="m">1.8.0.0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">files</span><span class="p">:</span><span class="w"> </span><span class="l">socat-1.8.0.0.zip</span><span class="w">
+</span></span></span></code></pre></div><p>整个编译过程在 Github 的 windows runner 上执行。使用 Cygwin 作为编译工具。编译过程分为下面几步：</p>
+<ol>
+<li>初始化代码仓库。这步会将仓库的所有文件下载到 runner 中。</li>
+<li>安装 Cygwin 和依赖的库。</li>
+<li>将 Cygwin 的 bin 目录加到环境变量中。</li>
+<li>下载 Socat 的源码。</li>
+<li>使用 Cygwin 编译。</li>
+<li>拷贝依赖的 dll 文件到编译好的程序目录。</li>
+<li>打包编译好的程序作为 Artifact 。</li>
+<li>将打包好的压缩包作为 Release 发布。</li>
+</ol>
+<h2 id="使用方法">使用方法</h2>
+<ol>
+<li>下载项目 Releases 页面的程序压缩包。解压到本地。</li>
+<li>将解压好的文件夹路径添加到 windows 的 PATH 环境变量中。</li>
+</ol>
+<p>打开终端输入 socat 即可使用。编译好的程序在我自己的电脑上（windows11 22H2 22621.2506）运行良好。</p>]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
