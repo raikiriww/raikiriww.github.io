@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>技术 on raikiriww&#39;s blog</title>
+    <link>https://blog.raikiriww.net/tags/%E6%8A%80%E6%9C%AF/</link>
+    <description>Recent content in 技术 on raikiriww&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 26 Oct 2023 19:44:18 +0800</lastBuildDate><atom:link href="https://blog.raikiriww.net/tags/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx 配置子目录路由</title>
+      <link>https://blog.raikiriww.net/post/d43d83a85cc2d89c/</link>
+      <pubDate>Thu, 26 Oct 2023 19:44:18 +0800</pubDate>
+      
+      <guid>https://blog.raikiriww.net/post/d43d83a85cc2d89c/</guid>
+      <description>&lt;p&gt;一直以来项目都是路由到特定端口的根目录，简单配置一下就好。今天要部署一套前端到指定的子目录，复制了一份之前的根目录 server 配置，简单的将 location 的路由地址由 &lt;code&gt;/&lt;/code&gt;替换为指定子目录后，其他配置不变。部署上去测试发现直接 404 Not Found。😐&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>一直以来项目都是路由到特定端口的根目录，简单配置一下就好。今天要部署一套前端到指定的子目录，复制了一份之前的根目录 server 配置，简单的将 location 的路由地址由 <code>/</code>替换为指定子目录后，其他配置不变。部署上去测试发现直接 404 Not Found。😐</p>
+<h2 id="问题分析">问题分析</h2>
+<p>大概的 Nginx 配置如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">server</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">listen</span> <span class="mi">8000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">server_name</span> <span class="s">www.test.cn</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kn">location</span> <span class="s">/20002</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kn">root</span> <span class="s">/www/test/20002/dist</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kn">index</span> <span class="s">index.html</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这个配置是直接从其他根目录的 server 复制过来的。打开 server_name:8000/20002 会直接报 404 Not Found。</p>
+<p>首先去绑定的目录 <code>/www/test/20002/dist</code> 下查看是否由对应 Index.html 文件，有的，不是网页文件的问题。那应该就是我配置文件写的不对。将 location 改为 <code>/</code>，重启 Nginx，直接访问 server_name:8000 可以成功显示页面。问题应该是处在子目录的路由配置上。配置里就两个参数。。</p>
+<ul>
+<li><code>root</code> 用来指定路由到哪里。</li>
+<li><code>index</code> 用来设置默认访问的文件。</li>
+</ul>
+<p>看起来都没啥问题，尝试进行搜索。</p>
+<h2 id="寻找原因">寻找原因</h2>
+<p>搜索 Nginx 路由子目录的方法，查询到 Nginx 路由静态网页由两种方法，一个是 root，一个是 alias。两种方法对请求文件的寻找路径不同。</p>
+<ul>
+<li>
+<p><code>root</code></p>
+<ul>
+<li>当使用 <code>root</code> 指令并且没有使用精确匹配（使用 <code>=</code>）时，<code>root</code> 方法会将请求的路径拼接到 <code>root</code> 所设置的路径后。最终路径为：<code>root</code> + <code>location</code></li>
+</ul>
+</li>
+<li>
+<p><code>alias</code></p>
+<ul>
+<li>当使用 <code>alias</code> 指令时，<code>alias</code> 方法会将访问的文件路径用 <code>alias</code> 替换。最终路径为：<code>alias</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>举个例子</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">location</span> <span class="s">/20002</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">root</span> <span class="s">/www/test/20002/dist</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>使用 <code>root</code> 方法来路由时，当我们访问 <code>/20002/css/style.css</code> 时，Nginx 会寻找 <code>/www/test/20002/dist/20002/css/style.css</code> 文件。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">location</span> <span class="s">/20002</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">alias</span> <span class="s">/www/test/20002/dist</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>使用 <code>alias</code> 来路由时，当我们访问 <code>/20002/css/style.css</code> 时，Nginx 会寻找 <code>/www/test/20002/dist/css/style.css</code> 文件。</p>
+<p>所以，当我直接复制根目录的配置，简单修改一下 <code>location</code> 来进行子页面的路由时会出现 404 Not Found 的错误。当我访问 <code>server_name:8000/20002/index.html</code> 时，实际上 Nginx 在寻找 <code>/www/test/20002/dist/20002/index.html</code> 。是找不到这个文件的。</p>
+<h2 id="解决方法">解决方法</h2>
+<p>找到了报错原因那解决就很简单了，根据上面的说明将 <code>root</code> 方法更改为 <code>alias</code> 即可。最终代码为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">server</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">listen</span> <span class="mi">8000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">server_name</span> <span class="s">www.test.cn</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kn">location</span> <span class="s">/20002</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kn">alias</span> <span class="s">/www/test/20002/dist</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kn">index</span> <span class="s">index.html</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这样访问 <code>server_name:8000/20002/index.html</code> 会被 Nginx 路由到 <code>/www/test/20002/dist/index.html</code> 这样路径就是正确的了。</p>
+<h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://stackoverflow.com/questions/10631933/nginx-static-file-serving-confusion-with-root-alias">https://stackoverflow.com/questions/10631933/nginx-static-file-serving-confusion-with-root-alias</a></li>
+<li><a href="https://juejin.cn/post/6919799574253174792">https://juejin.cn/post/6919799574253174792</a></li>
+</ul>]]></content:encoded>
+    </item>
+    
+    <item>
+      <title>Python 写入文件失败</title>
+      <link>https://blog.raikiriww.net/post/139dae6586b8dfe0/</link>
+      <pubDate>Wed, 11 Oct 2023 10:29:09 +0800</pubDate>
+      
+      <guid>https://blog.raikiriww.net/post/139dae6586b8dfe0/</guid>
+      <description>&lt;p&gt;公司有一个同事做的项目，其中有一个 Python 写的程序会反复降低 CPU 的电压直至死机重启，程序会在降压前保存本次的数据。听起来很合理，先保存数据再降低电压，如果死机了导致重启，那上次的数据也保存到本地了。但在 windows 电脑上实际运行时，每次程序导致 windows 死机重启后，保存的数据文件都为空。他没搞定这个就离职了，于是我就接手来查这个 bug 了。&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>公司有一个同事做的项目，其中有一个 Python 写的程序会反复降低 CPU 的电压直至死机重启，程序会在降压前保存本次的数据。听起来很合理，先保存数据再降低电压，如果死机了导致重启，那上次的数据也保存到本地了。但在 windows 电脑上实际运行时，每次程序导致 windows 死机重启后，保存的数据文件都为空。他没搞定这个就离职了，于是我就接手来查这个 bug 了。</p>
+<h2 id="查找问题">查找问题</h2>
+<p>大概的代码示例如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 写入文件</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&#34;w&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">some_data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&#34;Write to checkpoint file&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 降低 CPU 电压，过低会导致死机</span>
+</span></span><span class="line"><span class="cl"><span class="n">set_voltage_offset</span><span class="p">(</span><span class="n">v_off</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>从代码结构来看确实没什么问题，是先保存数据再降低电压，即使后边的操作导致死机也是在写入操作完成后，应该不会影响保存的数据才对。但事实是确实有影响，在 windows 上测试了好几次保存的数据都为空。<code>with open()</code> 语句是 Python 中常用的文件操作语句，不应该会导致写入异常，于是怀疑是降压操作导致的。</p>
+<h2 id="分析问题">分析问题</h2>
+<p>在 Python 中，当使用 <code>with open()</code> 语句来写入文件时，它会负责管理文件的打开和关闭，通常情况下， <code>with</code> 语句块结束后，Python 会自动关闭文件，并确保所有数据写入硬盘。但，这个操作不是立即发生的。</p>
+<p>当写入文件时，操作系统通常会缓存这些操作，以便一次性的将多个写入操作合并，从而提高效率。这意味着即使 Python 代码执行了写入操作（也就是 write()），也不能保证这些数据已经永久的保存到了硬盘上。如果在 with 语句块结束后立即死机，这些数据可能会丢失。</p>
+<h2 id="解决方法">解决方法</h2>
+<p>现在知道了导致数据保存失败的原因是出在 windows 的系统缓存机制上，那只要找到方法可以强制系统将缓存的数据写入硬盘就好了。修改后的代码如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 写入文件</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&#34;w&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">some_data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="c1"># 确保数据从 Python 的内部缓冲区写入操作系统的缓冲区</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="c1"># 确保数据从操作系统的缓冲区写入磁盘</span>
+</span></span><span class="line"><span class="cl">    <span class="n">os</span><span class="o">.</span><span class="n">fsync</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">fileno</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&#34;Write to checkpoint file&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 降低 CPU 电压，过低会导致死机</span>
+</span></span><span class="line"><span class="cl"><span class="n">set_voltage_offset</span><span class="p">(</span><span class="n">v_off</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>新增了两行代码。</p>
+<ul>
+<li><code>f.flush()</code> 的作用为刷新 Python 的内部缓冲区，确保所有数据写入操作系统的缓冲区。但这个并不能保证操作系统会立刻将数据写入硬盘。</li>
+<li><code>os.fsync(f.fileno())</code>  的作用为强制操作系统将其缓冲区的数据写入硬盘。这样就保证了如果之后的代码导致系统死机，这部分数据也会完整的保存在硬盘上。</li>
+</ul>
+<p>将修改后的程序在 windows 上测试，数据每次都会完整的保存在硬盘上。</p>
+<h2 id="后记">后记</h2>
+<p>在 Microsoft 的一篇<a href="https://learn.microsoft.com/en-us/troubleshoot/windows-server/backup-and-storage/turn-disk-write-caching-on-off">官方文档</a>中有提到 <strong>disk write caching</strong> ，也就是写入缓存，并给出了关闭的方法。</p>
+<p>关于 <strong>disk write caching</strong> ，官方的描述为：</p>
+<blockquote>
+<p>Additionally, turning disk write caching on may increase operating system performance; however, it may also result in the loss of information if a power failure, equipment failure, or software failure occurs.</p>
+</blockquote>
+<p>确实与我遇到的情况一样。</p>
+<p>还有一篇更详细一点的介绍：https://learn.microsoft.com/en-US/windows/client-management/client-tools/change-default-removal-policy-external-storage-media</p>
+<p>总的来说 <strong>disk write caching</strong> 在一般情况下可以提高性能。但在需要确保极端情况下写入数据完整性时，可以考虑关闭或者手动强制写入。</p>]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>
