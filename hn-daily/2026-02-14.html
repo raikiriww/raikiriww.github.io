@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-14</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.14 周六</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.wallstreetraider.com/story.html" target="_blank" rel="noopener noreferrer" class="title-link">Show HN: I spent 3 years reverse-engineering a 40 yo stock market sim from 1986</a>
+              
+            </div>
+            <div class="summary">
+              <p>该条目摘要生成失败（模型调用重试后仍失败）。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46954696" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://cordcuttersnews.com/babylon-5-is-now-free-to-watch-on-youtube/" target="_blank" rel="noopener noreferrer" class="title-link">Babylon 5 is now free to watch on YouTube</a>
+              
+            </div>
+            <div class="summary">
+              <p>该条目摘要生成失败（模型调用重试后仍失败）。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47000505" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://openai.com/index/new-result-theoretical-physics/" target="_blank" rel="noopener noreferrer" class="title-link">GPT-5.2 derives a new result in theoretical physics</a>
+              
+            </div>
+            <div class="summary">
+              <p>该条目摘要生成失败（模型调用重试后仍失败）。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47006594" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.politico.eu/article/tiktok-meta-facebook-instagram-brussels-kill-infinite-scrolling/" target="_blank" rel="noopener noreferrer" class="title-link">The EU moves to kill infinite scrolling</a>
+              
+            </div>
+            <div class="summary">
+              <p>该条目摘要生成失败（模型调用重试后仍失败）。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47007656" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://theconversation.com/openai-has-deleted-the-word-safely-from-its-mission-and-its-new-structure-is-a-test-for-whether-ai-serves-society-or-shareholders-274467" target="_blank" rel="noopener noreferrer" class="title-link">OpenAI has deleted the word &#39;safely&#39; from its mission</a>
+              
+            </div>
+            <div class="summary">
+              <p>该条目摘要生成失败（模型调用重试后仍失败）。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47008560" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me-part-2/" target="_blank" rel="noopener noreferrer" class="title-link">An AI agent published a hit piece on me – more things have happened</a>
+              
+            </div>
+            <div class="summary">
+              <p>该条目摘要生成失败（模型调用重试后仍失败）。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47009949" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://ziglang.org/devlog/2026/#2026-02-13" target="_blank" rel="noopener noreferrer" class="title-link">Zig – io_uring and Grand Central Dispatch std.Io implementations landed</a>
+              
+            </div>
+            <div class="summary">
+              <p>该条目摘要生成失败（模型调用重试后仍失败）。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47012717" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://infosec.exchange/@mttaggart/116065340523529645" target="_blank" rel="noopener noreferrer" class="title-link">Ars Technica makes up quotes from Matplotlib maintainer; pulls story</a>
+              
+            </div>
+            <div class="summary">
+              <p>该条目摘要生成失败（模型调用重试后仍失败）。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47013059" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://ooh.directory/" target="_blank" rel="noopener noreferrer" class="title-link">Ooh.directory: a place to find good blogs that interest you</a>
+              
+            </div>
+            <div class="summary">
+              <p>该条目摘要生成失败（模型调用重试后仍失败）。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47014449" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://github.com/i5heu/ublock-hide-yt-shorts/" target="_blank" rel="noopener noreferrer" class="title-link">uBlock filter list to hide all YouTube Shorts</a>
+              
+            </div>
+            <div class="summary">
+              <p>该条目摘要生成失败（模型调用重试后仍失败）。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47016443" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-14.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

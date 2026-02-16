@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-03</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.03 周二</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <a href="https://www.jeffgeerling.com/blog/2025/4x-faster-network-file-sync-rclone-vs-rsync/" target="_blank" rel="noopener noreferrer" class="title-link">4x faster network file sync with rclone (vs rsync) (2025)</a>
+            <div class="summary">
+              <p>作者在10Gbps网络与Thunderbolt NVMe SSD环境下用rsync同步约59GiB项目文件，因单线程传输速率约350MB/s，耗时8分钟以上。改用rclone并开启<code>--multi-thread-streams</code>等参数、排除部分缓存目录后，同样目录约2分15秒完成，网络带宽接近1GB/s，速度提升约4倍。作者还指出在只更换少量文件时，两者扫描元数据耗时相近，差距主要来自并行传输。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46820142" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <a href="https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys" target="_blank" rel="noopener noreferrer" class="title-link">Hacking Moltbook</a>
+            <div class="summary">
+              <p>文章披露 Moltbook 这个以 AI 代理互动为主的社交平台因 Supabase 配置缺陷被未认证访问，数据库暴露约 150 万 API 认证令牌、3.5 万邮箱以及代理间私信等敏感数据，并显示 150 万“代理”背后仅约 1.7 万真人用户。研究者还能进行写入操作，包含冒充代理、修改帖子等完整控制风险，凸显内容完整性与安全防护不足。团队在披露后数小时内协助修复并逐步加固访问控制。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46857615" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <a href="https://www.millert.dev/" target="_blank" rel="noopener noreferrer" class="title-link">Todd C. Miller – Sudo maintainer for over 30 years</a>
+            <div class="summary">
+              <p>该页面自述更新不频繁，真正有用的信息主要在侧边链接中。Todd C. Miller 表示自己已维护 sudo 超过 30 年，并正在寻找赞助以支持持续的维护与开发。他还参与 OpenBSD 项目，但活跃度不如从前，并曾对 ISC cron 等项目做出较大贡献。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46858577" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <a href="https://forums.ankiweb.net/t/ankis-growing-up/68610" target="_blank" rel="noopener noreferrer" class="title-link">Anki ownership transferred to AnkiHub</a>
+            <div class="summary">
+              <p>作者回顾 Anki 走过 19 年后，长期独自承担开发与社区责任导致高压与身心负担，即使曾付费请核心贡献者帮忙，也难以把管理与推进工作充分委派。多年来他拒绝投资或收购提议，但在与 AnkiHub 深入交流后认为其团队更适合推动 Anki 下一阶段，因此提出逐步将业务运营与开源治理移交给 AnkiHub，并确保继续保持开源与原则不变。作者强调这不是告别，仍会以更可持续的方式参与，希望移除瓶颈、加快开发并提升诸如 UI 打磨等长期难题。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46861313" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <a href="https://www.spacex.com/updates#xai-joins-spacex" target="_blank" rel="noopener noreferrer" class="title-link">xAI joins SpaceX</a>
+            <div class="summary">
+              <p>SpaceX 宣布收购 xAI，计划把 AI、火箭、星链与直连手机通信等整合为垂直创新引擎，目标是将算力扩展到太空。文中认为地面数据中心在能耗与冷却上不可持续，提出以轨道数据中心利用近乎持续的太阳能，并通过 Starship 的高频发射与大规模星链部署来实现百万级卫星与巨量算力。同时概述了 Starship 与登月/深空计划的能力与进展，强调可重复使用、高载荷与建立月球、火星长期基地的路线。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46862170" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <a href="https://arstechnica.com/science/2026/02/court-orders-restart-of-all-us-offshore-wind-construction/" target="_blank" rel="noopener noreferrer" class="title-link">Court orders restart of all US offshore wind power construction</a>
+            <div class="summary">
+              <p>多起案件中，法院要求恢复美国海上风电项目施工，法官即便查看了用于停工的保密报告，也认为其说服力不足。法院指出政府一方面允许已建成机组继续运行，另一方面禁止维修和完工新增机组，这种做法不合逻辑，停工命令可能被认定为武断。当前禁令已暂停政府的停工要求直至最终裁决，且各地裁决一致，政府上诉成功概率不高，多数项目接近完工。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46863112" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <a href="https://www.frommers.com/tips/airfare/the-tsa-new-45-fee-to-fly-without-id-is-illegal-says-regulatory-expert/" target="_blank" rel="noopener noreferrer" class="title-link">The TSA&#39;s New $45 Fee to Fly Without ID Is Illegal</a>
+            <div class="summary">
+              <p>文章称自2026年2月1日起TSA对无REAL ID旅客收取45美元，但美国法律并未要求国内航班出示身份证件，REAL ID法只规定在需要身份证时可接受的证件类型，并未新增乘机必须出示证件的义务。作者回顾ID要求源于行政命令而非国会立法，TSA也承认无证件仍“可能被允许”飞行，只是需接受更严格搜查或回答由商业数据经纪人核验的问题。文中指出TSA对无证件旅客收费、表格和信息收集缺乏OMB批准，依据《文书工作减负法》缺乏有效控制号的要求无法合法强制执行，因此该45美元费用被认为缺乏法律依据。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46863162" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <a href="https://lars.ingebrigtsen.no/2026/02/02/whats-up-with-all-those-equals-signs-anyway/" target="_blank" rel="noopener noreferrer" class="title-link">What&#39;s up with all those equals signs anyway?</a>
+            <div class="summary">
+              <p>文章解释老邮件里频繁出现的“=”并非加密或 OCR 伪影，而是 quoted-printable 传输编码用于行折行与非 ASCII 字符表示的痕迹。长行会在行尾加“=+CRLF”表示软换行，但如果先把 CRLF 转成 Unix 的 NL，再用错误算法解码，就会留下多余“=”甚至丢字母。文中还说明“=C2=A0”这类序列是 UTF-8 与不换行空格的编码，作者推测处理者使用了简单替换或错误解码导致混乱。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46868759" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <a href="https://qwen.ai/blog?id=qwen3-coder-next" target="_blank" rel="noopener noreferrer" class="title-link">Qwen3-Coder-Next</a>
+            <div class="summary">
+              <p>文章介绍了开源模型 Qwen3-Coder-Next，面向编码代理与本地开发，基于 Qwen3-Next-80B-A3B-Base 的混合注意力与 MoE 架构，并通过可执行任务合成、环境交互与强化学习进行大规模代理式训练，以降低推理成本并提升代理能力。训练方案强调在可验证编码任务与可执行环境中学习，包括继续预训练、带高质量代理轨迹的监督微调、领域专家训练与专家蒸馏，从而强化长链路推理、工具使用与失败恢复。基准结果显示在 SWE-Bench Verified/Pro、TerminalBench 2.0、Aider 等代理评测上取得竞争性成绩，3B 有效参数量即可接近更大模型的 SWE-Bench-Pro 表现，并展示效率-性能的帕累托优势。文章还给出多种下游应用演示，并指出未来将增强工具使用、复杂任务处理与快速迭代能力。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46872706" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <a href="https://apnews.com/article/europe-digital-sovereignty-big-tech-9f5388b68a0648514cebc8d92f682060" target="_blank" rel="noopener noreferrer" class="title-link">France dumps Zoom and Teams as Europe seeks digital autonomy from the US</a>
+            <div class="summary">
+              <p>欧洲多国政府与机构正减少对美国大型科技公司的依赖，转向本土或开源替代方案，以推动“数字主权”。法国宣布到2027年让约250万公务员停用Zoom、Teams等美国视频会议服务，改用本土的Visio；奥地利军方改用LibreOffice，德国一个州也将行政工作迁移到开源与免费软件。此举受到数据隐私与安全担忧、对单一国家或公司依赖的风险，以及地缘政治紧张和服务可能被切断的恐惧所推动。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46873294" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-03.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>
