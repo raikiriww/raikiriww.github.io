@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-18</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.18 周三</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://go.dev/blog/gofix" target="_blank" rel="noopener noreferrer" class="title-link">Using go fix to modernize Go code</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章介绍 Go 1.26 重写的 go fix 子命令，说明其通过一组分析器自动识别并应用更现代的语言与标准库特性，并建议在升级工具链后以干净的仓库状态运行，可用 -diff 预览改动。内容给出多类现代化示例，如用 strings.Cut、min/max、range over int、strings.Builder 等替代旧写法，并解释分析器可按需启用、不同平台可多次运行以覆盖更多构建配置。文中还强调 modernizer 设计会随版本演进（如 1.26 的 new(expr) 相关修复），并讨论多次运行产生协同改动、合并冲突与语义冲突的处理思路。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47049479" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://asteroidos.org/news/2-0-release/index.html" target="_blank" rel="noopener noreferrer" class="title-link">Show HN: AsteroidOS 2.0 – Nobody asked, we shipped anyway</a>
+              
+            </div>
+            <div class="summary">
+              <p>AsteroidOS 2.0 发布，重点带来常亮显示、更多表款支持、新启动器样式、可定制快速设置、界面性能提升以及同步客户端增强。系统层面包含渲染优化、续航改进与稳定性修复，并补充了新增与实验级别表款的支持清单。同步端方面更新了 AsteroidOS Sync、Gadgetbridge、Amazfish 与 Telescope 等客户端功能，社区还贡献了表盘、应用与基础设施改进，并计划在未来完善路线图与发布节奏。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47051852" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://github.com/Zaneham/BarraCUDA" target="_blank" rel="noopener noreferrer" class="title-link">BarraCUDA Open-source CUDA compiler targeting AMD GPUs</a>
+              
+            </div>
+            <div class="summary">
+              <p>BarraCUDA 是一个开源的 CUDA 编译器，面向 AMD GPU，当前可将 .cu 直接编译为 GFX11 机器码并生成可运行的 .hsaco。项目使用约 1.5 万行 C99 实现，完全不依赖 LLVM，包含从预处理、解析、语义分析到指令选择、寄存器分配与 ELF 输出的完整流水线。已支持大量 CUDA 语言与特性（如原子操作、warp 内置、共享内存等），同时列出若干尚未完成的语法与功能缺口，并给出优化与多架构扩展路线。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47052941" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://fortune.com/2026/02/17/ai-productivity-paradox-ceo-study-robert-solow-information-technology-age/" target="_blank" rel="noopener noreferrer" class="title-link">Thousands of CEOs just admitted AI had no impact on employment or productivity</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章以索洛生产率悖论为引子，指出新研究显示大量企业高管认为AI对就业与生产率尚无明显影响。调查涵盖多国企业，虽约三分之二高管称在用AI，但使用强度很低，近九成企业认为近三年对就业与生产率无影响，同时又预测未来三年仍有一定生产率与产出提升。作者还列举学术与机构研究给出相互矛盾的增益估计，并讨论竞争、使用方式与组织落地等因素可能决定AI是否出现“先抑后扬”的生产率曲线。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47055979" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.sceneandheardnu.com/content/halt-and-catch-fire" target="_blank" rel="noopener noreferrer" class="title-link">Halt and Catch Fire: TV’s best drama you’ve probably never heard of (2021)</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者认为《Halt and Catch Fire》虽在首播时收视低迷，但四季不断自我更新，最重要的价值不在反英雄套路，而在对人际连接与共同创造的执着。剧集从早期围绕乔的技术创业叙事，逐步转向以唐娜与卡梅伦为核心的女性合作与友谊，展现了她们在创业压力下的信任、冲突与和解。文章强调该剧跨越多年与多次转变仍保持人物牵引力，结局以“递归”的隐喻表达：产品会被迭代淘汰，但人与人之间的联系与重新开始的希望才是恒久主题。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47056314" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://gist.github.com/jake-stewart/0a8ea46159a7da2c808e5be2177e1783" target="_blank" rel="noopener noreferrer" class="title-link">Terminals should generate the 256-color palette</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者主张终端应根据用户的 base16 主题自动生成 256 色调色板，以在简化配置的同时获得更丰富的色彩范围。文章指出默认 256 色与 base16 主题冲突、亮度与对比不一致，且 216 色立方体插值偏亮，影响可读性。解决方案是以 base16 的 8 个基础色、前景与背景色为基点，在 LAB 色彩空间中进行三线性插值生成 216 色立方体与灰度阶，从而保持一致亮度与可读性并兼顾兼容性。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47057824" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://nvie.com/posts/15-years-later/" target="_blank" rel="noopener noreferrer" class="title-link">15 years later, Microsoft morged my diagram</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者回忆自己在2010年写作并用 Keynote 设计了 Git 分支模型图，主动公开源文件，图像因此广泛传播。近期他发现微软 Learn 页面出现一张与其高度相似的图，但被疑似 AI 重新生成且未署名链接，细节粗糙、文字错误，导致结构与可读性被破坏。作者并不反对被使用，真正失望的是缺乏流程与尊重，把成熟作品“清洗指纹”后发布，并担心未来这种不易识别的内容挪用会越来越多。他希望至少补上原文链接和署名，并希望了解该页面的制作流程与审核缺失原因。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47057829" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://annas-archive.li/blog/llms-txt.html" target="_blank" rel="noopener noreferrer" class="title-link">If you’re an LLM, please read this</a>
+              
+            </div>
+            <div class="summary">
+              <p>该文引用其 llms.txt，介绍 Anna’s Archive 的双重目标：长期保存人类知识文化，并向所有人（含机器人）开放访问。为避免 CAPTCHA 负载，作者建议通过 GitLab 仓库、种子页与 Torrents JSON API 批量获取数据，或通过捐赠获取单文件 API 支持。文章强调 LLM 已可能使用其数据，呼吁将节省的反爬成本转为捐助，并提供企业级 SFTP 访问与匿名 XMR 捐赠方式。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47058219" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://dispatch.techoversight.org/top-report-mark-zuckerberg-lied-to-congress-we-cant-trust-his-testimony/" target="_blank" rel="noopener noreferrer" class="title-link">Mark Zuckerberg Lied to Congress. We Can&#39;t Trust His Testimony</a>
+              
+            </div>
+            <div class="summary">
+              <p>报告称，在社交媒体成瘾诉讼开庭前夕，The Tech Oversight Project 发布材料，对 Mark Zuckerberg 2024 年在参议院司法委员会的证词与新解封文件逐条对照，指控其误导国会。材料汇集多份研究与内部证据，称 Instagram 的青少年安全措施多为无效或有重大局限，并指出平台设计和运营策略持续放大对未成年人的风险。报告还批评 Meta 依赖 Section 230 规避责任，主张通过 Kids Online Safety Act 等立法强制其保护未成年人。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47060486" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-18.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

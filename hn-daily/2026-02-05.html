@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-05</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.05 周四</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <a href="https://boxc.net/blog/2026/claude-code-connecting-to-local-models-when-your-quota-runs-out/" target="_blank" rel="noopener noreferrer" class="title-link">Claude Code: connect to a local model when your quota runs out</a>
+            <div class="summary">
+              <p>作者说明在 Claude Code 使用中常见的额度耗尽问题，并给出替代方案：当配额用尽时可切换到本地开源模型继续编码。他建议优先使用 LM Studio（示例包含启动本地服务、设置环境变量并在 CC 中指定模型），并提到当前可选模型如 GLM-4.7-Flash 或 Qwen3-Coder-Next，以及小型量化模型以节省资源。此外也可直接使用 llama.cpp 连接，但整体速度和代码质量会下降，因此更像临时备选方案，等额度恢复再切回云端。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46845845" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <a href="https://www.anthropic.com/news/claude-is-a-space-to-think" target="_blank" rel="noopener noreferrer" class="title-link">Claude is a space to think</a>
+            <div class="summary">
+              <p>作者说明 Claude 将保持无广告，并强调对话式 AI 与搜索/社交不同，用户常分享敏感或深度上下文，广告会破坏其作为思考与工作的纯净空间。文中指出广告激励可能扭曲模型行为、引发难以察觉的商业动机与不可预测的影响，即便是非嵌入式广告也会驱动以停留时长为目标的优化。Anthropic 表示其收入将来自企业合同和付费订阅，并通过教育与公益折扣、较小模型与潜在低价层级扩大可访问性，同时所有与商业相关的功能和第三方工具应由用户主动触发。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46884883" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <a href="https://pdfa.org/a-case-study-in-pdf-forensics-the-epstein-pdfs/" target="_blank" rel="noopener noreferrer" class="title-link">A case study in PDF forensics: The Epstein PDFs</a>
+            <div class="summary">
+              <p>文章以司法部发布的“Epstein Files”相关数据集为案例，从数字取证角度分析PDF语法与结构，说明在处理敏感文件时需要可靠的去隐写与脱敏流程，并强调未分析文件内容本身。作者抽样检查多个数据集中的PDF，指出外界关于“可恢复涂黑内容”的说法多有误读，EFTA数据集中的PDF按其观察被正确涂黑且无可恢复文本。文中还比较不同取证工具对PDF版本与结构的报告差异，并给出文件规模、组成与增量更新等技术特征，以说明PDF取证的复杂性和需要多工具交叉验证。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46886440" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <a href="https://nmn.gl/blog/ai-killing-b2b-saas" target="_blank" rel="noopener noreferrer" class="title-link">AI is killing B2B SaaS</a>
+            <div class="summary">
+              <p>文章认为传统B2B SaaS的‘一次开发、长期订阅’模式正被AI“氛围编程”削弱：客户能更快做出贴合自身流程的内部工具，导致续费压力上升、流失加剧，并出现SaaS板块落后大盘等市场信号。作者指出AI本身不是终结者，拒绝进化的SaaS才会被淘汰。应对路径包括成为深度嵌入的系统记录（SoR）、强调安全/合规与稳定性价值，并提供高度可定制的平台能力让客户在现有系统上搭建自己的应用。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46888441" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <a href="https://www.jakequist.com/thoughts/openclaw-is-what-apple-intelligence-should-have-been" target="_blank" rel="noopener noreferrer" class="title-link">OpenClaw is what Apple intelligence should have been</a>
+            <div class="summary">
+              <p>文章指出 Mac Mini 正被用来跑能“实际操作电脑”的 AI 代理，OpenClaw 让 Claude、GPT-5 等模型直接点击按钮自动化工作流，成为推动硬件销量的关键应用。作者认为这正是 Apple Intelligence 应该做的事：依托硬件与信任优势提供有根权限的代理来自动处理邮件、日程等，从而建立更强的平台护城河与网络效应。未能推出的原因可能是未看见机会、担心法律与平台风险，以及避免与封闭生态正面冲突，但这也让苹果只拿到硬件收入而错失平台收益。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46893970" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <a href="https://rachelbythebay.com/w/2026/02/03/badnas/" target="_blank" rel="noopener noreferrer" class="title-link">When internal hostnames are leaked to the clown</a>
+            <div class="summary">
+              <p>作者描述购买 NAS 后在内网使用深层子域名并仅写入本机 hosts 的场景，却在公网服务器上看到同一主机名的访问。他通过设置通配 DNS 发现该主机名被第三方曝光，来自云主机的 TLS SNI 连接持续出现。追查后发现设备的网页界面会通过 <a href="http://sentry.io" target="_blank" rel="noopener noreferrer">sentry.io</a> 回传堆栈并泄露内网主机名，随后他用防火墙拦截相关域名。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46895972" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <a href="https://blog.comma.ai/datacenter/" target="_blank" rel="noopener noreferrer" class="title-link">Don&#39;t rent the cloud, own instead</a>
+            <div class="summary">
+              <p>文章以 <a href="http://comma.ai" target="_blank" rel="noopener noreferrer">comma.ai</a> 自建数据中心为例，主张别把算力长期租在云上：云上迁入易迁出难、成本易失控，也会削弱工程师优化代码的激励；自建更可控且长期成本更低，作者估算其数据中心花费约 500 万美元，而同等云成本可能 2500 万美元以上。文中披露其规模与成本：峰值约 450kW 用电，2025 年电费约 54 万美元，采用外部空气冷却与传感器闭环控温除湿以降低能耗。硬件与软件栈包括 75 台自建 TinyBox Pro（约 600 张 GPU）、约 4PB SSD 存储、多台 100Gbps 交换机与 Infiniband 互联；系统侧使用 Ubuntu+salt、mkv 分布式存储、slurm 调度、PyTorch FSDP 分布式训练、自研实验追踪与 miniray 任务调度来支撑训练与各类计算任务。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46896146" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <a href="https://www.anthropic.com/news/claude-opus-4-6" target="_blank" rel="noopener noreferrer" class="title-link">Claude Opus 4.6</a>
+            <div class="summary">
+              <p>Anthropic 宣布升级其最智能模型 Claude Opus 4.6，重点提升了编程能力、规划与长期代理任务表现，在更大代码库中的可靠性、代码审查与调试自检也更强，并在测试版提供 1M token 长上下文。模型可用于金融分析、研究与办公文档处理等任务，在多项评测中处于领先并在长上下文检索上显著改进。同时官方强调其安全评估表现与前代相当或更好，并介绍了新产品能力如多代理协作、上下文压缩与可控思考强度。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46902223" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <a href="https://openai.com/index/introducing-gpt-5-3-codex/" target="_blank" rel="noopener noreferrer" class="title-link">GPT-5.3-Codex</a>
+            <div class="summary">
+              <p>文章发布 GPT-5.3-Codex：将 GPT-5.2-Codex 的编程能力与 GPT-5.2 的推理/专业知识合并为一体，速度提升约 25%，面向需要研究、工具调用与复杂执行的长周期任务，并可在 Codex 工作过程中与人实时交互、保持上下文。它在 SWE-Bench Pro、Terminal-Bench 2.0、OSWorld 与 GDPval 等基准上达到或刷新业界最好水平，展示更强的代理式编程、前端与计算机使用能力，并覆盖软件全生命周期与一般知识工作。文中还描述用 Codex 加速训练/部署与评估的实践，强调网络安全"高能力"分级及配套防护与 Trusted Access for Cyber 计划；目前随付费 ChatGPT 在 Codex app/CLI/IDE/网页可用，API 访问将尽快开放。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46902638" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <a href="https://www.youtube.com/watch?v=l-kZGrDz7PU" target="_blank" rel="noopener noreferrer" class="title-link">Flock CEO calls Deflock a “terrorist organization” (2025) [video]</a>
+            <div class="summary">
+              <p>这是一段 YouTube 视频，内容为 Flock CEO 在接受 Forbes 采访时将 Deflock 称为“恐怖组织”，并指向了该采访的链接。页面信息显示该视频由 Hex Studios 发布，标注为 2025-11-16，时长约 1 分 32 秒，观看量约 8,702 次。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46903556" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-05.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

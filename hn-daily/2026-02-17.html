@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-17</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.17 周二</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://0byte.io/articles/pytorch_introduction.html" target="_blank" rel="noopener noreferrer" class="title-link">Visual introduction to PyTorch</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章以可视化方式介绍 PyTorch 的核心概念，先解释张量作为机器学习数值载体的含义，并对常见初始化函数的分布与差异进行直观说明。随后用示例展示张量运算、激活函数等基础操作，帮助理解这些工具在建模中的作用。文中重点讲解 autograd 的自动求导思想，结合梯度与梯度下降的直觉解释训练过程。最后给出一个简单神经网络的训练流程示例，覆盖数据预处理、划分与标准化，以及训练循环的基本步骤。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47002231" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://jmail.world/jemini" target="_blank" rel="noopener noreferrer" class="title-link">Show HN: Jemini – Gemini for the Epstein Files</a>
+              <span class="mode-badge mode-fallback">链接补救</span>
+            </div>
+            <div class="summary">
+              <p>页面展示了一个仿邮箱式的交互界面，标题为 Jemini，并以“Hey Jeffrey / 你在这里藏了什么？”作为对话入口。界面提供若干操作引导，如检索航班记录、按主题查找邮件、阅读法庭文件、查询购物记录等，整体更像是一个可对话检索工具的演示页。页面未给出具体内容结果，仅呈现空聊天列表与功能入口。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47031334" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://blog.dmcc.io/journal/2026-bluetooth-privacy-bluehood/" target="_blank" rel="noopener noreferrer" class="title-link">What your Bluetooth devices reveal</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者介绍了 Bluehood 这一 Bluetooth 扫描器项目，旨在展示设备开启蓝牙时会泄露哪些行为与存在模式，并举例说明仅被动监听也能推断日常活动规律。文章指出不少设备无法关闭蓝牙，且隐私友好应用也依赖蓝牙通信，因此形成隐私与可用性之间的张力。项目以 Python 运行，支持被动扫描、设备分类与模式分析，可通过 Docker 部署并用 SQLite 存储数据，强调其目的在于教育与风险认知。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47035560" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://arxiv.org/abs/2602.12670" target="_blank" rel="noopener noreferrer" class="title-link">SkillsBench: Benchmarking how well agent skills work across diverse tasks</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章提出 SkillsBench，用于衡量 Agent Skills 在 11 个领域共 86 个任务中的实际增益，并为每个任务配套精心编排的 Skills 与确定性验证器。评测覆盖无 Skills、编排 Skills 和自生成 Skills 三种条件、7 种代理模型配置与 7308 条轨迹，结果显示编排 Skills 平均通过率提升 16.2 个百分点，但不同领域差异显著且 84 个任务中有 16 个出现负向变化。自生成 Skills 平均无收益，2-3 模块的聚焦 Skills 优于全面文档型说明，小模型在使用 Skills 后可接近大模型的表现。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47040430" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://dolphin-emu.org/blog/2026/02/16/rise-of-the-triforce/" target="_blank" rel="noopener noreferrer" class="title-link">Rise of the Triforce</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章回顾90年代至六代机时代街机行业衰退与家用机崛起，指出世嘉为扭转局面与任天堂、Namco合作推出基于GameCube的街机平台Triforce。文中解释Triforce硬件结构由GameCube主板加AM-Baseboard与AM-Mediaboard组成，并用改版IPL和Segaboot负责启动与加载游戏。同时介绍GD-ROM/DIMM与NAND等存储方案及JVS I/O接口、存档卡机制，说明其如何降低成本并让玩家可跨机台续玩。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47040524" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.bbc.com/news/articles/cx2gn239exlo" target="_blank" rel="noopener noreferrer" class="title-link">Dark web agent spotted bedroom wall clue to rescue girl from abuse</a>
+              
+            </div>
+            <div class="summary">
+              <p>一名美国国土安全调查局的网络调查员追踪暗网中一名被虐待女孩“Lucy”，长期难以定位，直到从照片里发现卧室砖墙与家具细节。调查团队请教砖业专家，确认砖型只在特定地区销售，并结合沙发购买范围将搜索从数万地址缩小到少数目标，最终锁定住所并逮捕施虐者，女孩获救。报道还呈现此类工作对调查员心理健康的长期压力与自我求助过程，以及受害者成年后获得支持并能讲述经历的变化。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47042396" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://blog.tomaszdunia.pl/grapheneos-eng/" target="_blank" rel="noopener noreferrer" class="title-link">GrapheneOS – Break Free from Google and Apple</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者讲述从苹果生态转向尝试 GrapheneOS 的动机，强调其基于 AOSP、移除系统级谷歌服务、通过内核加固与沙箱化提升隐私与安全，并指出目前主要支持 Google Pixel 设备。文中给出 2026 年 2 月的受支持机型清单与硬件选择思路，作者选择 Pixel 9a 作为入门设备并评价续航与性能。同时按步骤概述安装流程与前置准备，包括更新系统、开启 OEM 解锁、通过网页工具解锁引导程序并刷入系统镜像。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47045612" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.arthurcnops.blog/death-of-show-hn/" target="_blank" rel="noopener noreferrer" class="title-link">Is Show HN dead? No, but it&#39;s drowning</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者基于自己近期发布 Show HN 的经历观察到，项目数量暴增但单个项目获得的关注与互动下降，许多作品很快被淹没在噪声中。他结合统计图表指出 Show HN 占比上升、停留在首页的时间缩短、仅 1 分的帖子比例增加，讨论量也持续走低。文章认为 Show HN 并未消亡，而是被“量”的扩张稀释了“质”的可见性，并提出需要思考如何让被忽视的好项目获得更多曝光与交流。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47045804" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.anthropic.com/news/claude-sonnet-4-6" target="_blank" rel="noopener noreferrer" class="title-link">Claude Sonnet 4.6</a>
+              
+            </div>
+            <div class="summary">
+              <p>Claude Sonnet 4.6 被描述为 Sonnet 系列迄今最强，能力全面升级，涵盖编码、计算机使用、长上下文推理与代理规划，并提供 1M token 的测试版上下文窗口。官方称其在代码一致性、指令遵循与复杂办公任务上明显优于 Sonnet 4.5，部分用户甚至更偏好它而不是 Opus 4.5，同时价格保持每百万 token $3/$15。它在 OSWorld 等计算机使用评测上有显著提升，但仍需加强安全与对提示注入的防护。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47050488" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://electrek.co/2026/02/17/tesla-robotaxi-adds-5-more-crashes-austin-month-4x-worse-than-humans/" target="_blank" rel="noopener noreferrer" class="title-link">Tesla &#39;Robotaxi&#39; adds 5 more crashes in Austin in a month – 4x worse than humans</a>
+              
+            </div>
+            <div class="summary">
+              <p>特斯拉在奥斯汀“Robotaxi”项目新增5起事故报告，使自2025年6月上线以来累计事故达14起；这些事故发生于2025年12月至2026年1月，均为Model Y在自动驾驶系统“已验证开启”状态下发生的碰撞或倒车刮碰。更新的NHTSA数据还显示，特斯拉将一份2025年7月事故从“仅财产损失”悄然升级为“轻伤且需住院”，此前未公开披露。按其披露的累计里程估算，当前事故率约每5.7万英里一撞，明显高于其自家车辆安全报告中普通人类驾驶的基准，且事故叙述被其以商业机密全部遮盖，难以独立核验责任与原因。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47051546" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-17.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

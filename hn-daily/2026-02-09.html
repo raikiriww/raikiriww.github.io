@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-09</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.09 周一</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <a href="https://blog.otterstack.com/posts/202512-gbshader/" target="_blank" rel="noopener noreferrer" class="title-link">I put a real-time 3D shader on the Game Boy Color</a>
+            <div class="summary">
+              <p>作者在 Game Boy Color 上实现实时 3D 着色器演示，玩家可控制绕物体旋转的光源，并提供 ROM 与代码。项目先在 Blender 中做外观验证，使用法线贴图与 cryptomatte 流程生成素材，再在主机端还原光照。由于 CPU 无乘法与浮点，计算改用对数空间与查表，把点乘与余弦计算拆成加法与查找，并用单字节编码。渲染每帧处理约 15 个图块、占用约 89% 的帧预算，还通过自修改代码减少指令开销以换取性能。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46935791" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <a href="https://underhillgame.com/" target="_blank" rel="noopener noreferrer" class="title-link">Show HN: I created a Mars colony RPG based on Kim Stanley Robinson’s Mars books</a>
+            <div class="summary">
+              <p>抓取失败，原因是内容过短（content_too_short:381），无法获得可用正文用于总结。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46936237" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <a href="https://sandboxspirit.com/blog/art-of-roads-in-games/" target="_blank" rel="noopener noreferrer" class="title-link">Art of Roads in Games</a>
+            <div class="summary">
+              <p>作者回顾城市建造类游戏里道路系统的演进，指出即便有自由放置与社区模组，路口半径、匝道曲率等仍显得不真实。核心问题在于常用的 Bézier 曲线做道路中线时，偏移后无法保持平行与曲率一致，容易出现内外缘“夹扁”和自相交。文章解释圆弧在偏移与求交上更稳健但曲率恒定、舒适性不足，引出渐变曲率的 clothoid 过于复杂，最终说明作者为何自研更符合工程约束的道路系统并计划继续公开细节。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46938511" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <a href="https://www.blundergoat.com/articles/ai-makes-the-easy-part-easier-and-the-hard-part-harder" target="_blank" rel="noopener noreferrer" class="title-link">AI makes the easy part easier and the hard part harder</a>
+            <div class="summary">
+              <p>文章指出，AI让写代码等“容易部分”更快，但调查、理解上下文、验证假设等“困难部分”反而更难；若直接说“AI帮我做了”，往往意味着没有形成自己的结论。作者举例说明，vibe coding 在原型和低风险场景有用，但在真实工程中可能删改文件、增加排查成本，AI辅助有时会比亲手写更耗时。文中还提醒管理层把一次冲刺当作常态会导致倦怠与质量下滑，责任仍需开发者对每一行代码负责。最后给出正向用法：用AI做调查与排查的“体力活”，由人提供背景并验证结论，才能真正把难的部分变得更容易。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46939593" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <a href="https://harshanu.space/en/tech/ccc-vs-gcc/" target="_blank" rel="noopener noreferrer" class="title-link">Claude’s C Compiler vs. GCC</a>
+            <div class="summary">
+              <p>文章对比了 Claude 的 C 编译器 CCC 与 GCC，说明 CCC 由 Claude Opus 4.6 生成、用 Rust 从零实现并覆盖多架构，同时简要科普编译器、汇编器、链接器分工。实测显示 CCC 能完成 Linux 6.9 内核全部 C 文件编译却在链接阶段因重定位与符号表问题失败，且在 SQLite 基准中产出的二进制更大、编译更慢、运行性能极差。作者指出 CCC 并未真正执行 -O 优化，性能瓶颈主要来自严重寄存器溢出导致的大量栈访问，但在正确性与崩溃测试上仍能通过。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46941603" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <a href="https://alltheviews.world/" target="_blank" rel="noopener noreferrer" class="title-link">Show HN: Algorithmically finding the longest line of sight on Earth</a>
+            <div class="summary">
+              <p>项目使用自研算法 CacheTVS 穷举计算地球上的可视连线，寻找最长视线。结果显示最长视线为兴都库什至 Pik Dankova，长度约 530 公里，并列出若干不同地区的代表性长视线示例。作者还提供交互式地图，可探索约 45 亿条视线数据。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46943568" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <a href="https://www.theverge.com/tech/875309/discord-age-verification-global-roll-out" target="_blank" rel="noopener noreferrer" class="title-link">Discord will require a face scan or ID for full access next month</a>
+            <div class="summary">
+              <p>报道称Discord宣布从下月起在全球推行年龄验证，默认将所有账号设为“青少年体验”，除非证明为成年人。年龄验证可通过视频自拍视频或证件；对多数成年人，Discord会用账号任期、设备与活动数据、社区层级模式进行年龄推断，并强调不使用私信或消息内容。未被验证为成年人将无法进入年龄限制服务器与频道、不能在Stage频道发言，敏感内容会被过滤，陌生好友请求和私信会被提示或分流，相关服务器在验证前会被黑屏遮挡且无法加入新的年龄限制服务器。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46945663" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <a href="https://explainers.blog/posts/why-is-the-sky-blue/" target="_blank" rel="noopener noreferrer" class="title-link">Why is the sky blue?</a>
+            <div class="summary">
+              <p>文章从“颜色由光的波长决定”出发，解释大气中蓝光更易被散射，因而从天空各处进入眼睛，使白天呈现蓝色，并指出散射与频率的四次方成正比。作者进一步说明紫光散射更强但人眼对紫光不敏感，且太阳紫外线本就少又被臭氧吸收，所以天空不呈紫色。文中还解释日出日落红色源于光程变长导致蓝绿光被散射掉，以及云的白色来自大量水滴对各色光的多次反射与散射混合。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46946401" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <a href="https://www.githubstatus.com/incidents/54hndjxft5bx" target="_blank" rel="noopener noreferrer" class="title-link">GitHub is down again</a>
+            <div class="summary">
+              <p>状态页通报当日出现通知投递延迟，部分 GitHub 服务性能受影响并进入调查与缓解流程。延迟从约 50 分钟逐步改善，但期间仍有约 1 小时 20 分钟的高峰延迟，并需要处理积压。事件随后宣告已恢复，通知投递延迟解决，并承诺稍后公布根因分析。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46946827" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <a href="https://github.com/jim11662418/ESP8266_WiFi_Analog_Clock" target="_blank" rel="noopener noreferrer" class="title-link">Converting a $3.88 analog clock from Walmart into a ESP8266-based Wi-Fi clock</a>
+            <div class="summary">
+              <p>该项目用 WEMOS D1 Mini ESP8266 和 Arduino 草图把便宜石英指针钟改造成 Wi‑Fi 校时钟，通过 NTP 获取本地时间，每 15 分钟重连，并自动处理夏令时。程序每 0.1 秒比较指针时间与真实时间，落后时用交替正负脉冲驱动 Lavet 线圈推进秒针，超前则等待追平。由于指针钟无位置反馈，作者用 Microchip 47L04 EERAM 记录并每秒更新时分秒位置，断电后可恢复；首次运行由板载网页让用户校准初始指针位置，并可显示状态页与表盘图形。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46947096" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-09.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-06</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.06 周五</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <a href="https://neosmart.net/blog/recreating-epstein-pdfs-from-raw-encoded-attachments/" target="_blank" rel="noopener noreferrer" class="title-link">Recreating Epstein PDFs from raw encoded attachments</a>
+            <div class="summary">
+              <p>作者指出 DoJ 发布的爱泼斯坦档案存在遮盖与处理失误，却在扫描件中遗漏了以 base64 形式嵌入的二进制附件，因此理论上可据此还原被遮盖的 PDF。为从 OCR 的扫描页中恢复 base64，他尝试手动与脚本提取，并用 tesseract 配合字符白名单，将 PDF 拆成 PNG（用 pdftoppm 避免 imagemagick/ghostscript 的资源问题）来提升识别，但依然难以稳定解码。主要障碍来自扫描质量和 Courier New 字体导致 1 与 l 等字符难以辨识，连 Adobe OCR 与 AWS Textract 也只能略有改善且仍有字符与行长误差。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46890335" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <a href="https://code.claude.com/docs/en/agent-teams" target="_blank" rel="noopener noreferrer" class="title-link">Orchestrate teams of Claude Code sessions</a>
+            <div class="summary">
+              <p>文档介绍 Claude Code 的“agent teams”用于协调多会话并行协作，由主会话负责分配任务、综合结果，队友各自独立上下文可互相直接消息。它适合研究评审、新功能开发、调试等并行探索场景，但会带来更高的 token 成本，顺序任务或同文件修改更适合单会话或 subagents。文档还说明需通过环境变量启用，并提供终端内与分屏两种显示模式、共享任务列表、计划审批与委派模式等管理机制。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46902368" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <a href="https://mitchellh.com/writing/my-ai-adoption-journey" target="_blank" rel="noopener noreferrer" class="title-link">My AI Adoption Journey</a>
+            <div class="summary">
+              <p>作者分享其采用AI工具的历程，认为多数人会经历低效、勉强可用到产生结构性改变的阶段，并提出六步法：先放弃用聊天式界面直接写代码，转向可执行外部操作的代理，再通过复刻自己工作、拆分任务与自检机制建立可靠流程。他实践了日终启动代理、外包高把握任务、关闭通知避免频繁切换等方法，并强调用AGENTS.md与脚本做“harness engineering”，让代理少犯错且能验证产出。目前他追求持续有一个代理在后台运行，但仍坚持谨慎、现实的态度，把人类注意力留给真正想做的高价值工作。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46903558" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <a href="https://www.anthropic.com/engineering/building-c-compiler" target="_blank" rel="noopener noreferrer" class="title-link">We tasked Opus 4.6 using agent teams to build a C Compiler</a>
+            <div class="summary">
+              <p>作者用“agent teams”让多实例 Claude 并行在同一代码库上工作，作为压力测试要求从零写出基于 Rust 的 C 编译器，并能编译 Linux 内核。项目通过持续任务循环与文件锁机制实现并行协作，重点经验是用高质量测试、可读日志与进度文件引导模型自我定位，以及在大任务上用分片与对照编译器来避免多人重复踩同一问题。结果是一个约十万行的编译器，能在多架构上编译 Linux 6.9 和多种大型项目，但仍存在汇编器/链接器不完善、性能与代码质量欠佳等局限。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46903616" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <a href="https://github.com/mdp/linkedin-extension-fingerprinting" target="_blank" rel="noopener noreferrer" class="title-link">LinkedIn checks for 2953 browser extensions</a>
+            <div class="summary">
+              <p>该仓库指出 LinkedIn 在每次页面加载时会静默探测 2,953 个 Chrome 扩展，并整理了这份指纹列表。仓库提供包含扩展名称与商店链接的完整数据文件，以及用于从商店与 Extpose 补全名称的脚本。统计显示约 78% 能在 Chrome Web Store 找到，其余约 22% 需通过 Extpose 回退（多为已下架或不可用扩展），并附有原始 ID 列表与页面指纹脚本说明。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46904361" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <a href="https://www.tigerdata.com/blog/its-2026-just-use-postgres" target="_blank" rel="noopener noreferrer" class="title-link">It&#39;s 2026, Just Use Postgres</a>
+            <div class="summary">
+              <p>文章主张多数团队应直接使用 Postgres，避免为搜索、向量、缓存、文档、队列、时序等场景各上一个专用库而导致的运维、备份、权限、监控和排障成本激增，尤其在 AI 代理需要频繁复制与测试数据时会变得几乎不可协调。作者认为 Postgres 扩展已能覆盖这些能力，如全文检索 BM25、向量检索（pgvector/pgvectorscale）、时序（TimescaleDB）、JSONB 文档、UNLOGGED 缓存、pgmq 队列与 PostGIS，并声称其算法与专用库同级甚至更优。结论是对 99% 公司而言，单一数据库带来更高的一致性与更低复杂度，专用数据库的优势多为边际且伴随额外风险。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46905555" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <a href="https://www.niemanlab.org/2026/02/a-new-bill-in-new-york-would-require-disclaimers-on-ai-generated-news-content/" target="_blank" rel="noopener noreferrer" class="title-link">A new bill in New York would require disclaimers on AI-generated news content</a>
+            <div class="summary">
+              <p>纽约州议会提出《NY FAIR News Act》，要求新闻机构对“主要由生成式AI创作”的内容加免责声明，并规定发布前必须由具有编辑控制权的人类员工审核。法案要求向编辑部员工披露AI使用情况，并建立保护机密材料与来源的防护措施，范围涵盖文章、音频、图像等。立法理由包括担忧AI内容虚假或误导、以及对原创的“抄袭”风险，且获得多家新闻业工会支持，并写入限制因AI采用而裁员或降薪等劳动保护。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46910963" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <a href="https://www.nytimes.com/2026/02/06/business/tiktok-addictive-design-europe.html" target="_blank" rel="noopener noreferrer" class="title-link">TikTok&#39;s &#39;addictive design&#39; found to be illegal in Europe</a>
+            <div class="summary">
+              <p>欧盟监管机构发布初步结论，认为 TikTok 的无限滚动、自动播放和推荐算法构成“成瘾式设计”，对未成年人等用户身心健康有潜在危害，违反欧盟在线安全规则。监管方称这是全球首次对社交媒体成瘾性适用法律标准，要求其改变核心设计并设置使用时长限制，否则可能面临最高相当于全球营收 6% 的罚款。TikTok 表示将通过一切手段挑战该结论，并否认其对平台的描述。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46911869" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <a href="https://kirkville.com/i-now-assume-that-all-ads-on-apple-news-are-scams/" target="_blank" rel="noopener noreferrer" class="title-link">I now assume that all ads on Apple news are scams</a>
+            <div class="summary">
+              <p>作者指出 Apple 与 Taboola 合作后，Apple News 里的广告不仅重复，还大量呈现出骗局特征。文章列举多条广告，称其图像疑似由 AI 生成，且所指向域名注册时间很近，难以建立信任。作者还提到“清仓倒闭”类广告长期存在，BBB 也发出过提醒，并质疑 Apple 与 Taboola 对此缺乏重视。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46911901" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <a href="https://waymo.com/blog/2026/02/the-waymo-world-model-a-new-frontier-for-autonomous-driving-simulation" target="_blank" rel="noopener noreferrer" class="title-link">The Waymo World Model</a>
+            <div class="summary">
+              <p>文章介绍 Waymo World Model，用于自动驾驶仿真，是 Waymo Driver 安全体系的关键组成，可在大规模虚拟世界中生成高真实度多传感器场景。模型基于 Google DeepMind 的 Genie 3 并适配驾驶领域，能生成包含相机与 lidar 的 3D 环境，覆盖极端天气、罕见物体与安全关键事件等长尾场景。它提供强可控性，可通过驾驶输入、场景布局与语言指令调节仿真，并能把行车或普通视频转换为多模态仿真，同时通过更高效的推理版本支持更长时序模拟。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46914785" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-06.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>
