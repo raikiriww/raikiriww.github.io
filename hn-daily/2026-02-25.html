@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-25</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.25 周三</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://wordglyph.xyz/one-piece-at-a-time" target="_blank" rel="noopener noreferrer" class="title-link">I pitched a roller coaster to Disneyland at age 10 in 1978</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者回忆1978年10岁时在迪士尼乐园乘坐太空山后，萌生设计倒转过山车的想法，并以“四环”的设想画蓝图、做模型。他为制作环形轨道反复实验热塑塑料，最终完成模型并寄信给迪士尼，之后收到WED Enterprises的回信肯定了创意。这份早期认可鼓励他持续发明与创作，后来尝试改造魔方并投递玩具公司，虽屡遭拒绝但保持韧性，并将发明精神延续到表演事业。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47136604" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.apple.com/newsroom/2026/02/apple-accelerates-us-manufacturing-with-mac-mini-production/" target="_blank" rel="noopener noreferrer" class="title-link">Mac mini will be made at a new facility in Houston</a>
+              
+            </div>
+            <div class="summary">
+              <p>苹果宣布在休斯敦扩大工厂运营，Mac mini 将首次在美国生产，并且相关生产将在今年晚些时候启动。公司还将在该工厂扩大先进 AI 服务器制造，并在新的高级制造中心提供实操培训，计划带来数千个岗位。文章同时强调其在美国供应链上的投入，包括大规模采购本土芯片、支持晶圆与封装测试设施建设，以及在底特律的制造学院为中小制造商提供培训。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47143152" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://pi.dev/" target="_blank" rel="noopener noreferrer" class="title-link">Pi – A minimal terminal coding harness</a>
+              
+            </div>
+            <div class="summary">
+              <p>这是一个终端形态的极简编码工具，强调把工作流适配到自己手上，可用 TypeScript 扩展、skills、提示词模板与主题进行扩展，并通过 npm 或 git 打包分发为 pi 包。它提供交互、print/JSON、RPC、SDK 等模式，支持大量模型与提供商，能用 API key 或 OAuth 鉴权，并允许会话中切换模型与自定义 providers。会话以树结构存储并可分享，配合 <a href="http://AGENTS.md" target="_blank" rel="noopener noreferrer">AGENTS.md</a>、<a href="http://SYSTEM.md" target="_blank" rel="noopener noreferrer">SYSTEM.md</a>、自动压缩、动态上下文与扩展机制进行上下文工程，同时明确不内置 sub-agents、plan mode、权限弹窗等功能，主张用扩展或外部工具自行实现。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47143754" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.thebignewsletter.com/p/amazon-busted-for-widespread-price" target="_blank" rel="noopener noreferrer" class="title-link">Amazon accused of widespread scheme to inflate prices across the economy</a>
+              
+            </div>
+            <div class="summary">
+              <p>加州总检察长罗布·邦塔申请法院立即禁止 Amazon 被指控的广泛抬价计划，称其利用平台规模和对卖家的议价能力，要求卖家提高在其他平台的价格或撤下低价商品，从而推高全社会价格水平。文章解释其机制：Amazon 通过 Prime、Buy Box 和 FBA 等规则，将卖家获取流量与使用其物流服务绑定，并用“不得外部更低价”的约束压制竞争，导致跨平台价格上升。作者还提到相关反垄断诉讼和临时禁令请求的意义，认为若法院支持，将迫使 Amazon 在审理前改变行为并加速案件推进。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47145907" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://time.com/7380854/exclusive-anthropic-drops-flagship-safety-pledge/" target="_blank" rel="noopener noreferrer" class="title-link">Anthropic Drops Flagship Safety Pledge</a>
+              
+            </div>
+            <div class="summary">
+              <p>报道称 Anthropic 将其 Responsible Scaling Policy（RSP）的核心承诺移除，不再坚持“在无法预先保证风险缓解到位时就不训练模型”的硬性规则，并强调这次调整是对竞争与现实环境的务实回应。新版政策提出更透明的安全披露、与竞争对手同等或更高的安全投入，并在被认为处于领先且灾难性风险显著时选择延迟开发，但整体约束力较旧版更弱。文章还提到公司在商业与技术上快速增长，内部与外部专家对“安全评估跟不上能力提升”的担忧依旧存在。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47145963" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://code.claude.com/docs/en/remote-control" target="_blank" rel="noopener noreferrer" class="title-link">Claude Code Remote Control</a>
+              
+            </div>
+            <div class="summary">
+              <p>该文档介绍 Claude Code 的 Remote Control：把本机正在运行的会话连接到手机、平板或浏览器，远程继续同一对话，且会话始终在本机运行，能使用本地文件、MCP 服务器和工具。它强调多端同步、断网或休眠后的自动重连，并说明与网页端 Claude Code 的区别在于执行环境在本机而非云端。文档给出使用前提（订阅与登录、工作区信任）、启动与连接方式（<code>claude remote-control</code> 或 <code>/remote-control</code>、会话 URL 与二维码），以及限制（单会话、终端需保持、长时间断网会结束）。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47148454" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://therecord.media/denmark-digital-agency-microsoft-digital-independence" target="_blank" rel="noopener noreferrer" class="title-link">Danish government agency to ditch Microsoft software (2025)</a>
+              
+            </div>
+            <div class="summary">
+              <p>丹麦政府数字事务部门的技术现代化机构计划以开源软件替换 Microsoft 产品，以降低对美国科技公司的依赖并推动数字主权。部长表示将于下月让过半员工从 Microsoft Office 迁移到 LibreOffice，若进展顺利将在秋季实现全员迁移，并力争年内完成。该决定也与 Windows 10 即将失去支持带来的维护成本、以及此前哥本哈根和奥胡斯两大市因成本与市场垄断担忧而弃用 Microsoft 的举动相呼应。同时欧洲多地正推进类似转向，例如德国石勒苏益格—荷尔斯泰因州改用 LibreOffice 与 Open-Xchange，并计划未来迁移到 Linux。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47149701" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.0xsid.com/blog/online-tld-is-pain" target="_blank" rel="noopener noreferrer" class="title-link">Never buy a .online domain</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者打破只买 .com 的习惯，因促销入手 .online 并快速上线，但站点突然被浏览器标记为不安全且域名进入注册局的 serverHold 状态，DNS 无法解析。为解除 Google Safe Browsing 的标记又必须先在 Google Search Console 验证域名，结果陷入“域名不解析就无法验证、无法验证就无法解封”的死循环，并因此批评 Radix 与 Google 的流程缺乏通知与容错。文中反思自己选了非常规 TLD、未尽早添加 Search Console、也未做可用性监控，并记录后来黑名单解除与站点恢复上线的更新。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47151233" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.marginalia.nu/weird-ai-crap/hn/" target="_blank" rel="noopener noreferrer" class="title-link">New accounts on HN more likely to use em-dashes</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者感觉 HN 近期被大量疑似机器人账号淹没，评论内容常显得无意义或跑题，于是抓取 /newcomments 与 /noobcomments 进行对比分析。结果显示，新注册账号的评论使用破折号、箭头等符号的比例约高出近 10 倍（17.47% 对 1.83%），并更常提及 AI 与 LLM（18.67% 对 11.8%）。样本量约各 700 条，差异显著，作者认为难以用正常用户习惯解释这种符号使用偏好。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47152085" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.reuters.com/sustainability/boards-policy-regulation/us-orders-diplomats-fight-data-sovereignty-initiatives-2026-02-25/" target="_blank" rel="noopener noreferrer" class="title-link">US orders diplomats to fight data sovereignty initiatives</a>
+              <span class="mode-badge mode-fallback">链接补救</span>
+            </div>
+            <div class="summary">
+              <p>尝试访问原文页面但仍被拦截，未能读取正文内容。当前可见信息不足以形成可靠摘要，因此不对报道细节作推断。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47152252" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-25.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

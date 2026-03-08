@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-28</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.28 周六</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.pcgamer.com/software/operating-systems/a-new-california-law-says-all-operating-systems-including-linux-need-to-have-some-form-of-age-verification-at-account-setup/" target="_blank" rel="noopener noreferrer" class="title-link">A new California law says all operating systems need to have age verification</a>
+              
+            </div>
+            <div class="summary">
+              <p>加州通过的 Assembly Bill No. 1043 要求操作系统在账户设置时提供可访问的界面，让账户持有人填写出生日期或年龄，用于向应用商店应用传递用户年龄段信号。法律将于 2027 年 1 月 1 日生效，不要求人脸等高强度验证，但要求在建号阶段收集年龄信息并可按需向开发者提供分段数据。文章指出这对 Windows 影响不大，但在 Linux 社区引发强烈反对，并被认为在加州几乎难以执行。作者还提到英国等地的强制年龄验证趋势带来隐私争议。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47181208" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://techcrunch.com/2026/02/27/openai-raises-110b-in-one-of-the-largest-private-funding-rounds-in-history/" target="_blank" rel="noopener noreferrer" class="title-link">OpenAI raises $110B on $730B pre-money valuation</a>
+              
+            </div>
+            <div class="summary">
+              <p>OpenAI 宣布完成 1100 亿美元私募融资，估值为 7300 亿美元（轮次仍开放，预计还有投资者加入）。资金来源包括亚马逊 500 亿美元、英伟达和软银各 300 亿美元，并可能包含以服务形式计价的投入。公司将与亚马逊、英伟达展开更深的基础设施合作，在 Amazon Bedrock 上建设“有状态运行时环境”，并扩大既有算力合作与自研模型计划。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47181211" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://notdivided.org/" target="_blank" rel="noopener noreferrer" class="title-link">We Will Not Be Divided</a>
+              
+            </div>
+            <div class="summary">
+              <p>该页面是一封公开信，邀请 Google 与 OpenAI 的现任和前员工联署，明确拒绝国防部门将 AI 用于国内大规模监控及无人类监督的自主杀伤。页面详细说明可匿名或实名签署、签名核验方式与去重机制，并解释匿名数据在验证后 24 小时内删除的流程。还公开披露过的核验失误与改进，并介绍站点技术栈、托管与安全措施，强调无跟踪脚本。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47188473" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://glashrvatske.hrt.hr/en/domestic/croatia-declared-free-of-landmines-after-31-years-12593533" target="_blank" rel="noopener noreferrer" class="title-link">Croatia declared free of landmines after 31 years</a>
+              
+            </div>
+            <div class="summary">
+              <p>克罗地亚内政部长宣布全国已正式清除地雷，距离本土战争结束已过去31年，所有已知雷区均已排除。这项持续数十年的排雷行动代价沉重，共有208人遇难，其中包括41名排雷人员。官方估算清除成本约12亿欧元，累计移除了约10.7万枚地雷和40.7万件未爆弹药，并指出无雷环境将提升家庭安全、农村发展、耕地利用与旅游业。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47189535" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://twitter.com/sama/status/2027578652477821175" target="_blank" rel="noopener noreferrer" class="title-link">OpenAI agrees with Dept. of War to deploy models in their classified network</a>
+              <span class="mode-badge mode-fallback">链接补救</span>
+            </div>
+            <div class="summary">
+              <p>尝试访问原文时持续被平台验证页拦截，未能获取到具体正文内容，因此无法提供有效摘要。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47189650" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://help.openai.com/en/articles/7232927-how-do-i-cancel-my-chatgpt-subscription" target="_blank" rel="noopener noreferrer" class="title-link">How do I cancel my ChatGPT subscription?</a>
+              
+            </div>
+            <div class="summary">
+              <p>本文说明仅适用于自助订阅，不涵盖企业或教育计划，并分别给出在网页端、iOS 与 Android 端取消订阅的操作路径。还提供 ChatGPT Business 取消订阅流程与账期规则，强调需在下次扣费前至少 24 小时取消且费用不退。若无法访问注册邮箱，可联系支持以核验信息代为取消，或通过隐私请求永久删除账号以自动取消订阅。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47190997" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.cnn.com/2026/02/28/middleeast/israel-attack-iran-intl-hnk" target="_blank" rel="noopener noreferrer" class="title-link">The United States and Israel have launched a major attack on Iran</a>
+              
+            </div>
+            <div class="summary">
+              <p>美国与以色列对伊朗发动联合打击，称目标是摧毁其军事与导弹能力并遏制核项目，特朗普还公开表达希望促成伊朗政权更迭。报道援引美以消息称伊朗最高领袖哈梅内伊在袭击中身亡，伊方否认部分说法，但多地遭袭并出现大量伤亡。伊朗随后对中东多国及以色列实施大规模报复性打击，海湾地区多地爆炸、机场与民用设施受损，霍尔木兹海峡航运也受到干扰。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47191232" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://help.openai.com/en/articles/6378407-how-to-delete-your-account" target="_blank" rel="noopener noreferrer" class="title-link">OpenAI – How to delete your account</a>
+              
+            </div>
+            <div class="summary">
+              <p>该页面说明删除 OpenAI 账号可通过隐私门户提交请求，或在 ChatGPT 网页端设置中自助删除，并强调仅在最近 10 分钟内登录过才能直接操作。删除账号会自动取消订阅，聊天记录被删除后在系统内通常会在 30 天内硬删除且不可恢复，归档仅隐藏不删除。文中还解释账号删除后 30 天可用同邮箱重新注册、手机号码验证次数限制，以及已删除账号无法重新激活等常见问题。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47193478" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://garymarcus.substack.com/p/the-whole-thing-was-scam" target="_blank" rel="noopener noreferrer" class="title-link">The whole thing was a scam</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者认为对外公开的支持只是表演，实际背后早已另行签下类似交易，使得某公司从一开始就没有机会。政府以供应链风险为由将其排除，同时却偏向另一家在条款上相近且政治捐赠更多的公司，作者据此指称不公与腐败气息。作者承认对相关人物和公司有批评立场，但强调应给予同等条件的公平竞争，否则市场被关系与捐赠所左右。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47197505" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-28.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-04</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.04 周三</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <a href="https://github.com/puemos/craftplan" target="_blank" rel="noopener noreferrer" class="title-link">Show HN: Craftplan – I built my wife a production management tool for her bakery</a>
+            <div class="summary">
+              <p>Craftplan 是面向小规模手工制造/工艺型微型企业的开源、自托管 ERP/生产管理平台，把目录与BOM、库存、订单/发票、生产计划、采购和CRM等核心工具整合在一处。功能还包括批次生产与自动物料消耗、成本回溯、批次追踪、过敏原与营养信息、需求预测/补货、CSV导入导出、邮件与日历订阅、API（JSON:API/GraphQL）、角色权限与全局搜索等。技术栈为 Elixir、Ash Framework、Phoenix LiveView、PostgreSQL、Tailwind CSS，可用 Docker Compose 自建部署，并提供开发与自托管文档。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46847690" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <a href="https://www.simonberens.com/p/lessons-learned-shipping-500-units" target="_blank" rel="noopener noreferrer" class="title-link">Lessons learned shipping 500 units of my first hardware product</a>
+            <div class="summary">
+              <p>作者作为软件工程师转向硬件创业，在众筹后生产首批 500 盏超高亮度灯，经历了亮度指标偏差、散热/电子设计反复、模具与零件生产沟通失误等问题。随后又遭遇关税大幅上涨、装配与零件公差导致的旋钮刮擦、出货后线缆长度不一致等质量与客服挑战，只能在短时间内返工并补发。文章总结硬件项目周期长、容错低、资金与库存管理更严格，需要更细的计划与供应商现场沟通，同时强调充分测试与明确规格的重要性，以及预售验证需求、为失误预留成本等经营经验。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46848876" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <a href="https://www.bbc.com/news/articles/ce3ex92557jo" target="_blank" rel="noopener noreferrer" class="title-link">X offices raided in France as UK opens fresh investigation into Grok</a>
+            <div class="summary">
+              <p>法国巴黎检察机关的网络犯罪部门突击搜查了马斯克旗下 X 的法国办公室，调查涉嫌违法数据提取、与儿童性虐待材料（CSAM）相关的共犯等问题，并传唤马斯克及前 CEO Linda Yaccarino 出席 4 月听证。X 和马斯克指责这是政治攻击并否认违法，检方称将评估多项潜在罪名，包括性深度伪造侵权与有组织欺诈性数据提取。与此同时，英国信息专员办公室（ICO）宣布与 Ofcom 联合调查 Grok 在处理个人数据及生成性化图像方面的风险，Ofcom 仍在紧急跟进但承认对聊天机器人执法权限有限。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46868998" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <a href="https://agentskills.io/home" target="_blank" rel="noopener noreferrer" class="title-link">Agent Skills</a>
+            <div class="summary">
+              <p>Agent Skills 是一种开放格式，把说明、脚本与资源打包成可发现的技能文件夹，让智能体按需加载程序化与组织上下文，从而更准确高效地完成真实任务。它强调可复用的领域知识、新能力、可审计的多步工作流与跨产品互操作，并支持技能作者一次构建、多端部署。该标准最初由 Anthropic 开发并开源，已有多种工具支持，生态仍在开放贡献。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46871173" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <a href="https://blog.adafruit.com/2026/02/03/new-york-wants-to-ctrlaltdelete-your-3d-printer/" target="_blank" rel="noopener noreferrer" class="title-link">New York’s budget bill would require “blocking technology” on all 3D printers</a>
+            <div class="summary">
+              <p>文章称纽约州2026–2027年度预算案S.9005/A.10005（Part C）拟要求在纽约销售或交付的所有3D打印机内置“阻断技术”，对每个打印文件运行“枪械蓝图检测算法”并在被标记时拒绝打印，定义范围还覆盖FDM、光固化打印机以及CNC等可进行减材制造的设备，并要求线下面对面销售，违规将面临最高1万美元民事罚款。作者认为几何识别无法可靠区分枪械与大量合法形状，且该要求对开源固件、离线设备与自定义流程不可行，等同于对通用制造工具的内建监控。文中提出修改方向：将监管聚焦于明知违法制造而非工具本身，取消强制文件扫描，豁免开源/离线工具链，限制卖方和教育机构责任，并为工作组设定更具代表性的席位与独立可行性评估。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46872540" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <a href="https://deno.com/blog/introducing-deno-sandbox" target="_blank" rel="noopener noreferrer" class="title-link">Deno Sandbox</a>
+            <div class="summary">
+              <p>文章介绍 Deno Sandbox：面向 LLM 生成或用户提交的非可信代码，提供轻量 Linux microVM 隔离，并在 VM 边界控制网络外联与密钥外泄。密钥不进入环境变量，仅在访问授权域名时由出站代理注入；同时可用 allowNet 白名单限制可访问主机，并通过 JS/Python SDK 在 1 秒内启动沙箱，支持 SSH/HTTP/VS Code 交互。沙箱可一键 deploy 直达 Deno Deploy，无需重建；提供卷与快照实现持久化与预装环境，定位于安全执行与快速上线的场景。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46874097" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <a href="https://civai.org/blog/space-data-centers" target="_blank" rel="noopener noreferrer" class="title-link">Data centers in space makes no sense</a>
+            <div class="summary">
+              <p>文章以SpaceX收购xAI并计划将数据中心送入太空为引子，指出Google与多家初创公司也在追逐这一概念，并提到研究设想当发射成本降至约200美元/公斤（可能在2035年）时才可能与地面数据中心竞争。作者认为即便辐射、散热、延迟与发射成本问题被解决，规模化训练AI需要数十万到百万级GPU意味着要发射海量卫星，既远超现有在轨数量又会显著增加Kessler综合症风险，而且在轨卫星难以像地面机房那样快速升级。更关键的是，太空机房即便在未来某年与当时地面成本打平，也必须长期与持续降本的地面能源与硬件竞争，因此从根本上缺乏经济性，并被视为IPO造势与融资需求驱动的投机叙事。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46876105" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <a href="https://www.jernesto.com/articles/thinking_hard" target="_blank" rel="noopener noreferrer" class="title-link">I miss thinking hard</a>
+            <div class="summary">
+              <p>作者回顾自己曾把‘长时间艰难思考’当作核心能力，并在物理学习与工程实践中获得深度满足。他将自己拆成偏好效率与产出的‘Builder’与渴望长期心智挣扎的‘Thinker’，认为 AI/‘vibe coding’让前者被极大满足，却让后者长期挨饿，真正长时思考的机会显著减少。尽管承认 AI 产出往往只是‘够用’，他仍难以抗拒务实与速度，最终停在不知如何同时满足两者、对未来是否还能兼得的迷惘之中。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46881264" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <a href="https://www.404media.co/fbi-couldnt-get-into-wapo-reporters-iphone-because-it-had-lockdown-mode-enabled/" target="_blank" rel="noopener noreferrer" class="title-link">FBI couldn&#39;t get into WaPo reporter&#39;s iPhone because Lockdown Mode enabled</a>
+            <div class="summary">
+              <p>法院记录显示，FBI在针对机密信息泄露的调查中于1月搜查《华盛顿邮报》记者Hannah Natanson住所并扣押iPhone，但因启用Lockdown Mode无法进入设备。记录还列出FBI最终能够访问的数据与无法访问的设备，提供了Lockdown Mode在阻止第三方解锁方面可能有效的罕见线索。文章强调Lockdown Mode常被忽视但能广泛提升iPhone安全性，同时其效果可能会随FBI后续技术尝试而变化。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46886237" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <a href="https://mistral.ai/news/voxtral-transcribe-2" target="_blank" rel="noopener noreferrer" class="title-link">Voxtral Transcribe 2</a>
+            <div class="summary">
+              <p>Mistral AI 发布 Voxtral Transcribe 2，包含批处理的 Voxtral Mini Transcribe V2 与面向实时场景的 Voxtral Realtime，主打高质量转写、说话人分离与超低延迟，实时版支持可配置到亚 200ms 的流式架构。模型支持 13 种语言，提供词级时间戳与上下文偏置，强调在 FLEURS 等基准上的低错误率与成本优势；Realtime 权重以 Apache 2.0 开源并可在边缘部署。同步上线 Mistral Studio 音频试玩场，Mini V2 API 价格为 $0.003/分钟，Realtime 为 $0.006/分钟。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46886735" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-04.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

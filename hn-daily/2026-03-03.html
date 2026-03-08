@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-03-03</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.03.03 周二</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.apple.com/newsroom/2026/03/apple-introduces-the-new-ipad-air-powered-by-m4/" target="_blank" rel="noopener noreferrer" class="title-link">New iPad Air, powered by M4</a>
+              
+            </div>
+            <div class="summary">
+              <p>苹果发布搭载 M4 的新款 iPad Air，统一内存提升到 12GB、带宽 120GB/s，16 核神经引擎更快，强调本地 AI 任务与日常生产力的提升。新机支持 Wi‑Fi 7，并引入 N1 无线芯片与 C1X 蜂窝基带以改进连接与能效，提供 11 英寸与 13 英寸两种尺寸和多种配色。iPadOS 26 带来新的窗口系统、菜单栏与文件管理改进，同时支持 Apple Pencil Pro 与新款 Magic Keyboard。价格维持 11 英寸 599 美元、13 英寸 799 美元起，3 月 4 日开启预订，3 月 11 日起发售。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47218175" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.cbc.ca/news/canada/british-columbia/b-c-adopting-year-round-daylight-time-9.7111657" target="_blank" rel="noopener noreferrer" class="title-link">British Columbia is permanently adopting daylight time</a>
+              
+            </div>
+            <div class="summary">
+              <p>不列颠哥伦比亚省宣布将永久采用夏令时，3月8日将成为大多数居民最后一次调整时钟的日期，省长表示时间变更会带来睡眠受损、交通事故等问题。新时区将被称为“Pacific time”，自2026年11月1日起原本应回拨的时钟将不再回拨，但省内部分沿用山地时间的社区不受影响。省内2019年公众咨询显示多数人支持全年夏令时，但也有企业与机场担忧与邻近美国州不同步会增加运营与出行混乱。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47223620" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.ntik.me/posts/voice-agent" target="_blank" rel="noopener noreferrer" class="title-link">Show HN: I built a sub-500ms latency voice agent from scratch</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者为企业原型项目反思现成语音平台的抽象，决定自建语音代理编排层，并用约一天与约100美元API费用做出端到端约400ms延迟的系统，性能较Vapi同类配置更快。文章强调语音难点在回合切换与打断控制，需在用户说话与聆听两态间快速判定并同步取消/生成，以避免抢话或空白。他从VAD+预录音基线过渡到Deepgram Flux转写与回合检测，再将LLM与TTS流式串联并保持连接预热，结合Twilio传输与地域部署优化，最终把延迟从本地约1.6s降到EU部署约0.79s。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47224295" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.svd.se/a/K8nrV4/metas-ai-smart-glasses-and-data-privacy-concerns-workers-say-we-see-everything" target="_blank" rel="noopener noreferrer" class="title-link">Meta’s AI smart glasses and data privacy concerns</a>
+              
+            </div>
+            <div class="summary">
+              <p>报道聚焦 Meta 的 AI 智能眼镜在隐私上的现实落差：幕后标注工人称他们会接触到用户的极其私密画面与对话，包含裸露、性生活、银行卡等内容，且劳动者感到不适但无法质疑。调查显示这些眼镜为实现识别与问答功能需要将语音、图像等数据送往 Meta 基础设施处理，离线无法工作，门店对“数据不共享”的说法与实际网络传输不一致。条款与专家观点指出用户对数据被人工或自动审查、保存期限与用途缺乏清晰知情，同意边界模糊，在欧洲还涉及 GDPR 透明度与合法性问题。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47225130" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://futurism.com/artificial-intelligence/ars-technica-fires-reporter-ai-quotes" target="_blank" rel="noopener noreferrer" class="title-link">Ars Technica fires reporter after AI controversy involving fabricated quotes</a>
+              
+            </div>
+            <div class="summary">
+              <p>Ars Technica因一篇含有AI伪造引语的报道引发争议后，已解雇高级AI记者Benj Edwards，媒体称该文已被撤稿。编辑部说明该报道在引用真实人物Scott Shambaugh时出现由AI工具生成的虚假引语，主编称这是严重的编辑标准失误。Edwards在社媒承认在生病时使用实验性Claude Code工具与ChatGPT辅助整理引用，导致误把改写内容当作原话，并强调文章由人类撰写、同事未参与该错误。Ars表示已完成内部审查，将发布对外指南说明AI使用边界，同时公司未评论具体人事决定。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47226608" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://editor.p5js.org/isohedral/full/vJa5RiZWs" target="_blank" rel="noopener noreferrer" class="title-link">The Xkcd thing, now interactive</a>
+              <span class="mode-badge mode-fallback">链接补救</span>
+            </div>
+            <div class="summary">
+              <p>页面为 p5.js Web Editor 的交互作品展示，正文内容无法在当前抓取中完整读取，未能提取到可总结的文本信息。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47230704" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www-cs-faculty.stanford.edu/~knuth/papers/claude-cycles.pdf" target="_blank" rel="noopener noreferrer" class="title-link">Claude&#39;s Cycles [pdf]</a>
+              <span class="mode-badge mode-fallback">链接补救</span>
+            </div>
+            <div class="summary">
+              <p>文章介绍了一个关于有向图的构造问题：对由三维模 m 坐标定义的有向图，寻找将所有弧分解为三个哈密顿回路的通用方法。作者叙述了 Claude Opus 在多轮探索中从朴素搜索、二维与三维“蛇形”模式到纤维分解的尝试，并最终提出基于坐标条件切换方向的具体构造程序。该构造在奇数 m 上通过大量测试（到 101）得到完美分解，并给出了证明思路，说明首个回路长度为 m^3 且覆盖所有三元组。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47230710" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://twitter.com/Gavriel_Cohen/status/2028821432759717930" target="_blank" rel="noopener noreferrer" class="title-link">I&#39;m losing the SEO battle for my own open source project</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者称其开源项目 NanoClaw 已在 GitHub 获得 1.8 万星并被多家媒体报道，但搜索时一个冒充网站却排在官方站点前面，真实官网长期不见踪影。作者说明自己从未建立该冒充站点，后来补建官网并做了结构化数据、Search Console 提交、翻译与多渠道链接等优化，仍无法让 Google 识别权威来源。作者强调这不仅是 SEO 竞争，更是安全风险，冒充站点可能投放误导或恶意内容，且错误曝光会在短期内持续扩大。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47232158" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.apple.com/newsroom/2026/03/apple-introduces-macbook-pro-with-all-new-m5-pro-and-m5-max/" target="_blank" rel="noopener noreferrer" class="title-link">MacBook Pro with new M5 Pro and M5 Max</a>
+              
+            </div>
+            <div class="summary">
+              <p>苹果发布 14/16 英寸 MacBook Pro，搭载全新 M5 Pro 与 M5 Max，强调 CPU/GPU 与每核心 Neural Accelerator 带来的本地 AI 提升，号称相较上一代与 M1 系列有显著性能增幅。新品配备更快的 SSD、起步 1TB/2TB 存储、Wi‑Fi 7 与 Bluetooth 6、最高 24 小时续航、Thunderbolt 5、12MP Center Stage 摄像头和 Liquid Retina XDR 屏。官方称 2026 年 3 月 4 日起开放预购，3 月 11 日开始发售，并给出各尺寸与配置的起售价区间。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47232453" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://neilzone.co.uk/2026/03/im-struggling-to-think-of-any-online-services-for-which-id-be-willing-to-verify-my-identity-or-age/" target="_blank" rel="noopener noreferrer" class="title-link">I&#39;m reluctant to verify my identity or age for any online services</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者认为各国关于身份与年龄验证的讨论缺乏清晰问题定义与社会层面的权衡，多以技术“速胜”方案推进。作者自问哪些在线服务愿意进行身份或年龄验证，结论是几乎没有，并列举了 RSS、视频、论坛、HN、GitLab、维基等使用场景，表示多数情况下宁可放弃或改用自托管替代。作者担心相关限制会影响他人网站的访问量与创作动力，但自己更看重隐私与避免被审查；只有如 Teams、Zoom 这类与客户协作相关的服务才可能被迫权衡。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47232768" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-03-03.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

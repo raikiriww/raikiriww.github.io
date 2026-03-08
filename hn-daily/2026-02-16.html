@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-16</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.16 周一</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://github.com/NationalSecurityAgency/ghidra" target="_blank" rel="noopener noreferrer" class="title-link">Ghidra by NSA</a>
+              
+            </div>
+            <div class="summary">
+              <p>Ghidra 是由美国国家安全局研究部门创建并维护的软件逆向工程框架，提供反汇编、反编译、图形分析与脚本化等高阶分析能力，覆盖多种平台、处理器指令集与可执行格式。它既支持交互式分析也支持自动化流程，并允许用户用 Java 或 Python 编写扩展与脚本以适配复杂研究任务。文中还提示存在已知安全漏洞，建议在使用前查看安全公告，并给出安装与构建所需的 JDK、Gradle、Python 等关键依赖。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47011548" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.videogameschronicle.com/news/hideki-sato-designer-of-segas-consoles-dies-age-75/" target="_blank" rel="noopener noreferrer" class="title-link">Hideki Sato, designer of all Sega&#39;s consoles, has died</a>
+              
+            </div>
+            <div class="summary">
+              <p>Hideki Sato 去世，曾任世嘉社长并长期主导公司硬件研发，报道提到其逝世消息由日媒传出且世嘉发表声明致哀。文章回顾他带队打造多代主机与街机硬件，包括 SG-1000、SC-3000、Master System、Mega Drive/Genesis、Saturn 和 Dreamcast，并强调其对行业影响。文中还引用他对主机研发理念的回忆，提到主机技术选择与市场宣传的权衡。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47024907" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://github.com/TechPaula/LT6502" target="_blank" rel="noopener noreferrer" class="title-link">LT6502: A 6502-based homebrew laptop</a>
+              
+            </div>
+            <div class="summary">
+              <p>该项目展示一台基于 65C02 的自制笔记本电脑，给出核心规格如 8MHz 处理器、约 46KB RAM、BASIC 固化在 ROM、VIA 与串口、9 英寸显示屏、内置键盘、CF 存储与电池供电等。页面记录了从电路板到机壳装配的时间线进展，并提到显示屏方案与键盘扫描等在研问题。还提供了较稳定的内存映射与外设地址分配，以及为 EhBASIC 增加的一系列图形、文件与控制命令。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47025399" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://modern-css.com/" target="_blank" rel="noopener noreferrer" class="title-link">Modern CSS Code Snippets: Stop writing CSS like it&#39;s 2015</a>
+              
+            </div>
+            <div class="summary">
+              <p>该页面汇集大量现代 CSS 代码片段，将传统做法与原生新特性并列对照，覆盖颜色、布局、交互、动效与表单等场景。内容通过“旧写法 vs 现代写法”的方式，强调减少 JavaScript 依赖、降低样式黑魔法、利用浏览器新能力提升可维护性与一致性。示例包含如 oklch 颜色、容器查询、视图过渡、弹出层、滚动捕获、表单校验等新特性，便于快速替换旧方案。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47025851" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.fide.com/magnus-carlsen-wins-2026-fide-freestyle-world-championship/" target="_blank" rel="noopener noreferrer" class="title-link">Magnus Carlsen Wins the Freestyle (Chess960) World Championship</a>
+              
+            </div>
+            <div class="summary">
+              <p>Magnus Carlsen在德国Weissenhaus举行的2026年FIDE自由式国际象棋世锦赛中，以2.5比1.5战胜Fabiano Caruana夺冠，第四局和棋锁定胜局，第三局的逆转胜成为转折点。两位决赛选手均获得2027年自由式世锦赛资格，本届赛事也是首个获得FIDE正式认可的自由式世界冠军赛。报道还提到季军战中Nodirbek Abdusattorov击败Vincent Keymer，Hans Niemann与Levon Aronian分别取得第五和第七名，女子表演赛由Bibisara Assaubayeva战胜Alexandra Kosteniuk。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47028227" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://mastodon.world/@knowmadd/116072773118828295" target="_blank" rel="noopener noreferrer" class="title-link">I want to wash my car. The car wash is 50 meters away. Should I walk or drive?</a>
+              
+            </div>
+            <div class="summary">
+              <p>页面内容主要是 Mastodon 服务器 mastodon.world 的站点介绍与导航。文中强调该平台可在联邦宇宙中按时间顺序浏览内容，避免算法、广告与标题党。页面提供注册、登录、应用获取、键盘快捷键与源码等入口，并展示服务器概况与隐私相关链接。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47031580" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://qwen.ai/blog?id=qwen3.5" target="_blank" rel="noopener noreferrer" class="title-link">Qwen3.5: Towards Native Multimodal Agents</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章宣布 Qwen3.5 正式发布，开放权重的首个模型为 Qwen3.5-397B-A17B，作为原生视觉-语言模型在推理、编码、代理与多模态理解等评测中表现突出。介绍其混合架构将线性注意力（Gated Delta Networks）与稀疏 MoE 结合，3970亿总参数每次仅激活170亿，以提升推理效率并降低成本。还提到语言与方言支持从119扩展到201，并提供托管版 Qwen3.5-Plus，包含更长上下文与内置工具能力。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47032876" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.theregister.com/2026/02/16/anthropic_claude_ai_edits/" target="_blank" rel="noopener noreferrer" class="title-link">Anthropic tries to hide Claude&#39;s AI actions. Devs hate it</a>
+              
+            </div>
+            <div class="summary">
+              <p>Anthropic 更新 Claude Code 后，将默认进度输出改为折叠文件名，只显示读了多少文件和搜索了多少模式，引发开发者强烈反对。开发者强调可见文件路径有助于安全审查、及时发现上下文走偏并节省 token，频繁用快捷键展开既麻烦又不实用。负责人回应称是为减少终端噪声并建议使用 verbose 模式，同时又将该模式改得不那么“全量”，导致想要完整细节的用户不满，争议仍在延续。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47033622" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.legalcheek.com/2026/02/ministry-of-justice-orders-deletion-of-the-uks-largest-court-reporting-database/" target="_blank" rel="noopener noreferrer" class="title-link">Ministry of Justice orders deletion of the UK&#39;s largest court reporting database</a>
+              
+            </div>
+            <div class="summary">
+              <p>英国司法部要求删除最大法院报道数据库 Courtsdesk，平台预计在数日内被清空，引发对公开司法与媒体监督能力的担忧。该平台自 2020 年上线，被 39 家媒体的 1500 多名记者用于查询地方法院列表与登记，但其运营方称法院常常未提前通知记者，导致大量案件可能无人报道。HMCTS 以“未经授权共享”法院信息为由在 2025 年 11 月发出停止通知，并称为保护敏感数据而采取行动；平台方则表示曾多次向政府求助且被拒，并质疑官方记录准确性很低。官方回应称媒体仍可获取法院信息用于报道，记者的访问未受影响。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47034713" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.smithsonianmag.com/innovation/this-14-year-old-is-using-origami-to-design-emergency-shelters-that-are-sturdy-cost-efficient-and-easy-to-deploy-180988179/" target="_blank" rel="noopener noreferrer" class="title-link">14-year-old Miles Wu folded origami pattern that holds 10k times its own weight</a>
+              
+            </div>
+            <div class="summary">
+              <p>14岁的Miles Wu基于Miura-ori折纸结构进行大量参数化变体实验，测量不同折痕角度与尺寸对强度的影响，发现最强样式可承受自身重量的约一万倍，且具备可折叠与展开的特性。受飓风和野火等灾害启发，他提出将该折纸结构用于快速部署、成本可控且足够坚固的应急庇护所，并通过多轮强度测试验证其可行性。文章也指出，从纸质小尺度实验走向真实庇护所仍需解决材料厚度、非线性尺度效应与多向受力等工程问题，他计划继续做原型与多向载荷测试。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47038546" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-16.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

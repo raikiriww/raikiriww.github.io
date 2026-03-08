@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-08</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.08 周日</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <a href="https://github.com/pydantic/monty" target="_blank" rel="noopener noreferrer" class="title-link">Monty: A minimal, secure Python interpreter written in Rust for use by AI</a>
+            <div class="summary">
+              <p>Monty 是用 Rust 编写的极简且偏安全的 Python 解释器，面向 AI 代理执行其生成的代码，并强调无需完整容器沙箱的低成本与低延迟。它支持运行一部分 Python 语法，启动耗时可达微秒级，同时通过可控的外部函数调用隔离文件系统、环境变量与网络，并可做类型检查与状态快照以便恢复执行。功能限制也很明确，包括标准库覆盖有限、缺少第三方库支持以及部分类特性尚未实现，定位于让代理安全执行其编写的脚本。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46918254" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <a href="https://github.com/valdanylchuk/breezydemo" target="_blank" rel="noopener noreferrer" class="title-link">Show HN: Look Ma, No Linux: Shell, App Installer, Vi, Cc on ESP32-S3 / BreezyBox</a>
+            <div class="summary">
+              <p>该项目展示如何把 ESP32-S3 变成“即开即用”的微型电脑，提供迷你 shell、终端、编辑器、编译器与应用安装器，目标是以更小的资源获得类 PC 的交互体验。作者将其命名为 BreezyBox，定位为基于 ESP-IDF 的用户态组件而非完整操作系统，核心提供 vterm/vfs 与常用命令，并可一条命令集成到现有工程。仓库给出在特定 Waveshare 开发板上的示例，强调可移植到其他板卡，并鼓励社区提交更多应用、示例固件与使用场景。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46918429" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <a href="https://jesperordrup.github.io/vocal-guide/" target="_blank" rel="noopener noreferrer" class="title-link">Vocal Guide – belt sing without killing yourself</a>
+            <div class="summary">
+              <p>这是一份歌唱技巧参考，覆盖发声机制、风格、效果、装饰与力度等多个类别，并强调先建立呼吸支持与基础发声。内容集中纠正常见误导性建议，如把高音当作“用力推气”、以酒精烟草制造沙哑、或用茶与蜂蜜“修复”声带，指出这些做法会导致紧张或损伤。指南还给出入门自测与练习路径，从胸声、头声、假声到混声与表达逐步推进，并建议有条件时寻求声乐教练的实时反馈。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46922049" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <a href="https://www.washingtonpost.com/technology/2026/02/07/ai-spending-economy-shortages/" target="_blank" rel="noopener noreferrer" class="title-link">The AI boom is causing shortages everywhere else</a>
+            <div class="summary">
+              <p>文章指出，科技公司在AI上的巨额投入正在把资源从其他行业抽走，引发电力、芯片、施工人员等多方面的紧缺，并推高消费电子成本。多家头部公司年度支出规模被描述为远超以往，批评者担心只有在AI重塑经济并带来巨额利润时这些成本才可能回本。由于数据中心建设吸走劳动力和资本，其他建设项目被边缘化，初创企业融资也更加向少数明星公司集中，创新生态面临被挤压的风险。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46922969" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <a href="https://blog.alaindichiappari.dev/p/software-engineering-is-back" target="_blank" rel="noopener noreferrer" class="title-link">Coding agents have replaced every framework I used</a>
+            <div class="summary">
+              <p>作者以亲身产品开发为例，认为自 2025 年 12 月以来编码代理与前沿模型让“自动化编程”成熟，使工程师能把精力从大量手工敲代码转向架构与产品决策。文章批评框架与层层抽象带来虚假简化、工具负担与人才“工位化”，主张回到为具体问题量体裁衣的工程实践。作者强调低成本自动化与基础工具（如 Bash、Makefile）已足以覆盖大多数需求，应减少不必要的框架依赖，重建真正属于自己的复杂度。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46923543" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <a href="https://xorvoid.com/sectorc.html" target="_blank" rel="noopener noreferrer" class="title-link">SectorC: A C Compiler in 512 bytes (2023)</a>
+            <div class="summary">
+              <p>文章介绍 SectorC：一个用 x86-16 汇编写成、可塞进 512 字节引导扇区的 C 编译器，可能是已知最小的 C 编译器。它支持足够实用的 C 子集，包含变量、函数、if/while、常见运算符、指针解引用、内联机器码与注释等，因此能编写真正可运行的程序。文中还给出示例程序（如绘制移动正弦波）与实现思路，强调在极小体积约束下仍能实现可用的编译器功能。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46925741" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <a href="https://github.com/localgpt-app/localgpt" target="_blank" rel="noopener noreferrer" class="title-link">Show HN: LocalGPT – A local-first AI assistant in Rust with persistent memory</a>
+            <div class="summary">
+              <p>LocalGPT 是用 Rust 构建的本地优先助手，强调单一可执行文件、无需 Node.js/Docker/Python，数据与记忆都留在本机。它提供持久化记忆与自治任务心跳，支持 CLI、Web UI 和桌面 GUI，并可接入 Anthropic、OpenAI、Ollama 等多种模型提供方。其记忆以 Markdown 文件组织，结合 SQLite FTS5 与 sqlite-vec 实现关键词与语义检索，并给出完整的安装、配置与命令行/HTTP API 使用方式。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46930391" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <a href="https://github.com/mitchellh/vouch" target="_blank" rel="noopener noreferrer" class="title-link">Vouch</a>
+            <div class="summary">
+              <p>Vouch 是一个以显式背书为核心的社区信任管理系统，要求贡献者先被社区成员背书，也支持对不当行为者进行点名拒绝，以限制其参与项目的范围。系统采用单一的平面文件记录背书与拒绝信息，格式极简且易于用常见工具解析，并可互相读取不同项目的信任列表，形成跨项目的信任网络。项目提供 GitHub Actions 与 CLI（基于 Nushell）集成，支持在 PR、issue、discussion 中自动检查、更新与管理成员状态。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46930961" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <a href="https://donotnotify.com/opensource.html" target="_blank" rel="noopener noreferrer" class="title-link">DoNotNotify is now Open Source</a>
+            <div class="summary">
+              <p>DoNotNotify 宣布开源，应用完整源码已公开，任何人可查看、学习并贡献。其强调隐私承诺，通过开源实现透明度，让用户可自行验证应用仅实现通知管理功能。项目邀请社区参与，包括报错、提建议和提交代码改进。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46932192" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <a href="https://ezhik.jp/ai-slop-terrifies-me/" target="_blank" rel="noopener noreferrer" class="title-link">Slop Terrifies Me</a>
+            <div class="summary">
+              <p>作者担心 AI 生成的软件停在‘勉强可用’的水平：能做到约九成效果，但最后一成质量与独特性被放弃，大家也不再在意。他认为激励机制与市场节奏使软件更趋同质化，AI 工具还会把开发推向中位数模板化，难以做出像手工艺般的精品。更大的恐惧来自用户与开发者都接受这种‘够用就行’，导致真正关心质量与创造力的人越来越少，最终让软件工艺无人守护。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46933067" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-08.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

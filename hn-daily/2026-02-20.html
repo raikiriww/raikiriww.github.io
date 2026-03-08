@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-20</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.20 周五</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://cep.dev/posts/every-infrastructure-decision-i-endorse-or-regret-after-4-years-running-infrastructure-at-a-startup/" target="_blank" rel="noopener noreferrer" class="title-link">Infrastructure decisions I endorse or regret after 4 years at a startup (2024)</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者基于在初创公司负责基础设施四年的经历，逐项评估关键选择，强调优先保证数据安全与团队效率，并多数推荐在 AWS 上使用 EKS、RDS、Redis、ECR、VPN、AFT 与 GitOps，同时通过月度成本会议与清晰告警分级来控制运维节奏。他指出 EKS 托管插件、昂贵的 AWS 高级支持以及把事后复盘流程绑定在 DataDog 或 PagerDuty 上的做法带来定制化与成本问题，建议改用更灵活的文档工具并保留流程可塑性。在架构与组织层面，他后悔早期没有尽快引入 Okta 等身份平台、过度共享数据库，以及没有更多采用 FaaS（GPU 负载受限），并给出替代实践与权衡理由。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47043345" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.kasava.dev/blog/ai-as-exoskeleton" target="_blank" rel="noopener noreferrer" class="title-link">AI is not a coworker, it&#39;s an exoskeleton</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章认为把AI当作自主同事是误导，更合适的心智模型是“外骨骼”，即放大人的能力而不是替代人。作者用制造、军用与康复外骨骼的案例与数据说明“增幅而非取代”的效果，并指出自治代理失败常因缺乏隐性上下文。在产品开发中，AI应深度分析代码、提交与用户反馈等信息，但决策仍由人完成，作者以Kasava的产品图谱与微型代理架构说明如何把人类判断与机器规模化分析结合。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47078324" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.theguardian.com/us-news/2026/feb/19/trump-science-funding-cuts" target="_blank" rel="noopener noreferrer" class="title-link">We&#39;re no longer attracting top talent: the brain drain killing American science</a>
+              
+            </div>
+            <div class="summary">
+              <p>报道聚焦特朗普政府削减科研经费与人员对美国生物医学研究的冲击，指出NIH和NSF大量拨款被取消、员工被裁，实验室维护和独立建组机会受限，年轻科研人员首当其冲。多名研究者表示因经费不确定、招聘冻结及对DEI与研究议题的限制而转向欧洲等地，欧洲高校趁机吸纳人才，导致美国早期科研人才外流加剧。文章还强调移民政策收紧抬高外籍科研人员进入门槛，削弱美国科研生态与未来创新产出，并引发对长期公共健康与经济影响的担忧。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47079222" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.coinerella.com/made-in-eu-it-was-harder-than-i-thought/" target="_blank" rel="noopener noreferrer" class="title-link">I tried building my startup entirely on European infrastructure</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者尝试把初创公司完全建立在欧洲基础设施上，动机是数据主权、合规与降低对美国超大型云的依赖，但实际迁移比预期更费力。文中列出最终栈与取舍：以 Hetzner 与 Scaleway 提供计算与配套服务，<a href="http://Bunny.net" target="_blank" rel="noopener noreferrer">Bunny.net</a> 负责 CDN 与安全，Nebius 处理 AI 推理，Hanko 负责身份认证，同时自建一批工具以掌控数据。困难点包括邮件生态薄弱、脱离 GitHub 生态需要重建 CI/CD 和集成、部分域名在欧洲注册更贵。作者承认某些环节仍难以避免美国依赖（应用商店、社交登录、前沿模型等），但成本更低、数据驻留更清晰，认为这是值得但需要主动投入的选择。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47085483" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://taalas.com/the-path-to-ubiquitous-ai/" target="_blank" rel="noopener noreferrer" class="title-link">The path to ubiquitous AI (17k tokens/sec)</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章认为AI走向普及的关键障碍是高延迟与高成本，现有大模型部署依赖庞大算力与复杂硬件，导致能耗与费用极高。作者以Taalas为例，主张通过为每个模型定制硅片、合并存储与计算并大幅简化硬件栈，实现更快、更低功耗与更低成本的推理。其首个硬件化Llama 3.1 8B产品据称可达每用户17K tokens/sec，并在成本与能耗上显著下降，同时保留可调上下文与LoRA微调能力。文章还披露后续将推出中型推理模型与第二代平台HC2的更高密度产品，强调以精简团队与工程纪律推进。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47086181" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://github.com/ggml-org/llama.cpp/discussions/19759" target="_blank" rel="noopener noreferrer" class="title-link">Ggml.ai joins Hugging Face to ensure the long-term progress of Local AI</a>
+              
+            </div>
+            <div class="summary">
+              <p><a href="http://ggml.ai" target="_blank" rel="noopener noreferrer">ggml.ai</a>（llama.cpp 的创始团队）宣布加入 Hugging Face，旨在扩大并长期支持 ggml/llama.cpp 社区，保持本地 AI 的开放发展。公告强调项目仍将完全开源与社区驱动，团队继续全职维护核心库，并获得更可持续的资源保障。双方将重点推进与 transformers 的更顺畅集成、改进模型支持与用户体验，同时提升本地推理部署的易用性并加速生态合作。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47088037" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://spencer.wtf/2026/02/20/cleaning-up-merged-git-branches-a-one-liner-from-the-cias-leaked-dev-docs.html" target="_blank" rel="noopener noreferrer" class="title-link">I found a useful Git one liner buried in leaked CIA developer docs</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者回顾自己在泄露的 CIA 开发文档中发现的 Git 小技巧，用一条命令批量清理本地已合并分支，避免分支列表变成“坟场”。他解释了原始一行命令的三个步骤，并强调它只会删除已合并分支、不会误删当前分支。随后给出适配 <code>main</code> 及常用分支名的改写版本，并建议做成别名以便在部署后快速整理。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47088181" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.bbc.com/news/live/c0l9r67drg7t" target="_blank" rel="noopener noreferrer" class="title-link">Trump&#39;s global tariffs struck down by US Supreme Court</a>
+              
+            </div>
+            <div class="summary">
+              <p>美国最高法院以 6-3 裁决特朗普无权在紧急权力下实施全球性关税，相关诉讼源于多家企业挑战“解放日”关税。特朗普随后宣布将依据 Section 122 推出为期 150 天、上限 15% 的 10% 全球关税，白宫称此前与美国达成协议的国家也将适用这一统一税率，未来走向充满不确定。关于已缴关税的退款问题，官员与经济学者均指出手续复杂、可能长期拖延，中小企业难以受益。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47089213" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://f-droid.org/2026/02/20/twif.html" target="_blank" rel="noopener noreferrer" class="title-link">Keep Android Open</a>
+              
+            </div>
+            <div class="summary">
+              <p>本文是 2026 年第 8 周的 F-Droid 周报，强调谷歌此前的 Android 收紧计划并未取消，社区担忧开放生态受限，因而在 F-Droid 客户端等位置加入提醒横幅，呼吁用户向监管与本地机构表达关切。周报还介绍 F-Droid Basic 重写进展与 2.0-alpha3 的多项功能改动，并提醒旧版用户需手动开启测试更新。应用层面涵盖多款软件更新与变更，包括 Conversations/Quicksy、Dolphin Emulator、Nextcloud 相关应用、ProtonVPN 等，同时提及部分应用移除与新增。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47091419" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://pilk.website/3/facebook-is-absolutely-cooked" target="_blank" rel="noopener noreferrer" class="title-link">Facebook is cooked</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者多年未登录后重返 Facebook，发现信息流几乎没有熟人内容，主要被平台推送的疑似 AI 生成的性感诱导图、低质梗图和情绪引战式视频占据。他指出这些内容往往带有粗糙痕迹与怪异元素，评论区也难辨真假，怀疑算法在缺少真实好友动态时会迅速滑向“AI 垃圾内容输送带”。在看到疑似未成年形象的 AI 图片后他感到强烈不适并退出，认为产品核心体验已被污染，除非迫于现实需求否则不再使用。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47091748" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-20.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-03-07</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.03.07 周六</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://walzr.com/payphone-go/" target="_blank" rel="noopener noreferrer" class="title-link">Payphone Go</a>
+              
+            </div>
+            <div class="summary">
+              <p>该项目是一款以加州公用电话为目标的线下打卡游戏：用户注册获得 9 位玩家 ID，通过地图寻找电话亭，拿起话筒拨打指定的免费电话并输入 ID。系统依据来电号码识别电话亭并计分，首个打卡得 20 分、第二 10 分、第三 5 分，其后 1 分，排行榜实时展示玩家排名。作者解释数据来自向加州公共事业委员会提交的公开记录申请，但名单可能过时或遗漏，鼓励玩家反馈新地点以修正数据库。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47220411" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.anthropic.com/news/mozilla-firefox-security" target="_blank" rel="noopener noreferrer" class="title-link">Hardening Firefox with Anthropic&#39;s Red Team</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章介绍 Anthropic 与 Mozilla 合作强化 Firefox 安全：Claude Opus 4.6 在两周内发现 22 个漏洞，其中 14 个被评为高危，成果促成 Firefox 148.0 向数亿用户推送修复，并累计提交了 112 份报告。他们通过重现历史 CVE 与挖掘新漏洞验证模型能力，发现 AI 在漏洞发现上显著加速，但在利用上仍较弱。在数百次测试和约 4000 美元成本下仅两次成功构造粗糙利用，团队强调需借助任务验证器、最小复现和候选补丁等流程，提高报告可信度并加速修复。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47273854" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://will-keleher.com/posts/this-css-makes-me-human/" target="_blank" rel="noopener noreferrer" class="title-link">this css proves me human</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者以自述方式讲述为“看起来更像人类写作”而对文章样式做的克制改造，如强制小写但保留代码块、隐藏对破折号的偏好，并避免使用单调的等宽字体。为达到细微的书写瑕疵与版式效果，他设想通过脚本改字形、替换字符间距，以及借助拼写统计挑选易混淆或低频变体。最终他在“改变写作风格会伤及自我”的犹豫中止步，用一段带 CSS 与脚本片段的示例作结，讽刺性地回应对技术读者口味的迎合。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47281593" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://helix-editor.com/" target="_blank" rel="noopener noreferrer" class="title-link">Helix: A post-modern text editor</a>
+              
+            </div>
+            <div class="summary">
+              <p>Helix 是一款强调多选区与多光标的终端文本编辑器，核心编辑基元是选择区，可并发操作代码。它集成 Tree-sitter 和语言服务器，提供更强的语法高亮、导航、自动补全与诊断等能力，并内置模糊查找、全局搜索与主题等现代功能。项目使用 Rust 构建，不依赖 Electron 或脚本语言，主打低配置与远程终端使用；同时说明与 Kakoune 和 Vim 的差异，并提到未来可能推出基于 WebGPU 的图形前端与插件计划。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47282701" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://plasma-bigscreen.org/" target="_blank" rel="noopener noreferrer" class="title-link">Plasma Bigscreen – 10-foot interface for KDE plasma</a>
+              
+            </div>
+            <div class="summary">
+              <p>Plasma Bigscreen 是面向电视、HTPC 与机顶盒的 Linux 开源大屏界面，可作为各类发行版的桌面环境部署。它提供适配遥控器或手柄的客厅设置与主页侧边栏，方便在沙发上管理显示、网络与应用切换。平台支持通过发行版包管理器或 Flathub 安装应用，示例包括 Steam、Kodi、Jellyfin 与经 VacuumTube 访问的 YouTube。项目强调开放栈与隐私保护，并由 KDE 社区志愿者协作开发，鼓励更多人参与贡献。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47282736" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://blog.katanaquant.com/p/your-llm-doesnt-write-correct-code" target="_blank" rel="noopener noreferrer" class="title-link">LLMs work best when the user defines their acceptance criteria first</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者以一次数据库基准测试说明，某个由 LLM 生成的 SQLite Rust 重写版在最基础的主键查询和插入上出现极端性能退化，原因并非语法错误而是规划器未把 <code>INTEGER PRIMARY KEY</code> 识别为 rowid、以及每次插入都触发昂贵的同步与重建流程，导致整体慢上数千到数万倍。他指出代码外观看似完整、模块齐全且测试通过，但在关键路径上存在设计与实现细节错误，并被一系列“安全但低效”的选择放大。作者由此强调 LLM 更擅长生成“看起来合理”的方案，若不在生成前明确验收标准与性能边界、并以基准与验证来约束，很容易产出满足描述却不满足实际需求的系统。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47283337" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://github.com/golang/go/issues/62026" target="_blank" rel="noopener noreferrer" class="title-link">UUID package coming to Go standard library</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者提议在 Go 标准库中新增 <code>crypto/uuid</code> 包，用于生成和解析 UUID，范围涵盖版本 3、4、5。理由是第三方 <code>github.com/google/uuid</code> 在服务器与数据库类 Go 项目中几乎是必备依赖，接口多年稳定，且 UUID 本身是标准。补充指出，相较于 C#、Java、JavaScript、Python、Ruby 等语言，Go 在标准库缺乏 UUID 支持显得较为例外。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47283665" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://torrentfreak.com/uploading-pirated-books-via-bittorrent-qualifies-as-fair-use-meta/" target="_blank" rel="noopener noreferrer" class="title-link">Uploading Pirated Books via BitTorrent Qualifies as Fair Use, Meta Argues</a>
+              
+            </div>
+            <div class="summary">
+              <p>在作者起诉Meta的集体诉讼中，法院曾认可其用盗版书训练Llama的合理使用，但仍留下通过BitTorrent下载并上传的直接侵权争议。Meta最新向法院提交补充答复，主张在下载过程中自动向他人上传是技术机制所致且为获取数据所必需，因此应同样构成合理使用；作者方则指其在期限后新增抗辩。双方就这一抗辩是否早已提出及其合法性产生新的程序争议，案件后续将由法官决定是否允许继续以该理由抗辩。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47285960" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://ki-editor.org/" target="_blank" rel="noopener noreferrer" class="title-link">Ki Editor - an editor that operates on the AST</a>
+              
+            </div>
+            <div class="summary">
+              <p>Ki Editor 是一款多光标的结构化编辑器，核心是围绕语法树节点进行操作，从而直接操控语法结构以贴近编码意图。它强调多光标并行处理语法节点，提升批量编辑与重构效率。编辑方式上通过统一的选择模式覆盖词、行、语法节点等不同粒度，带来一致而灵活的操作体验。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47286311" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-03-07.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

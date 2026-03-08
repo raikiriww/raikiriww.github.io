@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-15</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.15 周日</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.fast.ai/posts/2026-01-28-dark-flow/" target="_blank" rel="noopener noreferrer" class="title-link">Breaking the spell of vibe coding</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章指出“vibe coding”指大量依赖 AI 生成复杂代码且常不被人读，容易让管理层与从业者误判生产力与职业前景。作者将其类比为赌博中的“暗流”与“伪赢”，强调这种流程缺乏清晰反馈、技能与挑战匹配模糊，导致代码难维护、隐藏缺陷被延迟发现，并放大即时产出带来的虚假成就感。文中还引用研究与案例说明人们对 AI 带来效率提升的感知常与实际相反，并提醒不要因对未来的过度乐观预测而放弃技能积累。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47006615" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://aimilios.bearblog.dev/reverse-engineering-sleep-mask/" target="_blank" rel="noopener noreferrer" class="title-link">My smart sleep mask broadcasts users&#39; brainwaves to an open MQTT broker</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者购买智能睡眠眼罩后，用 Claude 逆向其 BLE 协议与安卓 APK，发现应用为 Flutter 编译，最终通过字符串与反编译工具还原了指令与数据包结构并做出控制面板。进一步利用应用内硬编码的 MQTT 凭证连接到厂商消息代理，能接收多台设备的实时 EEG 等传感数据，甚至可向他人设备下发 EMS 刺激指令，存在明显隐私与安全风险。作者已联系厂商并披露问题，同时提醒关注数字卫生与物联网安全。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47015294" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.vim.org/vim-9.2-released.php" target="_blank" rel="noopener noreferrer" class="title-link">Vim 9.2</a>
+              
+            </div>
+            <div class="summary">
+              <p>Vim 9.2 发布，重点增强 Vim9 脚本语言与完成能力，新增枚举、泛型、元组、类编译等特性，并加入更强的模糊匹配与寄存器补全。平台与界面层面引入 Wayland 支持、XDG 目录规范、垂直标签面板、Windows 原生深色菜单与更好全屏体验。差异比较新增 linematch 与 diffanchors 等选项、行内高亮改进，同时更新多项默认值并修复大量漏洞与崩溃问题；同时强调 Charityware 传承，资助项目转由加拿大的 Kuwasha 继续推进。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47015330" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.niemanlab.org/2026/01/news-publishers-limit-internet-archive-access-due-to-ai-scraping-concerns/" target="_blank" rel="noopener noreferrer" class="title-link">News publishers limit Internet Archive access due to AI scraping concerns</a>
+              
+            </div>
+            <div class="summary">
+              <p>多家新闻机构担心 AI 爬虫通过 Internet Archive 及其 Wayback Machine、API 取得结构化内容，开始限制相关访问。The Guardian 采取排除 API 与过滤文章页等措施，纽约时报与多家媒体在 robots.txt 中对 <a href="http://archive.org" target="_blank" rel="noopener noreferrer">archive.org</a> 的机器人进行硬阻断；机构强调是防止未经授权的抓取与知识产权外泄。报道还提到部分出版集团在样本中大规模屏蔽 Internet Archive 及 Common Crawl 等爬虫，并引用互联网档案馆的回应，称限制图书馆会削弱公众获取历史记录的能力。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47017138" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://k7r.eu/i-love-the-work-of-the-archwiki-maintainers/" target="_blank" rel="noopener noreferrer" class="title-link">I love the work of the ArchWiki maintainers</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者在“我爱自由软件日”感谢自由软件文档维护者，特别致谢 ArchWiki 维护团队，并指出文档维护常被低估。他分享自己与身边人长期依赖 ArchWiki 来理解各类工具、发现配置技巧、解决 GNU/Linux 安装问题，认为其是互联网上难以替代的优质资源。作者呼吁认可维护者的贡献，并鼓励向 Arch 相关项目捐助。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47020191" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://oat.ink/" target="_blank" rel="noopener noreferrer" class="title-link">Oat – Ultra-lightweight, zero dependency, semantic HTML, CSS, JS UI library</a>
+              
+            </div>
+            <div class="summary">
+              <p>该库主打超轻量与零依赖，仅需引入约 8KB 的 CSS/JS 就能获得常用 UI 组件与元素，强调语义化 HTML，尽量不使用类名并用原生标签与 ARIA 角色直接样式化。部分动态组件采用 WebComponents，提供键盘导航与无障碍支持，并可通过少量 CSS 变量快速定制主题，<code>data-theme="dark"</code> 可启用内置暗色方案。作者强调反对繁重框架与生态锁定，希望用纯 CSS/JS 的长期可维护、标准化方案实现类似 shadcn 风格的外观与体验。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47021980" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://marler8997.github.io/blog/fixed-windows/" target="_blank" rel="noopener noreferrer" class="title-link">I fixed Windows native development</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者指出在 Windows 上要求安装 Visual Studio 会把维护者变成安装器的技术支持，组件繁杂、安装缓慢且版本不可控，导致构建环境难以复现、迁移成本高。为此他开发了开源 CLI 工具 msvcup，直接解析微软公开的组件清单并从 CDN 下载最小化的 MSVC 工具链与 SDK，以版本化目录隔离安装。通过脚本即可在几分钟内完成安装并生成自动环境，支持交叉编译、锁文件与可重复构建，且无需 GUI 安装器和全局污染。该方案已在真实项目和 CI 中应用，显著降低 Windows 原生开发的门槛，但若需要完整 IDE 仍需官方安装器。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47022891" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://greenwald.substack.com/p/amazons-ring-and-googles-nest-unwittingly" target="_blank" rel="noopener noreferrer" class="title-link">Amazon&#39;s Ring and Google&#39;s Nest reveal the severity of U.S. surveillance state</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章以 Amazon Ring 超级碗广告的“Search Party”功能为例，指出相邻摄像头协同与 AI 识别让家庭安防迅速演变为社区级监控，公众对其侵入性产生强烈反弹。随后以 Google Nest 未订阅用户的录像仍被警方调取为案例，质疑公司在无订阅情况下仍保存影像，暴露数据实际留存与外界认知不一致。作者认为这反映出国家与企业共同推进的监控体系正在加深，叠加人脸识别与 AI 发展，隐私与公民权利面临持续侵蚀。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47023238" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://environment.ec.europa.eu/news/new-eu-rules-stop-destruction-unsold-clothes-and-shoes-2026-02-09_en" target="_blank" rel="noopener noreferrer" class="title-link">EU bans the destruction of unsold apparel, clothing, accessories and footwear</a>
+              
+            </div>
+            <div class="summary">
+              <p>欧盟委员会于2026年2月9日在《可持续产品生态设计法规》(ESPR)框架下通过新措施，禁止销毁未售出的服装、配饰和鞋类，并要求企业披露被作为废弃物处理的未售消费品信息。该举措旨在减少浪费和环境损害，文中估算欧洲每年有4%-9%的未售纺织品被销毁，产生约560万吨二氧化碳排放。禁令及豁免条款将自2026年7月19日对大型企业生效，中型企业预计2030年跟进，信息披露的统一格式自2027年2月起适用。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47025378" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://steipete.me/posts/2026/openclaw" target="_blank" rel="noopener noreferrer" class="title-link">I’m joining OpenAI</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者宣布加入 OpenAI，目标是把人人可用的智能体带给更多人，并强调 OpenClaw 将转入基金会，保持开源与独立。过去一个月项目引发巨大关注，他更想做建设者而非再建公司，因此选择与 OpenAI 协作以更快实现愿景。为让普通人（包括他母亲）也能使用的智能体，需要更安全的设计与最新模型支持，OpenAI 已承诺支持并赞助项目，基金会也将继续服务社区并支持更多模型与公司。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47028013" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-15.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

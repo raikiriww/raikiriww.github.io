@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-26</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.26 周四</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://worksinprogress.co/issue/the-united-states-needs-fewer-bus-stops/" target="_blank" rel="noopener noreferrer" class="title-link">Bus stop balancing is fast, cheap, and effective</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章指出美国公交站点过密是公交慢、可靠性差和成本高的重要原因，且与欧洲更大的站距形成对比。通过“站点平衡”拉大站距，可在几乎无需新增基础设施的情况下提升速度与准点性，并把节省的运营资源用于提高班次或改善站点质量。多地试点显示删减站点能显著节省乘客时间、提高线路速度与可靠性，同时对覆盖范围影响有限。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47153798" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://arstechnica.com/science/2026/02/final-2025-data-is-in-us-energy-use-is-up-as-solar-passes-hydro/" target="_blank" rel="noopener noreferrer" class="title-link">Following 35% growth, solar has passed hydro on US grid</a>
+              
+            </div>
+            <div class="summary">
+              <p>美国能源信息署公布的2025年数据显示，用电需求同比增长约2.8%，而太阳能发电量同比增长35%，首次超过水电。需求上升幅度超过单一能源增量，导致新增供电除可再生外还动用了更多化石能源，煤电因此回升。天然气设备成本上升与出口政策变化推高了气电成本，使煤电在经济性上相对更可行。机构预计2026年将新增大量太阳能、风电和电池储能容量，风光继续提升占比，但煤电上升可能抵消部分减排效果。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47154009" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://trufflesecurity.com/blog/google-api-keys-werent-secrets-but-then-gemini-changed-the-rules" target="_blank" rel="noopener noreferrer" class="title-link">Google API keys weren&#39;t secrets, but then Gemini changed the rules</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章指出谷歌长期强调 API key 不是秘密，但在启用 Gemini API 后，旧有公开键会被默认赋予敏感访问权限，导致可读取文件、缓存内容并产生高额调用费用。作者扫描公开网页发现 2863 个仍可用的键，并举例说明谷歌自身公开页面上的旧键也能访问 Gemini 接口，构成权限回溯升级与不安全默认配置问题。文中给出披露时间线与整改进展，并建议用户检查项目是否启用了 Generative Language API、审计并限制密钥范围、对外泄键进行轮换并使用 TruffleHog 扫描。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47156925" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://spectrum.ieee.org/jimi-hendrix-systems-engineer" target="_blank" rel="noopener noreferrer" class="title-link">Jimi Hendrix was a systems engineer</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章回顾1967年Hendrix录制《Purple Haze》时引入Octavia踏板与一整套模拟链路，强调电吉他被当作可操控的波形合成器，并指出录音室声学与放大器回授也是关键环节。作者尝试用工程化视角拆解这条信号链，基于电路原理解释Fuzz Face、Octavia、wah-wah、Uni-Vibe等效果器如何改变波形与音色，并说明Marshall放大器与空间反馈共同塑造可持续的失真与谐波。为替代“天才凭空出现”的叙事，作者给出可复现的仿真模型与参数（如ngspice与脚本），强调Hendrix与工程师协作、通过系统化迭代实现声音突破。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47157224" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.ben-evans.com/benedictevans/2026/2/19/how-will-openai-compete-nkg2x" target="_blank" rel="noopener noreferrer" class="title-link">How will OpenAI compete?</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章围绕OpenAI如何竞争展开，认为其缺乏独特技术与清晰的竞争优势，即便拥有庞大用户基础，使用深度与黏性仍然不足，尚未形成网络效应。文中指出头部厂商已在技术层面追平并凭借产品与分发优势逼近市场，而行业价值与战略杠杆更可能来自尚未出现的新体验。作者进一步强调产品负责人往往只能把研究成果转化为功能，战略与路线受制于研发节奏，因此OpenAI必须找到能持续驱动用户习惯与新场景的路径。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47158975" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.bannedincalifornia.org/" target="_blank" rel="noopener noreferrer" class="title-link">Banned in California</a>
+              
+            </div>
+            <div class="summary">
+              <p>该页面以可视化方式说明加州许可制度下许多工业流程在新建层面几乎无法获批，并按“几乎不可能/极难/受限”分级展示。内容以智能手机、汽车和军舰为例，逐项列出芯片制造、电镀、涂装、铸造、焊接等环节因排放、废水或危险化学品限制而被卡住。同时列举仍在运作的“祖父条款”老设施清单，强调这些场址一旦关闭将难以在州内重新获批。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47159430" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.eff.org/deeplinks/2026/02/tech-companies-shouldnt-be-bullied-doing-surveillance" target="_blank" rel="noopener noreferrer" class="title-link">Tech companies shouldn&#39;t be bullied into doing surveillance</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章称美国国防部向 Anthropic 下达最后通牒，要求其在军用场景中取消对 AI 用途的限制，并以“供应链风险”相威胁；作者主张公司应坚守公开承诺，拒绝将技术用于自主武器和监控。文中提到 2025 年 Anthropic 已获准用于涉密场景，但 2026 年 1 月因与 Palantir 合作而怀疑其技术参与 1 月 3 日委内瑞拉袭击，引发争议。作者引用 Dario Amodei 对“监控美国人”和“自主武器”两条红线的表态，认为政府压力不应成为企业背离人权与公民自由原则的理由。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47160226" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.cnn.com/2026/02/25/tech/anthropic-safety-policy-change" target="_blank" rel="noopener noreferrer" class="title-link">Anthropic ditches its core safety promise</a>
+              
+            </div>
+            <div class="summary">
+              <p>Anthropic 表示将其两年前的安全承诺由硬性约束调整为可变动的非强制框架，理由是原有政策可能限制其在快速竞争的 AI 市场中发展，并且“行业竞赛向上”的期待未能实现。新政策删除了“当模型能力超出可控范围应暂停训练”的条款，改为公开目标与定期报告来提升透明度，但公司也承认新框架更灵活而非强承诺。报道同时指出，公司与五角大楼在 AI 红线问题上存在摩擦，包括对 AI 控制武器和大规模监控的担忧，但称此次政策调整与合同争议无直接关联。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47165397" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/" target="_blank" rel="noopener noreferrer" class="title-link">Nano Banana 2: Google&#39;s latest AI image generation model</a>
+              
+            </div>
+            <div class="summary">
+              <p>Google DeepMind 发布 Nano Banana 2 图像模型，结合 Nano Banana Pro 的高级能力与 Gemini Flash 的速度，可在 Gemini、Search、Ads 等产品中更快生成和编辑图像。该模型强调更强的世界知识、主体一致性、指令遵循与生产级规格，支持更高质量和多比例输出。谷歌同时推进 SynthID 与 C2PA 内容凭证，用于标识与验证 AI 生成内容。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47167858" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-26.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>
