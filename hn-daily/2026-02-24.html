@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-24</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.24 周二</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.withdiode.com/" target="_blank" rel="noopener noreferrer" class="title-link">Diode – Build, program, and simulate hardware</a>
+              <span class="mode-badge mode-fallback">链接补救</span>
+            </div>
+            <div class="summary">
+              <p>Diode 提供在浏览器中搭建、编程与仿真的硬件平台，首页明确主打可在线模拟电路与元件。页面展示电阻、电容、NPN/PNP 晶体管、LED、555 Timer、按键开关与导线等基础元件，并提供“Simulate”入口。站点引导注册使用，并设有 Featured Projects 区域用于展示项目。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47094768" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/" target="_blank" rel="noopener noreferrer" class="title-link">Hetzner Prices increase 30-40%</a>
+              
+            </div>
+            <div class="summary">
+              <p>Hetzner 发布价格调整通知，云产品与相关服务的新价格将于 2026-04-01 起对新订单和现有产品生效，且在 2026-04-01 之前下单但之后交付的订单也按新价计费。文档列出德国/芬兰、美国、新加坡等区域多种 Cloud Server 规格的旧价与新价（含欧元与美元时价和月价），并给出负载均衡、Object Storage、卷与快照等项目的上调幅度。同时提供德国与芬兰独立服务器月费的新旧价格清单，并注明所有 Server Auction 机型统一上调 3%。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47120145" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://gwern.net/doc/iq/high/smpy/1984-clements.pdf" target="_blank" rel="noopener noreferrer" class="title-link">Terence Tao, at 8 years old (1984) [pdf]</a>
+              <span class="mode-badge mode-fallback">链接补救</span>
+            </div>
+            <div class="summary">
+              <p>这篇1984年的论文由Clements撰写，记录特伦斯·陶在7至8岁时的数学早熟与其家庭、学校背景，并讨论对拔尖数学教育的启示。作者回溯媒体报道与家访经过，描述他在中学课程中的学习安排、兴趣与父母背景。文中给出多项测验与口答题的过程与成绩，显示他在计算、代数概念与推理上的超常表现。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47123689" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.nytimes.com/2026/02/23/technology/binance-employees-iran-firings.html" target="_blank" rel="noopener noreferrer" class="title-link">Binance fired employees who found $1.7B in crypto was sent to Iran</a>
+              
+            </div>
+            <div class="summary">
+              <p>报道指Binance内部调查人员发现，过去一年伊朗相关方获取了平台上逾1500个账户的访问，并有约17亿美元加密资产从两个账户流向与伊朗实体有关的对象，可能触及制裁风险。调查人员将线索上报高层后，至少四名参与调查的员工在数周内被解雇或停职，公司给出的理由与处理客户数据的流程违规有关。Binance称已处理相关账户并通知监管机构，否认存在明知纵容制裁违规的情况，并强调并非因员工提出合规问题而处分。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47127396" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://vladimir.varank.in/notes/2026/02/freebsd-brcmfmac/" target="_blank" rel="noopener noreferrer" class="title-link">FreeBSD doesn&#39;t have Wi-Fi driver for my old MacBook, so AI built one for me</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者用一台有 flexgate 问题的 2016 款 MacBook Pro 试用 FreeBSD，但 BCM4350 Wi‑Fi 芯片缺乏原生驱动，最初让 Claude Code 直接移植 Linux 的 brcmfmac，结果模块能编译却频繁崩溃且无法工作。随后改为先用 AI 生成并多轮校对的详细规格说明，再让代理在干净环境中从零实现驱动、逐步弃用 LinuxKPI、在含直通设备的测试 VM 中迭代。最终得到可扫描并支持 2.4/5GHz 与 WPA/WPA2 的 FreeBSD 内核模块，但仍有已知问题，仅建议作为学习练习使用。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47129361" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://medicalxpress.com/news/2026-02-blood-boosts-alzheimer-diagnosis-accuracy.html" target="_blank" rel="noopener noreferrer" class="title-link">Blood test boosts Alzheimer&#39;s diagnosis accuracy to 94.5%, clinical study shows</a>
+              
+            </div>
+            <div class="summary">
+              <p>西班牙研究在真实门诊场景跟踪200名50岁以上认知症状患者，评估血液生物标志物p-tau217对诊断的影响。仅靠常规临床评估时阿尔茨海默病诊断准确率为75.5%，加入血检结果后提升至94.5%，约四分之一患者因此被调整诊断。医生的诊断信心从10分制的6.90提升到8.49，并在不同认知阶段（含轻度认知障碍与痴呆）均表现有效，提示更便捷、低侵入的早期诊断路径。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47132388" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://serverhost.com/blog/firefox-148-launches-with-exciting-ai-kill-switch-feature-and-more-enhancements/" target="_blank" rel="noopener noreferrer" class="title-link">Firefox 148 Launches with AI Kill Switch Feature and More Enhancements</a>
+              
+            </div>
+            <div class="summary">
+              <p>Firefox 148 新增“AI 终止开关”，可一键关闭聊天提示、链接摘要等 AI 功能，且关闭选择不会被后续更新覆盖；还提供选择性屏蔽，允许保留本地翻译等功能。设置路径为“设置 &gt; AI 控制”，可阻止提示并移除已下载模型，同时在“设置 &gt; 隐私与安全 &gt; Firefox 数据收集”里进一步控制远程更新与数据收集。该版本还强化了 Web 平台能力（如 Trusted Types 与 Sanitizer API 抗 XSS）、提升 PDF 数学公式的读屏兼容性，新增 Windows 10 的 Firefox Backup、越南语与繁体中文翻译，并加入新标签壁纸与 WebGPU 的 Service Worker 支持。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47133313" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.dropsitenews.com/p/israeli-soldiers-tel-sultan-gaza-red-crescent-civil-defense-massacre-report-forensic-architecture-earshot" target="_blank" rel="noopener noreferrer" class="title-link">IDF killed Gaza aid workers at point blank range in 2025 massacre: Report</a>
+              
+            </div>
+            <div class="summary">
+              <p>报道称，Earshot 与 Forensic Architecture 的联合调查基于目击者证词及音视频与开源材料重建了 2025 年 3 月 23 日在加沙南部特尔苏丹的救援人员遭袭过程，称共有 15 名巴勒斯坦救援人员遇害。报告称记录到至少 910 发枪击，其中大部分在约 5 分 30 秒内完成，且有多名射手朝标识清晰、开着警示灯的救援车辆开火，并在接近后出现近距离射击迹象。文中还提到以色列军方多次调整说法，内部调查未建议追责，并否认处决指控，称该事件发生在敌对战区。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47136179" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.calebleak.com/posts/dog-game/" target="_blank" rel="noopener noreferrer" class="title-link">I&#39;m helping my dog vibe code games</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者讲述训练一只9磅的卡瓦普犬Momo用键盘“乱打”来驱动Claude Code生成Godot游戏的过程，并概述了从灵感、流程到成果的整体设计。系统通过树莓派与自制DogKeyboard过滤并转发按键，配合宠物喂食器奖励、提示音与自动提交机制，实现狗输入—模型生成—游戏构建的闭环。为提高可用性，作者设计了更强的提示词与最低功能清单，并增加截图、自动输入、场景/着色器/输入映射检查等工具，让模型能自测并修复游戏问题。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47139675" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://vmfunc.re/blog/persona/" target="_blank" rel="noopener noreferrer" class="title-link">OpenAI, the US government and Persona built an identity surveillance machine</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章称在政府端点发现公开可访问的源文件与证书信息，指向一套与 OpenAI 相关的身份核验与观察名单服务，包括人脸比对、名单筛查与可疑活动报告等能力。作者强调仅使用公开来源进行被动侦察，并声称该服务存在独立基础设施与长期运行的证书记录，表明相关筛查在公开要求前已持续运作。同时披露 API 可返回大量身份与证件影像字段，推断其对用户进行大规模自动化筛查。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47140632" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-24.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

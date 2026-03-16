@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-03-02</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.03.02 周一</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.theguardian.com/lifeandstyle/2026/feb/24/stranger-secret-how-to-talk-to-anyone-why-you-should" target="_blank" rel="noopener noreferrer" class="title-link">How to talk to anyone and why you should</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章以作者在火车与餐馆的两次陌生交流为引子，指出公共场合与陌生人交谈正在减少，背后有手机与社交媒体、远程工作、第三空间消失等结构性原因，也与“没人说我也不说”的社会规范强化有关。作者认为这会削弱人类的基本沟通能力，并引用心理学与神经科学相关观点说明年轻一代在对话与自我价值感上的困境。文章批评社交媒体上的“与陌生人对话挑战”过度表演化、工具化他人，反而加深疏离；同时给出低风险、小步尝试与尊重边界的实践建议，强调小型寒暄是维持社会连结与共同人性的微小但重要方式。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47142183" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.noelberry.ca/posts/making_games_in_2025/" target="_blank" rel="noopener noreferrer" class="title-link">Making Video Games in 2025 (without an engine)</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者回顾自己长期不依赖大型商业引擎的原因，强调为小团队做定制化工具更轻量、可控且更能贴合游戏手感与工作流。文章具体介绍其技术栈与理由，包括以 C# 作为主语言、利用 dotnet 热重载提高迭代效率，并以 SDL3 作为跨平台底层抽象，自写一层渲染与输入工具。音频采用 FMOD，关卡编辑与工具界面依赖 Dear ImGui 或自建编辑器，并通过 C# 反射快速生成编辑面板；同时指出原生 AOT 编译和 SDL3 的主机平台支持降低了移植门槛。最后他说明已转向以 Linux 为主的开发环境，认为开源与跨平台生态更符合其长期可维护的开发理念。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47176576" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://ejholmes.github.io/2026/02/28/mcp-is-dead-long-live-the-cli.html" target="_blank" rel="noopener noreferrer" class="title-link">When does MCP make sense vs CLI?</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者认为 MCP 并未带来现实收益，企业为新协议投入大量资源却仍需编写同样的工具说明，LLM 其实更擅长直接使用已有 CLI。CLI 对人和模型都友好，调试可复现、管道与组合能力强，适合处理大型数据流并复用现成工具链。MCP 在认证与运行时上引入额外复杂度，例如多次登录、权限粒度粗、服务进程不稳定，反而增加日常摩擦。作者承认在没有 CLI 的场景 MCP 仍有价值，但主张优先建设 API 与 CLI，让智能体自然接入。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47208398" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://github.com/mandel-macaque/memento" target="_blank" rel="noopener noreferrer" class="title-link">If AI writes code, should the session be part of the commit?</a>
+              
+            </div>
+            <div class="summary">
+              <p>该项目提供名为 git-memento 的 Git 扩展，用于在提交时记录 AI 编码会话，并把清理后的对话以 git notes 附加到提交上。它强调保持常规提交流程，同时支持多次 -m、amend、审核与诊断等命令，并可选择将完整会话与摘要分别存入不同的 notes 引用。工具支持可扩展的提供方配置与共享同步 notes，包含初始化、同步、携带 notes 以及 CI 审核等功能，并给出安装与发布说明。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47212355" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.wltx.com/article/news/nation-world/281-53d8693e-77a4-42ad-86e4-3426a30d25ae" target="_blank" rel="noopener noreferrer" class="title-link">Everett shuts down Flock camera network after judge rules footage public record</a>
+              
+            </div>
+            <div class="summary">
+              <p>华盛顿州埃弗里特市在法院裁定Flock车牌识别摄像头影像属于公共记录后，已暂时关闭全市68个摄像头，市府称担忧公开申请可能被犯罪者或跟踪者利用并造成安全风险。该案源于居民提出公共记录申请，法院认定影像可被公众索取；市政府不同意裁定并表示若州议会立法豁免此类数据公开，将考虑重新启用。州议会正就限制披露与数据使用的法案进行辩论，支持者强调安全风险，反对者则指出申请流程冗长且难以用于实时追踪。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47213764" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://motorolanews.com/motorola-three-new-b2b-solutions-at-mwc-2026/" target="_blank" rel="noopener noreferrer" class="title-link">Motorola announces a partnership with GrapheneOS</a>
+              
+            </div>
+            <div class="summary">
+              <p>Motorola 在 MWC 2026 宣布与 GrapheneOS Foundation 建立长期合作，计划在未来设备上加强安全与隐私并推动 GrapheneOS 兼容性，并开展联合研究与软件增强。公司同时推出面向企业的 Moto Analytics，提供设备性能、应用稳定性、电池与连接等运营级洞察，帮助 IT 团队预防问题并提升效率。Moto Secure 新增“私密图像数据”功能，可自动移除照片中的敏感元数据以保护位置与设备信息，未来将逐步推送至部分机型。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47214645" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.theguardian.com/lifeandstyle/2026/feb/24/stranger-secret-how-to-talk-to-anyone-why-you-should" target="_blank" rel="noopener noreferrer" class="title-link">How to talk to anyone and why you should</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章以作者与陌生人交谈的经历切入，指出人们越来越回避公共场合的交流，这种退缩正在削弱基本的社会沟通能力并加剧孤立感。作者分析了技术屏蔽、社交规范强化、疫情遗留心理等原因，并批评社交媒体上的“与陌生人交流挑战”因表演化而加深疏离。文中引用心理学与研究观点，强调我们往往高估被拒绝的风险、低估交谈的愉悦和连结收益，倡导以低门槛的小对话重建互信与人性连接。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47214864" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://e.foundation/e-os/" target="_blank" rel="noopener noreferrer" class="title-link">/e/OS is a complete, fully “deGoogled” mobile ecosystem</a>
+              
+            </div>
+            <div class="summary">
+              <p>/e/OS 被定位为一套完整的“去谷歌化”移动生态，由开源的安卓系统核心与精选应用组成，强调可审计隐私与内置的隐私增强环境。它移除谷歌默认搜索与服务，改用自有搜索、microG、非谷歌的定位与网络服务，并兼容安卓应用，提供带隐私评分的应用获取与追踪器/权限提示。生态还包含 Murena Workspace 账户、云存储与加密目录、家长控制、账户同步等功能，并提供购买预装手机、网页安装器与手动刷机等多种使用方式。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47215489" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://commerce.jolla.com/products/jolla-phone-sept-26" target="_blank" rel="noopener noreferrer" class="title-link">Jolla phone – a full-stack European alternative</a>
+              
+            </div>
+            <div class="summary">
+              <p>该页面介绍 Jolla Phone（2026 年 9 月批次），强调以 Sailfish OS 为核心的欧洲独立 Linux 手机，主打隐私与可控性，提供物理隐私开关、可更换后盖与电池，并支持 Android 应用。文中给出主要规格：6.36 英寸 AMOLED 屏、8GB/12GB 内存、256GB 存储可扩展、约 5500mAh 电池、50MP+13MP 后摄与 32MP 前摄、5G 双卡等，并宣称至少 5 年系统支持。销售采用分批预售模式，2026 年 9 月交付，需 99 欧元可退订金，最终价 649 欧元含税。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47216037" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.windowslatest.com/2026/03/02/microsoft-gets-tired-of-microslop-bans-the-word-on-its-discord-then-locks-the-server-after-backlash/" target="_blank" rel="noopener noreferrer" class="title-link">Microsoft bans the word &quot;Microslop&quot; on its Discord, then locks the server</a>
+              
+            </div>
+            <div class="summary">
+              <p>据报道，微软在官方 Copilot Discord 服务器中屏蔽“Microslop”一词，触发自动审查提示，导致用户尝试用变体绕过过滤并引发更多对立。随后部分用户被限制发言，频道历史与发布权限被收紧，服务器一度被锁定以应对升级的冲突。微软事后表示这是因垃圾信息攻击而采取的临时过滤与封禁措施，并计划加强防护以维持社区秩序。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47216047" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-03-02.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-03-10</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.03.10 周二</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://writings.hongminhee.org/2026/03/legal-vs-legitimate/" target="_blank" rel="noopener noreferrer" class="title-link">Is legal the same as legitimate: AI reimplementation and the erosion of copyleft</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章以 chardet 由 LGPL 改为 MIT 的 AI 重新实现争议为例，指出“合法”并不等于“正当”，法律只划底线而非背书行为。作者反驳将 GNU 历史类比为正当性依据，强调这次改许可从共益走向私有，削弱了回馈义务与社区信任。文中还批评把 GPL 视为“阻碍分享”的说法，并指出许可选择常与既得利益一致。最后提出当 AI 降低重新实现成本时，更应坚持共益与互惠的规范，而不是以合法性替代正当性判断。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47310160" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://cbs12.com/news/local/florida-news-judge-rules-red-light-camera-tickets-unconstitutional" target="_blank" rel="noopener noreferrer" class="title-link">Florida judge rules red light camera tickets are unconstitutional</a>
+              
+            </div>
+            <div class="summary">
+              <p>佛罗里达布劳沃德县法官 Steven P. DeLuca 在一份 21 页裁定中撤销一张红灯摄像头罚单，认定相关州法把举证责任从政府转嫁给车主，违反正当程序。裁定指出此类案件虽属民事交通违法，但具有“准刑事”性质，进入县法院后应由政府以“排除合理怀疑”的标准证明司机身份与违法事实。该裁定目前仅适用于布劳沃德县个案，但可能引发其他县及上诉层级的连锁挑战，同时红灯摄像头安全效益的支持方与反对方争议仍在持续。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47312090" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.cnbc.com/2026/03/09/oracle-is-building-yesterdays-data-centers-with-tomorrows-debt.html" target="_blank" rel="noopener noreferrer" class="title-link">OpenAI is walking away from expanding its Stargate data center with Oracle</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章指出人工智能芯片迭代速度快于数据中心建设周期，导致基础设施投资面临过时风险。报道称OpenAI不再扩展与Oracle在德州Abilene的Stargate数据中心合作，因为希望在别处用更新一代Nvidia GPU形成更大集群，而现有站点预计使用Blackwell且供电一年后才上线。Oracle称相关报道不实但未否认扩建计划，并已在选址、硬件订购和建设上投入巨资；其扩张主要依赖约1000亿美元债务，合作方Blue Owl不再追加资金并计划裁员。文章还提到Nvidia芯片更新已从两年一代加速到一年一代，Vera Rubin性能提升显著，使长期建设的设施更容易落后。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47315128" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://martinalderson.com/posts/no-it-doesnt-cost-anthropic-5k-per-claude-code-user/" target="_blank" rel="noopener noreferrer" class="title-link">No, it doesn&#39;t cost Anthropic $5k per Claude Code user</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章质疑“每个 Claude Code Max 用户每月要花 5000 美元算力”的说法，认为这是把零售 API 价格当作真实算力成本导致的误读。作者对比 OpenRouter 上同量级开源权重模型的定价，指出实际推理成本大约只有 API 价格的十分之一，因此最重度用户的真实成本约 500 美元左右，损失规模远小于传闻。文中还解释 5000 美元更像是 Cursor 这类需要支付零售 API 价格的第三方成本，而 Anthropic 的主要亏损来自训练与研发投入，非推理成本。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47317132" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://howisfelix.today/" target="_blank" rel="noopener noreferrer" class="title-link">I put my whole life into a single database</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者从2019年起把生活指标集中到单一数据库里，每天跟踪上百类数据，覆盖位置、饮食、运动、睡眠、心情、工作与天气等，并累计约38万条记录。他说明项目目标是用数据回答城市迁移、睡眠与效率、季节与情绪等关系问题，并强调数据可自主管理、可增删问题、可视化完全掌控。页面公开了部分统计与趋势图（以快照呈现保护隐私），同时项目开源并支持自托管。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47321233" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.ft.com/content/e5245ec3-1a58-4eff-ab58-480b6259aaf1" target="_blank" rel="noopener noreferrer" class="title-link">Yann LeCun&#39;s AI startup raises $1B in Europe&#39;s largest ever seed round</a>
+              
+            </div>
+            <div class="summary">
+              <p>报道指出，前 Meta 首席 AI 科学家 Yann LeCun 推出 AI 初创公司 AMI Labs，并完成超过 10 亿美元种子轮融资。该轮融资被描述为欧洲史上最大规模的种子轮。资金支持方包括 Nvidia、Temasek 以及 Jeff Bezos。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47321533" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.cnbc.com/2026/03/08/social-media-child-safety-internet-ai-surveillance.html" target="_blank" rel="noopener noreferrer" class="title-link">Online age-verification tools for child safety are surveilling adults</a>
+              
+            </div>
+            <div class="summary">
+              <p>美国多州推进针对未成年人的年龄验证法规，导致成年人访问内容也被强制进入验证关卡，引发隐私与言论自由担忧。文章指出平台多依赖第三方身份验证商，用人脸分析、年龄估计或证件核验等方式判定年龄，但数据留存与集中存储带来泄露、执法索取及责任转移风险。Discord等平台的推行计划遭用户反弹并延期，监管方强调需最小化数据使用与安全保护，而隐私倡议者主张应以更强的联邦隐私法取代持续扩张的验证基础设施。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47322635" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://arstechnica.com/ai/2026/03/after-outages-amazon-to-make-senior-engineers-sign-off-on-ai-assisted-changes/" target="_blank" rel="noopener noreferrer" class="title-link">After outages, Amazon to make senior engineers sign off on AI-assisted changes</a>
+              
+            </div>
+            <div class="summary">
+              <p>亚马逊在内部运营例会后要求初级和中级工程师的 AI 辅助改动必须由资深工程师签字审核，称这是正常的可用性复盘与持续改进的一部分。AWS 近期至少两起事故与 AI 编码助手有关，包括 Kiro 工具在成本计算器服务上导致 13 小时中断，并被描述为删除并重建环境。公司表示部分事件影响范围有限且未波及面向客户的服务。报道还提到裁员后故障响应级别事件增多的说法，亚马逊否认人员削减导致近期宕机上升。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47323017" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.axios.com/2026/03/10/meta-facebook-moltbook-agent-social-network" target="_blank" rel="noopener noreferrer" class="title-link">Meta acquires Moltbook</a>
+              
+            </div>
+            <div class="summary">
+              <p>Meta收购面向AI代理的社交网络Moltbook，并将其创始人Matt Schlicht与Ben Parr纳入Meta Superintelligence Labs。交易价格未披露，预计在3月中旬完成，两人计划3月16日入职。Moltbook与OpenClaw配合，强调为AI代理提供可验证身份与相互连接，并与人类所有者绑定。Meta表示现有用户可继续使用平台，但该安排可能是临时性的。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47323900" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://blog.computationalcomplexity.org/2026/03/tony-hoare-1934-2026.html" target="_blank" rel="noopener noreferrer" class="title-link">Tony Hoare has died</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章悼念图灵奖得主、前牛津教授 Tony Hoare，称其于 2026 年 3 月 5 日去世，享年 92 岁，并回顾他在快速排序、ALGOL 与 Hoare logic 等方面的贡献。作者以多次拜访的个人回忆为主线，描写他温和清晰的表达、对早期计算机与职业经历的细致讲述，以及与“快速排序赌注”相关的小故事。文中还记录了他对电影中“天才”刻画的看法及他幽默、谦逊的性格特征，并表达对其离世的深切怀念。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47324054" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-03-10.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

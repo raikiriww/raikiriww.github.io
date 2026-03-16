@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-03-14</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.03.14 周六</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.bbc.com/future/article/20260310-wired-headphones-are-better-than-bluetooth" target="_blank" rel="noopener noreferrer" class="title-link">Wired headphone sales are exploding</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章指出，有线耳机在被手机取消耳机孔后并未消失，反而因音质性价比更高、连接更稳定而重新流行，形成一种从实用到审美的文化回潮。数据称2025年下半年销量大幅反弹，2026年初收入继续增长，受访者也提到对复杂技术与蓝牙不可靠性的反感推动了回归。作者描述了有线耳机在时尚圈与名人中的象征意义，并提到USB或转接头等连接方案让回归成本降低，但仍存在便携性与易丢失的取舍。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47340203" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://onecloudplease.com/blog/bucketsquatting-is-finally-dead" target="_blank" rel="noopener noreferrer" class="title-link">Bucketsquatting is finally dead</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者回顾了 S3 桶名全局唯一导致的桶名抢注问题，删除旧桶后他人可注册同名桶并可能获取数据或干扰服务，而可预测的命名规则会放大风险。AWS 现推出面向通用客户的账号命名空间格式（&lt;前缀&gt;-&lt;账号ID&gt;-&lt;区域&gt;-an），只有拥有该命名空间的账号能创建同名桶，错误时会返回 InvalidBucketNamespace。AWS 建议默认使用该格式，并可通过组织级 SCP 的 s3:x-amz-bucket-namespace 条件强制新桶使用，但不会自动保护既有桶，需要新建并迁移数据。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47361913" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.tomshardware.com/tech-industry/qatar-helium-shutdown-puts-chip-supply-chain-on-a-two-week-clock" target="_blank" rel="noopener noreferrer" class="title-link">Qatar helium shutdown puts chip supply chain on a two-week clock</a>
+              
+            </div>
+            <div class="summary">
+              <p>卡塔尔拉斯拉凡综合设施的氦气生产在遭遇无人机袭击后停摆已九天，若停产超过约两周，工业气体分销商可能不得不迁移低温设备并重新验证供应关系，恢复周期可能拉长到数月。韩国芯片产业受冲击最大，2025年其氦气进口中约64.7%来自卡塔尔，且氦气在硅片冷却中缺乏可替代方案。韩国政府已调查对中东高度依赖的14类半导体材料与设备，韩国企业SK hynix称已分散供应并备足库存，而台积电表示目前影响不大但会持续监测；韩国和台湾各占全球约18%的产能。文章还提到类似情形曾在2022年因俄乌战争引发的氦氖短缺中出现，推动韩国加速供应多元化和本土生产。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47363584" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.techdirt.com/2026/03/12/the-wyden-siren-goes-off-again-well-be-stunned-by-what-the-nsa-is-doing-under-section-702/" target="_blank" rel="noopener noreferrer" class="title-link">The Wyden Siren Goes Off Again: We’ll Be “Stunned” By What the NSA Is Doing</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章称参议员罗恩·怀登再次在参议院发出警报，表示关于 FISA 第 702 条存在影响美国人隐私的秘密法律解释，且多届政府拒绝解密，他认为公众一旦知情会“震惊”。他借对 NSA 领导人提名与 702 续授权辩论，批评国会在缺乏充分信息下被迫仓促续期，形成长期无实质审议的模式。文中还指出上次所谓改革未能建立有效监督，敏感检索审批落在争议人物手中，且扩张“电子通信服务提供者”定义可能迫使更多普通人秘密协助监控。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47366374" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.ft.com/content/e5fbc6c2-d5a6-4b97-a105-6a96ea849de5" target="_blank" rel="noopener noreferrer" class="title-link">Elon Musk pushes out more xAI founders as AI coding effort falters</a>
+              
+            </div>
+            <div class="summary">
+              <p>报道指出，埃隆·马斯克将更多 xAI 的创始成员挤出核心位置，背景是其 AI 编码工作进展不顺。文中提到，来自 Tesla 和 SpaceX 的管理人员被派去审查相关工作，显示这家初创公司在追赶竞争对手方面面临压力。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47366666" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://claude.com/blog/1m-context-ga" target="_blank" rel="noopener noreferrer" class="title-link">1M context is now generally available for Opus 4.6 and Sonnet 4.6</a>
+              
+            </div>
+            <div class="summary">
+              <p>Claude Opus 4.6 与 Sonnet 4.6 的 1M 上下文已正式可用，且全窗口按标准价格计费，不再有长上下文溢价。媒体上限提升到每次请求最多 600 张图片或 PDF 页，并在 Claude Platform、Azure Foundry 与 Google Cloud Vertex AI 等渠道提供，超过 200K token 也可直接使用。Claude Code 的 Max、Team、Enterprise 版在 Opus 4.6 上默认启用 1M 上下文，减少压缩与上下文清理成本。同时强调长上下文检索与推理能力提升，并给出 MRCR v2 78.3% 的成绩作为效果佐证。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47367129" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://medhir.com/blog/your-phone-is-an-entire-computer" target="_blank" rel="noopener noreferrer" class="title-link">Your phone is an entire computer</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章认为智能手机本质上是完整电脑，硬件能力已足以运行桌面级操作系统，与同芯片的 MacBook Neo 在算力上并无本质差异。作者批评苹果通过应用商店、文件系统与引导加载器限制，阻止用户自由安装软件或更换系统，把“安全”叙事当作商业控制的理由。其主张应确立对设备“获得 root 与自由装载系统”的权利，将手机视为可自由改造的通用计算设备。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47367568" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://github.com/Hammerspoon/hammerspoon" target="_blank" rel="noopener noreferrer" class="title-link">Hammerspoon</a>
+              
+            </div>
+            <div class="summary">
+              <p>Hammerspoon 是一款面向 macOS 的强力自动化工具，核心是把系统功能与 Lua 脚本引擎连接起来。它通过一组扩展暴露系统能力，让用户用 Lua 脚本控制操作系统的多方面行为。项目提供手动安装与 Homebrew 安装方式，并建议在 <code>~/.hammerspoon/init.lua</code> 中编写配置后开始使用，同时给出入门指南和 API 文档等资源。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47367932" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://github.com/TomBadash/MouseControl" target="_blank" rel="noopener noreferrer" class="title-link">Mouser: An open source alternative to Logi-Plus mouse software</a>
+              
+            </div>
+            <div class="summary">
+              <p>该项目提供名为 Mouser 的本地化开源工具，用于替代 Logitech Options+，为 MX Master 3S 鼠标重映射 6 个可编程按键，并强调无遥测、无云端、无需账号。它支持按应用自动切换配置、22 类内置动作、DPI 与滚轮方向控制、电量监测、自动重连，以及基于 Qt Quick 的界面和托盘常驻。实现上结合 HID++ 与系统钩子拦截事件，并提供 Windows 与 macOS 的安装运行说明及已知限制（暂不支持 Linux，优先推荐蓝牙）。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47368033" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://digg.com/" target="_blank" rel="noopener noreferrer" class="title-link">Digg is gone again</a>
+              
+            </div>
+            <div class="summary">
+              <p>团队强调 Digg 不会消失，而是由一支规模不大但坚定的团队进行重建，并准备以全新角度重新定位产品，不再把自己仅仅当作传统竞品的替代。公司宣布创始人 Kevin Rose 将于 4 月第一周全职回归，把主要精力投入 Digg，同时仍作为 True Ventures 顾问。官方播客 Diggnation 将在重启期间继续每月录制。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47368135" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-03-14.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

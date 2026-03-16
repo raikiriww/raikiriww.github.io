@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-19</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.19 周四</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://chromereleases.googleblog.com/2026/02/stable-channel-update-for-desktop_13.html" target="_blank" rel="noopener noreferrer" class="title-link">Zero-day CSS: CVE-2026-2441 exists in the wild</a>
+              
+            </div>
+            <div class="summary">
+              <p>Chrome 稳定版已更新：Windows/Mac 版本为 145.0.7632.75/76，Linux 版本为 144.0.7559.75，并将在未来几天到数周内逐步推送。此次更新仅包含 1 项安全修复，高危 CVE-2026-2441 属于 CSS 中的 use-after-free 漏洞，由 Shaheen Fazim 于 2026-02-11 报告。官方说明该漏洞已有在野利用，相关缺陷详情可能在多数用户完成更新前继续受限。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47062748" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://tailscale.com/blog/peer-relays-ga" target="_blank" rel="noopener noreferrer" class="title-link">Tailscale Peer Relays is now generally available</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章宣布 Tailscale Peer Relays 正式 GA，可在任意 Tailscale 节点部署客户自建中继，用于在直连受阻时提供高吞吐中继能力。新版在多客户端转发场景提升吞吐与可靠性，改进了接口与地址族选择、锁竞争与多 UDP 套接字分摊。针对公有云受限环境新增静态端点支持，可配合负载均衡器提供固定入口，扩大可用的中继路径并可能替代部分子网路由器。可观测性也增强，支持通过 tailscale ping 判别是否走中继，并暴露可被 Prometheus 或 Grafana 抓取的转发指标，便于审计与排障。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47063005" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://jasonfantl.com/posts/Universal-Unique-IDs/" target="_blank" rel="noopener noreferrer" class="title-link">Cosmologically Unique IDs</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章以宇宙尺度的设备与物流为背景，讨论为何需要几乎不可能碰撞的唯一 ID，并用生日悖论说明随机 ID 只要位数足够即可把碰撞概率降到可忽略水平。作者估算了不同极端假设下所需位数，给出从常见 UUID 的 122 位到宇宙级上限约 798 位等范围，并提醒随机性质量会影响碰撞风险，需避免常见或低熵来源。随后转向确定性分配方案，从中央计数器扩展到分层“Dewey”式命名，并通过树形增长模式比较其在不同分配行为下的位数增长特性。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47064490" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://old.reddit.com/r/MacOS/comments/1r8900z/macos_which_officially_supports_27_year_old/" target="_blank" rel="noopener noreferrer" class="title-link">27-year-old Apple iBooks can connect to Wi-Fi and download official updates</a>
+              
+            </div>
+            <div class="summary">
+              <p>讨论围绕旧款 iBook 仍可连接现代 Wi-Fi 并从苹果服务器获取更新展开，同时对“计划性淘汰”提出质疑与辩论。评论强调摩尔定律放缓后 CPU 提升更多依赖专用优化，而非工艺节点持续缩小。也有观点指出苹果在 2010 年代更像计划性淘汰，但 2020 年代因服务业务占比提升而态度转变，并补充早期 iBook 可通过 Apple AirPort 卡使用 802.11b 无线网络。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47066241" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://pudding.cool/2026/02/womens-sizing/" target="_blank" rel="noopener noreferrer" class="title-link">Sizing chaos</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章以作者自身与大量数据为线索，指出女性服装尺码长期缺乏统一标准，品牌频繁调整尺码并借助“虚假尺码”营销，导致消费者在不同品牌、不同品类间不断踩坑。作者解释了现代尺码体系以少数样板身材（如样衣尺码）为基础进行分级生产，难以覆盖真实体型分布，且历史上对人群多样性的代表性不足。文末提出尺码并无“真实值”，行业缺乏约束并非技术问题，而是商业选择，应当允许并推动更合理的尺码体系与更贴合身体的设计。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47066552" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://code.claude.com/docs/en/legal-and-compliance" target="_blank" rel="noopener noreferrer" class="title-link">Anthropic officially bans using subscription auth for third party use</a>
+              
+            </div>
+            <div class="summary">
+              <p>该页面说明 Claude Code 的法律与合规条款，包括适用的商业条款、消费者条款以及既有商业协议的适用范围。文中强调 OAuth 仅限于 Claude Code 与 <a href="http://Claude.ai" target="_blank" rel="noopener noreferrer">Claude.ai</a>，禁止将 Free/Pro/Max 账号的 OAuth 令牌用于第三方产品或服务（含 Agent SDK），开发者应使用 Claude Console 或云厂商的 API key 认证。还提及若客户已签署 BAA 且开启 ZDR，BAA 会自动覆盖 Claude Code，且可在信任中心与透明度中心查询安全与合规信息。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47069299" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/" target="_blank" rel="noopener noreferrer" class="title-link">Gemini 3.1 Pro</a>
+              
+            </div>
+            <div class="summary">
+              <p>Gemini 3.1 Pro 作为升级后的核心智能模型发布，面向复杂任务强调更强推理能力，面向开发者、企业与消费者在 Gemini API、Vertex AI、Gemini 应用和 NotebookLM 等渠道逐步上线。官方称其在 ARC-AGI-2 等复杂问题基准上显著提升，验证得分 77.1%，用于数据综合、复杂主题解释和创意编程等场景。当前以预览方式发布以验证更新，并在 Gemini 应用与 NotebookLM 中对 Pro 与 Ultra 订阅用户提供更高使用上限。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47074735" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://micasa.dev/" target="_blank" rel="noopener noreferrer" class="title-link">Show HN: Micasa – track your house from the terminal</a>
+              
+            </div>
+            <div class="summary">
+              <p>Micasa 是一个终端界面工具，用一个本地 SQLite 文件记录家中的维护、项目、事故、家电、供应商、报价与文档，并避免云端、账号和订阅。它提供维护周期与到期提醒、项目与报价对比、保修信息、事故处理和供应商历史等能力，便于把零散记录集中管理。工具强调键盘驱动与 Vim 风格操作，可排序、跳转与关联数据，并支持 Go 安装或下载多平台二进制。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47075124" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://deepmind.google/models/model-cards/gemini-3-1-pro/" target="_blank" rel="noopener noreferrer" class="title-link">Gemini 3.1 Pro</a>
+              
+            </div>
+            <div class="summary">
+              <p>该模型卡介绍了 Gemini 3.1 Pro，定位为 Gemini 3 系列的新迭代，并强调其为面向复杂任务的高性能原生多模态推理模型。模型支持文本、图像、音频、视频与代码库等多模态输入，最长 1M 令牌上下文，输出上限 64K 令牌。评测覆盖推理、多模态、代理式工具使用、多语种与长上下文等多类基准，结果显示相较 Gemini 3 Pro 在多项基准上有显著提升。文档还给出安全与前沿风险评估结论，指出整体安全与语气表现优于上一代，并在多个高风险领域维持在警戒阈值以下。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47075318" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.marginalia.nu/log/a_132_ai_bores/" target="_blank" rel="noopener noreferrer" class="title-link">AI makes you boring</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者从 Show HN 质量下降的讨论出发，认为大量 AI 辅助项目缺少投入与深入思考，因此显得乏味、难以形成有价值的交流。其核心观点是 LLM 不擅长原创思考，把思考外包会让想法停留在浅层，甚至让人类思维更像模型输出。作者强调原创来自长期沉浸与反复表达，而不是简单的提示与生成。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47076966" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-19.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

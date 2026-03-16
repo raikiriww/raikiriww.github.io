@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-03-13</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.03.13 周五</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://sharif.io/looking-stupid" target="_blank" rel="noopener noreferrer" class="title-link">Willingness to look stupid</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者反思从敢于随写随发到害怕发布，认为成名或标准提高会抑制尝试，像诺奖得主容易因高期待而停下。优秀点子往往看起来很蠢，年轻人因不被期待更敢探索，作者用“先说一堆烂点子再出好点子”的故事提出愿意看起来愚蠢是创作护城河。进化能产生水母也依赖大量失败试错，说明怕出丑会导致过度筛选、作品乏味；与其追求好，不如先产出并分享。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47307124" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://channelsurfer.tv/" target="_blank" rel="noopener noreferrer" class="title-link">Show HN: Channel Surfer – Watch YouTube like it’s cable TV</a>
+              <span class="mode-badge mode-fallback">链接补救</span>
+            </div>
+            <div class="summary">
+              <p>该页面仅显示启动提示与作者信息，未能获得正文内容，无法确认产品功能细节与使用方式。若需总结，请提供可读取的正文或可访问的完整页面。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47336100" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.marketscreener.com/news/us-private-credit-defaults-hit-record-9-2-in-2025-fitch-says-ce7e5fd8df8fff2d" target="_blank" rel="noopener noreferrer" class="title-link">US private credit defaults hit record 9.2% in 2025, Fitch says</a>
+              
+            </div>
+            <div class="summary">
+              <p>Fitch报告称，2025年美国私募信贷企业借款人的违约率升至9.2%，创历史新高，覆盖302家公司、38起违约事件。2024年的纪录为8.1%，去年违约主要来自年收益不超过2500万美元的小型发行人，行业分布较为分散。样本以中型企业为主，私募信贷多为与联邦基金利率挂钩的浮动利率且缺少利率对冲，高利率被视为主要诱因；违约形式包括破产申请与债务重组交换。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47349806" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://davidoks.blog/p/why-the-atm-didnt-kill-bank-teller" target="_blank" rel="noopener noreferrer" class="title-link">ATMs didn’t kill bank teller jobs, but the iPhone did</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章以银行柜员为例指出，过去流行的说法认为ATM并未减少柜员岗位，但这一结论在近年已失效，柜员数量大幅下降。作者认为真正导致岗位萎缩的是iPhone等移动技术，它改变了金融服务的工作范式，而不是仅替代部分任务。核心论点是技术影响取决于与人类工作的互补性及新范式的出现：只做任务自动化往往难以消灭岗位，重塑流程才会带来结构性替代。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47351371" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.grandforksherald.com/news/north-dakota/ai-error-jails-innocent-grandmother-for-months-in-north-dakota-fraud-case" target="_blank" rel="noopener noreferrer" class="title-link">Innocent woman jailed after being misidentified using AI facial recognition</a>
+              
+            </div>
+            <div class="summary">
+              <p>报道讲述田纳西州居民安吉拉·利普斯因北达科他州警方使用人脸识别误判而被当作银行诈骗嫌疑人，被跨州逮捕并关押近六个月。她始终称从未到过北达科他州，直到律师调取银行与消费记录证明她案发时身处家乡，警方才与其面谈并撤案。案件撤销后她在寒冬中一度滞留法戈，且在羁押期间失去住房、车辆等，警方未对错误识别进行道歉。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47356968" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://samhenri.gold/blog/20260312-this-is-not-the-computer-for-you/" target="_blank" rel="noopener noreferrer" class="title-link">“This is not the computer for you”</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章批评把电脑评测当作“许可条”的做法，认为标签化用户并规定“正确用途”，忽视了人成长与探索的可能。作者借自己童年用低配旧机硬跑剪辑、开发等经历，说明痴迷和学习往往源于在限制中不断试错。以 MacBook Neo 为例，虽然性能和配置有限，但完整的 macOS 平台让使用者能直面资源与算力的真实边界，从而学到“计算的物理学”。作者强调这类机器真正面向的是缺乏资源却愿意折腾的孩子，正是这种持续试探与突破促成日后成为开发者、设计师等身份的起点。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47359744" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://vite.dev/blog/announcing-vite8" target="_blank" rel="noopener noreferrer" class="title-link">Vite 8.0 Is Out</a>
+              
+            </div>
+            <div class="summary">
+              <p>Vite 8 稳定版发布，核心变化是以 Rust 实现的 Rolldown 统一取代开发期的 esbuild 与生产期的 Rollup，宣称构建速度提升 10–30 倍且插件兼容。官方强调生态下载量已达每周 6500 万，并推出 registry.vite.dev 作为 Vite、Rolldown、Rollup 的插件目录。新版本还包含集成 Devtools、内置 tsconfig 路径与 emitDecoratorMetadata 支持、Wasm SSR、浏览器控制台转发等功能，并要求 Node.js 20.19+ 或 22.12+。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47360730" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://github.com/upper-up/meta-lobbying-and-other-findings" target="_blank" rel="noopener noreferrer" class="title-link">Meta Platforms: Lobbying, dark money, and the App Store Accountability Act</a>
+              
+            </div>
+            <div class="summary">
+              <p>该仓库是一份开源情报调查，聚焦 Meta Platforms 为推动 App Store Accountability Act（ASAA）而构建的多渠道影响操作，称其将年龄验证合规成本转嫁给 Apple 和 Google 的应用商店而非社交平台本身。调查基于公开记录，汇总了 2025 年联邦游说创纪录支出、遍及多州的游说网络、以及通过 Digital Childhood Alliance 等“草根”组织的宣传与资金流向。文档还列出已验证与待证假设、互动报告与数据结构，展示资金链、时间线与立法推进的证据整理方式。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47362528" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://tui.studio/" target="_blank" rel="noopener noreferrer" class="title-link">TUI Studio – visual terminal UI design tool</a>
+              
+            </div>
+            <div class="summary">
+              <p>TUIStudio 是一款面向终端应用的可视化设计工具，提供拖拽式画布与实时 ANSI 预览，并内置 20 多种组件与绝对、Flexbox、网格等布局方式。它支持多主题配色和项目保存为可移植的 <code>.tui</code> JSON 文件，便于共享与版本管理。产品处于 Alpha 阶段，计划导出到 Ink、BubbleTea、Blessed、Textual、OpenTUI、Tview 等框架，但当前导出功能尚未可用。当前编辑器可免费下载使用，未来将提供含团队协作与云同步的专业版。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47362613" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.canirun.ai/" target="_blank" rel="noopener noreferrer" class="title-link">Can I run AI locally?</a>
+              
+            </div>
+            <div class="summary">
+              <p>该页面提供一个交互式工具，用来判断本地设备能否运行不同的 AI 模型。它列出大量硬件选项（含各类 GPU、集显与移动芯片）并标注显存、带宽等指标，同时按任务类型与模型规模给出可运行、吃紧或过重的等级与排序，帮助用户快速匹配可用模型。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47363754" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-03-13.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

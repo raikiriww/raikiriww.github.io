@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-03-01</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.03.01 周日</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://ben-mini.com/2026/the-happiest-ive-ever-been" target="_blank" rel="noopener noreferrer" class="title-link">The happiest I&#39;ve ever been</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者回忆自己在2020年初担任青少年篮球队主教练的经历，从原本的空虚感转为强烈的满足感，并描述了训练与比赛中帮助孩子成长的具体片段。他认为快乐来自于帮助孩子、在现实世界中投入身体与情感、以及在可控的责任中建立自信，也提到疫情突然终止赛季带来的遗憾。最后他把这段体验与当下科技从业者的迷茫联系起来，反思‘坐在屏幕前’是否真是通往价值与幸福的道路，并鼓励人们记录让自己快乐的事并追问原因。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47161759" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://mksg.lu/blog/context-mode" target="_blank" rel="noopener noreferrer" class="title-link">MCP server that reduces Claude Code context consumption by 98%</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者指出 Claude Code 的 MCP 工具调用会把原始输出塞满 200K 上下文，诸如 Playwright 快照、GitHub 工单列表和日志会迅速耗尽可用上下文。为此其构建 Context Mode 作为中间 MCP 服务器，把工具输出在沙箱中执行、只回传精简的 stdout，从而将 315 KB 输出压到 5.4 KB，宣称可降低约 98% 的上下文占用并显著延长可用会话时长。文章还描述了索引与搜索机制：按标题分块、保留代码块、基于 SQLite FTS5 与 BM25 排名并做词干化，支持从 URL 抓取后索引。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47193064" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://help.obsidian.md/sync/headless" target="_blank" rel="noopener noreferrer" class="title-link">Obsidian Sync now has a headless client</a>
+              
+            </div>
+            <div class="summary">
+              <p>Obsidian Sync 提供无界面 Headless Sync 客户端，用于在不打开桌面端的情况下同步仓库，适合 CI、代理和自动化流程，并支持一次性同步或持续监听更新。文档强调在启用前备份数据，且同一设备不要同时使用桌面端同步与 Headless Sync 以避免冲突。入门通过 <code>npm</code> 安装并使用 <code>ob</code> 命令登录、列出远端仓库、建立同步与运行连续同步，非交互场景可改用 <code>OBSIDIAN_AUTH_TOKEN</code> 环境变量。还说明了多项命令配置与状态查看，并介绍原生模块用于在 Windows 与 macOS 保留文件创建时间，Linux 不支持该能力。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47197267" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://venturebeat.com/technology/alibabas-new-open-source-qwen3-5-medium-models-offer-sonnet-4-5-performance" target="_blank" rel="noopener noreferrer" class="title-link">Qwen3.5 122B and 35B models offer Sonnet 4.5 performance on local computers</a>
+              
+            </div>
+            <div class="summary">
+              <p>阿里巴巴发布 Qwen3.5 Medium 系列四个模型，其中三款以 Apache 2.0 开源并支持企业与个人商用，另有 Qwen3.5-Flash 通过云端 API 提供。文章称这些模型在第三方基准测试中达到甚至超越部分同尺寸闭源模型，并通过 4-bit 权重与 KV cache 量化保持高精度，从而在本地硬件上实现更强性能。旗舰 35B-A3B 可在消费级 32GB 显存上实现百万级上下文，并采用混合架构与稀疏 MoE 来降低推理成本，面向本地部署与私有数据场景。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47199781" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://twitter.com/OpenAI/status/2027846016423321831" target="_blank" rel="noopener noreferrer" class="title-link">We do not think Anthropic should be designated as a supply chain risk</a>
+              <span class="mode-badge mode-fallback">链接补救</span>
+            </div>
+            <div class="summary">
+              <p>尝试访问该条目指向的原文页面，但页面未返回可读正文内容，疑似被登录或验证流程拦截。当前无法获取帖文的具体表述与细节，因此不能生成基于正文的总结。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47200420" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="http://karpathy.github.io/2026/02/12/microgpt/" target="_blank" rel="noopener noreferrer" class="title-link">Microgpt</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者介绍 microgpt：一个仅约 200 行、无依赖的 Python 单文件，实现了从数据集、分词器、自动求导、类 GPT‑2 架构、Adam 优化器到训练与推理的完整流程，并强调已将 LLM 压缩到最小可用内核。文章以约 3.2 万个姓名作为示例数据，说明模型学习文本统计规律并生成新名字的目标。同时讲解最简分词方式与自写 autograd 的原理、参数初始化与训练所需的梯度计算思路。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47202708" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://claude.com/import-memory" target="_blank" rel="noopener noreferrer" class="title-link">Switch to Claude without starting over</a>
+              
+            </div>
+            <div class="summary">
+              <p>页面介绍了 Claude 的“导入记忆”功能，强调可从其他 AI 提供方拷贝上下文与偏好，让首次对话也能像长期使用一样顺畅。它给出两步流程：先在原 AI 中粘贴提示词生成上下文，再将结果粘贴到 Claude 的记忆设置中即可完成迁移。该功能面向付费计划，主打跨对话保留工作偏好、项目隔离与可查看可编辑的记忆管理。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47204571" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://mlu-explain.github.io/decision-tree/" target="_blank" rel="noopener noreferrer" class="title-link">Decision trees – the unreasonable power of nested decision rules</a>
+              
+            </div>
+            <div class="summary">
+              <p>这篇文章用可视化讲解决策树如何通过一系列嵌套规则把数据划分为更“纯”的区域，并解释熵在衡量样本纯度中的作用。它展示了信息增益如何由熵的前后差计算，并以 ID3 的递归贪心流程选择最佳切分点，必要时设置停止条件避免过深生长。文中对比了熵与 Gini 不纯度的差异与适用场景，并强调单棵决策树对数据扰动敏感、易过拟合，需要通过剪枝或限制深度等方式控制复杂度。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47204964" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://99helpers.com/tools/ad-supported-chat" target="_blank" rel="noopener noreferrer" class="title-link">I built a demo of what AI chat will look like when it&#39;s &quot;free&quot; and ad-supported</a>
+              
+            </div>
+            <div class="summary">
+              <p>该页面展示一个讽刺但可实际使用的广告支持型 AI 聊天演示，目的是让人直观看到在计算成本压力下，以广告换取“免费”的可能形态。演示涵盖多种广告位与机制，如会话前插屏、横幅/侧栏广告、赞助式回答、上下文文字广告、意图触发商品卡、对话配额后的观看广告解锁、重定向/地域广告与赞助式快捷建议，并对费用、隐私、打断程度、回答质量与收入模型的权衡进行对比。页面还说明广告与品牌为虚构、聊天由真实模型生成且会记录对话，并指出该工具面向产品、营销、开发、设计、投资与政策研究等人群用于理解 AI 变现方式。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47205890" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://ghostty.org/docs" target="_blank" rel="noopener noreferrer" class="title-link">Ghostty – Terminal Emulator</a>
+              
+            </div>
+            <div class="summary">
+              <p>该页面为 Ghostty 文档入口，介绍其作为跨平台终端模拟器，强调原生 UI 与 GPU 加速，并定位为快速、功能丰富的工具。文档提供安装与配置指引，声称可零配置快速启动，macOS 有现成二进制，Linux 可用包或源码构建。还列出重点文档主题，包括自定义快捷键、内置与明暗主题配置、大量可调配置项，以及面向终端应用开发者的控制序列与终端概念参考。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47206009" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-03-01.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

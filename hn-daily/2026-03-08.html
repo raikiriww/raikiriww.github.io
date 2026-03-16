@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-03-08</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.03.08 周日</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.bbc.com/travel/article/20260302-the-yoghurt-delivery-women-combatting-loneliness-in-japan" target="_blank" rel="noopener noreferrer" class="title-link">Yoghurt delivery women combatting loneliness in Japan</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章聚焦日本“Yakult Lady”上门送益生菌饮品的女性，她们在快速老龄化与独居上升的背景下，成为许多老人稳定的例行探访与情感连接来源。通过长期固定的拜访和简短交谈，这些配送员不仅完成销售，也在无形中承担社区看护与预警角色，缓解孤独感并留意健康变化。文中回顾了该模式从产品推广到正式制度化的历史，并指出其社会意义已超越饮品本身，成为一种日常关怀网络。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47287344" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://cacm.acm.org/research/a-decade-of-docker-containers/" target="_blank" rel="noopener noreferrer" class="title-link">A decade of Docker containers</a>
+              <span class="mode-badge mode-fallback">链接补救</span>
+            </div>
+            <div class="summary">
+              <p>尝试访问该链接时被站点验证拦截，返回 403，未能读取正文内容。因此无法基于原文生成摘要，只能记录访问失败。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47289311" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://github.com/0x0mer/CasNum" target="_blank" rel="noopener noreferrer" class="title-link">CasNum</a>
+              
+            </div>
+            <div class="summary">
+              <p>CasNum 是一个用圆规直尺作图来实现任意精度运算的库，把数字表示为平面点，并用作图构造来完成加减乘除以及部分逻辑运算。项目还把这些几何构造嵌入到 Game Boy 模拟器的 ALU 中，提供示例与运行方式，并带有作图可视化查看器。作者强调这是一种偏“几何计算”的实验性实现，性能依赖缓存且资源开销大，适合用于教学、演示或概念验证。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47291292" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://zipcodefirst.com/" target="_blank" rel="noopener noreferrer" class="title-link">Put the zip code first</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者主张地址表单应先输入 ZIP Code，用 5 位码即可自动填充城市、州和国家，减少下拉选择与手动输入并提升数据准确性。文中批评将邮编放在最后、不做自动填充、无搜索的国家下拉等设计浪费用户时间，并指出有免费 API、几行代码即可实现。还建议针对数字字段启用数字键盘并配合浏览器自动填充，让用户只需最后填写街道地址。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47292485" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://unsloth.ai/docs/models/qwen3.5" target="_blank" rel="noopener noreferrer" class="title-link">How to run Qwen 3.5 locally</a>
+              
+            </div>
+            <div class="summary">
+              <p>这是一份在本地运行 Qwen3.5 的指南，涵盖多个参数规模与 Small 系列，并强调其多模态与混合推理特性、长上下文能力及适用任务。文档给出了不同模型大小的内存需求、量化版本更新与性能建议，并说明 27B 与 35B-A3B 在速度与精度上的取舍。指南提供基于 llama.cpp 的构建与运行示例，包含思考/非思考模式参数、下载 GGUF 权重及命令行配置要点。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47292522" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://devblog.ecuadors.net/cloud-vm-benchmarks-2026-performance-price-1i1m.html" target="_blank" rel="noopener noreferrer" class="title-link">Cloud VM benchmarks 2026</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章对 2026 年云计算 VM 进行横向基准测试，覆盖 7 家云厂商、44 种实例，重点评估通用 CPU 性能与性能/价格，并以 2 vCPU 作为可扩展对比单位，单线程与多线程结果分开呈现。作者强调不同区域性能存在波动，因此给出性能与性能/价格的区间，并排除了突发型实例，价格基于 2026 年 1 月按需与预留等模式。更新亮点包括新增 AMD EPYC Turin、Intel Granite Rapids 以及多款 ARM 方案（如 Google Axion、Azure Cobalt 100、Ampere AmpereOne M），并提示旧 CPU 代际因效率低反而成本更高。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47293119" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://arstechnica.com/gadgets/2026/03/apples-512gb-mac-studio-vanishes-a-quiet-acknowledgement-of-the-ram-shortage/" target="_blank" rel="noopener noreferrer" class="title-link">Apple&#39;s 512GB Mac Studio vanishes, a quiet acknowledgment of the RAM shortage</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章指出，尽管苹果近期产品发布看似常规，但其悄然下架了顶配 M3 Ultra Mac Studio 的 512GB 内存选项，反映出 AI 驱动的内存与存储供应紧张已开始影响配置供给。与此同时，256GB 配置价格从 1,600 美元涨到 2,000 美元，而苹果支持站点的规格页仍保留 512GB 选项，商店页面却已删除。作者强调，苹果很少直接移除在售配置，通常只会拉长交期，这次变化因此格外显眼。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47296302" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://fb.edoo.gg/" target="_blank" rel="noopener noreferrer" class="title-link">FrameBook</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者将 2006 年黑色 MacBook 的外壳改造成“FrameBook”，用 Framework Laptop 13 主板与新显示面板替换旧硬件，并保留原键盘触控板（通过焊接改成 USB 接入）。装配过程中他拆解机身、3D 打印支架与 I/O 挡板，改造左右侧接口、扬声器、电池外壳占位与摄像头，甚至为发光苹果标志定制超薄 LED。项目历时约三个月，作者总结了学到的焊接与建模经验，也承认很多位置用胶固定并希望未来改用定制 PCB 提升可靠性。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47298044" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://mlumiste.com/general/openai-charter/" target="_blank" rel="noopener noreferrer" class="title-link">The changing goalposts of AGI and timelines</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章引用 OpenAI 2018 宪章中的自我牺牲条款，强调若有更安全对齐的项目在两年内更可能实现 AGI，应停止竞赛并提供协助。作者整理多次公开采访中的 AGI 时间表，指出预期明显加速，甚至出现“AGI 已经实现、转向 ASI”的说法。结合模型排行榜中 GPT-5.4 落后于 Anthropic 与 Gemini 等结论，作者认为触发条件已满足，按宪章应停止竞争并合作，同时反思理想主义与经济激励的张力以及 AGI 定义不断移动。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47299009" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-03-08.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

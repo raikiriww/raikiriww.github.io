@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-03-04</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.03.04 周三</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.apple.com/newsroom/2026/03/apple-introduces-the-new-macbook-air-with-m5/" target="_blank" rel="noopener noreferrer" class="title-link">MacBook Air with M5</a>
+              
+            </div>
+            <div class="summary">
+              <p>苹果发布搭载 M5 的全新 MacBook Air，强调更快的 CPU 与新一代 GPU，并在每个核心集成神经加速器以提升 AI 相关工作负载。新机标配 512GB 起始存储并可选至 4TB，同时加入 Apple N1 无线芯片，支持 Wi‑Fi 7 与 Bluetooth 6。机身维持轻薄无风扇设计，配备 Liquid Retina 显示屏、12MP Center Stage 摄像头、最高 18 小时续航，以及两个 Thunderbolt 4 端口可外接两台显示器。产品提供 13 和 15 英寸、四种配色，3 月 4 日开启预购、3 月 11 日发售，起售价 1,099 美元。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47232502" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.youtube.com/watch?v=B3m3AMRlYfc" target="_blank" rel="noopener noreferrer" class="title-link">Physics Girl: Super-Kamiokande – Imaging the sun by detecting neutrinos [video]</a>
+              
+            </div>
+            <div class="summary">
+              <p>这是一段由 Physics Girl 制作的科普视频，围绕超级神冈（Super-Kamiokande）通过探测中微子在夜间“成像太阳”的现象展开，引出“为何夜里也能看到太阳”的问题。视频由 Dianna Cowern 主持与研究团队完成，给出相关机构与合作方的署名致谢。片尾介绍她在因严重长新冠停更三年后于 2026 年回归继续创作，强调对科学好奇与韧性的坚持。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47233110" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://openai.com/index/gpt-5-3-instant/" target="_blank" rel="noopener noreferrer" class="title-link">GPT‑5.3 Instant</a>
+              
+            </div>
+            <div class="summary">
+              <p>该更新面向 ChatGPT 最常用模型，强调让日常对话更顺畅、更有帮助，减少不必要的拒绝、说教式前置语和无效兜圈，并提升使用网络信息时的综合判断与答案质量。官方称在事实准确性与幻觉控制上有显著改进，并通过内部高风险领域评测与用户反馈评测给出量化下降幅度。写作能力也被强化，能在实用任务与更具表现力的文本之间更自然切换，同时仍承认部分非英文语言的语气自然度有待改进。该版本即日起在 ChatGPT 与 API 提供，API 端模型名为 gpt-5.3-chat-latest，GPT‑5.2 Instant 将保留三个月并计划于 2026 年 6 月 3 日退役。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47236169" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://grapheneos.social/@GrapheneOS/116160393783585567" target="_blank" rel="noopener noreferrer" class="title-link">Motorola GrapheneOS devices will be bootloader unlockable/relockable</a>
+              
+            </div>
+            <div class="summary">
+              <p>GrapheneOS 表示，面向 Motorola 的设备将完全支持用户使用其他操作系统，包括自行构建 GrapheneOS。可解锁并可用用户密钥重新上锁的引导加载器能力是其硬件要求的一部分。团队还计划提供更硬化的固件与驱动构建，尽量以官方方式发布，方便构建时无需从 GrapheneOS 或 Motorola 的出厂镜像中提取内容。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47241551" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.bbc.com/news/articles/cly2m5e5ke4o" target="_blank" rel="noopener noreferrer" class="title-link">TikTok will not introduce end-to-end encryption, saying it makes users less safe</a>
+              
+            </div>
+            <div class="summary">
+              <p>TikTok 表示不会在私信中引入端到端加密，认为该技术会让平台无法读取必要信息，从而降低对未成年人与安全事件的保护能力。公司称目前仍使用常规加密，只有在执法请求或用户举报等特定情形下授权人员可查看私信。此举与多数社交平台强化隐私的趋势相反，外界既有人称其有利于打击有害内容，也有人担忧其与全球隐私预期不一致。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47241817" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://simonwillison.net/guides/agentic-engineering-patterns/" target="_blank" rel="noopener noreferrer" class="title-link">Agentic Engineering Patterns</a>
+              
+            </div>
+            <div class="summary">
+              <p>这篇指南围绕如何更有效地使用编码智能体，总结了一组工程模式与原则，并强调在代码成本下降的背景下应积累可复用的做法。作者列出常见反模式与需要避免的做法，同时给出测试与质量保障路径，例如红绿 TDD 与先运行测试。内容还涵盖理解代码的方法（线性走读、交互式解释、带注释的提示词）及一个基于 WebAssembly 和 Gifsicle 的 GIF 优化工具示例，附录提供可直接复用的提示词。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47243272" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://terriblesoftware.org/2026/03/03/nobody-gets-promoted-for-simplicity/" target="_blank" rel="noopener noreferrer" class="title-link">Nobody Gets Promoted for Simplicity</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章指出工程团队在招聘、评审与晋升中常把复杂度当成能力证明，导致过度设计被奖励而简单可维护的方案被忽视。作者用对比案例说明：把问题讲成“架构升级”的叙事更容易写进晋升材料，而真正更优的简单实现因难以叙事而被低估。解决思路是让“选择不建复杂系统”的判断可见化，在设计评审中把简单作为默认，并在绩效与文化层面主动表扬删减与延迟复杂化的决策。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47246110" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.apple.com/newsroom/2026/03/say-hello-to-macbook-neo/" target="_blank" rel="noopener noreferrer" class="title-link">MacBook Neo</a>
+              
+            </div>
+            <div class="summary">
+              <p>苹果发布 MacBook Neo，定位为更亲民的新款笔记本，主打 13 英寸 Liquid Retina 屏幕、多彩铝合金机身与更低起售价。它采用 A18 Pro，强调日常任务与本地 AI 负载的性能提升，并配备 16 小时续航、1080p 摄像头、双麦克风和支持空间音频的扬声器。系统为 macOS Tahoe，强调与 iPhone 的协同、Apple Intelligence 以及内置应用生态，提供静音无风扇设计与多种配色选择，并公布了预订与开售时间。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47247645" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://simonwillison.net/2026/Mar/4/qwen/" target="_blank" rel="noopener noreferrer" class="title-link">Something is afoot in the land of Qwen</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者称 Qwen 3.5 是近期发布的开源权重模型家族，规模覆盖 397B 到 0.8B，多尺寸模型在编码与小模型效能上表现出色，尤其是 2B 体量也具推理与多模态能力。文章关注团队动荡：核心负责人 Junyang Lin 在 3 月 4 日辞职，疑与组织调整及新负责人任命有关，并引述 36Kr 报道称多位关键成员同期离职。作者认为阿里高层紧急会议显示公司重视此事，但团队是否维持仍不明朗，若核心成员分散将是对 Qwen 3.5 成果的重大损失，同时也期待他们未来动向。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47249343" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://deflock.org/map#map=5/37.125286/-96.284180" target="_blank" rel="noopener noreferrer" class="title-link">An interactive map of Flock Cams</a>
+              
+            </div>
+            <div class="summary">
+              <p>该页面展示“DeFlock”的互动地图，基于 OpenStreetMap 社区的众包数据来标注 ALPR 摄像头位置。页面明确提示地图尚不完整，鼓励用户提交缺失点位或贡献新位置，并提供参与与联系入口。使用者访问时需同意站点服务条款。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47252049" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-03-04.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

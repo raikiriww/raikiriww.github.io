@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-03-15</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.03.15 周日</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://cemrehancavdar.com/2026/03/10/optimization-ladder/" target="_blank" rel="noopener noreferrer" class="title-link">Python: The Optimization Ladder</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者以 n-body、spectral-norm 及一个 JSON 事件流水线为例，复现实测并说明 Python 在计算型任务上确实很慢，根因在于高度动态带来的频繁运行时分派与对象开销，GIL 不是单线程慢的主因。文章提出“优化阶梯”并量化每一层的成本与收益：升级 CPython、改用 PyPy/GraalPy、用 mypyc 编译、改写为 NumPy 向量化、采用 JAX JIT 或 Numba 等，速度提升从数倍到上百倍不等。核心结论是越往上层越能绕开 Python 解释执行，但代价是兼容性、代码改写与学习成本；对长时间热循环和可向量化问题，收益最明显。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47327703" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.crowdsupply.com/baochip/dabao/updates/what-it-is-why-im-doing-it-now-and-how-it-came-about" target="_blank" rel="noopener noreferrer" class="title-link">Baochip-1x: What it is, why I&#39;m doing it now and how it came about</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者介绍 Baochip-1x 的核心差异是加入了 MMU，使小型 SoC 也能实现现代操作系统所需的虚拟内存与隔离，并解释了嵌入式领域长期缺失 MMU 的历史与商业原因。文章强调在开放架构兴起的当下，应选择“部分开放”的 RTL 方案，以便社区尽早积累开放软件栈并逐步摆脱专有体系。作者还说明项目资金与制造的关键在于“搭便车”到 22nm 芯片空余版图上，通过可切换 CPU 核心以较低成本实现多种设计目标。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47339219" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://sebi.io/posts/2026-03-14-allow-me-to-get-to-know-you-mistakes-and-all/" target="_blank" rel="noopener noreferrer" class="title-link">Allow me to get to know you, mistakes and all</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者指出，把写给他人的文字交给 LLM 清洗，会遮蔽原本的意图与措辞动机，让收信人失去根据你一贯语气和细微强调来解读信息的机会。人与人相处会累积对彼此的隐性理解，这种“同步”与社会性握手被过度泛化的文本打断。作者希望对话保留真实的错误、笨拙和风格差异，让他能通过原始表达真正了解你。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47381736" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://agelesslinux.org/" target="_blank" rel="noopener noreferrer" class="title-link">Ageless Linux – Software for humans of indeterminate age</a>
+              
+            </div>
+            <div class="summary">
+              <p>该页面介绍 Ageless Linux，这是一个基于 Debian 的发行版，主张在加州 AB 1043 语境下拒绝年龄验证要求，并强调其作为“操作系统提供者”的法律定位。它提供“先装 Debian、再运行转换脚本”的安装路径，通过修改系统标识并部署不返回数据的年龄验证接口来表达不合规立场。文中论证该法规对大型平台几乎零成本，却会把合规负担转嫁给中小开源发行版，形成合规门槛，并批评其对儿童安全教育的实际效果。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47381791" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://s4dbrd.github.io/posts/how-kernel-anti-cheats-work/" target="_blank" rel="noopener noreferrer" class="title-link">How kernel anti-cheats work</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章概述内核级反作弊为何必须在 Windows ring 0 运行，指出用户态保护在权限模型下易被更高权限绕过，促成从用户态到内核态的升级与长期攻防竞赛。作者梳理了作弊与反作弊的技术升级路径，包括利用有漏洞的已签名驱动、转向虚拟机管理器以及 PCIe DMA 读内存等，并强调成本门槛对遏制作弊的实际作用。文中还介绍主流系统（如 BattlEye、EAC、Vanguard、FACEIT AC）的特点与三层架构：内核驱动、系统服务与游戏内 DLL 的分工与通信方式，并解释启动时加载驱动和驱动签名要求为何关键。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47382791" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://sa.lj.am/rack-mount-hydroponics/" target="_blank" rel="noopener noreferrer" class="title-link">Rack-mount hydroponics</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者把闲置42U服务器机柜改造成水培菜架，采用潮汐式（洪泛-排水）系统，通过水泵定时灌溉并用增氧装置维持溶氧，主要种了生菜和多种香草。文中按部件与装配步骤说明了储液箱、托盘、灯具、管路与定时控制的搭建细节，并提到在盆栽漂浮、藻类控制和泵管打孔等环节的实际坑。配方上使用不明配比的NPK肥粉自行试配，最后获得多茬收成但也发生过两次漏水，作者强调这是偏实验性的折腾而非严肃教程。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47384352" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.charlespetzold.com/blog/2026/02/The-Appalling-Stupidity-of-Spotifys-AI-DJ.html" target="_blank" rel="noopener noreferrer" class="title-link">The Appalling Stupidity of Spotify&#39;s AI DJ</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者以使用 Spotify 的 AI DJ 搜索古典音乐为例，指出它把多乐章作品当成零散曲目处理，顺序混乱且常夹入无关曲目，无法理解作品结构。他多次要求播放 Beethoven 第七交响曲的全四乐章，系统却反复只放第二乐章、混用不同录音，甚至错播其他交响曲并切换到流行歌曲。作者据此质疑该功能对西方古典传统缺乏基本概念与责任感，即便声称可通过提示改进，也对其前景持怀疑态度。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47385272" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://github.com/novatic14/MANPADS-System-Launcher-and-Rocket" target="_blank" rel="noopener noreferrer" class="title-link">$96 3D-printed rocket that recalculates its mid-air trajectory using a $5 sensor</a>
+              
+            </div>
+            <div class="summary">
+              <p>该仓库展示一套低成本火箭与发射器的概念验证原型，核心由消费级电子元件和 3D 打印部件组成。火箭采用折叠尾翼与鸭翼稳定，机载 ESP32 飞控与 MPU6050 惯性测量单元参与姿态控制。发射器集成 GPS、罗盘与气压等传感器用于定向与遥测，整体通过 Fusion 360 设计、OpenRocket 仿真并结合多轮机械、电路与试射迭代。项目同时提供机械 CAD、固件、仿真文件与文档，硬件成本约 96 美元。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47385935" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://r2d3.us/visual-intro-to-machine-learning-part-1/" target="_blank" rel="noopener noreferrer" class="title-link">A Visual Introduction to Machine Learning (2015)</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章用房屋数据可视化演示机器学习如何通过统计学习在特征空间中划分边界，并说明分类问题可用海拔、每平方英尺价格等特征来区分纽约与旧金山的房屋。随后以决策树为例，解释分裂点、递归扩展与叶节点如何提升训练准确率，同时指出训练集上过度追求纯度会导致过拟合，需要用测试数据检验模型泛化。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47386116" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://developer.chrome.com/blog/chrome-devtools-mcp-debug-your-browser-session" target="_blank" rel="noopener noreferrer" class="title-link">Chrome DevTools MCP</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章介绍了 Chrome DevTools MCP 的新增强功能：编码代理可直接连接到当前浏览器会话，复用已登录状态并接入正在进行的调试会话，从而在网络与元素面板中无缝切换人工与智能协作。该能力基于 Chrome 144 Beta 的远程调试新流程，需要在 chrome://inspect/#remote-debugging 中显式开启，并通过 MCP 服务器的 --autoConnect 参数请求连接。为防滥用，连接时会弹出用户授权对话框并显示“自动化控制”提示。作者给出配置与测试步骤示例，强调这只是开始，后续会逐步开放更多面板数据给编码代理使用。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47390817" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-03-15.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-22</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.22 周日</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://kevinak.se/blog/be-wary-of-bluesky" target="_blank" rel="noopener noreferrer" class="title-link">Be wary of Bluesky</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者认为 Bluesky 虽以 ATProto 宣称去中心化，但绝大多数用户数据仍集中在官方 PDS 上，现实中很少有人自建或提前迁移，因此“可随时离开”的承诺缺乏实际保障。随着 Tangled、Grain、Leaflet 等应用不断接入，更多数据写入同一基础设施，反而形成集中化飞轮并提高切换成本。作者还指出 Relay、AppView、DID 目录等关键层仍主要由官方控制，类比邮箱生态说明开放协议也可能高度集中，一旦被收购便可能限制导出、打压第三方应用或强化变现。最后强调融资与估值带来的回报压力与 PBC 约束的不确定性，使激励机制更倾向于集中控制而非真正分散。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47095597" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://gamedate.org/" target="_blank" rel="noopener noreferrer" class="title-link">Gamedate – A site to revive dead multiplayer games</a>
+              
+            </div>
+            <div class="summary">
+              <p>这是一个用于“死服/冷门”多人游戏约局的平台，帮助玩家查找并加入约定时间的游戏会话，也可自行创建场次。页面强调无需注册账号即可使用，面向小众模组与复古联机需求。示例覆盖大量经典或停更作品，体现其核心是把分散玩家聚在同一时间开局。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47096167" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://twitter.com/karpathy/status/2024987174077432126" target="_blank" rel="noopener noreferrer" class="title-link">Claws are now a new layer on top of LLM agents</a>
+              <span class="mode-badge mode-fallback">链接补救</span>
+            </div>
+            <div class="summary">
+              <p>作者称自己买了 Mac mini 准备周末折腾 Claws，但对直接运行 OpenClaw 很谨慎，担心大规模攻击、RCE 漏洞、供应链投毒和技能仓库恶意内容等安全风险。尽管如此，他认为 Claws 就像 LLM agents 之上的新一层，负责编排、调度、上下文、工具调用和持久化能力，让系统进入更高层级。文中还举 NanoClaw 为例，强调其核心代码规模小、默认容器化，并赞赏用 skills 取代传统配置文件的方式，同时点名多种 Claw 变体正在涌现。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47096253" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://github.com/tnm/zclaw" target="_blank" rel="noopener noreferrer" class="title-link">zclaw: personal AI assistant in under 888 KB, running on an ESP32</a>
+              
+            </div>
+            <div class="summary">
+              <p>zclaw 是用 C 编写的 ESP32 个人 AI 助手，默认固件总大小目标不超过 888 KiB，支持定时任务、GPIO 控制、持久化记忆与自然语言组合自定义工具。该体积包含应用逻辑与 ESP-IDF/FreeRTOS 运行时、联网、TLS/证书等开销，并给出分项大小与整体仍低于上限的示例。项目提供安装与配置脚本、Telegram 或网页中继聊天、设备测试与基准脚本，以及对多种 ESP32 目标和多家模型提供方的支持。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47100232" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.anuragk.com/blog/posts/Taalas.html" target="_blank" rel="noopener noreferrer" class="title-link">How Taalas “prints” LLM onto a chip?</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章介绍 Taalas 推出将 Llama 3.1 8B 以量化形式“刻”在 ASIC 芯片上的方案，宣称可达约 1.7 万 tokens/秒，并在成本、能耗和速度上明显优于 GPU 推理。作者解释 GPU 在每层权重与显存之间反复搬运导致带宽瓶颈，而 Taalas 通过把模型权重固化为晶体管并让数据在芯片内部连续流动来规避“内存墙”。文中还提到该芯片仍使用少量片上 SRAM 存放 KV Cache 与 LoRA 适配器，并通过仅定制上层掩膜来缩短不同模型的制程周期。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47103661" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://github.com/xaskasdf/ntransformer" target="_blank" rel="noopener noreferrer" class="title-link">Show HN: Llama 3.1 70B on a single RTX 3090 via NVMe-to-GPU bypassing the CPU</a>
+              
+            </div>
+            <div class="summary">
+              <p>项目ntransformer是C++/CUDA推理引擎，通过三层缓存（显存/锁页内存/NVMe或mmap）流式加载，使Llama 3.1 70B能在单张RTX 3090上运行，并支持NVMe直连绕过CPU。文中给出性能与内存占用对比，Q4_K_M配合分层与层跳过可达约0.5 tok/s，且相比纯mmap有数量级加速，瓶颈在PCIe带宽。还列出无PyTorch依赖、GGUF多量化格式、构建与系统改动要求（CUDA 13.1、内核与驱动补丁、VFIO绑定等），并提示关闭IOMMU和直通NVMe可能带来稳定性与数据风险。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47104667" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.dbreunig.com/2026/02/21/why-is-claude-an-electron-app.html" target="_blank" rel="noopener noreferrer" class="title-link">Why is Claude an Electron app?</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章围绕“为何 Claude 仍是 Electron 桌面应用”展开，先对 Electron 的跨平台与复用优势作出说明，同时指出体积臃肿、性能与系统集成欠佳等问题。作者认为编码代理擅长完成开发前 90%，但最后 10% 的边界处理、真实场景适配与持续维护仍耗费巨大，且多平台原生实现会显著放大测试与支持成本。文中还引用 Claude Code 团队的说法，强调工程师熟悉度与跨端一致性的收益，使得目前仍选择 Electron，未来可能再权衡变化。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47104973" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://boristane.com/blog/how-i-use-claude-code/" target="_blank" rel="noopener noreferrer" class="title-link">How I use Claude Code: Separation of planning and execution</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者使用 Claude Code 约九个月，总结出与常见提示式用法不同的流程，强调先写清计划再执行。核心原则是把规划与实现分离，只有在审阅并批准书面计划后才允许生成代码。该做法据称能避免反复返工、保持架构决策在掌控中，并显著提升复杂任务的结果质量。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47106686" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://susam.net/attention-media-vs-social-networks.html" target="_blank" rel="noopener noreferrer" class="title-link">Attention Media ≠ Social Networks</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者回顾早期社交网络以熟人关系和真实互动为核心，并伴随对 Web 2.0 的乐观氛围。2012 至 2016 年间，无限滚动与虚假通知等机制让平台转向以攫取注意力为目标，时间线逐步被陌生内容占据，社交性被稀释。作者认为这些平台已变成注意力媒体，而 Mastodon 仍能保持按关注关系呈现、通知克制且可预期的体验，更接近最初的社交网络形态。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47110515" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://hawksley.org/2026/02/17/timeframe.html" target="_blank" rel="noopener noreferrer" class="title-link">I built Timeframe, our family e-paper dashboard</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者回顾了家庭电子纸看板 Timeframe 的十年演进：从镜面显示与越狱 Kindle 原型起步，逐步转向电子纸并优化到可读性与低打扰的日常使用。随后引入 Visionect 显示与本地部署，结合 Ruby on Rails 与定时推送图片实现高可靠运行，但商业试点因设备成本与订阅费用受阻。经历重建新家后，采用大尺寸 Boox 电子纸并重写后端，改为实时更新与 Home Assistant 深度集成，以“健康状态指示器”呈现关键提醒，同时仍在解决嵌入式稳定性、数据源整合与硬件成本等上市难题。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47113728" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-22.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

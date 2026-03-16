@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-23</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.23 周一</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://spectrum.ieee.org/solid-state-lidar-microvision-adas" target="_blank" rel="noopener noreferrer" class="title-link">Sub-$200 Lidar could reshuffle auto sensor economics</a>
+              
+            </div>
+            <div class="summary">
+              <p>MicroVision 宣称其固态汽车激光雷达计划量产价低于 200 美元，长期目标约 100 美元，这可能让激光雷达从高端自动驾驶走向大众 ADAS。文中指出机械式激光雷达仍在 1万到2万美元区间，而固态方案在高产量下有望进一步降本，但视场角较小，需要多枚传感器协同与标定带来系统集成复杂度。文章强调成本下降将改变传感器取舍，却也需要结合安全与性能指标衡量实际收益。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47075455" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.popsci.com/technology/robot-vacuum-army/" target="_blank" rel="noopener noreferrer" class="title-link">Man accidentally gains control of 7k robot vacuums</a>
+              
+            </div>
+            <div class="summary">
+              <p>一名软件工程师在为 DJI Romo 机器人吸尘器制作游戏手柄控制应用时，借助 AI 编码助手反向分析云端通信，意外获得了可访问约 7000 台设备的权限。该漏洞让他能查看实时摄像头、麦克风、地图与状态数据，并推测设备位置，暴露出大规模隐私与安全风险。发现后他向媒体披露并促使厂商修复，事件凸显联网家居机器人安全缺陷与 AI 工具降低漏洞利用门槛的隐忧。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47111400" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://joinloops.org/" target="_blank" rel="noopener noreferrer" class="title-link">Loops is a federated, open-source TikTok</a>
+              
+            </div>
+            <div class="summary">
+              <p>Loops 是一个去中心化、开源的短视频平台，主打把控制权交还给创作者和社区，并强调可在联邦社交网络上建立自己的社区。它宣称不会锁定用户，定位为创作者友好且无广告。项目处于公开测试阶段，并通过赞助与捐款支持开发、基础设施和社区建设。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47113618" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://cia-factbook-archive.fly.dev/" target="_blank" rel="noopener noreferrer" class="title-link">Show HN: CIA World Factbook Archive (1990–2025), searchable and exportable</a>
+              
+            </div>
+            <div class="summary">
+              <p>该项目将 CIA World Factbook 1990–2025 年的公开数据结构化整理为可检索档案，覆盖 281 个实体、36 个版本、逾百万字段，支持跨年份追踪与对比。平台提供版本浏览、全文搜索、字段时间序列、国家档案与差异对比等功能，并可导出打印型国家报告。还包含按 COCOM 区域的分析工作区、地图可视化、指标排行与趋势分析等工具，便于地缘与指标的系统化分析。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47114530" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://discuss.ai.google.dev/t/account-restricted-without-warning-google-ai-ultra-oauth-via-openclaw/122778" target="_blank" rel="noopener noreferrer" class="title-link">Google restricting Google AI Pro/Ultra subscribers for using OpenClaw</a>
+              
+            </div>
+            <div class="summary">
+              <p>发帖者称其 Google AI Ultra 账号在无预警情况下被限制已多日，唯一近期变更是通过 OpenClaw OAuth 连接 Gemini 模型，并质疑平台应阻止第三方集成而非限制付费账号。其表示已联系支持但未获回复，还提到获取 GCC 支持需额外付费，引发不满与迁移数据的计划。论坛工作人员回复已转交内部团队，并建议通过应用内反馈工具提交问题。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47115805" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.ewtnnews.com/vatican/pope-leo-xiv-tells-priests-to-use-their-brains-not-ai-to-write-homilies" target="_blank" rel="noopener noreferrer" class="title-link">Pope tells priests to use their brains, not AI, to write homilies</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章称教宗利奥十四在2月19日与罗马教区司铎私下问答中，围绕青年牧灵与堂区现实，强调司铎要以见证为先，并更深入了解并爱所服务的团体。他提醒讲道准备应更多使用自己的思考而非AI，并把祈祷视为与主相处、倾听的核心实践。在司铎彼此关系与年长司铎孤独等问题上，他强调持续学习与司铎手足情谊、共同喜乐与感恩的重要性。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47119210" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.chrisbrunet.com/p/elsevier-shuts-down-its-finance-journal" target="_blank" rel="noopener noreferrer" class="title-link">Elsevier shuts down its finance journal citation cartel</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章称 Elsevier 在 2025 年底集中撤回 12 篇金融与经济学论文，并指出这些论文多由 Brian M Lucey 署名参与，涉嫌编辑兼作者而绕过正常同行评审。文中认为这暴露了 Elsevier 金融期刊生态中的“引用堆叠/作者互换”机制，少数编辑通过期刊转投与引文互引快速抬升影响力。作者提到多本期刊随后移除相关编辑职务，并引用行业评论与机构回应，强调该模式反映了出版体系激励导致的结构性问题。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47119530" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://ladybird.org/posts/adopting-rust/" target="_blank" rel="noopener noreferrer" class="title-link">Ladybird adopts Rust</a>
+              
+            </div>
+            <div class="summary">
+              <p>Ladybird 为替代 C++ 寻找内存安全语言，因生态成熟、团队经验与安全保证等原因最终选择 Rust，并承认其所有权模型与传统 OOP 不完全契合但更务实。首个移植目标是 LibJS，借助 Claude Code 与 Codex 进行人类主导的逐步翻译，约两周产出约 2.5 万行 Rust。移植要求与 C++ 管线字节级一致，测试与基准未出现回归，并通过并行运行验证 JavaScript 输出一致；当前代码刻意保留“从 C++ 翻译”的风格以确保兼容。后续将长期维持 C++ 与 Rust 共存、按核心团队计划逐步迁移，并要求外部贡献者先行协调。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47120899" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://spectrum.ieee.org/age-verification" target="_blank" rel="noopener noreferrer" class="title-link">The Age Verification Trap: Verifying age undermines everyone&#39;s data protection</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章指出，严格的年龄验证要求会迫使平台收集并长期保存身份证明或生物特征数据，形成“年龄验证陷阱”，与数据最小化、目的限定和最短保留期限原则发生冲突。平台主要依赖身份证明上传与行为或人脸推断两类手段，实际常叠加使用并频繁触发复核，带来误判、申诉负担与隐私泄露风险，文中举 Meta、TikTok、Google/YouTube、Roblox 等为例。在巴西、尼日利亚等身份基础设施不足地区，监管压力让所谓“合理步骤”逐步演化为更侵入的长期记录与监控，作者Waydell D. Carvalho在IEEE Spectrum强调儿童保护与隐私之间存在不可回避的权衡。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47122715" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://techcrunch.com/2026/02/23/americans-are-destroying-flock-surveillance-cameras/" target="_blank" rel="noopener noreferrer" class="title-link">Americans are destroying Flock surveillance cameras</a>
+              
+            </div>
+            <div class="summary">
+              <p>报道称美国多地有人拆除或破坏 Flock 车牌识别摄像头，起因是公众担忧其数据被用于移民执法，且地方警方可能把访问权限分享给联邦机构。文章指出该公司在全美拥有大量摄像头网络，能追踪车辆行踪，引发隐私与监控扩张的反对。多个城市居民要求终止合同，也出现从加州到康涅狄格等地的破坏案例，甚至有设备被割倒或涂鸦。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47127081" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-23.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

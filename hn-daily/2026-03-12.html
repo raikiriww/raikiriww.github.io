@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-03-12</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.03.12 周四</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://hacks.mozilla.org/2026/02/making-webassembly-a-first-class-language-on-the-web/" target="_blank" rel="noopener noreferrer" class="title-link">Making WebAssembly a first-class language on the Web</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章回顾 WebAssembly 自 2017 年发布以来的能力扩展，包含共享内存、SIMD、异常处理、尾调用、64 位内存与 GC 等特性，但仍存在与 Web 平台集成不足的问题。作者指出 WebAssembly 只能通过 JavaScript 间接访问 Web API，加载与调用流程复杂，需要大量胶水代码，增加构建与运行成本并降低开发体验。这种“二等语言”地位使其更适合大型项目，普通开发者更倾向使用 JavaScript，文章进一步讨论了工具链支持、文档与性能等方面的障碍，并引出组件化方案的潜力。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47331811" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://daringfireball.net/2026/03/the_macbook_neo" target="_blank" rel="noopener noreferrer" class="title-link">The MacBook Neo</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章回顾从 iPhone 6S 时代开始的芯片性能跃迁，强调苹果自研芯片已在能效与性能上全面压过 x86，并认为 A 系列如今足以支撑入门级 Mac 笔记本。作者评测这款 600 美元左右的 MacBook Neo，认为日常生产力体验流畅，屏幕、音频、电池与做工水平均远超同价位。主要妥协点包括缺少环境光传感器导致亮度需手动调节、摄像头指示灯为软件提示、部分接口规格较低等，但整体仍被评价为极具性价比的消费级产品。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47334293" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://github.com/microsoft/BitNet" target="_blank" rel="noopener noreferrer" class="title-link">BitNet: Inference framework for 1-bit LLMs</a>
+              
+            </div>
+            <div class="summary">
+              <p>该项目发布了 bitnet.cpp，作为 1-bit LLM 的官方推理框架，提供面向 CPU 与 GPU 的优化内核，强调在多硬件平台上实现快速且无损的推理。文中给出在 ARM 与 x86 上的加速与能耗下降数据，并指出可在单 CPU 上运行 100B 规模的 BitNet b1.58，速度达到每秒约 5-7 tokens。项目还新增并行内核、可配置分块和嵌入量化以继续提速，并提供技术报告与优化指南供进一步参考。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47334694" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.wiz.io/blog/google-closes-deal-to-acquire-wiz" target="_blank" rel="noopener noreferrer" class="title-link">Google closes deal to acquire Wiz</a>
+              
+            </div>
+            <div class="summary">
+              <p>该条目宣布 Wiz 正式加入 Google，并回顾双方合并后在云与 AI 安全上的使命与方向。内容强调在 AI 加速开发的背景下需要更快的安全能力，并总结过去一年研究与产品上的关键进展。同时明确保持多云平台定位，结合 Google 生态提升威胁防护与客户覆盖。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47336476" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.theverge.com/featured-video/892850/i-was-interviewed-by-an-ai-bot-for-a-job" target="_blank" rel="noopener noreferrer" class="title-link">I was interviewed by an AI bot for a job</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章讲述作者亲自体验多家平台的 AI 面试官，模拟不同岗位的初筛面试，并记录互动体验与感受。相关公司宣称 AI 面试可让更多申请者被听见、减少人工筛选，并以“更少偏见”为卖点，但作者指出模型训练数据本身带有性别与种族等偏见，难以真正无偏。实测中各平台自然度差异明显，但总体上作者更希望与真人交流。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47339164" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="http://satproto.org/" target="_blank" rel="noopener noreferrer" class="title-link">Show HN: s@: decentralized social networking over static sites</a>
+              
+            </div>
+            <div class="summary">
+              <p>该页面介绍 s@（sAT Protocol）这种基于静态站点的去中心化社交协议，用户以域名作为身份，在个人静态网站上保存加密 JSON 数据，由浏览器客户端聚合动态并发布内容，不依赖中间服务器或中继。内容采用端到端加密与密钥封装机制：每位用户生成 X25519 密钥对，帖子用对称密钥加密，并按关注者分别封装密钥，实现只对互相关注的朋友可见。协议定义了发现文档、关注列表、帖子索引与存储结构，以及发帖、解密与时间线合并的流程，强调只适用于小范围真实社交。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47344548" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.markround.com/blog/2026/03/05/returning-to-rails-in-2026/" target="_blank" rel="noopener noreferrer" class="title-link">Returning to Rails in 2026</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者因乐队排练与演出需要管理曲目与备注，业余时间开发了 setlist.rocks，并因此重新体会到以 Rails 构建 Web 应用的乐趣。作者回顾自己从早期 Rails 3-4 时代到如今 Rails 8 的变化，认为框架仍熟悉但前端与工具链已大幅简化，尤其是 Hotwire 与 importmap 带来的少构建体验。文章也谈到个人偏好后端运维领域、对现代前端复杂度的保留态度，以及在使用 AI 生成 UI 组件时的矛盾心情。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47347064" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://malus.sh/" target="_blank" rel="noopener noreferrer" class="title-link">Malus – Clean Room as a Service</a>
+              
+            </div>
+            <div class="summary">
+              <p>该页面宣称提供名为 Malus 的“洁净室重建”服务，利用机器人在不接触原始源码的前提下，根据文档和接口重建开源项目，从而实现零署名、零传染式条款、零义务的自有许可。它强调可上传依赖清单，进行隔离分析与独立重写，交付所谓“法务友好”的新代码，并给出面向企业的流程、保证与定价方式。页面还通过案例与问答强化其主张：能消除各类开源许可约束，并以审计日志与法律先例来证明合法性。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47350424" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://fortune.com/2026/03/11/iran-war-fuel-crisis-asia-work-from-home-closed-schools-price-caps/" target="_blank" rel="noopener noreferrer" class="title-link">Asia rolls out 4-day weeks, WFH to solve fuel crisis caused by Iran war</a>
+              
+            </div>
+            <div class="summary">
+              <p>受霍尔木兹海峡关闭与油价飙升影响，亚洲多国出现燃料紧张，政府采取节能与减量出行的紧急措施。泰国、越南、菲律宾、巴基斯坦等推动居家办公或四天工作制，并通过调高空调温度、限制公务出行、提前放假、关闭学校等方式压缩用能。部分国家直接干预市场与供应，如韩国设定成品油价格上限、日本考虑动用国家储备、印尼增加补贴与稳定能源价格，越南研究取消燃油进口关税。文中还提及油价短期剧烈波动与国际释放战略储备的背景，以及对未来油价可能进一步上行的担忧。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47352215" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://gist.github.com/bretonium/291f4388e2de89a43b25c135b44e41f0" target="_blank" rel="noopener noreferrer" class="title-link">Shall I implement it? No</a>
+              
+            </div>
+            <div class="summary">
+              <p>该条目看起来是一个包含大量用户评论的 Gist，围绕“Shall I implement it? No”的提示词/系统指令梗展开。内容集中在调侃与分享大模型在编程请求中的失败或过度执行案例，如误解上下文、越权行动、任务失败成功学等。整体语气偏戏谑，强调模型会为继续执行找借口，以及提示词对行为方向的影响。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47357042" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-03-12.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

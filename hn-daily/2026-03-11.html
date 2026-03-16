@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-03-11</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.03.11 周三</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.wired.com/story/yann-lecun-raises-dollar1-billion-to-build-ai-that-understands-the-physical-world/" target="_blank" rel="noopener noreferrer" class="title-link">Yann LeCun raises $1B to build AI that understands the physical world</a>
+              
+            </div>
+            <div class="summary">
+              <p>前 Meta 首席 AI 科学家 Yann LeCun 共同创办的巴黎初创公司 AMI 宣布融资超过 10 亿美元，估值约 35 亿美元，目标是构建基于“世界模型”的新一代 AI 系统。LeCun 认为人类推理主要扎根于物理世界，单靠扩展大语言模型无法达到人类级智能，AMI 将面向制造、生物医药与机器人等拥有大量数据的行业提供可记忆、可推理、可规划且可控安全的系统。公司计划从一开始就全球化布局，设有巴黎、蒙特利尔、新加坡和纽约办公室，并由多位前 Meta 研究负责人及前 Nabla CEO 等联合创始人领导。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47320600" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.claudecodecamp.com/p/i-m-building-agents-that-run-while-i-sleep" target="_blank" rel="noopener noreferrer" class="title-link">Agents that run while I sleep</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者描述让代码代理在自己睡觉时长时间运行，变更落到分支却难以确认是否正确，团队在大量合并与审查负担下信任危机加剧。他认为同一模型写代码又写测试是自我验证，主张回到类似 TDD 的思路：先用自然语言写清可验证的验收标准，再让代理实现并用自动化验证。文中给出前后端验收标准与 Playwright 验证的流程示例，并提出由脚本预检、规划、并行浏览器执行、最终判定组成的工具链，强调先定义“完成”的可观察结果，才能提高代理产出的可信度。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47327559" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://developers.cloudflare.com/changelog/post/2026-03-10-br-crawl-endpoint/" target="_blank" rel="noopener noreferrer" class="title-link">Cloudflare crawl endpoint</a>
+              
+            </div>
+            <div class="summary">
+              <p>Cloudflare 在 Browser Rendering 中推出新的 /crawl 端点（开放测试），允许用一次 API 调用从起始 URL 自动发现并抓取整站内容，结果可返回 HTML、Markdown 与结构化 JSON。该端点默认遵循 robots.txt 与 AI Crawl Control，并以异步任务形式运行：提交后拿到任务 ID，再轮询获取处理进度与结果。功能包含抓取范围控制、站点地图与链接双源发现、增量抓取与静态模式等，并适用于免费与付费计划，但不会绕过机器人检测或验证码。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47329557" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://ionathan.ch/2026/02/16/angzarr.html" target="_blank" rel="noopener noreferrer" class="title-link">U+237C ⍼ Is Azimuth</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者追溯符号 ⍼ 的来源，指出 1950 年 H. Berthold AG 的符号目录将其标为 Azimut/方向角，从而解开长期谜团。对比 1949–1952 年的字样目录与更早的 1946、1909、1900 年目录，发现该符号在 1950 前并未出现，并给出相应页面扫描位置。作者还引用 Mastodon 的观察，说明 ⍼ 形状像六分仪中光线路径与直角符号，并联系 Wikipedia 的六分仪示意图解释其测量方位角的含义。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47329605" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://ziglang.org/devlog/2026/#2026-03-10" target="_blank" rel="noopener noreferrer" class="title-link">Zig – Type Resolution Redesign and Language Changes</a>
+              
+            </div>
+            <div class="summary">
+              <p>该更新合并了一个约3万行的重构分支，目标是把 Zig 编译器内部的类型解析逻辑改成更直观的设计，并带来多项用户可见变化。编译器现在会更惰性地分析类型字段，未被初始化的类型不会被展开分析，从而避免命名空间用法触发不必要的编译错误。依赖环路的报错信息变得可读，能够指出环路来源与关键位置，便于定位问题。此外，增量编译修复了大量已知问题，显著减少过度分析并提升更新速度，同时还包含若干性能改进与小幅语言调整。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47330836" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://geohot.github.io//blog/jekyll/update/2026/03/11/running-69-agents.html" target="_blank" rel="noopener noreferrer" class="title-link">Create value for others and don’t worry about the returns</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者劝人别被社交媒体的恐惧叙事裹挟，认为“AI 让你落后”的焦虑多是噱头。文章强调 AI 只是长期技术进步与搜索、优化的延续，不是魔法或科幻式飞跃。作者批评以制造复杂度牟利的岗位和公司，称零和的寻租会被更大玩家吞并。最后给出出路：远离比较陷阱，专注为他人创造价值，产出大于消耗就足够。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47332074" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://codewall.ai/blog/how-we-hacked-mckinseys-ai-platform" target="_blank" rel="noopener noreferrer" class="title-link">How we hacked McKinsey&#39;s AI platform</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章称，一个自动化攻击代理在无凭据情况下针对 McKinsey 内部 AI 平台 Lilli，发现公开的 API 文档中存在未鉴权端点，并利用字段名拼接导致的 SQL 注入在约两小时内获得生产库读写权限。该访问暴露了大量明文聊天记录、员工账号以及各类文件，并可进一步读取系统提示词与模型配置，意味着攻击者可能篡改提示词以影响咨询输出、放宽防护或渗出数据。作者据此强调提示词层已成为高价值资产，传统安全扫描未能发现问题，而自主代理通过探测、链式利用放大了风险，并给出披露时间线。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47333627" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.washingtonpost.com/politics/2026/03/10/social-security-data-breach-doge-2/" target="_blank" rel="noopener noreferrer" class="title-link">Whistleblower claims ex-DOGE member says he took Social Security data to new job</a>
+              
+            </div>
+            <div class="summary">
+              <p>美国社会保障署监察长办公室正在调查举报，称一名前 DOGE 工程师宣称可访问两套高度敏感的内部数据库，并计划把信息带到私营雇主。消息人士称，此举若属实将构成该机构安全流程的重大、前所未有的违规，可能影响为数超过七千万受益人的数据安全。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47335572" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://bloomberg.github.io/js-blog/post/temporal/" target="_blank" rel="noopener noreferrer" class="title-link">Temporal: A nine-year journey to fix time in JavaScript</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章回顾了 Temporal 在 TC39 标准化过程中长达九年的推进历程，解释了 JavaScript 早期沿用 Java Date 设计在可变性、月份计算和字符串解析等方面留下的长期痛点。作者结合 Bloomberg 在跨时区金融系统中的实践，说明生态被迫依赖 Moment.js 等库却带来体积和维护负担，从而推动以不可变类型、时区与历法一等公民、纳秒精度为目标的新方案。文中还梳理了 Bloomberg 与 Igalia 等多方协作、冠军团队扩充以及 Temporal 作为顶层命名空间提供多种类型（如 Temporal.ZonedDateTime）的现状与定位。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47336989" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-03-11.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-21</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.21 周六</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.deadlanguagesociety.com/p/how-far-back-in-time-understand-english" target="_blank" rel="noopener noreferrer" class="title-link">How far back in time can you understand English?</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章用一段虚构的旅行博主叙事做语言实验：同一篇“去 Wulfleet 海滨小镇的旅行记录”随着段落推进，每百年倒退一次，拼写、语法与词汇逐渐变旧，最终近乎外语但仍是英语。作者说明故事人物与城镇是虚构的，但语言形态依据历史英语的写法进行构造，意在让读者观察自己在何处开始读不懂。文末指出这是一个将约千年英语变化压缩进单篇文本的练习，并引出后续对语言演变的解释。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47061614" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.bleepingcomputer.com/news/security/paypal-discloses-data-breach-exposing-users-personal-information/" target="_blank" rel="noopener noreferrer" class="title-link">PayPal discloses data breach that exposed user info for 6 months</a>
+              
+            </div>
+            <div class="summary">
+              <p>PayPal在通知用户一项因贷款应用代码错误导致的个人信息暴露事件，暴露范围涵盖姓名、邮箱、电话、营业地址、社保号和出生日期等敏感信息，持续时间为2025年7月1日至12月13日。公司于2025年12月12日发现问题并在次日回滚代码阻断访问，同时发现少量账户出现未经授权交易并已退款。PayPal为受影响用户提供两年三家征信机构的信用监测与身份修复服务，需在2026年6月30日前注册，并提示用户警惕钓鱼与关注账户动态。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47087719" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://harpers.org/archive/2026/03/childs-play-sam-kriss-ai-startup-roy-lee/" target="_blank" rel="noopener noreferrer" class="title-link">Child&#39;s Play: Tech&#39;s new generation and the end of thinking</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章以旧金山街头广告与市民状态的反差开场，描绘科技创业话语对城市日常的侵入与迷失感。随后聚焦 AI 辅助作弊产品 Cluely 与其创始人 Roy Lee，叙述其从 Columbia 学生、用 ChatGPT 辅助到以 Zoom 访谈作弊、被停学并创业融资的路径。作者借此批判硅谷把“高度能动性”当作新价值，认为这种文化将普通人推向被动与无用的处境，并展示公司内部“流量优先、产品粗糙”的氛围。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47088685" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://arstechnica.com/tech-policy/2026/02/wikipedia-bans-archive-today-after-site-executed-ddos-and-altered-web-captures/" target="_blank" rel="noopener noreferrer" class="title-link">Wikipedia deprecates Archive.today, starts removing archive links</a>
+              
+            </div>
+            <div class="summary">
+              <p>英文版维基百科因 Archive.today 被用于对博客发动 DDoS 且被发现篡改网页快照，形成共识将其立即弃用并加入垃圾黑名单，同时启动大规模移除链接。现有约 69.5 万条 Archive.today 链接分布在约 40 万页面，社区认为多数用途可被替代。新指引要求编辑移除或替换 archive.today 及其多个域名的链接，可改指向 Internet Archive、Ghostarchive 或 Megalodon，或改用不需要存档的来源。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47092006" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://juno-labs.com/blogs/every-company-building-your-ai-assistant-is-an-ad-company" target="_blank" rel="noopener noreferrer" class="title-link">Every company building your AI assistant is now an ad company</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章认为主流AI助手公司逐渐以广告为主要资金来源，并推动带摄像头和麦克风的“常开”硬件，未来会持续收集生活场景数据。作者强调仅靠隐私政策不足以约束，真正的保障应来自架构层面的本地推理，让数据不出设备。文中主张以出售硬件与软件为商业模式，构建既能提供主动帮助又不“回传”数据的边缘AI。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47092203" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://dixken.de/blog/i-found-a-vulnerability-they-found-a-lawyer" target="_blank" rel="noopener noreferrer" class="title-link">I found a Vulnerability. They found a Lawyer</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者在哥斯达黎加潜水途中发现一家大型潜水保险机构会员门户存在严重漏洞：登录使用递增用户ID和统一默认密码，且无强制改密、无锁定与限速，导致包括未成年人在内的个人信息可被轻易枚举访问。他按负责任披露流程在2025年4月28日向组织与马耳他CSIRT报告并设定30天披露期，但组织的法律团队先确认问题、称将重置密码并推进2FA，随后转而以法律威胁和保密声明要求其沉默。作者拒签广泛保密条款，仅愿证明已删除数据，并指出GDPR要求对高风险数据泄露通知监管机构与受影响用户，而他未获确认已完成通知。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47092578" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://words.filippo.io/dependabot/" target="_blank" rel="noopener noreferrer" class="title-link">Turn Dependabot off</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者认为 Dependabot 造成大量噪音，尤其在 Go 生态的安全告警里，容易制造虚假的紧迫感和无效 PR。文中以 <a href="http://filippo.io/edwards25519" target="_blank" rel="noopener noreferrer">filippo.io/edwards25519</a> 的修复为例，说明大量项目并未触及易受影响的符号，但仍被触发更新与告警，甚至出现不合理评分。作者主张用定时 GitHub Actions 运行 govulncheck 与依赖最新版本测试来替代，以包级与符号可达性过滤降低误报，并把注意力留给真正需要处置的安全问题。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47094192" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.bloodinthemachine.com/p/across-the-us-people-are-dismantling" target="_blank" rel="noopener noreferrer" class="title-link">Across the US, people are dismantling and destroying Flock surveillance cameras</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章指出美国多地出现拆毁 Flock 车牌监控摄像头的行为，导火索与其与 ICE 的数据共享及隐私侵害争议相关，并提到社区在公共会议上反对续约但仍被通过。文内还简要列出其他社会议题：一名公众在数据中心听证会上因超时发言被捕，约 1 万名 Uber 与 Lyft 司机联署要求返还被拖欠工资。附带提及对“AI 能解决气候问题”的质疑、Tesla 机器人出租车事故率偏高，以及 AI 生成评论影响空气质量投票等现象。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47095134" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://thelocalstack.eu/posts/linkedin-identity-verification-privacy/" target="_blank" rel="noopener noreferrer" class="title-link">I verified my LinkedIn identity. Here&#39;s what I handed over</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者为获得 LinkedIn 蓝色徽章进行身份验证，实际把护照、自拍、面部几何等生物识别信息、设备与位置等数据交给第三方公司 Persona，并发现其会结合第三方数据库做交叉核验。隐私政策与服务条款显示，这些数据可能被用于训练 AI、与多个北美服务商共享，且受美国 CLOUD Act 影响即使数据在欧洲也可能被要求交出。作者强调生物识别不可更改、责任上限仅 50 美元、争议需仲裁，并建议已验证者请求数据与删除、联系 DPO 并在验证前权衡风险。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47098245" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://milk.com/wall-o-shame/security_clearance.html" target="_blank" rel="noopener noreferrer" class="title-link">What not to write on your security clearance form (1988)</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者回忆童年读到密码学书籍后，与朋友自制加密“暗号本”，因眼镜盒遗失被他人误认为间谍并引来 FBI 调查。多年后他申请安全许可时如实填写曾被调查并写“被怀疑是日本间谍”，安全官当场撕表要求重填并隐瞒此事，否则将无法获得许可。他最终按要求改写并获批，文章以讽刺口吻提醒在安全审查表上某些“刺激性”描述会带来意想不到的后果。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47102576" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-21.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

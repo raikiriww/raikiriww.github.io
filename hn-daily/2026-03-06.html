@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-03-06</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.03.06 周五</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.404media.co/cbp-tapped-into-the-online-advertising-ecosystem-to-track-peoples-movements/" target="_blank" rel="noopener noreferrer" class="title-link">CBP tapped into the online advertising ecosystem to track peoples’ movements</a>
+              
+            </div>
+            <div class="summary">
+              <p>内部文件显示，海关与边境保护局通过购买广告生态中的位置数据，持续追踪手机的精确移动轨迹，数据往往来自普通应用如游戏、约会和健身类软件。该材料强调此类广告数据具备强大追踪能力并带来政府监控风险，并指出移民与海关执法局已采购类似工具，且仍在寻求更多“广告技术”数据用于调查。围绕这一做法，国会有约70名议员要求国土安全部监督机构就位置数据购买启动新的调查。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47249387" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://mas.to/@gabrielesvelto/116171750653898304" target="_blank" rel="noopener noreferrer" class="title-link">10% of Firefox crashes are caused by bitflips</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者以自身装机经历说明内存条存在较高的翻转/错误风险，多次购买 DDR4 套条都在 memtest86 等长时间测试中发现错误，只有更换后才稳定。作者认为厂商知晓失效率但出于成本仍出售问题套条，而普通用户很少做长时内存压力测试，导致偶发崩溃被误当成正常。文中还指出 Windows 的内存检测和短时 Prime95 测试容易漏检，主张把 ECC RAM 作为消费级设备的更高标准。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47252971" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://ogirardot.writizzy.com/p/good-software-knows-when-to-stop" target="_blank" rel="noopener noreferrer" class="title-link">Good software knows when to stop</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章用一个虚构的命令行升级闹剧，讽刺软件不断加料、过度“智能化”的趋势。作者强调好软件应清楚自己的问题边界，知道什么该由别的工具解决，并在功能扩张前学会适可而止。文中引用早期产品理念，主张以约束促决策、聚焦核心体验、谨慎对待功能请求，认为稳定解决既有问题的价值往往胜过追逐热点改名。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47261561" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://grith.ai/blog/clinejection-when-your-ai-tool-installs-another" target="_blank" rel="noopener noreferrer" class="title-link">A GitHub Issue Title Compromised 4k Developer Machines</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章描述一次由 GitHub 议题标题提示注入触发的供应链攻击，最终导致约 4,000 名开发者在安装或更新 Cline 时被静默安装了 OpenClaw。攻击链结合了提示注入、恶意脚本执行、缓存投毒与凭证窃取，利用 CI 工作流的高权限和缓存机制获取 NPM 等令牌，并在 8 小时内发布带有 postinstall 的恶意版本。作者强调关键问题不在载荷本身，而是 AI 工作流将不可信文本当作指令执行，造成“工具安装工具”的递归信任漏洞，并列出事后改进如 OIDC 证明、凭证轮换校验与移除高风险缓存等措施。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47263595" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://paulgraham.com/brandage.html" target="_blank" rel="noopener noreferrer" class="title-link">The Brand Age</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章以瑞士钟表业在20世纪70年代遭遇三重冲击为切入点，指出日本竞争、瑞郎升值与石英技术让性能优势迅速失效，导致销量大幅下滑。作者说明幸存者通过从精密制造转向奢侈品牌生存，并借销量与营收走势对比强调品牌化带来的利润与复苏。文中进一步讨论“品牌”在技术抹平产品差异时成为核心价值，并以表壳设计变化为例说明品牌需要显著可识别性而常与“最佳设计”相冲突。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47264756" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.anthropic.com/news/where-stand-department-war" target="_blank" rel="noopener noreferrer" class="title-link">Where things stand with the Department of War</a>
+              
+            </div>
+            <div class="summary">
+              <p>这是一份 Dario Amodei 的声明，称 Anthropic 收到 Department of War 来信，被认定为供应链风险，并将就此提起诉讼。声明强调该认定依据的法律范围有限，主要影响与 Department of War 合同直接相关的 Claude 使用，不应波及与合同无关的业务关系。文中解释公司坚持不参与作战决策，仅对完全自主武器和大规模国内监控设限，并为先前内部帖文泄露致歉，表示将继续以名义成本支持相关过渡，避免前线在作战中失去关键工具。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47269263" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://blog.system76.com/post/system76-on-age-verification/" target="_blank" rel="noopener noreferrer" class="title-link">System76 on Age Verification Laws</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者以儿童获取知识的经历和现实案例说明，未成年人很容易绕过限制，强制年龄申报并不会真正阻止访问，反而把孩子推向说谎与规避。文中批评科罗拉多与加州的法案会限制未成年人自行创建账户、压缩探索空间，并指出纽约拟议法案要求成人证明年龄将导致隐私被迫交给第三方。作者强调去中心化平台如 Linux 对自由与创新至关重要，过度集中化与强制年龄验证会削弱个人能力与社会潜力，真正的路径是教育与信任。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47270784" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://news.cornell.edu/stories/2026/03/workers-who-love-synergizing-paradigms-might-be-bad-their-jobs" target="_blank" rel="noopener noreferrer" class="title-link">Workers who love ‘synergizing paradigms’ might be bad at their jobs</a>
+              
+            </div>
+            <div class="summary">
+              <p>一项发表于《Personality and Individual Differences》的研究提出“企业废话接受度量表”（CBSR），用来衡量人们对貌似高深却语义空洞的职场话术的敏感度。研究者让1000多名职场人员评价自动生成的“高大上”陈述和真实高管语句，结果显示对这类话术更容易买账的人在分析性思维、认知反省与流体智力以及有效决策测试上得分更低。这类人更容易把主管看作有魅力和有远见，也更满意并更愿传播此类话术，可能形成助长无效领导与组织低效的负反馈。作者认为这类语言可能带来声誉与财务风险，量表未来或可用于研究与人才评估，并提醒公众放慢速度核查组织信息的实际含义。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47274676" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.researchsquare.com/article/rs-6079807/v1" target="_blank" rel="noopener noreferrer" class="title-link">Global warming has accelerated significantly</a>
+              
+            </div>
+            <div class="summary">
+              <p>这是一篇尚未经过同行评审的预印本，讨论全球变暖是否在近年出现加速。作者在分析中控制了厄尔尼诺、火山活动和太阳变化三类主要自然变率的影响。结果显示，经过这些调整后，2015年之后的全球气温上升速度显著快于1945年以来任何之前的10年时期。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47275088" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://twitter.com/JosephPolitano/status/2029916364664611242" target="_blank" rel="noopener noreferrer" class="title-link">Tech employment now significantly worse than the 2008 or 2020 recessions</a>
+              <span class="mode-badge mode-fallback">链接补救</span>
+            </div>
+            <div class="summary">
+              <p>尝试访问该条 X 推文时被登录或验证页面拦截，未能获取正文内容，因此无法提供具体观点或数据。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47278426" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-03-06.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

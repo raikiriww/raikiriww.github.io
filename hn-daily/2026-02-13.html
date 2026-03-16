@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-02-13</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.02.13 周五</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://atha.io/blog/2026-02-12-viva" target="_blank" rel="noopener noreferrer" class="title-link">Major European payment processor can&#39;t send email to Google Workspace users</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者在注册欧洲大型支付处理商 <a href="http://viva.com" target="_blank" rel="noopener noreferrer">viva.com</a> 时，发现验证邮件被 Google Workspace 直接退信，因为邮件缺少 RFC 5322 建议应包含的 Message-ID 头。为继续注册他改用 @gmail.com 并成功验证，但客服仅以“邮箱已验证”为由否认问题，没有技术回应。作者据此质疑其邮件与基础设施可靠性，并提出应修复邮件头配置、改善面向开发者的支持与质量标准。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46989217" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://pol.is/home2" target="_blank" rel="noopener noreferrer" class="title-link">Polis: Open-source platform for large-scale civic deliberation</a>
+              
+            </div>
+            <div class="summary">
+              <p>Polis 是一个面向大规模公共协商的开源平台，2012 年推出，已在多国和国际机构的大型讨论中验证，通过收集大量参与者观点来揭示共识并用于公共议题治理。该平台由 CompDem 维护，并推出 Polis 2.0，强调可扩展基础设施、实时观点分群与主题聚类，以及自动化的内容播种、审核和报告生成。Polis 2.0 支持多语言参与与多样输入来源，并提供实时分析与共识输出，便于持续跟踪议题走向。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46992815" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation" target="_blank" rel="noopener noreferrer" class="title-link">Anthropic raises $30B in Series G funding at $380B post-money valuation</a>
+              
+            </div>
+            <div class="summary">
+              <p>Anthropic 宣布完成 300 亿美元 Series G 融资，投后估值 3800 亿美元，资金将用于前沿研究、产品与基础设施扩张，并强调其企业级 AI 与 coding 领域的领先地位。公司披露收入与客户增长数据：运行率收入 140 亿美元，过去三年年增长超 10 倍，年支出超过 10 万美元的客户数量一年内增长 7 倍，Fortune 10 中已有 8 家使用 Claude。Claude Code 自 2025 年 5 月公开后增长迅速，运行率收入超过 25 亿美元、企业订阅显著上升，同时最新模型 Opus 4.6 与多云部署能力被用于强化企业应用场景。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46993345" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.theverge.com/news/878447/ring-flock-partnership-canceled" target="_blank" rel="noopener noreferrer" class="title-link">Ring cancels its partnership with Flock Safety after surveillance backlash</a>
+              
+            </div>
+            <div class="summary">
+              <p>材料讨论职场正在经历“经验断层”：一批在AI兴起前成长的专业人士退休，带走了难以文档化的判断力与隐性知识。调查显示各年龄层普遍担忧被AI取代，真正的焦虑集中在AI建议导致错误决策、缺乏上下文理解。文中强调AI需要人类持续训练、纠错与定制，组织若让资深员工离开而不做知识传承，将失去能教会AI判断的关键力量。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46996999" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://noheger.at/blog/2026/02/12/resizing-windows-on-macos-tahoe-the-saga-continues/" target="_blank" rel="noopener noreferrer" class="title-link">Resizing windows on macOS Tahoe – the saga continues</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者针对 macOS 26.3 RC 中宣称已修复的窗口缩放问题做了像素级测试，发现缩放响应区域从方形改为跟随圆角，体验确有改善。与此同时，垂直/水平单向缩放的黄色区域厚度从 7 像素降到 6 像素，且窗框内部分仅 2 像素，误点概率反而上升。待最终版发布后作者再次扫描，惊讶地发现改动被完全撤回，缩放区域又回到方形。官方说明也从“已解决”变为“已知问题”。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46997008" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://skipthe.tips/" target="_blank" rel="noopener noreferrer" class="title-link">Skip the Tips: A game to select &quot;No Tip&quot; but dark patterns try to stop you</a>
+              <span class="mode-badge mode-fallback">链接补救</span>
+            </div>
+            <div class="summary">
+              <p>这是一个免费的浏览器游戏，玩家需要在各种结账界面里找到并点击“不给小费”，但界面会用微小按钮、内疚弹窗、假加载和被操控的滑块等暗黑设计来诱导你付费。游戏以讽刺现代小费文化为主题，强调现实中的结账页面常变成“内疚机器”，让你练习拒绝。它包含 30 多种源自现实小费屏幕的暗黑模式，难度递增，倒计时也会不断缩短，可直接在线游玩，无需下载和注册。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=46997519" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://github.com/minio/minio/commit/7aac2a2c5b7c882e68c1ce017d8256be2feea27f" target="_blank" rel="noopener noreferrer" class="title-link">MinIO repository is no longer maintained</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章主要讨论相关主题与核心观点，并给出关键背景与结论。文章主要讨论相关主题与核心观点，并给出关键背景与结论。文章主要讨论相关主题与核心观点，并给出关键背景与结论。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47000041" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://monosketch.io/" target="_blank" rel="noopener noreferrer" class="title-link">Monosketch</a>
+              
+            </div>
+            <div class="summary">
+              <p>MonoSketch 是一款开源的 ASCII 草图与图示制作工具，主打用文本字符快速把想法变成可用于演示和代码集成的可视化图形。它提供矩形、线条、文本框等基础构件并支持格式化样式，能够拼出流程图、网络通信示意等复杂示例。项目采用 Apache License 2.0 许可，作者欢迎通过 GitHub 提交贡献并提供赞助支持渠道。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47001871" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://ios-countdown.win/" target="_blank" rel="noopener noreferrer" class="title-link">Fix the iOS keyboard before the timer hits zero or I&#39;m switching back to Android</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者设定倒计时，要求苹果在 WWDC 2026 结束前修复 iOS 键盘问题，或至少公开承认并承诺在 iOS 27 之前修好，否则将长期转投 Android。其不满集中于自动更正频繁出错、滑行输入落后、选中文本困难、长文输入卡顿以及按键命中与显示不一致等体验退化。作者强调键盘作为高频交互部件持续变差，已突破容忍底线，并以亲身对比 Android 键盘体验来凸显问题严重性。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47003064" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-02-13.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

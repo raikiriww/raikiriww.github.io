@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-03-05</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.03.05 周四</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://unsloth.ai/docs/models/qwen3.5/fine-tune" target="_blank" rel="noopener noreferrer" class="title-link">Qwen3.5 Fine-Tuning Guide</a>
+              
+            </div>
+            <div class="summary">
+              <p>该指南介绍如何用 Unsloth 微调 Qwen3.5 模型家族（从 0.8B 到 122B‑A10B），同时支持文本与视觉微调，并给出 bf16 LoRA 的显存需求与多 GPU 注意事项。文中强调 Unsloth 可提升训练速度并降低显存占用，建议使用 Transformers v5，并不推荐在 Qwen3.5 上进行 4-bit QLoRA，尤其是 MoE 版本。指南还说明微调后可导出为 GGUF 或合并权重用于部署，并提醒 vLLM 的版本兼容性限制。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47246296" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://bill.newgrounds.com/news/post/1607118" target="_blank" rel="noopener noreferrer" class="title-link">Building a new Flash</a>
+              
+            </div>
+            <div class="summary">
+              <p>页面仅展示 Newgrounds 的站点标识与状态提示，内容反复出现“STATUS: ONLINE”“SECURITY: ACTIVE”“ACCESS: PROCESSING”等字样。未见可供提炼的正文信息，疑似处于访问处理或安全校验提示页。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47253177" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://techcrunch.com/2026/03/04/anthropic-ceo-dario-amodei-calls-openais-messaging-around-military-deal-straight-up-lies-report-says/" target="_blank" rel="noopener noreferrer" class="title-link">Dario Amodei calls OpenAI’s messaging around military deal ‘straight up lies’</a>
+              
+            </div>
+            <div class="summary">
+              <p>Anthropic 联合创始人兼 CEO Dario Amodei 在给员工的备忘录中指责 OpenAI 围绕军方合同的表述是“作秀式安全”，并称相关说法属于公然撒谎。摘要指出，Anthropic 因坚持要求国防部明确不将其 AI 用于国内大规模监控或自主武器而未能达成协议，随后 OpenAI 与国防部达成了“所有合法用途”的合同。Amodei 认为 OpenAI 的表态是在粉饰其防务合作，并担忧这种叙事可能影响员工与公众观感。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47255662" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://github.com/googleworkspace/cli" target="_blank" rel="noopener noreferrer" class="title-link">Google Workspace CLI</a>
+              
+            </div>
+            <div class="summary">
+              <p>这是一个面向 Google Workspace 的统一命令行工具 gws，可通过动态读取 Discovery Service 自动生成完整命令面。它强调零样板、结构化 JSON 输出和内置 40+ 代理技能，既适合人工操作也便于 AI 代理调用。项目提供 npm 预编译二进制、Rust 源码构建与 Nix flake，支持多种认证流程并可在本地、CI 或服务器环境使用。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47255881" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://acko.net/blog/the-l-in-llm-stands-for-lying/" target="_blank" rel="noopener noreferrer" class="title-link">The L in &quot;LLM&quot; Stands for Lying</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章质疑AI与LLM“不可避免”的叙事，认为大量宣传驱动投资，却让软件产出依旧平庸。作者提出“伪造”框架，指出LLM本质是快速模仿，把仿制品当成真实成果使用才会造成问题。在软件开发中，这导致开源维护者遭遇低质PR、团队产出充斥平庸代码并增加维护负担。相较之下，游戏等以艺术性和消费者透明度为核心的行业更能有效抵制未标注的AI内容。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47257394" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://tuananh.net/2026/03/05/relicensing-with-ai-assisted-rewrite/" target="_blank" rel="noopener noreferrer" class="title-link">Relicensing with AI-Assisted Rewrite</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者围绕 chardet v7.0.0 争议讨论“AI 重写是否能实现从 LGPL 变更为 MIT”，指出传统重写需严格“净室”隔离，而用 Claude Code 基于原代码生成新版本绕过了这一隔离，可能构成衍生作品而触发许可冲突。文中提到 2026 年 3 月 2 日美国最高法院对 AI 生成内容版权上诉不予受理，使“人类作者”要求更稳固，从而带来三重困境：维护者未必拥有授权资格、重写可能违反 LGPL、若被视为机器生成则许可形同虚设。作者认为若 AI 重写被视为有效改许可证，将削弱 Copyleft 约束，chardet 案例正在测试这一边界。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47257803" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://github.com/chardet/chardet/issues/327" target="_blank" rel="noopener noreferrer" class="title-link">No right to relicense this project</a>
+              
+            </div>
+            <div class="summary">
+              <p>原作者说明自己是 chardet 的最初作者，感谢维护者与贡献者让项目成功，但强调 7.0.0 版本声称可重新授权是错误的。其理由是 LGPL 要求衍生修改继续使用同一许可，宣称“完全重写”并不成立，因为维护者接触过原始代码，且并非洁净室实现。作者认为加入代码生成器也不会改变授权权利，并要求恢复原有许可。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47259177" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.wsj.com/politics/policy/judge-orders-government-to-begin-refunding-more-than-130-billion-in-tariffs-fdc1e62c" target="_blank" rel="noopener noreferrer" class="title-link">Judge orders government to begin refunding more than $130B in tariffs</a>
+              
+            </div>
+            <div class="summary">
+              <p>一名联邦贸易法院法官下令政府开始退还超过1300亿美元的关税，这些关税在上月被最高法院判定无效。该裁定源自一家公司就退款提起的听证，法官要求行政部门启动对进口商的退款流程，并安排周五再次开庭听取进展。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47261688" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.wikimediastatus.net/" target="_blank" rel="noopener noreferrer" class="title-link">Wikipedia was in read-only mode following mass admin account compromise</a>
+              
+            </div>
+            <div class="summary">
+              <p>Wikimedia 状态页记录了 3 月 5 日至 3 月 6 日期间维基系统的故障处置进展。期间多次更新显示，问题从调查到识别并修复后进入监控阶段，部分编辑和脚本功能仍被临时限制。最终状态为已恢复读写并逐步恢复大部分用户脚本能力，仍继续观察是否有后续问题。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47263323" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">10</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank" rel="noopener noreferrer" class="title-link">GPT-5.4</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章宣布发布 GPT-5.4，在 ChatGPT、API 与 Codex 提供版本，并推出 GPT-5.4 Pro 面向高复杂度任务。新模型整合推理、编码与代理工作流能力，强调更强的工具使用与计算机操作能力、最高 1M 上下文、以及更高的效率与更低的成本。文中列出多项基准评测与内部测试，显示在知识工作、代码、桌面与浏览器操作等任务上整体优于上一代，并改善事实准确性与视觉理解。还介绍了工具搜索机制以降低提示词开销、加速工具密集型任务，并提供更快的推理与开发者工作流。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47265045" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-03-05.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>

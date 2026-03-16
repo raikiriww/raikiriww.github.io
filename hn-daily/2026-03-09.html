@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>Hacker News Daily - 2026-03-09</title>
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scrollbar-gutter: stable both-edges;
+        }
+
+        :root {
+            --bg: #ffffff;
+            --fg: #1b1b1b;
+            --rank: #9b9b9b;
+            --meta: #7c7c7c;
+            --summary: #6d6d6d;
+            --line: #e6e6e6;
+            --badge-fallback-bg: #e8f4f8;
+            --badge-fallback-fg: #0f5f78;
+            --badge-fallback-failed-bg: #ffe8e8;
+            --badge-fallback-failed-fg: #8f1d1d;
+
+            --font-sans: "IBM Plex Sans", "Source Han Sans", "Noto Sans SC", "PingFang SC", sans-serif;
+            --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f0f0f;
+                --fg: #f1f1f1;
+                --rank: #8a8a8a;
+            --meta: #9a9a9a;
+                --summary: #b0b0b0;
+                --line: #2a2a2a;
+                --badge-fallback-bg: #143643;
+                --badge-fallback-fg: #9ad5e7;
+                --badge-fallback-failed-bg: #4a2323;
+                --badge-fallback-failed-fg: #ffb8b8;
+            }
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 64px 28px;
+            font-size: 15px;
+            overflow-y: scroll;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            line-height: 1;
+        }
+
+        .date {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--meta);
+            font-weight: 500;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .post {
+            padding: 26px 0 30px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .post-row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .post-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-top: 2px;
+        }
+
+        .rank {
+            font-family: var(--font-mono);
+            color: var(--rank);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding-top: 0;
+        }
+
+        .title-link {
+            display: inline-block;
+            font-size: 1.0rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0;
+            color: var(--fg);
+            text-decoration: none;
+        }
+
+        .title-link {
+            transition: color 0.2s;
+        }
+
+        .title-link:hover {
+            color: #000000;
+        }
+
+        .title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .mode-badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            line-height: 1;
+            padding: 4px 7px;
+            border-radius: 999px;
+            letter-spacing: 0.02em;
+        }
+
+        .mode-fallback {
+            background: var(--badge-fallback-bg);
+            color: var(--badge-fallback-fg);
+        }
+
+        .mode-fallback-failed {
+            background: var(--badge-fallback-failed-bg);
+            color: var(--badge-fallback-failed-fg);
+        }
+
+        .summary {
+            font-size: 0.875rem;
+            color: var(--summary);
+            margin: 0;
+        }
+
+        .links {
+            font-size: 0.72rem;
+            font-family: var(--font-mono);
+        }
+
+        .links a {
+            color: var(--meta);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        .links a:hover {
+            color: var(--fg);
+            border-bottom-color: var(--line);
+        }
+
+        .summary p {
+            margin: 0 0 10px;
+        }
+
+        .summary code {
+            font-family: var(--font-mono);
+            background: rgba(127, 127, 127, 0.12);
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .summary pre {
+            background: rgba(127, 127, 127, 0.12);
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .footer-link {
+            margin-top: 40px;
+            text-align: center;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+        }
+        .footer-link a { color: var(--meta); }
+
+        @media (max-width: 700px) {
+            body { padding: 44px 18px; }
+            .post-row { grid-template-columns: 42px 1fr; }
+        }
+    </style>
+</head>
+<body class="notranslate">
+    <header>
+        <h1>
+            <span>Hacker News Daily</span>
+            <span class="date">2026.03.09 周一</span>
+        </h1>
+    </header>
+    <main>
+        <ol>
+            
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">01</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.youtube.com/watch?v=qZuR-772cks" target="_blank" rel="noopener noreferrer" class="title-link">Microscopes can see video on a laserdisc</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者在显微镜下观察随机样品时意外发现了“神奇”的现象，进而确认激光影碟和 CED 介质上可以直接看到视频图像。为更准确展示这一现象，他专门购买了更专业的显微镜并制作演示视频。视频信息显示为 2026-03-07 发布，来自 Tech Tangents 频道。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47291876" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">02</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://bryananthonio.com/blog/my-homelab-setup/" target="_blank" rel="noopener noreferrer" class="title-link">My Homelab Setup</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者为解决相机 RAW 文件备份和存储的痛点，复用 2018 年的旧游戏 PC 搭建家用服务器，购买两块 8TB 硬盘，并安装 TrueNAS 进行 RAID 1 镜像与定期快照。文中列出硬件配置，并说明使用 SSD 存放对读写速度敏感的自托管服务数据。基于 TrueNAS 的应用生态，他部署了硬盘健康监控、基于 restic 的备份前端、照片视频管理、食谱管理与本地大模型运行等应用。远程访问采用 Tailscale，并计划后续为各服务配置自定义域名以简化登录管理。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47298743" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">03</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://blog.documentfoundation.org/blog/2026/02/04/libreoffice-26-2-is-here/" target="_blank" rel="noopener noreferrer" class="title-link">LibreOffice Writer now supports Markdown</a>
+              
+            </div>
+            <div class="summary">
+              <p>文章发布了 LibreOffice 26.2，强调这是面向个人与组织的免费开源办公套件更新，主打性能提升、复杂文档交互更流畅以及与其他办公软件文件的兼容性改进。新版新增 Markdown 导入导出等功能，进一步强化对开放标准的支持，并由全球社区贡献大量修复与优化。该版本可用于 Windows、macOS 与 Linux，并支持多语言使用。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47298885" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">04</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://agent-safehouse.dev/" target="_blank" rel="noopener noreferrer" class="title-link">Agent Safehouse – macOS-native sandboxing for local agents</a>
+              
+            </div>
+            <div class="summary">
+              <p>该项目在 macOS 上提供本地 LLM 代理的内核级沙箱，采用 deny-first 策略，默认仅允许当前项目目录读写，其它如 SSH 密钥、云凭据或其它仓库被内核拒绝。使用方式是下载单一脚本并在其内启动各类代理，无需构建与依赖，默认授予工作区与工具链只读访问。文中还提供验证沙箱生效的示例，以及通过 shell 函数把常用代理默认放入沙箱，并可生成最小权限的 sandbox-exec 配置模板。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47301085" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">05</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://old.reddit.com/r/KitchenConfidential/comments/1ro61g2/how_the_sriracha_guys_screwed_over_their_supplier/" target="_blank" rel="noopener noreferrer" class="title-link">How the Sriracha guys screwed over their supplier</a>
+              
+            </div>
+            <div class="summary">
+              <p>贴文依据法院判决材料梳理了Huy Fong与Underwood Ranches长期合作如何在2015—2017年间破裂：在口头合作与按种植面积预付模式下，Underwood被鼓励大规模扩张并高度依赖对方采购。随后Huy Fong另设Chilico改由其独家供货，要求降价、转卖并拒绝提供保障，且使用保密航拍资料指导他人生产，导致Underwood陷入财务危机并裁员。最终陪审团支持Underwood的反诉并判赔约1300万美元补偿性赔偿及约1000万美元惩罚性赔偿，双方此后各自生产自有辣椒酱。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47304831" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">06</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://cdn.ca9.uscourts.gov/datastore/memoranda/2026/03/03/25-403.pdf" target="_blank" rel="noopener noreferrer" class="title-link">US Court of Appeals: TOS may be updated by email, use can imply consent [pdf]</a>
+              <span class="mode-badge mode-fallback">链接补救</span>
+            </div>
+            <div class="summary">
+              <p>第九巡回上诉法院在这份备忘录意见中审查了 Tile 与 Life360 涉及追踪器被第三方滥用的集体诉讼，焦点是用户是否同意更新后的服务条款。法院认为 2023 年 10 月通过电子邮件发送的更新通知足以构成合理提示，且用户在之后继续使用应用构成对新条款的同意。由于新条款明确将可仲裁性问题也交由仲裁，法院撤销地方法院部分裁定并发回，要求强制仲裁并将相关争议交由仲裁员处理。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47305461" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">07</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://arcade.pirillo.com/fontcrafter.html" target="_blank" rel="noopener noreferrer" class="title-link">FontCrafter: Turn your handwriting into a real font</a>
+              
+            </div>
+            <div class="summary">
+              <p>FontCrafter 是一款在浏览器本地运行的手写字体生成工具，用户上传手写扫描图后即可自动识别字符并生成可安装字体，整个过程无需账号或上传到服务器，强调隐私不外流。它支持导出 OTF、TTF、WOFF2 和 Base64 等多种格式，并提供连字、字距和扩展字符等功能，适用于设计、教学及个人内容创作。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47306655" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">08</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://www.pv-magazine.com/2025/06/20/ireland-coal-free-ends-coal-power-generation-moneypoint/" target="_blank" rel="noopener noreferrer" class="title-link">Ireland shuts last coal plant, becomes 15th coal-free country in Europe (2025)</a>
+              
+            </div>
+            <div class="summary">
+              <p>爱尔兰在克莱尔郡关闭唯一仍在发电的915兆瓦Moneypoint燃煤电厂，成为欧洲第15个煤电清零国家，退煤的重要原因是近年可再生能源特别是风电占比显著上升。报道援引数据称爱尔兰2024年风电发电量约占37%，太阳能虽规模较小但近期不断创纪录。电厂将按应急指令以重油方式承担有限备用角色至2029年，但环保组织提醒需加快储能、电网与灵活性建设，并减少对化石气与数据中心扩张带来的额外需求。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47307055" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+
+      <li class="post">
+        <div class="post-row">
+          <div class="rank">09</div>
+          <div class="post-body">
+            <div class="title-row">
+              <a href="https://felixturner.github.io/hex-map-wfc/article/" target="_blank" rel="noopener noreferrer" class="title-link">Building a Procedural Hex Map with Wave Function Collapse</a>
+              
+            </div>
+            <div class="summary">
+              <p>作者介绍用WFC算法生成中世纪风格六边形岛屿地图的思路：30种地形瓦片配合旋转与高程形成大量状态，通过最低熵选择与约束传播完成拼接，并针对大网格易失败的问题拆分为多网格求解。文中重点讲了回溯与分层恢复机制，如解除边界固定、局部重算与用山体遮挡缝隙，提高整体求解成功率。还说明高程让匹配从二维变为三维，树木与建筑则用噪声而非WFC来形成聚落与森林的聚集模式。渲染层面使用WebGPU与TSL着色器，并针对水面波纹与海岸波带提出掩膜与包围度检测等实现细节。</p>
+
+            </div>
+            <div class="links"><a href="https://news.ycombinator.com/item?id=47311815" target="_blank" rel="noopener noreferrer">→ HN Discussion</a></div>
+          </div>
+        </div>
+      </li>
+        </ol>
+        
+        <div class="footer-link"><a href="https://www.daemonology.net/hn-daily/2026-03-09.html" target="_blank" rel="noopener noreferrer">Data Source</a></div>
+    </main>
+
+</body>
+</html>
