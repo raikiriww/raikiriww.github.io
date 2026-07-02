@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - 2026-03-18</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-03-18.html">Daily Hacker News for 2026-03-18</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on March 18, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.sophielwang.com/blog/jpeg" target="_blank" rel="noopener noreferrer">JPEG Compression</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47372367" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这篇文章从人眼对亮度比颜色更敏感的特点切入，解释了 JPEG 为什么能在肉眼几乎不变的前提下大幅压缩图片。它先把图像从 RGB 转到 Y&#39;CbCr，把亮度与色度分开，再通过色度抽样减少细节较不敏感的颜色信息。随后，JPEG 用 8×8 块做离散余弦变换，把能量集中到低频系数，再用量化矩阵把高频系数大量压成零。最后，经过锯齿扫描、游程编码和哈夫曼编码，文件体积进一步缩小，而解码时只需按相反流程还原图像。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://unsloth.ai/docs/new/studio" target="_blank" rel="noopener noreferrer">Unsloth Studio</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47414032" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Unsloth Studio 是一个开源、无需编程的本地网页界面，用来在一处完成开模型的训练、运行与导出。它强调可离线本地使用，支持在 Mac、Windows 和 Linux 上加载多种模型，并可处理文本、视觉、语音、嵌入等任务。产品还提供数据处理流程、训练过程监控、模型对比聊天以及将结果导出为 safetensors 或 GGUF，方便接入 llama.cpp、Ollama、LM Studio 等工具。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://fidget-spinner.github.io/posts/jit-on-track.html" target="_blank" rel="noopener noreferrer">Python 3.15&#39;s JIT is now back on track</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47416486" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者表示，CPython 的 JIT 在 3.15 版本已经提前达到原本很保守的性能目标：在 macOS AArch64 上比尾调用解释器快约 11% 到 12%，在 x86_64 Linux 上也比标准解释器快约 5% 到 6%。他回顾了 3.13 和 3.14 时 JIT 常常比解释器更慢的低谷，并强调这次进展很大程度来自合适的人、合适的时机，以及把复杂工作拆成更容易参与的小任务。文章还提到，社区接手、清晰的分工、双调度机制和引用计数消除，都是推动 JIT 重新走上正轨的关键因素。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://terathon.com/blog/decade-slug.html" target="_blank" rel="noopener noreferrer">A Decade of Slug</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47416736" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这篇文章回顾了 Slug 算法从 2016 年诞生到如今满十年的演进，强调它能够直接在 GPU 上从贝塞尔曲线渲染文字与矢量图形，并在游戏、科学可视化、CAD、视频编辑等场景中得到广泛应用。作者说明了自论文发表以来的若干改进，包括移除带分裂优化、缩减带数据存储，以及引入“动态扩张”来自动计算合适的扩展距离，从而在不同缩放和透视条件下兼顾清晰度与效率。文章最后宣布，作者已把 Slug 专利永久奉献给公有领域，并公开了可直接用于实现该算法的参考着色器代码。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/gsd-build/get-shit-done" target="_blank" rel="noopener noreferrer">Get Shit Done: A meta-prompting, context engineering and spec-driven dev system</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47417804" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这是一个面向 Claude Code 等工具的开发系统，核心卖点是把元提示、上下文工程和规格驱动流程组合起来，减少上下文变脏后带来的质量下降。页面强调它能在 Mac、Windows、Linux 上运行，并提供从安装、帮助到多种运行时集成的完整使用路径。作者把它定位为替代繁琐企业式流程的轻量方案，目标是让用户只需描述需求，就能稳定得到可验证的实现。</p>
+<p>文中还列出了若干质量门禁，例如检查模式漂移、安全验证和范围收缩，说明它不仅关注生成代码，也关注生成过程的可靠性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://mistral.ai/news/forge" target="_blank" rel="noopener noreferrer">Mistral AI Releases Forge</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47418295" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Mistral AI 推出 Forge，这是一套面向企业的系统，帮助组织基于自身的专有知识训练前沿级模型。它强调把内部文档、代码库、结构化数据和运营记录纳入训练，使模型更懂企业术语、流程、合规要求与业务约束。Forge 还支持预训练、后训练和强化学习等阶段，并兼容稠密模型与混合专家模型，以便在性能、成本和延迟之间取得平衡。官方也把它定位为“面向代理优先”的训练平台，方便自动化代理执行调参、排程、合成数据生成等工作。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.otherstrangeness.com/2026/03/14/have-a-fucking-website/" target="_blank" rel="noopener noreferrer">Have a fucking website</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47421442" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者强烈主张：无论是商家还是个人创作者，都应该拥有自己的独立网站，而不是只依赖社交平台。因为网站能直接展示营业时间、价格和基础信息，不必受平台算法、规则变动或封号风险影响。文章同时提醒，社交媒体上的粉丝和内容并不真正属于自己，电子邮件和网站才更接近可长期掌控的网络存在。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://nightingale.cafe/" target="_blank" rel="noopener noreferrer">Nightingale – open-source karaoke app that works with any song on your computer</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47422942" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Nightingale 是一款开源卡拉 OK 应用，可把本地任意歌曲直接变成可唱的伴奏曲目。它会先进行人声与伴奏分离，再用语音转写与逐词对齐生成同步歌词，并在演唱时提供实时音高评分和星级统计。应用还支持多用户档案、视频文件导入、动态背景和手柄操作，而且首次运行会自动拉起所需组件，基本做到即装即用。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.cs.unc.edu/~stotts/COMP590-059-f24/robsrules.html" target="_blank" rel="noopener noreferrer">Rob Pike’s Rules of Programming (1989)</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47423647" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这篇文章提出了罗布·派克的 5 条编程规则，核心是不要凭直觉猜性能瓶颈，而要先测量再优化。作者强调，小规模场景下花哨算法往往更慢，也更容易出错，因此应优先使用简单算法和简单数据结构。最后一条指出，数据结构往往比算法选择更能决定程序的整体表现，设计时应先把数据组织好。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.propublica.org/article/microsoft-cloud-fedramp-cybersecurity-government" target="_blank" rel="noopener noreferrer">Despite Doubts, Federal Cyber Experts Approved Microsoft Cloud Service</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47426057" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>美国联邦网络安全评审机制 FedRAMP 在对微软云产品 GCC High 存在长期疑虑的情况下，仍批准其承载敏感政府数据。报道指出，审查过程中多次出现对安全文档不足、风险难以验证的担忧，但程序最终还是给了通过。文章还提到，政府依赖由厂商付费的第三方评估机构，这让审核独立性受到质疑。与此同时，FedRAMP 在人员和预算收缩后更像是在加速放行云服务，而不是严格把关。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-04 00:00 | <a href="./2026-03-18.html">Permanent link</a> | <a href="https://www.daemonology.net/hn-daily/2026-03-18.html" target="_blank" rel="noopener noreferrer">原链接</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

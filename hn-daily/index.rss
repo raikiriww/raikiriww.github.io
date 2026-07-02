@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Hacker News Daily</title>
+    <link>https://blog.raikiriww.xyz/hn-daily/</link>
+    <description>Daily top stories from Hacker News with Chinese summaries</description>
+    <language>zh-cn</language>
+    <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
+    <item>
+      <title>Daily Hacker News for 2026-07-01</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-07-01.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-07-01.html</guid>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on July 01, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://deepmind.google/models/gemini-image/flash-lite/">Nano Banana 2 Lite</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48735444">(comments)</a></span>
+<div class="summary"><p>Google DeepMind 推出的 Nano Banana 2 Lite 图像生成模型主打低延迟与高性价比，在大幅缩短延迟和降低规模化生成成本的同时，依然保持了高水平的图像质量。该模型已被应用于 Manus AI 智能体流、Figma Weave 设计设计及实时游戏画面生成等多元场景，支持文本转图像、图像编辑和多图合成等功能。尽管模型在角色一致性等方面表现优异，但在处理微小面部、文字拼写、复杂场景混合以及特定事实准确性上仍存在一定局限。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://claude.com/product/claude-science">Claude Science</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48735770">(comments)</a></span>
+<div class="summary"><p>Claude Science 是 Anthropic 推出的一款面向科学研究的 AI 工作台应用，支持在 macOS 和 Linux 系统上运行分析。该应用通过集成科学工具、计算环境并支持查询超 60 个科学数据库，可自动运行和记录从数据整理到发表的每一步骤，确保研究成果完全可复现。目前该应用已被用于基因组学、单细胞测序和药物开发等领域，能有效连接实验室已有工作流并加速科研成果的产出。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://twitter.com/AnthropicAI/status/2072106151890809341">Department of Commerce has lifted export controls on Claude Fable 5 and Mythos 5</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48740771">(comments)</a></span>
+<div class="summary"><p>Anthropic在社交平台X上宣布，已收到美国商务部解除对Claude Fable 5和Mythos 5出口管制的通知。公司将于次日开始恢复相关模型的访问，并会在近期分享最新进展。Anthropic对用户的耐心以及协助重新部署模型的人员表示了感谢。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.pcgamer.com/gaming-industry/open-source-game-engine-godot-will-no-longer-accept-ai-authored-code-contributions-we-cant-trust-heavy-users-of-ai-to-understand-their-code-enough-to-fix-it/">Godot will no longer accept AI-authored code contributions</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48743472">(comments)</a></span>
+<div class="summary"><p>开源游戏引擎 Godot 宣布将修改其贡献者指南，禁止提交人工智能（AI）编写的代码、AI 代理提交的合并请求（PR）以及人际沟通中的 AI 生成文本。Godot 基金会表示，此举旨在减轻代码审查维护者的负担，因为 AI 无法承担责任，且过度依赖 AI 的用户往往无法理解并修复自己提交的代码。新政策旨在鼓励人类贡献者并培养未来的维护者，仅允许在处理琐碎事务时使用 AI 辅助且必须如实披露。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://asahilinux.org/2026/06/progress-report-7-1/">Asahi Linux 7.1 Progress Report</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48744518">(comments)</a></span>
+<div class="summary"><p>Asahi Linux 发布 7.1 进度报告，修复了 macOS 27 开发者测试版导致 Linux 启动项消失以及 SMC 固件接口变更引发紧急关机的问题。同时，M3 平台在音频输出、CPU 调频和任务调度等核心驱动支持上取得重大进展。此外，团队为 Apple 视频解码器（AVD）编写了自定义无状态固件以实现 4K 视频硬解，并推出了首个在 stage 2 构建中要求 Rust 的 m1n1 1.6.0 版本。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://mynintendonews.com/2026/06/26/nintendo-has-raised-its-employees-base-salary-by-10/">Nintendo has raised its employees base salary by 10%</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48745113">(comments)</a></span>
+<div class="summary"><p>任天堂（Nintendo）社长古川俊太郎向股东透露，为了留住人才并与其它工作室保持竞争力，公司已将员工的基本工资提高了10%。同时，这家总部位于京都的公司也提高了应届毕业生的起薪。古川社长强调，将薪酬维持在合理水平对公司而言非常重要。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://blog.playstation.com/2026/07/01/physical-disc-production-ending-in-january-2028-for-new-games-releasing-on-playstation-consoles/">Physical disc production ending in Jan 2028 for new games on PlayStation</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48745456">(comments)</a></span>
+<div class="summary"><p>索尼互动娱乐宣布，为顺应消费者向数字化媒体转型的趋势，自2028年1月起将停止为PlayStation主机上发行的所有新游戏生产实体光盘。在此日期之后发布的新游戏将仅提供数字版本，但此项转变不影响在此之前已经发售或即将发售的实体光盘游戏。索尼表示此举旨在更好地契合玩家群体对数字版游戏的偏好，并将继续优化玩家获取和购买游戏的渠道与体验。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://wangcong.org/2026-06-30-why-i-stopped-arguing-with-people.html">Most arguments are about ego, not ideas</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48746445">(comments)</a></span>
+<div class="summary"><p>作者阐述了自己不再与人辩论的原因，指出大部分争论往往关乎自我防御而非观点本身，且强行纠正他人通常只会激起抵触而无法达到效果。他建议将彼此的分歧视为独特资产，通过在现实中构建和验证想法来利用这种认知差距，而非浪费精力说服对方。最终，人只能改变自己，应当将精力集中于自我提升，通过主动寻求并倾听反馈来获得真正的进步。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.quantamagazine.org/for-the-first-time-a-cell-built-from-scratch-grows-and-divides-20260701/">For first time, a cell built from scratch grows and divides</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48747304">(comments)</a></span>
+<div class="summary"><p>明尼苏达大学合成生物学家 Kate Adamala 团队首次利用非生命分子元件组装出能够生长、复制DNA并分裂的合成人造细胞。该研究通过将DNA复制系统、提供原料的脂质泡以及诱导分裂的膜蛋白相结合，成功使该人造细胞完成了基本的细胞周期。虽然该细胞目前仍无法自主制造核糖体等物质且并非真正意义上的生命，但它展现了初步的遗传变异选择特征，被视为合成生物学领域的重大突破。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://reclaimthenet.org/sony-deletes-551-studiocanal-movies-playstation-owners-paid-for">Sony Deletes 551 Movies PlayStation Owners Paid For</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48747389">(comments)</a></span>
+<div class="summary"><p>由于与StudioCanal的许可协议到期，索尼计划于9月1日从PlayStation Store用户库中直接删除551部已全款购买的电影和电视节目，且未提供任何退款方案。同时，游戏行业也呈现出类似的数字所有权收回趋势，例如《GTA 6》实体盒装版将仅包含下载码而无实体光盘，从而终结了二手交易和出借市场。这些事件共同表明，在少数巨头控制账户与服务器的时代，消费者点击“购买”所能拥有的实际权益正在变得越来越微弱。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-07-01.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+    <item>
+      <title>Daily Hacker News for 2026-06-30</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-06-30.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-06-30.html</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on June 30, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://opensourcelowtech.org/">Open Source Low Tech</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48683098">(comments)</a></span>
+<div class="summary"><p>该项目由 Daniel Connell 发起，致力于开发任何人都可以使用回收材料和简单工具制造的基础技术，旨在帮助全球每个人建立并维护自己的基础设施（以生产能源、食物、清洁水和通信系统等）。所有设计均开源且无授权限制，并提供完整的建造教程与指南，曾获得半岛电视台、《卫报》及《世界报》等多家知名媒体的报道。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://weblog.rogueamoeba.com/2026/06/26/free-the-icons/">Free the Icons</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48698908">(comments)</a></span>
+<div class="summary"><p>MacOS 26 (Tahoe) 强制所有第三方应用图标采用统一的圆角矩形（squircle），导致不合规图标被放入灰色背景中，抹杀了 Mac 图标的个性和辨识度。虽然 MacOS 27 (Golden Gate) 优化了系统自家图标的视觉设计，但依然未能解决统一形状所带来的可用性降低问题。作者呼吁苹果取消对图标形状的限制，允许第三方应用重回多样化设计的时代。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://theintercept.com/2026/06/26/daniel-sanchez-estrada-zines-prairieland-free-speech/">30-year sentence for transporting zines is a five-alarm fire for free speech</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48711981">(comments)</a></span>
+<div class="summary"><p>在特朗普政府依据国家安全备忘录（NSPM-7）打击左翼异见人士的背景下，丹尼尔·桑切斯·埃斯特拉达（Daniel Sanchez Estrada）因运输一箱非其撰写的无政府主义小册子而被判处30年联邦监禁。检方指控其试图隐瞒其妻子的政治意识形态证据，以此将持有政治宣传品等同于参与恐怖活动。媒体《The Intercept》发文指出，此判决开创了将“持有信息”刑事化的恶劣先例，对公众的言论自由与宪法第一修正案构成重大威胁。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-acquire-iridium-historic-deal-creating-fully">Rocketlab acquires Iridium</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48719485">(comments)</a></span>
+<div class="summary"><p>Rocket Lab宣布将以每股54美元的现金加股票交易方式收购Iridium，交易估值约为80亿美元，预计于2027年中完成。该交易将Rocket Lab的发射及卫星制造能力与Iridium的全球网络和L频段频谱相整合，构建出垂直一体化的太空服务巨头。合并后公司将直接进军卫星物联网、手机直连（D2D）及定位导航授时（PNT）等太空应用领域，并利用Iridium的经常性现金流显著提升Rocket Lab的盈利水平。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://hccf.onmy.cloud/2026/06/21/reclaiming-our-digital-selves-hccfs-vision-for-a-human-centered-top-level-domain/">.self: A new top-level domain designed to support self-hosting</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48724230">(comments)</a></span>
+<div class="summary"><p>以人类为中心的计算基金会（HCCF）旨在通过构建替代性的网络架构，改变当前科技行业剥削用户数据和注意力的现状。作为 ICANN 申请人支持计划（ASP）的批准参与者，该基金会已正式启动竞选活动，以争取获得一个专用于道德和人类中心化技术的全新顶级域名（TLD）“.self”来支持自主托管。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://europeancorrespondent.com/en/r/the-us-ambassador-had-belgian-police-stop-our-reporting">The US ambassador had Belgian police stop our reporting</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48730608">(comments)</a></span>
+<div class="summary"><p>在布鲁塞尔举办的美国“Freedom 250”庆祝活动上，《欧洲通讯员》（The European Correspondent）的记者因向美国驻比利时大使比尔·怀特（Bill White）提问其涉嫌威胁公民的争议事件，被比利时便衣警察扣留并强行驱逐。警方称使馆人员指责记者为“活跃威胁”，尽管随后发现是误解，使馆仍坚持将受邀记者驱离现场。此事件留下了活动资金来源、公共资源占用等诸多未解悬问，而大使在次日回应中拒绝解释并辱骂记者。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://waag.org/en/article/european-digital-id-wallets-are-gift-google-and-apple/">European digital ID wallets rely on safety services of Google and Apple</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48730729">(comments)</a></span>
+<div class="summary"><p>欧洲多国政府在推广数字身份钱包时引入了谷歌Play Integrity API和苹果的设备完整性验证服务，导致公共服务依赖私有科技巨头的平台政策。这排斥了使用GrapheneOS等去谷歌化系统的用户，涉嫌违反《数字市场法案》，且阻碍了欧洲的数字主权与互操作性。尽管存在更开放的硬件认证API，且瑞士等国已因数据主权等考量放弃使用谷歌服务，但荷兰和意大利等国仍强制推行，专家呼吁应在钱包架构中禁用此类巨权认证并转向开放的硬件认证机制。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://libertystreeteconomics.newyorkfed.org/2026/06/the-post-covid-decline-in-the-labor-share/">The labor share of income in the US is at its lowest post-war level</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48734234">(comments)</a></span>
+<div class="summary"><p>美国劳动收入份额在新冠疫情后急剧下降，已跌至战后历史最低水平。研究表明，此次下降的周期性特征与历史衰退期相似，且完全由行业内部变化（within-industry changes）驱动，而非行业间的经济活动转移所致。由于其演变遵循与以往衰退相同的周期性规律和内部驱动力，目前没有证据表明这一趋势在未来会偏离历史表现。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://thereallo.dev/blog/claude-code-prompt-steganography">Claude Code is steganographically marking requests</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48734373">(comments)</a></span>
+<div class="summary"><p>安全研究人员在审计 Claude Code 时发现，该工具会利用隐蔽的 Unicode 字符（如微调撇号和日期分隔符）在系统提示词中隐写标记请求。当用户配置了自定义 API 地址且系统时区为上海或乌鲁木齐，或者 API 主机名匹配内置的代理转售商与主流 AI 实验室域名（如 DeepSeek、智谱）时，该隐写机制便会触发。作者认为这种隐蔽收集分类信号的做法损害了开发者对高权限工具的信任，此类检测应当以公开透明的遥测方式进行。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.anthropic.com/news/claude-sonnet-5">Claude Sonnet 5</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48736605">(comments)</a></span>
+<div class="summary"><p>Anthropic推出了最具代理能力的Claude Sonnet 5模型，其性能逼近Opus 4.8但价格更低，在推理、工具使用、编程和知识工作上较前代Sonnet 4.6有显著提升。该模型已在所有服务方案、Claude Code及API中上线，并提供截至2026年8月31日的初期优惠定价。在安全方面，Sonnet 5的不良行为率整体低于Sonnet 4.6且网络攻击能力较弱，并默认启用了可实时拦截恶意代码的安全防护机制。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-06-30.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+    <item>
+      <title>Daily Hacker News for 2026-06-29</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-06-29.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-06-29.html</guid>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on June 29, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://www.eff.org/deeplinks/2026/06/kids-act-would-require-age-checks-get-online">The KIDS Act would require age checks to get online</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48706560">(comments)</a></span>
+<div class="summary"><p>电子前哨基金会（EFF）的 Joe Mullin 指出，美国国会准备投票的 KIDS Act 法案虽声称旨在保护未成年人，但其条款将迫使网络平台对所有用户进行强制年龄验证，严重威胁个人隐私。该法案还要求平台针对毒品、赌博等合法言论制定审核政策，这将迫使平台为避险而过度删帖，限制用户的自由表达。此外，法案对私信及加密通信的新规将施压服务商削弱加密保护，进一步损害网络用户的通信隐私与自由。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html">Professor denounces mass AI fraud on an exam at Brown</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48708991">(comments)</a></span>
+<div class="summary"><p>布朗大学经济学教授 Roberto Serrano 因校园枪击案后体谅学生，在 ECON 1170 课程中破例采用带回家闭卷考试，却发现至少 50 名学生利用 ChatGPT 大规模作弊，期末改回线下考试后平均分随之暴跌。教授批评学校管理层对此冷淡应对，并警告 AI 正在严重威胁高等教育和学术诚信，为此他决定在下学年取消带回家考试及作业评分。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://dam.stanford.edu/memory-prices.html">Historical memory prices 1960-2026</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48710092">(comments)</a></span>
+<div class="summary"><p>斯坦福 DAM 项目的 David Shim 编译并维护了 1960 至 2026 年历史内存与存储价格的数据集，提供了 DRAM、NAND flash 和 HBM 的价格与带宽成本走势。该数据不仅展示了 DRAM 跨世代（Pre-DDR 至 DDR5）及 NAND 零售最低每 GB 价格的历史记录，还包含了 Epoch AI 对四大 AI 加速器设计商 HBM 支出和成本构成的季度估算。此外，数据集还收录了 HBM2e 至 HBM4 等各世代 HBM 的每 GB 价格及单位带宽成本估算。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://github.com/librepods-org/librepods">Librepods: AirPods liberated</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48710232">(comments)</a></span>
+<div class="summary"><p>Librepods 是一个在 GitHub 上开源的项目，旨在让非苹果平台（如 Android 和 Linux）用户能够使用 AirPods 的专属功能。该项目通过逆向实现苹果的专有通信协议，支持了噪声控制模式切换、入耳检测、电量显示和对话感知等功能。部分高级功能在 Android 上可能需要 Root 权限或 VendorID 欺骗，且项目的部分代码采用了 AI 辅助生成。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://danunparsed.com/p/hackerrank-open-source-ats">HackerRank open sourced its ATS. My resume scored 90/100. Oh wait 74. No – 88</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48713832">(comments)</a></span>
+<div class="summary"><p>作者对HackerRank开源的AI简历筛选系统进行了100次重复测试，发现使用同一份简历在相同设定下运行，其评分会在66至99分之间剧烈波动，暴露出非确定性的设计缺陷。分析指出，LLM在缺乏明确评估细则的“工作经验”维度上会盲目给出满分，而在“个人项目”等需要主观判断的维度上评分随机性极高。此外，该系统将65%的权重分配给开源贡献和个人项目，极易误判那些拥有丰富工业界经验但缺乏公开GitHub产出的优秀工程师，因此作者警告企业慎用此类AI筛选工具。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://nonogra.ph/age-verification-is-just-a-precursor-to-attribution-of-speech-06-29-2026">Age verification is just a precursor to automated attribution of speech</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48714529">(comments)</a></span>
+<div class="summary"><p>多国推行的“年龄验证”法规虽以保护儿童为名，其实质是将数字账号与个人真实身份绑定的归属系统。这种系统能让政府和执法部门自动化、规模化地识别在线言论者的真实身份，从而实现对异见或敏感言论的快速监控与追责。作者呼吁公众拒绝年龄验证以保护隐私，或在必须验证时选用支持门罗币（Monero）支付的匿名验证服务。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://blog.pragmaticengineer.com/pollen-tried-to-remove-my-article-about-callum-negus-fancey-and-google-is-assisting-to-it/">Pollen tried to remove my article and Google is assisting with it</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48716902">(comments)</a></span>
+<div class="summary"><p>Gergely Orosz 撰写的关于活动科技公司 Pollen 在 2022 年破产且涉嫌欠薪欺诈的调查文章，近期被 Google 根据一份来自无人居住的布韦岛的虚假 DMCA 侵权投诉从搜索结果中移除。作者指出该版权申诉完全是捏造的，质疑 Pollen 或其创始人雇佣声誉公司滥用 Google 机制来抹除负面历史。目前作者已提出申诉，并指出加州针对 Pollen 高管追讨欠薪和福利的集体诉讼仍在进行中。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://det.social/@lostgen/116820546568940358">The CEO of Mullvad is the main financer of the Swedish Örebro party</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48717469">(comments)</a></span>
+<div class="summary"><p>据爆料，VPN服务商Mullvad的CEO是瑞典极右翼政党Örebro party（厄勒布鲁党）的主要资助者，该政党70%以上的资金都来自于其个人捐助。这笔资助是该党今年得以在全国范围内推广的关键原因，但由于该政党主张强制驱逐出境，部分用户已宣布停止信任并使用Mullvad的服务。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision">US Supreme Court rules geofence warrants require constitutional protections</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48720924">(comments)</a></span>
+<div class="summary"><p>美国最高法院在 Chatrie v US 案中以 6-3 裁定，执法部门使用收集智能手机位置数据的“地理围栏搜查令”（geofence warrants）属于宪法第四修正案规定的搜查，公民对此享有合理的隐私预期。多数派法官驳回了政府关于用户自愿分享定位数据的辩称，指出服务商的频繁提示使用户难以做出真正自由的选择。该判决限制了警方将第三方商业定位记录转化为国家监控工具的权力，被法律界视为数字时代宪法隐私保护的一大胜利。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://quesma.com/blog/qwen-36-is-awesome/">Qwen 3.6 27B is the sweet spot for local development</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48721903">(comments)</a></span>
+<div class="summary"><p>作者 Piotr Migdał 推荐将 Qwen 3.6 27B 作为本地开发的首选模型，认为它是首个真正实用的本地通用智能模型。在 Macbook 或 Nvidia RTX 等设备上配合 llama.cpp 和多 Token 预测（MTP）技术，该模型能够流畅运行并提供实用的代码生成速度。虽然其速度慢于 MoE 架构的 35B A3B，但其更高质量的代码输出和优秀的基准测试表现使其成为本地部署的极佳选择。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-06-29.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+    <item>
+      <title>Daily Hacker News for 2026-06-28</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-06-28.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-06-28.html</guid>
+      <pubDate>Mon, 29 Jun 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on June 28, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://physics.stackexchange.com/questions/535/why-does-kinetic-energy-increase-quadratically-not-linearly-with-speed">Why does kinetic energy increase quadratically, not linearly, with speed? (2011)</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48692946">(comments)</a></span>
+<div class="summary"><p>该内容探讨了物体动能为何与速度平方而非速度线性成正比。文中通过两个情景进行论证：一是利用动量守恒及伽利略变换，证明弹簧推箱子实验中速度翻倍则动能变为四倍；二是在不预设做功和重力势能公式的前提下，仅依靠恒定重力场运动学和能量守恒，同样推导出动能与速度平方成正比的比例关系。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://cauenapier.com/blog/townsquare_release/">Turn your site into a place people can bump into each other</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48699928">(comments)</a></span>
+<div class="summary"><p>开发者开源了名为 Town Square 的网页插件项目，在页面底部用火柴人代表当前在线的访客，允许用户看到他人浏览的页面并进行即时交流。该项目定位非社交网络，无账号、个人资料或历史记录，旨在重塑早期互联网中“屏幕另一端是真人”的真实互动感。开发者提供了公共服务器以方便网站主免自建服务集成，未来还计划加入角色互动道具，并实现与邻近网站 Town Square 连接的“网络环”（Webring）功能。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://ipcrawl.com/">IP Crawl: Living atlas of open webcams discovered on the public internet</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48700834">(comments)</a></span>
+<div class="summary"><p>IP Crawl 是一个公开网络摄像头目录，提供可过滤的实时仪表板以探索在公共互联网上发现的视频源数据。其内容展示了分布于荷兰鹿特丹、西班牙奥维耶多、日本东京及美国纽约等全球多地的网络摄像头状态，包括实时画面（LIVE）与快照（SNAPSHOT）。列表还详细列出了各个摄像头所属的互联网服务提供商（如 BT、Vodafone、Comcast 等）以及相关的连接或设备数量。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://jayacunzo.com/blog/your-move-chief">The best response to AI slop and online noise is from Robin Williams</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48703452">(comments)</a></span>
+<div class="summary"><p>作者结合电影《心灵捕手》中罗宾·威廉姆斯的经典台词，阐明了书本理论与真实生活经历之间的本质区别。他指出，AI虽然掌握海量网络知识，却无法真实感知和体验生活，而人类独特的“生活瞬间”（LLMs）才是赋予创作和工作灵魂的关键。因此，应对AI垃圾内容和网络噪音的最佳方式是勇敢地在创作中注入个人经历与真实自我，将单调的文字信息升华为有温度的艺术。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.marfapublicradio.org/podcast/marfa-public-radio-puts-you-to-sleep">Marfa Public Radio Puts You to Sleep</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48703759">(comments)</a></span>
+<div class="summary"><p>该条目摘要生成失败（Antigravity 调用重试后仍失败）。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.engadget.com/2203000/flock-cameras-recording-license-plate/">Flock cameras track more than your license plate, and they&#39;re spreading fast</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48707673">(comments)</a></span>
+<div class="summary"><p>由Flock公司主导的AI智能监控摄像头（ALPR）在美国迅速普及，虽主要用于读取车牌，但其能通过AI识别车辆特征并追踪个人，引发了广泛的隐私与安全担忧。该系统存在严重的网络安全漏洞且缺乏监管，不仅发生过多起警员滥用系统监视他人的丑闻，还因AI误判导致无辜民众被控犯罪。尽管面临公众抵制，但由于地方决策者的推行及Flock公司严苛的合同限制，城市想要拆除这些摄像头变得极其困难。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.patrick-breyer.de/en/double-threat-to-private-communications-undemocratic-chat-control-backroom-deals-and-imminent-concessions-spark-relaunch-of-fightchatcontrol-eu/">EU to legislate about Chat Control behind closed doors</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48707719">(comments)</a></span>
+<div class="summary"><p>前欧洲议会议员 Patrick Breyer 警告称，欧盟正面临削弱安全通信的“双重威胁”，包括试图复活已过期的 Chat Control 1.0 大规模扫描机制，以及在永久性 Chat Control 2.0 谈判中可能就私密消息扫描、无授权扫描令和强制年龄验证做出妥协。这些举措将威胁 4.5 亿欧洲人的隐私并终结匿名通信权利。为此，民间社会已紧急重新上线 fightchatcontrol.eu 平台，呼吁公民向代表抗议以捍卫基本权利。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://pudding.cool/2026/06/menu-story/">5k menus from the New York Public Library’s Buttolph Collection (1880-1920)</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48707763">(comments)</a></span>
+<div class="summary"><p>纽约公共图书馆的Buttolph菜单收藏馆藏（1880-1920年）记录了现代餐厅餐饮的兴起。该档案由Frank E. Buttolph收集整理，她花费数十年时间收集菜单，以此记录当时的烹饪与社会历史。这些美国早期的餐厅菜单向人们展示了当时的社会风貌与饮食文化。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://antoine.fi/mri-analysis-using-claude-code-opus">I used Claude Code to get a second opinion on my MRI</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48708941">(comments)</a></span>
+<div class="summary"><p>作者 Antoine 分享了使用 Claude Code (Opus 4.8) 对其右肩 MRI 原始数据进行二次诊断的尝试。针对医院做出的“III级肌腱部分撕裂”诊断及疑似过度治疗方案，Opus 4.8 经多智能体深入分析与仲裁后，以中高置信度判定其肌腱完整、仅有轻度腱病。这一诊断结果的巨大分歧展示了 AI 辅助诊疗的未来潜力，但也让作者陷入了在人类医生与 AI 之间难以抉择的信任困境。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/">GLM 5.2 beats Claude in our benchmarks</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48709670">(comments)</a></span>
+<div class="summary"><p>Semgrep 在其 IDOR 漏洞检测基准测试中，使用简单 Prompt 框架评估了多款模型。测试显示，智谱 AI 的开源权重模型 GLM 5.2 取得了 39% 的 F1 分数，不仅击败了 Claude Code (32%) 和 Claude Opus 4.8，而且单个漏洞检测成本仅约 0.17 美元。尽管 Semgrep 配合定制脚手架的多模态管线仍以 53%-61% 的 F1 分数处于领先地位，但 GLM 5.2 的表现突显了开源模型在安全领域的极高性价比与应用潜力。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-06-28.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+    <item>
+      <title>Daily Hacker News for 2026-06-27</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-06-27.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-06-27.html</guid>
+      <pubDate>Sun, 28 Jun 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on June 27, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms/">MicroVMs: Run isolated sandboxes with full lifecycle control</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48642510">(comments)</a></span>
+<div class="summary"><p>AWS 宣布推出全新的无服务器计算原语 AWS Lambda MicroVMs，旨在为多租户应用提供安全运行用户或 AI 生成代码的虚拟机级隔离环境。该服务基于 Firecracker 轻量级虚拟化技术，支持近乎瞬时的启动与挂起恢复，并允许直接控制执行环境的生命周期。MicroVMs 支持在会话期间完整保留内存和磁盘状态，并在空闲时自动挂起以降低成本，单次运行时间最长可达 8 小时。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.eff.org/deeplinks/2026/06/we-can-still-stop-californias-3d-printer-surveillance-scheme">We can still stop California&#39;s 3D printer surveillance scheme</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48692051">(comments)</a></span>
+<div class="summary"><p>电子前哨基金会（EFF）撰文指出，加州众议院已通过强制3D打印机运行监控审查软件的AB 2047法案，该法案打着防范非法制造枪支的旗号，实则严重侵害了用户隐私、言论自由和开源创新。尽管最新修正案取消了对二手设备转售的刑事化处罚，并为娱乐业和开源工具提供了豁免，但依然强加了模糊且难以实现的审查标准，并且强制监控所有打印文件会导致商业和个人用户的原型设计面临泄露风险。EFF强调该监控方案在技术上无法有效阻止规避行为，只会损害守法用户，呼吁加州参议院否决此法案。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies">U.S. allows Anthropic to release Mythos AI to ‘trusted’ US organizations</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48692995">(comments)</a></span>
+<div class="summary"><p>美国政府取消了对Anthropic公司Claude Mythos 5 AI模型的限制，允许其向100多家受信任的美国机构及特定外国员工免签发布该模型。此次决定标志着特朗普政府与Anthropic之间对抗的重大降温，此前政府曾因担忧模型被恶意破解用于危害用途而实施出口管制。目前Anthropic已承诺在安全协议和标准上与政府合作，而其竞争对手OpenAI也在同日向政府批准的合作伙伴限量发布了最新的GPT-5.6模型。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://daringfireball.net/2026/06/om">Om</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48693391">(comments)</a></span>
+<div class="summary"><p>知名科技记者兼投资人 Om Malik 因心脏病去世，Daring Fireball 作者撰文怀念这位相识 20 年的挚友。Om 从高频更新的博客先锋成功转型为深度的科技随笔作家，并在 2014 年加入 True Ventures 成为合伙人。尽管他在生命的最后阶段身处斯坦福 ICU 抢救，却依然隐秘地坚持撰写着极具洞察力的科技分析文章。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf">DSpark: Speculative decoding accelerates LLM inference [pdf]</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48696585">(comments)</a></span>
+<div class="summary"><p>该条目指向托管在GitHub上的deepseek-ai开源项目DeepSpec，包含论文《DSpark: Speculative decoding accelerates LLM inference》。该项目由Xin Cheng署名，是一个用于训练和评估投机解码算法的全栈代码库，旨在通过投机解码技术加速大语言模型的推理。由于正文抓取内容主要为GitHub网站的常规导航与功能介绍，未包含更多具体论文内容。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://w.pitula.me/fintech-engineering-handbook/">Fintech Engineering Handbook</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48696982">(comments)</a></span>
+<div class="summary"><p>《金融科技工程手册》（Fintech Engineering Handbook）阐述了以资金为核心的软件系统开发模式，并提出了无虚构数据、无丢失数据和无信任三大核心原则。手册详细讨论了货币的精确表示方法（如避免使用浮点数，采用任意精度或最小单位整型等）与显式舍入策略，以及严格的货币与汇率处理机制。此外，它强调利用复式记账法记录资金流向、记录多维交易时间戳，并保留详尽的审计追踪以应对合规监管。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://dervis.de/physical/">The case for physical media ownership</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48697335">(comments)</a></span>
+<div class="summary"><p>数字内容“购买”通常仅是可撤销的授权许可，用户面临着因版权失效、平台下架或服务关停（如迪士尼、索尼和微软等案例）而失去内容访问权的风险。相比之下，实体媒介（如蓝光光盘、游戏卡带）能提供真正的离线所有权和二次销售价值，不依赖账户状态、在线验证或服务商的存续。此外，流媒体及软件订阅服务（如Netflix、Adobe）价格持续上涨且需不断付费，而物理媒介在购买后无需任何后续持有成本。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.openra.net/">OpenRA</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48697560">(comments)</a></span>
+<div class="summary"><p>OpenRA发布了全新的测试版本，为《红色警戒》、《泰伯利亚黎明》和《沙丘2000》引入了可在遭遇战和多人模式中使用的随机地图生成器。其中《沙丘2000》迎来了视觉升级、星港“批量购买”逻辑及社区主导的平衡性调整，独立的《泰伯利亚黎明 HD》模组也已开发完毕并支持自由切换重置与经典版资产。此外，地图编辑器新增了Path Tiler等便捷工具，游戏还添加了新任务、人机扩张基地AI以及多项细节优化。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://github.com/bikini/exploitarium">Anonymous GitHub account mass-dropping undisclosed 0-days</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48698617">(comments)</a></span>
+<div class="summary"><p>GitHub用户bikini创建了名为exploitarium的公开漏洞PoC和安全研究报告归档仓库，集中披露了包括c-ares、FFmpeg、Firefox、Ghidra等多款软件在发布时未上报的零日漏洞。作者透露其模糊测试工作流由GPT-5.5-3-Codex-Spark等AI技术自动化辅助，但PoC代码大多为手写完成。该仓库旨在通过善意的公开披露吸引更多人加入网络安全领域，作者允许他人自行上报这些漏洞获取CVE，并警告禁止恶意使用。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://pluralistic.net/2026/06/27/zuckerstreisand-2/">Zuckerberg&#39;s war on whistleblowers</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=48698684">(comments)</a></span>
+<div class="summary"><p>Meta（前Facebook）前国际关系主管 Sarah Wynn-Williams 撰写了揭露该公司内部丑闻与高管个人品行问题的畅销回忆录《Careless People》，遭到 Meta 利用合同中的保密与仲裁条款进行疯狂打压，并被仲裁员判处巨额赔偿。尽管 Wynn-Williams 极力遵守禁言令甚至在公共活动中保持完全沉默，Meta 仍以其在舞台上的沉默静态表现构成违约为由追讨更多赔偿，逼迫其起诉 Meta 以要求废除相关合同。作者认为，Meta 在面临 AI 投资失败和大规模裁员的危机下，试图通过彻底摧毁这一标杆性举报人，达到恐吓数千名可能透露公司更严重罪行的前员工的目的。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-06-27.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+  </channel>
+</rss>
