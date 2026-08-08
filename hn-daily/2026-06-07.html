@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - 2026-06-07</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-06-07.html">Daily Hacker News for 2026-06-07</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on June 07, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://news.ycombinator.com/item?id=48420827" target="_blank" rel="noopener noreferrer">Ask HN: Why is the HN crowd so anti-AI?</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48420827" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者针对 Hacker News 社区中普遍存在的反 AI 情绪提出质疑，指出社区过度关注 AI 生成代码带来的质量与技术债问题。他认为代码仅是实现目标的工具，用户更在意产品功能而非其编写方式，且 AI 辅助开发能显著提升交付和迭代速度。作为资深软件工程师，作者强调在快速获取市场反馈的竞争中，执行效率的重要性往往超过了代码本身的优雅程度。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://pokeemerald.com/" target="_blank" rel="noopener noreferrer">Pokemon Emerald Ported to WebAssembly (100k FPS)</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48423762" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该项目基于 <code>pokeemerald</code> 反编译代码库，利用 AI 辅助将《宝可梦 绿宝石》的原生 C 代码编译为 WebAssembly 移植至浏览器运行。通过消除模拟器指令翻译开销并解除垂直同步限制，游戏逻辑在现代硬件上的理论运行速度可达 100,000 FPS。此原生移植展示了 WASM 在高性能跨平台分发方面的卓越性能，以及大模型在加速遗留代码库重构与迁移中的巨大价值。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://twitter.com/lemire/status/2062880075117113739" target="_blank" rel="noopener noreferrer">Nvidia is proposing a beast of a CPU system for Windows PCs</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48424605" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Nvidia 提议为 Windows PC 推出一款高性能处理器系统，配备 128GB 统一内存、6144 个 CUDA 核心以及包含 10 个性能核与 10 个能效核的 20 核 CPU。该系统借鉴了苹果的统一内存架构，虽然内存速度不及专用显存，但其带宽足以支持本地 AI 模型运行和高强度游戏需求。作者指出，尽管该芯片采用的 Cortex-X925 SVE2 指令集在性能和通用性上可能逊于 AMD 的 AVX-512，但这种高集成度方案将迫使英特尔和 AMD 做出应对。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://lwn.net/SubscriberLink/1076018/16f01bbbb8e0d1f0/" target="_blank" rel="noopener noreferrer">Moving beyond fork() + exec()</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48425528" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>针对 Linux 传统进程创建模型 fork() + exec() 存在的内存复制开销问题，Li Chen 提议引入“生成模板”（spawn templates）机制来加速相同可执行文件的重复调用。虽然该方案在测试中带来了约 2% 的性能提升，但内核社区更倾向于通过 pidfd 抽象构建一套全新的“初始进程”创建 API。该提议计划利用 pidfd_open() 和 pidfd_config() 等调用来实现原生的 posix_spawn()，从而彻底解决传统模型在效率和设计上的不足。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://this.weekinsecurity.com/meta-confirms-thousands-of-instagram-accounts-were-hacked-by-abusing-its-ai-chatbot/" target="_blank" rel="noopener noreferrer">Meta confirms 1000s of Instagram accounts were hacked by abusing its AI chatbot</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48427643" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Meta 证实黑客利用其 AI 聊天机器人的代码漏洞，绕过验证将重置密码的验证码发送至不受控的邮箱，导致超过 2 万个未开启双重认证的 Instagram 账号被劫持。该攻击活动自 2024 年 4 月持续至近期，黑客可完全控制受害者的个人资料、私信及关联账号。目前 Meta 已禁用该 AI 工具并修复漏洞，同时提醒受影响用户通过安全渠道重置密码并重新认证。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://ntsc.rs/" target="_blank" rel="noopener noreferrer">Ntsc-rs – open-source video emulation of analog TV and VHS artifacts</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48428025" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>ntsc-rs 是一个开源的模拟电视和 VHS 录像机效果模拟器，通过模拟 NTSC 传输和 VHS 编码的物理过程，实现了比传统滤镜更精准的画面效果。该项目采用 Rust 编写，支持多线程和 SIMD 加速以实现实时处理，并提供网页版、独立应用以及适配 DaVinci Resolve、After Effects 等主流视频编辑软件的 OpenFX 插件。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.ioccc.org/2025/" target="_blank" rel="noopener noreferrer">The 29th International Obfuscated C Code Contest (IOCCC) 2025 Winners</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48432199" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>第 29 届国际 C 语言混乱代码大赛（IOCCC 2025）公布了获奖名单，本次投稿量与质量均维持高位，台湾开发者 jingp49 首次代表该地区获奖。获奖作品涵盖了 GameBoy 模拟器、黑洞打孔卡 Fortran 程序、Subleq 计算机等精巧实现，远藤侑介、Nick Craig-Wood 和 Don Yang 三位老牌高手均实现了三项作品同时入围的成就。此外，本届比赛还重写了竞赛规则与指南，并为每项获奖作品新增了包含代码分析挑战的评委评论。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://human-in-the-loop.bearblog.dev/llms-are-eroding-my-software-engineering-career-and-i-dont-know-what-to-do/" target="_blank" rel="noopener noreferrer">LLMs are eroding my software engineering career and I don&#39;t know what to do</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48434312" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>一名拥有十年经验的资深后端工程师指出，LLM正从领域知识、调试能力和架构质量三个维度侵蚀其职业护城河。曾经需要多年积累的金融支付业务逻辑和分布式系统调试直觉，如今已被大模型及代理化工具通过自动化方案和一键修复功能快速平替。随着行业对代码质量的需求从严谨架构降级为模糊的“审美”，资深专家的深度专长在市场上逐渐贬值，迫使其在AI浪潮中陷入职业方向的深度焦虑。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/anthropics/claude-code/issues/65697" target="_blank" rel="noopener noreferrer">Anthropic, please ship an official Claude Desktop for Linux</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48434436" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>开发者在 GitHub 上发起提案，请求 Anthropic 为 Linux 系统发布官方 Claude 桌面客户端，以结束目前仅支持 macOS 和 Windows 的现状。提案指出 Linux 用户在开发插件及使用 Cowork 等高级功能时面临障碍，且被迫依赖非官方维护、缺乏安全审计的社区打包版本，存在凭据泄露风险。鉴于 Anthropic 已具备 Linux 分发渠道且部分核心功能本质上已在 Linux 环境运行，用户呼吁官方提供受信任的安装包或明确技术路线图。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://gavinray97.github.io/blog/building-from-zero-after-addiction-prison-felony" target="_blank" rel="noopener noreferrer">Building from zero after addiction, prison, and a felony</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48437406" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Gavin Ray 讲述了他从 14 岁因毒瘾进入少管所、19 岁成为重罪犯，到最终通过软件开发和开源项目实现人生救赎的坎坷历程。在经历多次复吸与一贫如洗的谷底后，他在妻子的支持下重返技术领域，尽管因重罪背景多次遭遇录用撤回，最终仍凭借在 Hasura 等开源社区的深度贡献获得了职业成功。他分享这段故事旨在鼓励身处困境的人，证明通过技术专长与不懈坚持，即便背负法律污点也能重塑未来。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-06-08 00:00 | <a href="./2026-06-07.html">Permanent link</a> | <a href="https://www.daemonology.net/hn-daily/2026-06-07.html" target="_blank" rel="noopener noreferrer">原链接</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
