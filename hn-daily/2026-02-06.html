@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - 2026-02-06</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-02-06.html">Daily Hacker News for 2026-02-06</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on February 06, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://neosmart.net/blog/recreating-epstein-pdfs-from-raw-encoded-attachments/" target="_blank" rel="noopener noreferrer">Recreating Epstein PDFs from raw encoded attachments</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=46890335" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者指出司法部发布的档案在转码与审查上存在严重问题，其中部分邮件附件以 base64 形式保留在扫描件里，理论上可还原 PDF，但原始文本被 OCR 和版式破坏导致无法直接解码。为恢复内容，他尝试从 PDF 转图后用 tesseract 等工具限定字符集识别，并改用 pdftoppm 处理多页，但识别仍频繁出错、行长不齐。更棘手的是 Courier New 字体与低质量扫描使 1 与 l 等字符难以区分，即使改用 Amazon Textract 等商业方案也仅能略有改善。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://code.claude.com/docs/en/agent-teams" target="_blank" rel="noopener noreferrer">Orchestrate teams of Claude Code sessions</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=46902368" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该文档介绍了 Claude Code 的 agent team，用团队长与独立队友会话协同完成并行工作，队友之间可直接互相消息、共享任务列表并自我协调。它强调适用场景是需要并行探索的研究评审、新功能拆分、并行排错和跨层协作，并指出代价是更高的 token 与协调成本，不适合顺序任务或同文件密集依赖。文档说明与 subagent 的差异、启用方式和常用操作，包括显示模式选择、任务分配、委派模式与质量门控钩子等。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://mitchellh.com/writing/my-ai-adoption-journey" target="_blank" rel="noopener noreferrer">My AI Adoption Journey</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=46903558" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者回顾自己采用 AI 工具的历程，认为任何新工具都会经历低效、勉强可用到真正改变工作流的三阶段，并强调要以务实心态看待 AI。他主张先放弃纯聊天式编码，转而使用具备读写文件、执行程序等能力的代理，并通过重复复现自己手工成果来积累判断哪些任务适合代理、如何拆分与校验。随后他把代理用于收集资料、并行探索与问题分诊，再把高把握“轻松题”外包，同时避免通知打断以减少上下文切换。最终他提出“harness engineering”思路：为代理设计提示规范和自动化工具以自证对错，并尝试让代理持续运行以获得长期效率收益。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.anthropic.com/engineering/building-c-compiler" target="_blank" rel="noopener noreferrer">We tasked Opus 4.6 using agent teams to build a C Compiler</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=46903616" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者用“agent teams”让多实例 Claude 并行协作，在无人干预的长期循环中从零实现基于 Rust 的 C 编译器，并以编译 Linux 内核为压力测试，最终产出约 10 万行代码。文章重点总结了编排多代理的经验：用高质量测试与反馈回路约束方向、通过任务锁和合并机制减少冲突、为并行拆分问题并引入 GCC 作为对照编译器以定位内核编译中的错误。项目成本约 2,000 次会话、约 2 亿输入 token 和 1.4 亿输出 token、约 2 万美元，但也暴露出在汇编/链接、性能与可替换性上的局限。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/mdp/linkedin-extension-fingerprinting" target="_blank" rel="noopener noreferrer">LinkedIn checks for 2953 browser extensions</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=46904361" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该仓库记录了 LinkedIn 在每次页面加载时静默探测 2,953 个 Chrome 扩展的行为，并提供可复现的指纹列表与识别工具。核心数据以 <code>chrome_extensions_with_names_all.csv</code> 给出扩展 ID、名称和商店链接，脚本可从 Chrome Web Store 获取名称，并在下架或不可用时通过 Extpose 回退。统计显示约 78% 可在商店找到，约 22% 仅能通过回退渠道识别，并附有原始 ID 列表与页面脚本来源说明。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.tigerdata.com/blog/its-2026-just-use-postgres" target="_blank" rel="noopener noreferrer">It&#39;s 2026, Just Use Postgres</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=46905555" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者主张大多数场景无需堆叠多种专用数据库，把搜索、向量、时序、队列等能力集中在一个 Postgres 体系内更划算。多数据库会带来多套查询语言、备份与安全策略的运维成本，以及故障排查和测试环境搭建的协同负担。在 AI 时代频繁需要快速复制与验证数据时，单一数据库能显著降低协调难度并减少失败点。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.niemanlab.org/2026/02/a-new-bill-in-new-york-would-require-disclaimers-on-ai-generated-news-content/" target="_blank" rel="noopener noreferrer">A new bill in New York would require disclaimers on AI-generated news content</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=46910963" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>纽约州立法机构提出‘NY FAIR News Act’，要求新闻机构对‘实质由生成式AI创作或生成’的内容加注免责声明，并规定所有此类内容在发布前必须由具备编辑控制权的人类审核，范围涵盖文章、音频和图像等。法案还要求在新闻编辑部内披露AI的使用情况与方式，并建立保护消息来源等机密材料不被AI访问的防护措施。提出者强调AI生成内容可能虚假或构成抄袭，同时法案得到多家新闻业工会支持，并包含限制因引入生成式AI而裁撤记者或削减薪酬福利的劳工保护条款。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.nytimes.com/2026/02/06/business/tiktok-addictive-design-europe.html" target="_blank" rel="noopener noreferrer">TikTok&#39;s &#39;addictive design&#39; found to be illegal in Europe</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=46911869" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>欧盟监管机构发布初步裁定，认为 TikTok 的无限下滑、自动播放与推荐算法构成“成瘾性设计”，可能危害用户身心健康，尤其是未成年人，因而涉嫌违反欧盟线上安全法规。监管方要求其限制无限滚动、设置新的屏幕时间限制并调整推荐系统，否则可能面临高额罚款；这也是全球首次将社交媒体成瘾性设计纳入法律标准的实践之一。TikTok 表示将通过一切途径挑战该初步结论，最终裁定时间表尚未公布。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://kirkville.com/i-now-assume-that-all-ads-on-apple-news-are-scams/" target="_blank" rel="noopener noreferrer">I now assume that all ads on Apple news are scams</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=46911901" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者指出 Apple News 由 Taboola 投放的广告越来越像“垃圾广告盒”，重复度高且疑似诈骗，导致他对平台广告完全失去信任。文章举例多条广告，称图像疑似由 AI 生成，并通过查询域名注册信息发现多为近期注册，可信度很低。作者认为 Apple 与 Taboola 对此缺乏责任感，批评其在“高级新闻服务”中放任诈骗广告存在。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://waymo.com/blog/2026/02/the-waymo-world-model-a-new-frontier-for-autonomous-driving-simulation" target="_blank" rel="noopener noreferrer">The Waymo World Model</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=46914785" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Waymo 介绍了 Waymo World Model，这是一种面向自动驾驶仿真的前沿生成式世界模型，用于在大规模、超真实的虚拟环境中训练与验证自动驾驶能力。该模型基于 Google DeepMind 的 Genie 3，并针对驾驶场景进行适配，能够生成包含相机与激光雷达的多传感器高保真输出，并支持通过语言、驾驶输入和场景布局进行精细可控的模拟。它利用广泛的世界知识来模拟极端天气、罕见安全事件和长尾对象等现实中难以采集的情况，从而帮助 Waymo 在更严格的安全基准下扩展服务。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-02-07 00:00 | <a href="./2026-02-06.html">Permanent link</a> | <a href="https://www.daemonology.net/hn-daily/2026-02-06.html" target="_blank" rel="noopener noreferrer">原链接</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
