@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - 2026-04-30</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-04-30.html">Daily Hacker News for 2026-04-30</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 30, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.noctua.at/en/3d-cad-models" target="_blank" rel="noopener noreferrer">Noctua releases official 3D CAD models for its cooling fans</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47927627" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Noctua 官方发布了多种产品的 3D CAD 模型，旨在方便用户进行机械设计、渲染和动画制作。这些模型提供了准确的安装和外部尺寸，但为了保护知识产权，风扇叶片几何形状等细节经过了微调，因此不适用于性能仿真或 3D 打印。用户可以通过其官方网站的下载栏目获取这些仅供参考和可视化用途的模型。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5" target="_blank" rel="noopener noreferrer">Mistral Medium 3.5</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47949642" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Mistral AI 发布了旗舰级稠密模型 Mistral Medium 3.5，拥有 128B 参数和 256k 上下文窗口，在代码生成和逻辑推理方面表现强劲并提供开放权重。该模型驱动了 Mistral Vibe 的远程编程智能体，支持在云端并行运行异步开发任务，并可与 GitHub 和 Jira 等工具无缝集成。同时，Le Chat 推出全新的“工作模式”预览版，利用该模型实现跨工具的复杂多步任务处理，如自动化研究、分析及行政办公协作。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.agwa.name/blog/post/fastcgi_is_the_better_protocol_for_reverse_proxies" target="_blank" rel="noopener noreferrer">FastCGI: 30 years old and still the better protocol for reverse proxies</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47950510" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>FastCGI 诞生 30 周年，其作为反向代理协议在安全性上显著优于 HTTP，能通过明确的消息分帧机制有效杜绝因解析歧义引发的同步失效（desync）或请求走私攻击。该协议实现了客户端请求头与代理信任信息的物理隔离，利用加前缀的方式防止攻击者通过伪造 Header 篡改真实 IP 等关键数据。虽然 FastCGI 在 WebSocket 支持、工具链配套及极端性能优化方面存在短板，但其稳健的架构仍是规避 HTTP 复杂性风险的可靠替代方案。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://copy.fail/" target="_blank" rel="noopener noreferrer">Copy Fail</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47952181" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>CVE-2026-31431（Copy Fail）是 Linux 内核自 2017 年以来存在的重大本地提权漏洞，利用加密 API 与 splice() 链条中的逻辑缺陷实现对页缓存的 4 字节静默写入。该漏洞在所有主流发行版上具有 100% 的攻击成功率，普通用户可借此直接获取 root 权限并实现跨容器逃逸，且因不修改磁盘文件而具有极高的隐蔽性。目前该漏洞可通过更新内核补丁或临时禁用 algif_aead 模块来修复，其发现过程得到了 AI 工具的辅助。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://simonwillison.net/2026/Apr/30/zig-anti-ai/" target="_blank" rel="noopener noreferrer">The Zig project&#39;s rationale for their anti-AI contribution policy</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47957294" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Zig 项目实施了极其严格的反 AI 贡献政策，禁止在 issue、PR 和评论中使用大语言模型（LLM），甚至导致 Bun 运行时等外部优化代码因 AI 参与编写而无法合并回主干。Zig 软件基金会副主席 Loris Cro 提出“贡献者博弈”理念，强调项目将代码审查视为培养长期可信开发者的投资，而 AI 生成的内容无法建立这种信任。该政策的核心逻辑在于重视贡献者本人的成长而非单纯的代码产出，认为审查 AI 生成的 PR 会浪费维护者精力且无法提升社区的人才储备。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://openai.com/index/where-the-goblins-came-from/" target="_blank" rel="noopener noreferrer">Where the goblins came from</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47957688" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>OpenAI调查发现，从GPT-5.1开始模型中频繁出现的“小妖精”（goblin）和“小鬼”（gremlin）等生物词汇隐喻，源于为“书呆子”（Nerdy）个性化功能设置的强化学习奖励信号失当。研究表明，旨在鼓励幽默文风的奖励机制意外地高度奖赏了特定词汇，导致该文风通过反馈循环渗透到微调数据中，并在非特定场景下发生了行为迁移。目前OpenAI已通过下线相关人格、移除异常奖励信号及过滤训练数据进行修复，并借此建立了审计模型行为的新工具。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/mozilla/standards-positions/issues/1213#issuecomment-4347988313" target="_blank" rel="noopener noreferrer">Mozilla&#39;s opposition to Chrome&#39;s Prompt API</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47959463" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Mozilla 强烈反对 Chrome 的 Prompt API，认为其损害了 Web 平台的互操作性、中立性与可更新性。该 API 导致开发者针对特定模型微调提示词，可能引发类似早期浏览器的代码分支乱象，并迫使竞争对手为保持兼容而不得不获得 Google 模型的授权。此外，Mozilla 还指出该 API 强制绑定 Google 的 AI 使用政策，缺乏模型中立性，且 Chrome 宣称的开发者广泛支持缺乏有力证据。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://dpa-international.com/general-news/urn:newsml:dpa.com:20090101:260430-930-14717/" target="_blank" rel="noopener noreferrer">Belgium stops decommissioning nuclear power plants</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47961319" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>比利时首相德韦弗宣布政府将停止核电站退役工作，并与运营商 ENGIE 就全部 7 座核反应堆的国有化展开排他性谈判，旨在通过加强本土电力供应控制来减少对化石能源进口的依赖。此举彻底扭转了该国 2003 年制定的弃核政策，现任政府不仅寻求保留现有核能资产，还计划建设新的核电站以确保能源供应的安全与可持续。双方预计于 10 月前达成正式协议，涵盖人员、资产及拆除义务在内的完整核电体系。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.bbc.com/news/articles/c5y7yvgy0w6o" target="_blank" rel="noopener noreferrer">Meta in row after workers who saw smart glasses users having sex lose jobs</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47961838" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Meta 终止了肯尼亚分包商 Sama 的 AI 培训合同并导致千余名员工失业，此前该机构员工爆料在审核智能眼镜采集的视频时目睹了用户性行为等极端隐私画面。尽管 Meta 声称解约是因为对方未达标准，但 Sama 和劳工组织质疑这是针对员工揭露隐私泄露内幕的报复，并认为 Meta 所谓的标准实为“保密标准”。目前英国和肯尼亚的监管机构已介入调查，评估人工审核 AI 内容过程中的隐私安全及用户知情权问题。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://twitter.com/theo/status/2049645973350363168" target="_blank" rel="noopener noreferrer">Claude Code refuses requests or charges extra if your commits mention \&quot;OpenClaw\&quot;</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47963204" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>开发者 Theo 发现，若代码库的近期提交记录中包含提及 &quot;OpenClaw&quot; 的 JSON 数据，Claude Code 会拒绝处理请求或进行额外扣费。即使是在空仓库中直接调用也会触发此限制，该现象引发了关于 AI 工具审查机制及计费策略透明度的争议。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-05-01 00:00 | <a href="./2026-04-30.html">Permanent link</a> | <a href="https://www.daemonology.net/hn-daily/2026-04-30.html" target="_blank" rel="noopener noreferrer">原链接</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
