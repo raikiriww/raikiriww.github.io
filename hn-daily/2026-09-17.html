@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - 2026-09-17</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-09-17.html">Daily Hacker News for 2026-09-17</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on September 17, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-11/" target="_blank" rel="noopener noreferrer">Performance Improvements in .NET 11</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49711424" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>微软工程师 Stephen Toub 在本文中借用电影《摇滚万万岁》（This Is Spinal Tap）中“音量调到 11”的典故，详细介绍了 .NET 11 在运行时与类库方面的数百项性能改进。文章重点阐述了 JIT 编译器的去抽象化（Deabstraction）、虚调用去虚拟化与内联优化、基于分层编译的分析引导优化（PGO），以及消除边界检查、减少内存分配和 SIMD 加速等技术细节。同时，文中还提供了基于 BenchmarkDotNet 对比 .NET 10 与 .NET 11 的微基准测试配置与运行指南。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://global.fujitsu/en-global/pr/news/2026/09/14-02" target="_blank" rel="noopener noreferrer">Fujitsu launches made-in-Japan next-generation CPU FUJITSU-MONAKA</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49715813" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>富士通宣布将于2026年11月起全球发售在日本设计与制造的下一代CPU“FUJITSU-MONAKA”及配套服务器，主攻主权AI基础设施与高性能计算领域。该CPU采用2nm/5nm 3D堆叠架构与硬件加速技术，最高频率达3.8GHz，AI推理吞吐量及能效均达同类CPU的两倍，可有效减半所需的服务器数量与功耗需求。配套服务器结合本土制造的高追溯性、Confidential Computing机密计算以及CDI/CXL扩展与节能冷却技术，为数据中心、科研及国防部门提供安全透明且可持续的AI算力支持。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.wsj.com/world/middle-east/aws-says-it-cant-restore-some-data-from-mideast-facilities-struck-by-iran-ddcb7e5d" target="_blank" rel="noopener noreferrer">AWS says it can&#39;t restore some data from mideast facilities struck by Iran</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49719249" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>据《华尔街日报》报道，亚马逊 AWS 表示，由于其位于波斯湾地区的数据中心在春季遭受伊朗无人机袭击，目前无法恢复部分客户数据的访问权限。自美伊冲突爆发初期遭袭以来，AWS 在阿拉伯联合酋长国和巴林的数据中心大部分一直处于离线状态，其中巴林的多处设施均受到破坏。亚马逊的此项声明首次表明，仅存储于巴林和阿联酋的部分客户数据可能会永久丢失。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/" target="_blank" rel="noopener noreferrer">Nvidia announces native GPU programming in Rust</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49724881" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Nvidia 宣布推出 CUDA Rust，支持直接使用 Rust 原生编写 GPU 内核并编译为 PTX。CUDA Rust 提供了 SIMT 和 Tile 两条开发路线：SIMT 路线（cuda-oxide）基于自定义 rustc 后端提供细粒度的线程控制，Tile 路线（cutile-rs）基于 CUDA Tile IR 在张量块层级操作并支持 JIT 编译。两条路线分别通过 DisjointSlice 与主机端切分（Partitioning）等机制，在编译期有效消除数据竞争并确保 GPU 并发内存安全。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://will-keleher.com/posts/small-programming-tricks-matter/" target="_blank" rel="noopener noreferrer">Small programming tricks</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49729000" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>本文由 Will Keleher 撰写，指出日常工程开发的高效率很大程度上源于微小但高杠杆的知识点积累，如终端命令行工具、Git 检索指令、SQL 调试及 Node.js 网络优化等实用技巧。作者强调这些轻量知识无需复杂的背景结构即可即学即用，并建议资深工程师可以在团队内坚持每天分享一个技术或公司内部的小技巧，在避免信息过载的同时有效提升团队整体效率并促进交流。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://rohanbansal.com/qorl" target="_blank" rel="noopener noreferrer">Training a 4B model to produce 81% faster query plans than Postgres</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49731285" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>本文介绍了利用监督微调（SFT）与智能体强化学习（RL）训练 4B 参数开源语言模型来优化 Postgres 查询计划的实验。针对 Postgres 优化器在复杂 Join 连接顺序中因基数估计失效而选择低效计划的问题，作者借助 pg_hint_plan 扩展引导模型生成更优的 SQL Hints。实验通过搭建低噪声测试环境与自定义 GRPO 变体，成功使 113 个重度 Join 查询的平均执行延迟降低了 44.7%，展现了小模型在查询优化领域的巨大潜力。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://mimo.xiaomi.com/rl/" target="_blank" rel="noopener noreferrer">Xiaomi Mimo 2.6 live post-training dashboard</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49732270" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该页面是小米为 mimo-v2.6-pro 和 mimo-v2.6-flash 强化学习（RL）训练实时展示的 Post-training 仪表盘。仪表盘从训练日志中实时提取并呈现各项关键指标，包含实时训练进度、采样器反馈、批次组成（Batch Composition）以及基准测试（Benchmarks）成绩等数据。用户可通过该平台实时监控模型在强化学习阶段的训练状态、事件时间线及各项性能指标的动态变化。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://servo.org/blog/2026/09/15/one-year-of-sponsorship/" target="_blank" rel="noopener noreferrer">One year of sponsored Servo development</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49737849" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Servo 项目回顾了由 OpenCollective 和 GitHub 社区捐款资助的首个兼职维护者岗位年度工作成果，资深维护者 Josh Bowman-Matthews 致力于改善项目的贡献者体验。在受资助期间，他提名了 8 位新维护者，审查了 1150 个 PR，提出 114 个面向新贡献者的 Issue（其中 92% 已解决），并撰写了关于借用风险、AI 政策与测试修复等新文档。此外，他还推动了 JS 引擎集成重构以解决垃圾回收崩溃问题，修复了诸多不稳定测试，并成功支持了另一位贡献者的资助申请。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://z.ai/blog/glm-built-its-inference-infrastructure" target="_blank" rel="noopener noreferrer">How GLM built its own inference infrastructure</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49737922" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>智谱团队在超过10万张国产AI加速器集群上为GLM-5.3-Flash从零搭建了生产级推理服务，在芯片内存与生态尚不成熟的挑战下实现了与主流NVIDIA GPU相当的性能和成本效益。该过程由GLM-5.3驱动的Infra Agent自主深度参与，通过将端到端指标拆解为内核比对、微基准测试与运行追踪等“密集/可归因反馈”（Dense Feedback），解决了系统优化的归因难题。结合张量并行、混合精度量化及EPD解耦架构等多重优化，Infra Agent在不到两周内将系统端到端吞吐量提升了约3倍，展示了AI系统朝向递归自我提升（RSI）迈出的早期探索。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/asciimoo/hister" target="_blank" rel="noopener noreferrer">Hister: A private search engine for the pages you visit and the files you keep</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49743097" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Hister 是一个注重隐私的个人全文搜索引擎，能够对用户访问过的网页及保存的本地文件进行全文本索引。它支持通过浏览器插件自动记录网页、导入浏览器历史或本地目录，并提供 Web 界面、终端（TUI/CLI）以及通过 MCP 连接的 AI 助手等多种检索客户端。该系统无遥测且无需强制云服务，所有数据均保存在本地或自建服务器上，同时支持可选的语义搜索与多用户隔离。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-09-18 00:00 | <a href="./2026-09-17.html">Permanent link</a> | <a href="https://www.daemonology.net/hn-daily/2026-09-17.html" target="_blank" rel="noopener noreferrer">原链接</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

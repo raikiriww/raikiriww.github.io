@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - 2026-03-20</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-03-20.html">Daily Hacker News for 2026-03-20</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on March 20, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://forums.tigsource.com/index.php?topic=40832.msg1363742#msg1363742" target="_blank" rel="noopener noreferrer">Return of the Obra Dinn: spherical mapped dithering for a 1bpp first-person game</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47406160" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>《奥伯拉·丁的回归》开发者详细分享了解决1位（1-bit）低分辨率游戏在画面移动时产生抖动“漂移”和闪烁感的技术演进过程。文章探讨了从纹理空间映射到运动偏移的多种尝试，最终通过将抖动矩阵映射到环绕相机的球体空间（Sphere Mapping），实现了抖动点在视觉上与几何体的同步固定。该方案配合2倍超采样与下采样技术，有效消除了全屏模式下的视觉不适，并为正式版提供了保留原始像素风格的“数字”模式与画面更平滑稳定的“模拟”显示模式。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.bbc.com/news/articles/c624330lg1ko" target="_blank" rel="noopener noreferrer">4Chan mocks £520k fine for UK online safety breaches</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47440430" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>英国监管机构 Ofcom 因 4Chan 未能实施年龄核查及评估非法内容风险，对其处以 52 万英镑罚款。4Chan 法律顾问对此以一张 AI 生成的仓鼠图片作为回应，坚称其在美国合法运营并受第一修正案保护，拒绝缴纳罚金。Ofcom 强调数字平台必须遵守安全准则，虽然已累计向全球科技公司开出近 300 万英镑罚单，但由于跨境监管挑战，大部分资金尚未实际到账。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://gist.github.com/adamamyl/81b78eced40feae50eae7c4f3bec1f5a" target="_blank" rel="noopener noreferrer">macOS 26 breaks custom DNS settings including .internal</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47440759" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>macOS 26 中长期存在的 /etc/resolver/ 逐域名 DNS 解析机制出现静默故障，导致系统无法解析 .internal、.test 等非 IANA 根区的自定义顶级域名。mDNSResponder 会拦截此类查询并强制按 mDNS 协议处理，从而忽略了用户指定的单播名称服务器，严重破坏了基于 dnsmasq、Docker 或 Kubernetes 的本地开发环境。由于 scutil 工具仍显示配置正常且无报错日志，该问题极具迷惑性，目前开发者仅能通过手动修改 /etc/hosts 文件绕过。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/KittenML/KittenTTS" target="_blank" rel="noopener noreferrer">Show HN: Three new Kitten TTS models – smallest less than 25MB</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47441546" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Kitten TTS 是一个基于 ONNX 的开源轻量级文本转语音库，其 v0.8 版本推出的模型参数量介于 15M 到 80M 之间，最小的 int8 量化版体积仅 25MB。该模型针对 CPU 进行了深度优化，无需 GPU 即可实现高品质的 24kHz 语音合成，并支持语速调节及复杂的文本预处理功能。目前项目内置 8 种语音并采用 Apache 2.0 协议，非常适合在资源受限的边缘设备中进行快速部署与集成。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://deepdelver.substack.com/p/delve-fake-compliance-as-a-service" target="_blank" rel="noopener noreferrer">Delve – Fake Compliance as a Service</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47444319" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>调查揭露合规自动化平台 Delve 通过伪造审计证据、绕过架构要求以及利用印度“认证工厂”冒充美国审计师，为数百家客户提供虚假的 SOC 2 和 HIPAA 等合规报告。该公司在发生大规模敏感数据泄露后采取否认策略，其宣传的“代理式 AI”被指几乎不含真实技术，本质上依靠预填模板和手动表单运作。此欺诈行为导致包括 Incorta、Bland 及上市公司 Duos Edge 在内的众多客户面临严重的刑事法律责任和巨额监管罚款风险。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://code.claude.com/docs/en/channels" target="_blank" rel="noopener noreferrer">Push events into a running session with channels</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47448524" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Claude Code 推出 Channels 功能，允许通过 MCP 服务器将消息、警报和 Webhook 实时推送到正在运行的本地会话中，使 Claude 能够处理终端外的即时事件。该功能支持双向通信，目前提供 Telegram 和 Discord 官方插件及 fakechat 本地演示，适用于远程交互或接收 CI 监控回调。系统内置发件人允许列表安全机制，支持个人通过命令行参数开启，并为企业用户提供组织级的集中管理控制。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.science.org/content/article/arxiv-pioneering-preprint-server-declares-independence-cornell" target="_blank" rel="noopener noreferrer">ArXiv declares independence from Cornell</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47450478" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>知名预印本平台 arXiv 宣布将于 7 月 1 日脱离康奈尔大学，转型为独立非营利机构，旨在通过多元化融资应对激增的论文提交量及“AI 垃圾（AI slop）”内容的挑战。此举由创始人 Paul Ginsparg 推动，意在克服大学体制在维护全球科研基础设施方面的局限性，并计划利用新资金升级陈旧的技术系统。该转型效仿了 bioRxiv 等平台的成功经验，尽管引发了关于高管薪酬和商业化风险的讨论，但官方强调此举将保障平台的长期稳定性，且短期内不会改变用户体验。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.lemonde.fr/en/international/article/2026/03/20/stravaleaks-france-s-aircraft-carrier-located-in-real-time-by-le-monde-through-fitness-app_6751640_4.html" target="_blank" rel="noopener noreferrer">France&#39;s aircraft carrier located in real time by Le Monde through fitness app</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47453942" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>《世界报》通过健身应用 Strava 实时定位了法国“戴高乐号”航母及其打击群的精确位置。一名海军军官在甲板运动时使用智能手表记录数据，因其账户设为公开，直接泄露了航母在地中海靠近塞浦路斯海域的实时坐标。尽管此前已有相关安全警告，但这起被称为“StravaLeaks”的事件表明，法军在防止士兵利用可穿戴设备暴露敏感军事机密方面仍存在漏洞。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://shkspr.mobi/blog/2026/03/im-ok-being-left-behind-thanks/" target="_blank" rel="noopener noreferrer">I&#39;m OK being left behind, thanks</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47454341" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Terence Eden 在其博客中探讨了面对加密货币和 AI 等新技术浪潮时选择“被落下”的从容心态，认为无需因错失恐惧症（FOMO）而盲目追随尚不成熟且效率低下的工具。他通过 Git 和 HTML 等实例指出，真正革命性的技术在稳定并产生实际价值后再学习也完全来得及，而过早投入往往伴随着巨大的时间成本和掉入技术死胡同的风险。作者主张与其在技术初期忍受波动与不便，不如等待其变得易用且真正有用时，再按照自己的节奏去掌握。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://variety.com/2026/film/news/chuck-norris-dead-walker-texas-ranger-dies-1236694953/" target="_blank" rel="noopener noreferrer">Chuck Norris has died</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47454782" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>传奇武术家兼动作巨星查克·诺里斯（Chuck Norris）于3月19日去世，享年86岁，他因主演长寿剧集《德州巡警》及《三角突击队》等经典动作电影而闻名。诺里斯拥有多种武术的高段位黑带，曾与李小龙在《猛龙过江》中上演影史经典对决，是公认的全美硬汉偶像。他曾服役于美国空军，晚年不仅积极参与保守派政治与慈善活动，更因关于其超凡能力的互联网模因文化而成为全球文化符号。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-08 00:00 | <a href="./2026-03-20.html">Permanent link</a> | <a href="https://www.daemonology.net/hn-daily/2026-03-20.html" target="_blank" rel="noopener noreferrer">原链接</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
