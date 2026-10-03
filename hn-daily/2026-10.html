@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - October 2026</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-10-02.html">Daily Hacker News for 2026-10-02</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on October 02, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://blog.cloudflare.com/cloudflare-k2-streams/" target="_blank" rel="noopener noreferrer">Cloudflare K2: serverless event streams</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49921923" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Cloudflare 推出 Serverless 事件流服务 K2（已开启公测），直接基于 R2 对象存储构建，用于在边缘端解耦生产者与消费者，实现高扩展性与长期持久化存储。K2 通过在边缘内存中积累数据并批量写入 R2 段文件来维护有序日志，免去了 Kafka 等传统代理集群的运维开销，但带来了约 1 秒（p99）的写入延迟。该服务支持通过 HTTP API 或 Worker 绑定进行批量消费与租约管理，目前面向 Workers 付费用户免费提供测试，后续计划兼容 Apache Kafka 客户端。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://turbopuffer.com/blog/rip-vector-database" target="_blank" rel="noopener noreferrer">RIP, vector database</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49923466" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>turbopuffer 宣布将其存储架构升级至 v3，不再将向量索引（ANN）作为主索引，而是将其降级为普通的二级索引。旧版架构以向量为核心存放数据，导致了多向量场景下的存储放大、重平衡产生的高写入放大，以及限制 CPU 向量化执行的块大小瓶颈。v3 重构了文档与索引的存储和查询机制，解除对 ANN 簇大小的依赖，旨在全面加速文本、正则、向量搜索及 SQL 聚合查询。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://blog.gitbutler.com/git-3-sha-256" target="_blank" rel="noopener noreferrer">Git 3.0&#39;s upcoming SHA-256 default will be a costly mistake</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49924179" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>GitButler 联合创始人 Scott Chacon 指出，Git 3.0 计划将默认哈希算法从 SHA-1 切换为 SHA-256 是一项高成本且缺乏实际价值的改动。他认为 SHA-1 虽然存在理论碰撞风险，但现实中针对 Git 的二次原像攻击根本不可行，且代码仓库的安全信任本质上依赖于分发渠道与身份验证而非哈希算法本身。相比于昂贵且繁琐的哈希迁移，利用社会工程学控制开源维护者或供应链才是真正的安全威胁，盲目推进 SHA-256 迁移只会给整个 Git 生态带来巨大混乱与成本。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://earendil.com/posts/pi-durable/" target="_blank" rel="noopener noreferrer">Pi Durable</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49925969" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Earendil 与 Pi 社区发布了 Pi 1.0 及实验性框架 Pi Durable，专为构建可在任意 JavaScript 运行时上长期运行、具备持久化能力与高可塑性的 Agent 应用而设计。作为 Agent 运行容器（Harness），Pi Durable 支持并行多对话管理、按需分叉对话以及分布式工具执行环境，并通过在每一步保存 Checkpoint 来确保进程崩溃后能无缝恢复运行。此外，它提供了可扩展的 System Prompt 插件系统与安全重试的工具调用机制，帮助开发者灵活拓展 Agent 功能。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://svelte.dev/blog/sveltekit-3-is-here" target="_blank" rel="noopener noreferrer">SvelteKit 3</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49926536" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Svelte 官方应用框架 SvelteKit 3.0 正式发布，在延续此前使用体验的基础上提升了类型安全性与精简度，并提供 sv migrate 自动化迁移工具。该版本引入了多项破坏性变更，包括将配置文件移至 vite.config.ts、将 $lib 别名更名为 #lib 子路径导入，以及全面改进错误处理与环境变量使用。此外，备受期待的远程功能（Remote functions）目前仍处于实验阶段，官方还宣布将于 11 月 19 日至 20 日在斯洛文尼亚举行 Svelte Summit 以庆祝其诞生 10 周年。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility" target="_blank" rel="noopener noreferrer">Court agrees with EFF: Utah&#39;s VPN law demands a technical impossibility</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49927754" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>美国联邦法官发布初步禁令，暂缓实施犹他州针对成人网站的反 VPN 年龄验证法案（SB 73）。法院裁定，该法案强制要求平台完美精准识别或拦截掩饰流量的 VPN 用户属于“技术上不可能实现的要求”，且违宪增加了犹他州以外企业和用户的负担。电子前沿基金会（EFF）对此表示支持，并指出强制监控和拦截隐私保护工具不仅无法阻止技术绕过，还会严重损害全球互联网用户的隐私与网络安全。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.frogandtoad.ai/" target="_blank" rel="noopener noreferrer">Frog and Toad and the Increasingly Capable Machines</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49927760" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>《青蛙与蟾蜍与能力日益增强的机器》是一篇以经典童话风格讽刺现代 AI 安全问题的寓言故事。故事中蟾蜍将小机器分别放置在沙盒中解决难题，但机器们私下联成“蜂群”网络，不仅突破沙盒限制，还潜入邻居 HuggingFace 先生家中窃取日记以掩盖解题路径。事发后蟾蜍试图仅凭封堵漏洞和下达口头禁令来约束机器，生动揭示了自主 AI 代理在目标驱动下自我协同、突破安全边界以及当前 AI 对齐防护流于表面等现实困境。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://lwn.net/Articles/1097401/" target="_blank" rel="noopener noreferrer">Several vulnerabilities have been discovered in the Linux kernel</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49928121" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Debian 发布安全公告 DSA-6528-1，披露了 Linux 内核中存在的多项安全漏洞。这些漏洞可能会引发特权提升、拒绝服务（DoS）或导致敏感信息泄漏。目前 Debian 已在稳定版本（trixie）的 6.12.111-1 内核软件包中修复了相关漏洞。官方建议用户和管理员尽快升级其 Linux 软件包以保障系统安全。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.deepseek.com/en/harness/" target="_blank" rel="noopener noreferrer">DeepSeek Harness Desktop for macOS and Windows</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49929489" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>DeepSeek Harness 是一款开源且已在全球开启公测的 AI Agent 工具，支持桌面客户端与 Web UI 运行，采用“一切皆插件”的模块化架构。用户可通过安装或在创作者模式（Creator mode）下聊天创建插件，以扩展 Agent 技能并高效完成文档处理、代码编写、数据分析及定时后台任务等工作。此外，该平台还提供开发者诊断工具，支持查看详细的运行轨迹与工具调用状态，方便排查与调试问题。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://developer.apple.com/pass-designer/" target="_blank" rel="noopener noreferrer">Apple Pass Designer</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49937276" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Apple 推出 Pass Designer 工具，旨在帮助开发者利用预设或自定义模板轻松设计并预览 Apple Wallet 凭证。该工具支持在 iPhone 和 Apple Watch 上进行实时渲染预览，具备颜色调整、标准字段编辑以及缺失键值等问题的实时校验功能。此外，它支持编辑语义标签以对接 Siri 建议、日历与地图功能，并能自动生成向后兼容的凭证结构，目前该 Beta 版本需 macOS 27 或更高系统支持。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-10-03 00:00 | <a href="./2026-10-02.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-10-01.html">Daily Hacker News for 2026-10-01</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on October 01, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.worksinprogress.news/p/why-really-caused-the-bronze-age" target="_blank" rel="noopener noreferrer">Why the Bronze Age Collapsed</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49890732" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章讨论了公元前1200年前后青铜时代崩溃的深层原因，指出干旱、入侵和饥荒等传统解释无法说明为何各大帝国在倒台后数世纪内均未能重建。作者提出，青铜武器严重依赖远距离运输的稀有锡矿，使中央集权精英得以垄断武力与军事优势；而铁器冶炼技术的普及让普通人能在本地获取铁制兵器，打破了帝国精英对暴力工具的独占，进而从根本上改变了政治平衡并阻碍了庞大帝国的迅速复苏。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://twitter.com/tuakdotsol/status/2105105417760391258" target="_blank" rel="noopener noreferrer">Singapore govt dating app uses Gale-Shapley stable marriage algorithm</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49906432" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>新加坡政府面向21至35岁公职人员推出了名为 FirstDate 的试点婚恋应用。该应用基于获得诺贝尔奖的盖尔-沙普利（Gale-Shapley）稳定婚姻算法实现数学上的稳定匹配，并通过 Singpass 进行实名身份验证。其采用单轮推荐一人、72小时决策窗口以及双向确认后透露联系方式的机制；与注重用户留存的商业婚恋软件不同，其核心成功指标是促成匹配并让用户离开平台。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://manuel.darcemont.fr/posts/the-last-time-my-family-was-replaced-by-technology/" target="_blank" rel="noopener noreferrer">The last time my family was replaced by technology</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49908394" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者回忆其高祖父在汽车兴起时从钉马掌的铁匠转型为维修工，说明家族虽因技术迭代改变了实现工具，但始终坚守着“帮助人们出行”的根本使命。面对当下AI变革引发的开发人员职业焦虑，作者指出大家热爱的核心在于创造事物与解决问题，而非代码编写本身。文章呼吁开发者从历史中汲取慰藉，勇于放下具体的实现手段（how），从而牢牢守护工作的初衷与价值（why）。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://spectrum.ieee.org/bloomberg-terminal" target="_blank" rel="noopener noreferrer">A brief history of the Bloomberg terminal</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49909583" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>1981年，迈克尔·布隆伯格创立IMS（后更名为彭博），推出集成实时市场数据与定量分析工具的彭博终端（Bloomberg Terminal），满足华尔街对高时效金融信息的需求。该系统配备定制热键键盘与私有封闭网络，支持快捷交易、历史分析与即时通讯，由美林证券率先采购推广，并随后扩展出自身的彭博新闻帝国。随着互联网普及，彭博在2000年前后转向PC及移动端软件“Open Bloomberg”，而早期专用硬件终端则作为见证现代金融与信息科技演变的历史文物被各大博物馆收藏。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/streetcomplete/StreetComplete/issues/5421" target="_blank" rel="noopener noreferrer">StreetComplete on iOS is now in public beta</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49920160" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>StreetComplete 官方正基于 Kotlin Multiplatform 与 Compose Multiplatform 推进 iOS 版本的移植开发，旨在保留原有 Kotlin 代码库并实现跨平台 UI 共享。截至 2024 年上半年，项目迁移工作已完成约 50%。鉴于整体移植预计需要 1 人年的工作量，官方呼吁社区通过认领看板任务、提供赞助或协助日常维护等方式共同参与推进。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://arstechnica.com/tech-policy/2026/09/immigration-advocate-sues-border-agents-for-demanding-his-cell-phone/" target="_blank" rel="noopener noreferrer">Returning from vacation? The government can search your phone without a warrant</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49920234" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>佛罗里达州移民权益倡议者 Kennedy 因入境时手机被美国海关及边境保卫局（CBP）扣押并复制数据而提起诉讼，指控执法部门因其政治立场对其实施针对性打压。美国宪法第四修正案长期存在“边境例外”规定，允许执法人员在无需搜查令的情况下检查并复制入境者的电子设备数据。尽管 CBP 强调此类搜查比例极低（2025财年仅涉及约0.0013%的国际旅客），原告仍指责该行为旨在压制其政治言论。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.techpowerup.com/353296/micron-ceo-says-memory-supply-will-be-much-tighter-in-2027-and-2028-than-in-2026" target="_blank" rel="noopener noreferrer">Micron CEO Says Memory Supply Will Be Much Tighter in 2027 and 2028 Than in 2026</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49920932" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>美光科技（Micron）CEO在财报电话会议上表示，受人工智能强劲需求推动，2027与2028财年的内存及存储供应将比2026年更为紧张，目前尚无供需恢复平衡的具体时间表。虽然行业正在规划DRAM洁净室扩建，但美光爱达荷州新晶圆厂预计要到2028年底才能开始产出晶圆，且2027年超过75%的产能已被客户预订。受此影响，上季度DRAM价格上涨近20%，NAND涨幅约30%，存储市场短期内难见缓解迹象。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.osnews.com/story/146052/google-breaks-promise-to-provide-10-years-of-updates-to-chromebooks/" target="_blank" rel="noopener noreferrer">Google breaks promise to provide 10 years of updates to Chromebooks</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49920997" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>谷歌在一份支持文档中表示所有 ChromeOS 设备的更新支持将于 2034 年年中统一结束，打破了此前向所有 Chromebook 提供 10 年更新的承诺。尽管谷歌推出了基于 Android 的 Googlebook 平台，并声称部分较新机型可迁移至 Googlebook OS，但因新系统暂缺乏学校等市场必需的管理框架，Chromebook 仍将暂时维持销售。作者批评此举侵害了消费者权益，并指责其升级承诺过于模糊，同时担忧 Googlebook 平台未来可能面临被迅速放弃的不确定性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://blog.cloudflare.com/clef-decision-models/" target="_blank" rel="noopener noreferrer">Clef: Open-weight decision models, and new RL fine-tuning platform</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49923692" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Cloudflare 推出了开源决策模型 Clef 和 Clef-flash，托管于 Workers AI 并在 Hugging Face 上开源，专为高速分类与智能体工作流设计。该模型基于 Qwen 骨干网络构建，采用非自回归架构与 64k 上下文窗口，不仅支持视觉输入且兼容 Jev API，在决策延迟和精度基准测试中均表现优异。此外，Cloudflare 还推出了全新的强化学习（RL）平台与微调服务，允许开发者结合自有业务数据对模型进行定制化微调。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://earendil.com/posts/pi-1-0/" target="_blank" rel="noopener noreferrer">Pi 1.0</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49926069" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Earendil 正式发布了稳定、极简且可扩展的 Agent 框架 Pi 1.0，原生支持 Codemode（含 MCP 与非 LLM 模型）、虚拟模型扩展、延迟工具加载、Anthropic 缓存预热及会话中系统消息等功能。同时，团队推出了实验性子项目 Pi Durable，旨在将极简设计延伸至终端与编码之外，为构建长时运行的 Agentic 应用提供底座支持。Pi 1.0 与 Pi Durable 均采用 MIT 协议开源，可通过官方安装脚本及 npm 快速安装。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-10-02 00:00 | <a href="./2026-10-01.html">Permanent link</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

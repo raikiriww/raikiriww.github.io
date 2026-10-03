@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - 2026-09-19</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-09-19.html">Daily Hacker News for 2026-09-19</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on September 19, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.nationalgeographic.com/animals/article/meet-the-first-new-cat-species-discovered-in-100-years" target="_blank" rel="noopener noreferrer">The first new cat species discovered in 100 years</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49744704" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>玻利维亚研究人员与团队在《Current Biology》期刊发表最新基因组研究，确认发现百年来首个猫科新物种——虎猫属的 Leopardus tilcayo（本地称为 tilcayo）。该物种生活于玻利维亚安第斯山脉东坡的云加斯森林生态区，在大约 140 万年前与其他虎猫分支演化分流。这一发现将过去认知的单一虎猫物种细分为五个独立物种，不仅重构了小猫科动物的演化树，也表明需要针对不同种群重新评估并加大保护力度。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/" target="_blank" rel="noopener noreferrer">How to Write with an LLM</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49747070" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章探讨了如何高效使用 LLM 辅助写作而不破坏个人风格，强调应将模型定位为校对员而非替身作家。作者提出了两条核心规则：一是绝不采纳模型建议的具体措辞以防写作风格被同化，二是警惕模型的盲目鼓励以避免保留初稿瑕疵。LLM 的真正价值在于机械化地查找被动语态、冗余词及结构问题，作者应依据反馈自行重写并保持独立裁决权。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship" target="_blank" rel="noopener noreferrer">US Military had close call after using AI for hallucinated intelligence report</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49757520" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>今年春季美伊战争期间，美军因一份声称中国货船运送核武器部件的情报，差点在中东对该船发起拦截及武装登船行动。在行动前夕调查发现，该情报系美特种作战司令部分析师使用 AI 聊天机器人生成，由于 AI 产生“幻觉”误判货物导致报告完全虚假。该事件险些引发中美武装冲突，突显出美军在缺乏统一核查标准的情况下加速推广 AI 决策所带来的巨大风险。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/" target="_blank" rel="noopener noreferrer">Saving another 100TB of RAM</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49758580" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Cloudflare 的 Pingora 后端路由器（PBR）因需要支持多特性组合而建立了大量一致性哈希环（Consistent Hashing），导致内存占用过高。团队分析其数据结构发现，原本用于存储哈希和服务器索引的结构体因 Rust 内存对齐规则占用了 8 字节；通过将其改写为 6 字节的原始字节数组并配合 getter 取值，成功绕过了对齐填充限制。这一改变直接将一致性哈希的内存占用降低了 25%，在全球范围内为 Cloudflare 节省了超过 100TB 的内存。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener noreferrer">Claude Code now reads AGENTS.md if there is no Claude.md</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49760187" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Claude Code 发布更新日志，当项目中不存在 CLAUDE.md 时现已支持自动读取 AGENTS.md 作为项目指令。同时，Auto 模式在 API 及企业版等场景下默认改用服务端分类器以降低开销，并在状态面板中新增显示。本次更新还修复了会话恢复挂起、插件及技能加载错误、沙盒命令绕过等大量稳定性问题，并进一步优化了提示词缓存与工具交互体验。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://onionfutures.com/" target="_blank" rel="noopener noreferrer">San Francisco Onion Futures Company</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49763296" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>San Francisco Onion Futures Company 是一家提供黄洋葱未来实物交割私有且可转让合约的网站。该平台提供长达 6 个月期限的交割合约，单只洋葱售价在 3 至 12 美元之间，并支持通过 Stripe 进行支付。针对美国法律禁止在集中交易所交易洋葱期货的限制，网站声明自身并非交易所，以此规避相关法规禁令。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://med.stanford.edu/news/all-news/2026/09/two-separate-brains.html" target="_blank" rel="noopener noreferrer">Two parallel neural ectoderm progenitors contribute to the developing brain</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49763697" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>斯坦福医学院领导的研究颠覆了大脑为单一器官的传统认知，揭示人类大脑实际上由两个在数亿年前独立演化的系统组合而成。研究表明前脑/中脑（表达Otx2基因）与后脑（表达Gbx2基因）源自两条完全独立的平行祖细胞发育路径，且因染色质结构根本不同而不可相互转化。基于该发现，研究团队首次在实验室中成功利用人类多能干细胞诱导培养出功能性后脑运动神经元。这一突破为脊髓性肌萎缩症（SMA）和肌萎缩侧索硬化症（ALS）等脑干疾病的机制研究及再生治疗开辟了新途径。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio" target="_blank" rel="noopener noreferrer">GPT-6 Astra Solves a WWI German Radio Cipher</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49763987" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>GPT-6 Astra 成功破解了一封 1918 年 11 月 27 日发送且此前未解的一战德军 ADFGVX 无线电密码电报。模型利用文献记载的密钥词“TRUPPENVERSCHIEBUNG”推导并还原出关于英军巡洋舰及盟军舰队抵达塞瓦斯托波尔的信息。Astra 结合 HMS Canterbury 历史日志验证了译文的准确性，并分析该电文此前未解是因为其密钥实际使用时间早于历史记载的生效日期。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://john.hartnup.uk/2026/06/07/ai-event-posters.html" target="_blank" rel="noopener noreferrer">AI-generated posters don’t have to be horrible</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49764791" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>本文针对 AI 生成活动海报风格同质化严重且审美疲劳的问题，探讨了改善 AI 海报视觉质量的具体方法。作者通过向 ChatGPT 明确指定包豪斯、日式极简、孟菲斯及朋克等多种具体设计流派，成功打破了默认的粗劣模板，合成了风格迥异且具辨识度的海报。文章强调，在提示词中指明确切的艺术风格能让 AI 释放多样化设计潜力，使用生成可编辑文本和图层的格式还能进一步提升实用价值。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://laya.convaiinnovations.com/" target="_blank" rel="noopener noreferrer">I built non-autoregressive decision models with RL a year ago</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49765348" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者推出了开源的水平 System 1 决策模型族 Laya，旨在替代生成式 LLM 处理反射性结构化决策，解决高延迟、高成本及未经校准的假自信问题。Laya 基于双向编码器且不生成文本，通过单次前向传播评估 choice、score 和 noul 三种决策原语，从物理上杜绝幻觉与 Schema 违规。该模型在单 GPU 上推理延迟低至 32.8 毫秒（比闭源模型 Jev 快 6 至 8 倍），支持 100 多种语言并内置脚本路由器，在多项基准测试中展现出更高的准确率与更佳的概率校准能力。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-09-20 00:00 | <a href="./2026-09-19.html">Permanent link</a> | <a href="https://www.daemonology.net/hn-daily/2026-09-19.html" target="_blank" rel="noopener noreferrer">原链接</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

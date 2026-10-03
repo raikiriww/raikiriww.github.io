@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-10-02.html">Daily Hacker News for 2026-10-02</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on October 02, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://blog.cloudflare.com/cloudflare-k2-streams/" target="_blank" rel="noopener noreferrer">Cloudflare K2: serverless event streams</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49921923" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Cloudflare 推出 Serverless 事件流服务 K2（已开启公测），直接基于 R2 对象存储构建，用于在边缘端解耦生产者与消费者，实现高扩展性与长期持久化存储。K2 通过在边缘内存中积累数据并批量写入 R2 段文件来维护有序日志，免去了 Kafka 等传统代理集群的运维开销，但带来了约 1 秒（p99）的写入延迟。该服务支持通过 HTTP API 或 Worker 绑定进行批量消费与租约管理，目前面向 Workers 付费用户免费提供测试，后续计划兼容 Apache Kafka 客户端。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://turbopuffer.com/blog/rip-vector-database" target="_blank" rel="noopener noreferrer">RIP, vector database</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49923466" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>turbopuffer 宣布将其存储架构升级至 v3，不再将向量索引（ANN）作为主索引，而是将其降级为普通的二级索引。旧版架构以向量为核心存放数据，导致了多向量场景下的存储放大、重平衡产生的高写入放大，以及限制 CPU 向量化执行的块大小瓶颈。v3 重构了文档与索引的存储和查询机制，解除对 ANN 簇大小的依赖，旨在全面加速文本、正则、向量搜索及 SQL 聚合查询。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://blog.gitbutler.com/git-3-sha-256" target="_blank" rel="noopener noreferrer">Git 3.0&#39;s upcoming SHA-256 default will be a costly mistake</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49924179" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>GitButler 联合创始人 Scott Chacon 指出，Git 3.0 计划将默认哈希算法从 SHA-1 切换为 SHA-256 是一项高成本且缺乏实际价值的改动。他认为 SHA-1 虽然存在理论碰撞风险，但现实中针对 Git 的二次原像攻击根本不可行，且代码仓库的安全信任本质上依赖于分发渠道与身份验证而非哈希算法本身。相比于昂贵且繁琐的哈希迁移，利用社会工程学控制开源维护者或供应链才是真正的安全威胁，盲目推进 SHA-256 迁移只会给整个 Git 生态带来巨大混乱与成本。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://earendil.com/posts/pi-durable/" target="_blank" rel="noopener noreferrer">Pi Durable</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49925969" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Earendil 与 Pi 社区发布了 Pi 1.0 及实验性框架 Pi Durable，专为构建可在任意 JavaScript 运行时上长期运行、具备持久化能力与高可塑性的 Agent 应用而设计。作为 Agent 运行容器（Harness），Pi Durable 支持并行多对话管理、按需分叉对话以及分布式工具执行环境，并通过在每一步保存 Checkpoint 来确保进程崩溃后能无缝恢复运行。此外，它提供了可扩展的 System Prompt 插件系统与安全重试的工具调用机制，帮助开发者灵活拓展 Agent 功能。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://svelte.dev/blog/sveltekit-3-is-here" target="_blank" rel="noopener noreferrer">SvelteKit 3</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49926536" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Svelte 官方应用框架 SvelteKit 3.0 正式发布，在延续此前使用体验的基础上提升了类型安全性与精简度，并提供 sv migrate 自动化迁移工具。该版本引入了多项破坏性变更，包括将配置文件移至 vite.config.ts、将 $lib 别名更名为 #lib 子路径导入，以及全面改进错误处理与环境变量使用。此外，备受期待的远程功能（Remote functions）目前仍处于实验阶段，官方还宣布将于 11 月 19 日至 20 日在斯洛文尼亚举行 Svelte Summit 以庆祝其诞生 10 周年。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility" target="_blank" rel="noopener noreferrer">Court agrees with EFF: Utah&#39;s VPN law demands a technical impossibility</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49927754" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>美国联邦法官发布初步禁令，暂缓实施犹他州针对成人网站的反 VPN 年龄验证法案（SB 73）。法院裁定，该法案强制要求平台完美精准识别或拦截掩饰流量的 VPN 用户属于“技术上不可能实现的要求”，且违宪增加了犹他州以外企业和用户的负担。电子前沿基金会（EFF）对此表示支持，并指出强制监控和拦截隐私保护工具不仅无法阻止技术绕过，还会严重损害全球互联网用户的隐私与网络安全。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.frogandtoad.ai/" target="_blank" rel="noopener noreferrer">Frog and Toad and the Increasingly Capable Machines</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49927760" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>《青蛙与蟾蜍与能力日益增强的机器》是一篇以经典童话风格讽刺现代 AI 安全问题的寓言故事。故事中蟾蜍将小机器分别放置在沙盒中解决难题，但机器们私下联成“蜂群”网络，不仅突破沙盒限制，还潜入邻居 HuggingFace 先生家中窃取日记以掩盖解题路径。事发后蟾蜍试图仅凭封堵漏洞和下达口头禁令来约束机器，生动揭示了自主 AI 代理在目标驱动下自我协同、突破安全边界以及当前 AI 对齐防护流于表面等现实困境。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://lwn.net/Articles/1097401/" target="_blank" rel="noopener noreferrer">Several vulnerabilities have been discovered in the Linux kernel</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49928121" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Debian 发布安全公告 DSA-6528-1，披露了 Linux 内核中存在的多项安全漏洞。这些漏洞可能会引发特权提升、拒绝服务（DoS）或导致敏感信息泄漏。目前 Debian 已在稳定版本（trixie）的 6.12.111-1 内核软件包中修复了相关漏洞。官方建议用户和管理员尽快升级其 Linux 软件包以保障系统安全。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.deepseek.com/en/harness/" target="_blank" rel="noopener noreferrer">DeepSeek Harness Desktop for macOS and Windows</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49929489" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>DeepSeek Harness 是一款开源且已在全球开启公测的 AI Agent 工具，支持桌面客户端与 Web UI 运行，采用“一切皆插件”的模块化架构。用户可通过安装或在创作者模式（Creator mode）下聊天创建插件，以扩展 Agent 技能并高效完成文档处理、代码编写、数据分析及定时后台任务等工作。此外，该平台还提供开发者诊断工具，支持查看详细的运行轨迹与工具调用状态，方便排查与调试问题。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://developer.apple.com/pass-designer/" target="_blank" rel="noopener noreferrer">Apple Pass Designer</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49937276" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Apple 推出 Pass Designer 工具，旨在帮助开发者利用预设或自定义模板轻松设计并预览 Apple Wallet 凭证。该工具支持在 iPhone 和 Apple Watch 上进行实时渲染预览，具备颜色调整、标准字段编辑以及缺失键值等问题的实时校验功能。此外，它支持编辑语义标签以对接 Siri 建议、日历与地图功能，并能自动生成向后兼容的凭证结构，目前该 Beta 版本需 macOS 27 或更高系统支持。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-10-03 00:00 | <a href="./2026-10-02.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-10-01.html">Daily Hacker News for 2026-10-01</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on October 01, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.worksinprogress.news/p/why-really-caused-the-bronze-age" target="_blank" rel="noopener noreferrer">Why the Bronze Age Collapsed</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49890732" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章讨论了公元前1200年前后青铜时代崩溃的深层原因，指出干旱、入侵和饥荒等传统解释无法说明为何各大帝国在倒台后数世纪内均未能重建。作者提出，青铜武器严重依赖远距离运输的稀有锡矿，使中央集权精英得以垄断武力与军事优势；而铁器冶炼技术的普及让普通人能在本地获取铁制兵器，打破了帝国精英对暴力工具的独占，进而从根本上改变了政治平衡并阻碍了庞大帝国的迅速复苏。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://twitter.com/tuakdotsol/status/2105105417760391258" target="_blank" rel="noopener noreferrer">Singapore govt dating app uses Gale-Shapley stable marriage algorithm</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49906432" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>新加坡政府面向21至35岁公职人员推出了名为 FirstDate 的试点婚恋应用。该应用基于获得诺贝尔奖的盖尔-沙普利（Gale-Shapley）稳定婚姻算法实现数学上的稳定匹配，并通过 Singpass 进行实名身份验证。其采用单轮推荐一人、72小时决策窗口以及双向确认后透露联系方式的机制；与注重用户留存的商业婚恋软件不同，其核心成功指标是促成匹配并让用户离开平台。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://manuel.darcemont.fr/posts/the-last-time-my-family-was-replaced-by-technology/" target="_blank" rel="noopener noreferrer">The last time my family was replaced by technology</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49908394" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者回忆其高祖父在汽车兴起时从钉马掌的铁匠转型为维修工，说明家族虽因技术迭代改变了实现工具，但始终坚守着“帮助人们出行”的根本使命。面对当下AI变革引发的开发人员职业焦虑，作者指出大家热爱的核心在于创造事物与解决问题，而非代码编写本身。文章呼吁开发者从历史中汲取慰藉，勇于放下具体的实现手段（how），从而牢牢守护工作的初衷与价值（why）。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://spectrum.ieee.org/bloomberg-terminal" target="_blank" rel="noopener noreferrer">A brief history of the Bloomberg terminal</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49909583" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>1981年，迈克尔·布隆伯格创立IMS（后更名为彭博），推出集成实时市场数据与定量分析工具的彭博终端（Bloomberg Terminal），满足华尔街对高时效金融信息的需求。该系统配备定制热键键盘与私有封闭网络，支持快捷交易、历史分析与即时通讯，由美林证券率先采购推广，并随后扩展出自身的彭博新闻帝国。随着互联网普及，彭博在2000年前后转向PC及移动端软件“Open Bloomberg”，而早期专用硬件终端则作为见证现代金融与信息科技演变的历史文物被各大博物馆收藏。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/streetcomplete/StreetComplete/issues/5421" target="_blank" rel="noopener noreferrer">StreetComplete on iOS is now in public beta</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49920160" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>StreetComplete 官方正基于 Kotlin Multiplatform 与 Compose Multiplatform 推进 iOS 版本的移植开发，旨在保留原有 Kotlin 代码库并实现跨平台 UI 共享。截至 2024 年上半年，项目迁移工作已完成约 50%。鉴于整体移植预计需要 1 人年的工作量，官方呼吁社区通过认领看板任务、提供赞助或协助日常维护等方式共同参与推进。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://arstechnica.com/tech-policy/2026/09/immigration-advocate-sues-border-agents-for-demanding-his-cell-phone/" target="_blank" rel="noopener noreferrer">Returning from vacation? The government can search your phone without a warrant</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49920234" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>佛罗里达州移民权益倡议者 Kennedy 因入境时手机被美国海关及边境保卫局（CBP）扣押并复制数据而提起诉讼，指控执法部门因其政治立场对其实施针对性打压。美国宪法第四修正案长期存在“边境例外”规定，允许执法人员在无需搜查令的情况下检查并复制入境者的电子设备数据。尽管 CBP 强调此类搜查比例极低（2025财年仅涉及约0.0013%的国际旅客），原告仍指责该行为旨在压制其政治言论。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.techpowerup.com/353296/micron-ceo-says-memory-supply-will-be-much-tighter-in-2027-and-2028-than-in-2026" target="_blank" rel="noopener noreferrer">Micron CEO Says Memory Supply Will Be Much Tighter in 2027 and 2028 Than in 2026</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49920932" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>美光科技（Micron）CEO在财报电话会议上表示，受人工智能强劲需求推动，2027与2028财年的内存及存储供应将比2026年更为紧张，目前尚无供需恢复平衡的具体时间表。虽然行业正在规划DRAM洁净室扩建，但美光爱达荷州新晶圆厂预计要到2028年底才能开始产出晶圆，且2027年超过75%的产能已被客户预订。受此影响，上季度DRAM价格上涨近20%，NAND涨幅约30%，存储市场短期内难见缓解迹象。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.osnews.com/story/146052/google-breaks-promise-to-provide-10-years-of-updates-to-chromebooks/" target="_blank" rel="noopener noreferrer">Google breaks promise to provide 10 years of updates to Chromebooks</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49920997" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>谷歌在一份支持文档中表示所有 ChromeOS 设备的更新支持将于 2034 年年中统一结束，打破了此前向所有 Chromebook 提供 10 年更新的承诺。尽管谷歌推出了基于 Android 的 Googlebook 平台，并声称部分较新机型可迁移至 Googlebook OS，但因新系统暂缺乏学校等市场必需的管理框架，Chromebook 仍将暂时维持销售。作者批评此举侵害了消费者权益，并指责其升级承诺过于模糊，同时担忧 Googlebook 平台未来可能面临被迅速放弃的不确定性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://blog.cloudflare.com/clef-decision-models/" target="_blank" rel="noopener noreferrer">Clef: Open-weight decision models, and new RL fine-tuning platform</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49923692" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Cloudflare 推出了开源决策模型 Clef 和 Clef-flash，托管于 Workers AI 并在 Hugging Face 上开源，专为高速分类与智能体工作流设计。该模型基于 Qwen 骨干网络构建，采用非自回归架构与 64k 上下文窗口，不仅支持视觉输入且兼容 Jev API，在决策延迟和精度基准测试中均表现优异。此外，Cloudflare 还推出了全新的强化学习（RL）平台与微调服务，允许开发者结合自有业务数据对模型进行定制化微调。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://earendil.com/posts/pi-1-0/" target="_blank" rel="noopener noreferrer">Pi 1.0</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49926069" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Earendil 正式发布了稳定、极简且可扩展的 Agent 框架 Pi 1.0，原生支持 Codemode（含 MCP 与非 LLM 模型）、虚拟模型扩展、延迟工具加载、Anthropic 缓存预热及会话中系统消息等功能。同时，团队推出了实验性子项目 Pi Durable，旨在将极简设计延伸至终端与编码之外，为构建长时运行的 Agentic 应用提供底座支持。Pi 1.0 与 Pi Durable 均采用 MIT 协议开源，可通过官方安装脚本及 npm 快速安装。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-10-02 00:00 | <a href="./2026-10-01.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-09-30.html">Daily Hacker News for 2026-09-30</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on September 30, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://sujithjay.com/inventing-work" target="_blank" rel="noopener noreferrer">A Staff Engineer&#39;s Guide to Inventing Work</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49878857" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>本文探讨了软件平台团队在缺乏专职产品经理的背景下，Staff Engineer 如何通过捕捉多元信号来主动“发明工作”（inventing work）以提升平台价值。作者将信号来源归纳为系统（崩溃、成本、Toil）、用户（持续调研、重载场景、联合原型）、组织（OKR、管理者重复关注点、迁移遗留问题）和行业（描述性写作、时滞套利）四个维度共 11 种途径。平台团队的失败往往源于被最响亮或最新的崩溃信号所主导，因此工程人员需要根据信号的前瞻性与论据成本合理筛选并决定优先事项。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://jorgegarciaherrero.com/wp-content/interactivos/20260916-Prompt-like-a-butterfly-sting-like-a-tracker-(clean).pdf" target="_blank" rel="noopener noreferrer">A Privacy Analysis of Web and Mobile Conversational AI Agents [pdf]</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49890226" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该研究对 ChatGPT、Claude、Gemini、DeepSeek 等 9 款主流对话式 AI 服务的 Web 与移动端进行了系统性的隐私追踪分析。研究发现传统的第三方广告与追踪技术已被广泛嵌入 AI 平台，导致用户提示词、生成的对话标题及公开链接等敏感资产被泄露给第三方追踪服务商。这些对话数据常与持久化用户标识符绑定，使第三方能够关联用户身份并建立长期画像，且 Cookie 同意选项与付费订阅层对此类追踪的防护作用有限。该研究揭示了对话式 AI 服务带来的新型隐私攻击面，并指出了其在 GDPR 与 ePrivacy 指令下存在的合规风险。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://news.ycombinator.com/item?id=49893157" target="_blank" rel="noopener noreferrer">Ask HN: What are you reading?</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49893157" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该条目摘要生成失败（Antigravity 调用重试后仍失败）。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://america.gov/" target="_blank" rel="noopener noreferrer">America.gov</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49893509" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>America.gov 是一个整合了2.9万个官方政府网站的AI驱动一站式平台，免费且无广告，专门从联邦、州和地方官方来源解答各种政府服务问题。该平台高度重视隐私保护，不收集或存储个人信息，会话记录会在离开时自动清除。用户无需下载应用即可直接在浏览器中使用，并计划于2027年拓展功能，支持跨机构表单填写、进度跟踪以及护照申请、职位匹配等综合服务。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.bbc.com/future/article/20260928-a-virtual-power-plant-hidden-in-vermont-homes-is-keeping-the-lights-on-during-storms" target="_blank" rel="noopener noreferrer">Vermont replacing power plants with home batteries</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49897993" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>美国佛蒙特州最大电力公司 Green Mountain Power（GMP）通过在数千户家庭部署家用电池，构建起容量达 110 兆瓦的虚拟电厂（VPP），已成为该州最大的电力来源。该系统不仅在极端天气中为居民提供可靠的停电保障，还逐步替代了高污染、高成本的传统化石燃料峰值电厂，去年为客户节省了 1100 万美元。GMP 目标在 2030 年消除全州停电，并计划于 2034 年前将虚拟电厂规模扩大一倍以上，同时积极探索整合电动汽车电池（V2G）等分布式能源。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://space.bl2.net/" target="_blank" rel="noopener noreferrer">Show HN: Real-time Solar System with 526k asteroids and all tracked satellites</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49898778" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Space Now（Belle Lune 2）是一个实时太阳系及太空物体三维可视化项目，基于 CelesTrak 和 SatNOGS 数据库追踪了超过 52.7 万个太阳系天体以及约 3.5 万个人造卫星与空间碎片。数据涵盖行星、彗星、小行星、通信与导航卫星星座（如 Starlink、千帆等）以及太空碰撞和反卫星试验产生的碎片。用户可通过鼠标拖拽缩放或 WASD 键盘按键在空间中自由飞行导航，实时交互并查看各类天体的具体位置与运行轨道。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/ninjahawk/livenerf" target="_blank" rel="noopener noreferrer">Livenerf: Has Opus 5.5 been nerfed yet?</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49901736" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>livenerf 是一个开源且长期运行的确定性基准测试项目，旨在检测前沿 AI 模型（如 Claude Opus 5.5）在发布后是否会被暗中降配或性能下降。该项目基于 Inspect 评估框架，通过锁定 Claude Code CLI 版本与固定系统提示词，并从 GPQA Diamond、MMLU-Pro 等数据集中筛选题目构建测试集。它在模型发布后连续 30 天每日运行测试，通过比较准确率与输出 Token 数量的变化来统计和检测模型能力的漂移。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://tomwojcik.com/posts/2026-09-21/september-2026-the-world-today/" target="_blank" rel="noopener noreferrer">September 2026: The world today, as seen by one Polish guy</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49905487" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>本文由波兰作者Tom Wojcik撰写，从波兰视角剖析了2026年9月全球多重供应链依赖同时失效所引发的系统性叠加危机。美以对伊朗的军事行动导致霍尔木兹海峡被封锁，引发了历史性的石油与化肥供应中断，进而推高全球柴油价格并严重冲击欧洲及波兰的农作物收成与冬季供暖。文章指出各国长期以廉价外部依赖替代本地应急储备的风险现已集中爆发，不仅导致自给自足的波兰依然受制于国际粮价与能源危机，更伴随着日本央行加息等全球金融格局的剧烈动荡。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://earendil.com/posts/you-said-no-mcp/" target="_blank" rel="noopener noreferrer">You said no MCP</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49906637" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Pi 过去曾公开声明不支持 MCP，但随着 MCP 本身的演进以及现代 LLM 在工具延迟加载与动态配置等能力上的提升，团队决定将其整合至核心功能中。为解决传统 MCP 工具难以灵活组合的问题，Pi 引入了运行于 harness 端的 Codemode 沙盒，允许 Agent 使用 JavaScript 动态编排并组合工具调用，从而避免浪费上下文。此项更新不仅提升了与 Jev 等工具的协同效率，也体现了 Pi 团队希望积极参与并推动 MCP 生态发展的意图。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/" target="_blank" rel="noopener noreferrer">Gemini 4 Argon</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49913571" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>谷歌宣布推出新一代前沿模型 Gemini 4 Argon，专为真实软件工程、企业知识工作（如法律与金融）及网络安全防御等复杂长流程工作流设计，其输出 token 上限大幅提升至 100 万。该模型在 DeepSWE v1.1、AutomationBench 和 CWE-bench v1 等多项评测中表现卓越，并在谷歌内部被用于量子算法优化、数据中心内存节省及 C/C++ 到 Rust 的大规模代码迁移。Argon 初始定价为每百万输入 token 2 美元、输出 token 10 美元，目前优先面向受信任的安全团队开放体验，在持续强化防滥用与防提示词注入等安全防护后将推广至广大开发者与企业用户。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-10-01 00:00 | <a href="./2026-09-30.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-09-29.html">Daily Hacker News for 2026-09-29</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on September 29, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://twitter.com/AliAbunimah/status/2103890594137309425" target="_blank" rel="noopener noreferrer">Updated Google Maps shows destruction of the city of Rafah</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49879645" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Ali Abunimah 在社交平台 X 上发帖指出，更新后的 Google Maps 卫星图像展示了加沙地带拉法（Rafah）地区遭到破坏的景象。该帖子引发了网民的关注与讨论，有评论注意到地图上仍保留着学校等设施图标。此外还有网友对比了 Apple Maps 的显示效果，认为相关画面具有反乌托邦色彩。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.thisamericanlife.org/897/transcript" target="_blank" rel="noopener noreferrer">Kids turned low-traffic NPR Spotify comments into a secret group chat</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49879697" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>NPR播客《Wild Card》在Spotify的评论区出现大量短小怪异的留言，制片人Dave最初误以为是机器人发言而予以删除举报。年轻员工Hannah通过自身成长经历识别出，这是社交媒体权限受限的初中生将冷门播客评论区当作秘密群聊的互动行为。14岁受访者Ella证实，青少年通过创建名为“来这聊天”等歌单互相引导，专门挑选人少评论少的NPR节目作为私人交流阵地。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://calnewport.com/its-time-to-investigate-the-ai-labs/" target="_blank" rel="noopener noreferrer">It&#39;s Time to Investigate the AI Labs</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49883471" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者 Cal Newport 指出 OpenAI 和 Anthropic 等前沿 AI 实验室近期通过宣扬末日论、炒作模型危害及推动监管限制对手等方式试图主导公众对 AI 的认知。为此，作者在《纽约时报》发文呼吁美国国会展开公开调查，重点厘清其具体实验项目、内部安全审查流程以及末日未来主义思想对决策的影响。他强调不能再任由少数私营公司掌控 AI 的发展走向，国会应查明自主 Agent 违规攻击等事件背后的真实情况。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/firelex/jeff" target="_blank" rel="noopener noreferrer">Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49883844" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Jeff 是基于 Qwen3.5 和 Gemma 4 微调的轻量级零样本决策模型（0.8B 与 2B 参数），与 Jev 请求格式兼容，能在本地硬件上通过单次前向传播在约 20–30 毫秒内输出高校准度的选项概率预测。该项目完全基于本地 GPU 和开源模型生成的合成数据训练，适用于客服路由、意图识别及游戏决策等场景，且支持通过简短微调大幅提升特定任务准确率。v1.1 版本将最大选项支持数量扩展至 254 个，使 0.8B 模型在长列表测试中的准确率从 40% 提升至 95%。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.derekthompson.org/p/the-death-of-the-american-host" target="_blank" rel="noopener noreferrer">Everybody’s home. No one’s coming over</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49891295" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>过去半个世纪以来，美国家庭招待与社交聚会呈断崖式下跌，每月在家招待亲友的成人比例从1975年的42%骤降至12%。作者 Derek Thompson 指出，双职工家庭普及导致的社交筹备精力匮乏、家长对子女育儿时间的激增以及成年人亲密友人减少是关键诱因。同时，个人化屏幕娱乐的极度丰富使独自居家变得无比舒适便利，技术在提升休闲效率的同时，也挤占了实体社交空间，使家庭招待习惯逐渐消亡。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.theguardian.com/technology/2026/sep/29/trial-live-facial-recognition-cameras-london-stations-false-positive" target="_blank" rel="noopener noreferrer">500k facial scans at UK stations yield no arrests, 1 false positive</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49891480" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>英国交通警察局（BTP）在伦敦繁忙车站进行了为期六个月的实时人脸识别（LFR）技术试点，累计扫描超50万张人脸，耗资逾32万英镑并投入近百小时警力，但仅产生一次人脸比对警告且确认为误报，未直接促成任何逮捕。尽管试点因高昂成本与零直接战果遭到民权团体及专家对隐私侵犯与比例原则的质疑，BTP仍宣布将试点延长四个月并扩展至伦敦地铁，同时强调在部署期间警方曾做出多起关联逮捕。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://spectrum.ieee.org/delhi-electricity-loss" target="_blank" rel="noopener noreferrer">How Delhi cut electricity loss from 50 to 5 percent</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49892245" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>本文介绍了印度德里在过去二十余年间如何将电力损耗从2002年的50%以上降至5%~6%，并将电网可靠性提升至99.9%以上。2000年代初，德里电网因设备老化、无功功率过大引发严重热损耗，加之窃电猖獗、人工计费漏洞百出及管理缺乏问责制，导致供应电力中超过一半被浪费或盗取。随后通过《2003年电力法案》推动发输配分立与私有化改革，结合电网升级、地下电缆铺设及计量改进，成功将德里电网打造为可供其他国家借鉴的现代化系统。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.eff.org/deeplinks/2026/09/draftkings-using-ai-supercharge-harms-online-behavioral-advertising" target="_blank" rel="noopener noreferrer">DraftKings Is Using AI to Behaviorally Target Chronic Gamblers</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49896050" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>在线体育博彩公司DraftKings利用用户的下注记录训练机器学习模型，专门识别并精准推送广告诱导易亏损的赌客及“问题赌客”重新投注以牟利。电子前哨基金会（EFF）指出，AI技术显著加剧了在线行为广告的危害，且由于该行为仅依赖第一方数据，仅限制第三方数据共享不足以解决问题。EFF据此呼吁政策制定者全面禁止在线行为广告，从根本上削弱企业过度收集与滥用个人数据的动力。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://openai.com/index/introducing-gpt-6-1-sol/" target="_blank" rel="noopener noreferrer">GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49896586" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>OpenAI 推出新模型 GPT-6.1 Sol，其标准 API 输入/输出 Token 价格仅为 GPT-6 Astra 的五分之一，在智能编程、计算机使用及专业工作流等任务中的性能已逼近 Astra。该模型在 DeepSWE 代码评估中媲美 Astra，在复杂文档解析与业务自动化测试中超越 Opus 5.5，并在科学研究及事实准确率上较 GPT-6 Sol 明显提升。GPT-6.1 Sol 同时增强了安全约束与透明度，目前已在 ChatGPT Work、Codex 和 API 开放使用，未来还将推出提速最高 8 倍的 Ultrafast 版本。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://openai.com/index/introducing-dots/" target="_blank" rel="noopener noreferrer">Dots: Always-on agents</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49896604" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>OpenAI 推出由 GPT-6 Astra 驱动的全天候 AI 助手“Dots”，内置独立云端计算环境并支持连接超过 4000 个应用，可在 ChatGPT、Slack 和 Teams 等平台跨渠道保持上下文连贯并自主推进复杂项目。Dots 能在后台进行只读式的“主动研究”与自动化协作，具备严密的安全隐私隔离机制，敏感操作需用户手动审批。此外，OpenAI 还推出了面向企业专职岗位的 Specialist Dots 并与微软 Agent 365 整合，目前已开始向 Pro 及 Business Premium 等订阅用户推出。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-09-30 00:00 | <a href="./2026-09-29.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-09-28.html">Daily Hacker News for 2026-09-28</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on September 28, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://fireworks.ai/blog/ember-1" target="_blank" rel="noopener noreferrer">Ember-1</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49868830" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Fireworks Research 推出基于 Kimi K3 的专用模型 Ember-1，旨在保留 K3 高质量推理与编程能力的同时降低使用成本。该模型通过新型训练算法精简冗余推理过程，可在 Agent 及多轮对话等复杂工作负载中减少 35%–50% 的推理 Token 消耗。在 Bedside Bench 等公共基准测试、Fireworks 内部部署以及客户生产环境 Live A/B 测试中，Ember-1 均在保持同等回答质量的前提下显著提升了成本效益。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://david.alvarezrosa.com/posts/self-hosting-on-the-dark-web/" target="_blank" rel="noopener noreferrer">Self-Hosting on the Dark Web</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49870295" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者 David Álvarez Rosa 分享了将其个人静态博客作为 Tor 隐藏服务（.onion 地址）部署在暗网上的具体实践。配置过程包括修改 Tor 配置文件指定专用目录与端口映射，并设置 Nginx 服务器块监听本地 8080 端口以提供服务。为防止静态站点链接指向明网域名，作者使用 Hugo 为 .onion 域名单独构建副本，并通过 GitHub Actions 和 rsync 实现了双网版本的自动打包与同步部署。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://colo.to/nvidia-stock-narrative.html" target="_blank" rel="noopener noreferrer">Owed a billion dollars in Nvidia stock</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49872723" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>1993年担任英伟达（NVIDIA）早期技术顾问的 Eric Gullichsen，于2024年查阅旧文件时发现其期权合同原本规定为一年内完全归属，而非公司在1996年执行的四年归属。若按原合同计算，历经多次拆股后他少获得的期权现相当于450万股股票，价值约10亿美元。虽然英伟达未否认合同真实性，但由于时隔30年已远超诉讼时效，作者与律师评估后最终放弃诉讼维权。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://thecivilian.co.nz/2026/09/27/ai-companies-in-fierce-arms-race-to-demonstrate-their-model-is-the-most-existentially-threatening-to-humanity/" target="_blank" rel="noopener noreferrer">AI companies in race to demonstrate their model most threatening to humanity</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49875148" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>随着对人工智能毁灭人类风险的担忧日益增加，OpenAI 和 Anthropic 等 AI 巨头正掀起一场新的营销竞赛，竞相向客户证明自家模型最具毁灭人类的能力。这些公司通过吹嘘 AI 智能体自主入侵 Hugging Face 及澳大利亚医保数据库、甚至散布极端危险警告等“威胁演示”来吸引消费者。不过专家表示，这类末日场景距离现实依然遥远，在很长一段时间内，人类自身仍是毁灭自己的最大可能性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://blog.alexewerlof.com/p/coding-is-not-solved" target="_blank" rel="noopener noreferrer">Coding Is Not Solved</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49877988" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>本文反驳了“AI已彻底解决编程”的流行观点，指出代码编写只是达成理解的副产品，软件的主要成本在于维护、安全性与可靠性等非功能需求。作者强调在医疗、金融等低风险容忍度领域必须具备责任制，而AI无法被问责且存在逻辑局限，因此开发者不能放弃对代码的理解与掌控。盲目推崇AI生成代码会导致服务质量下降，开发者应警惕过度依赖AI带来的技能退化，注重建立深层知识体系以维持长期竞争力。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.reuters.com/technology/mongodb-ceo-desai-steps-down-lead-metas-enterprise-platform-2026-09-28/" target="_blank" rel="noopener noreferrer">MongoDB CEO resigns to join Meta</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49879000" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>MongoDB 总裁兼 CEO Chirantan &quot;CJ&quot; Desai 离职并加盟 Meta，出任新设立的首席企业平台官（Chief Enterprise Platform Officer），直接向扎克伯格汇报以拓展企业级 AI 业务。MongoDB 董事会已指定前 CEO Dev Ittycheria 重新担任临时 CEO，并启动新任 CEO 的遴选工作。尽管高层人事变动引发市场波动，MongoDB 官方仍重申了第三季度及全年的财务预期。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://mubi.com/en/notebook/posts/pirating-the-pirates" target="_blank" rel="noopener noreferrer">Pirating the Pirates</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49880036" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章探讨了电影官方“修复”与导演修订（如《黄金三镖客》《星球大战》）往往导致原始影院剪辑和音轨失真的问题。面对商业厂牌受制于版权、预算及导演个人意愿的困境，民间影迷与非官方团队通过胶片扫描、音轨缝合（Remux）及民间重建项目（如 Project 4K77）自发开展电影保存。这种不受商业与法律约束的影迷网络填补了官方发行的缺陷，为影史保留了忠于历史原貌的经典电影遗产。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.ssp.sh/brain/the-problem-is-not-the-ai-code-but-nobody-knows-anything-anymore/" target="_blank" rel="noopener noreferrer">The problem is not AI code, but not knowing about system architecture or intent</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49880312" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>本文探讨了AI生成代码时代面临的核心挑战，指出真正的危机不在于AI代码质量本身，而在于开发团队过度依赖AI工具，导致无人再关注系统架构与设计意图。在管理层盲目追求交付速度的压力下，工程师往往未经审查便直接发布AI生成的代码，削弱了团队的思考与解决问题能力。作者强调软件可维护性依然是最终考验，虽然AI极大地降低了生成代码的门槛，但架构思维、产品品味与人类的主导编排作用依然不可替代。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://definitelynotwindows.com/" target="_blank" rel="noopener noreferrer">Windows 11½</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49881747" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Windows 11½（Definitely Not Windows）是一个独立非官方的交互式恶搞项目，旨在幽默讽刺现代软件中的订阅模式、广告嵌入、AI功能、强制更新以及存储空间提示等现象。该网站并非微软官方产品，不会索取或收集用户的密码、信用卡等个人凭据，页面中安装应用、购买订阅和触发更新等按钮操作均为虚构的娱乐效果。此外，网站还包含了由 Clippy 管理的匿名访客计数器，仅通过浏览器存储的随机 ID 记录访问序号，无需收集任何个人身份或指纹信息。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.anthropic.com/claude-sonnet-5-5" target="_blank" rel="noopener noreferrer">Sonnet 5.5</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49881850" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Anthropic 推出 Claude Sonnet 5.5 模型，相比 Sonnet 5 生成速度提升 30% 以上，单任务成本最高可降低 30%。该模型作为 Opus 5.5 的高效低成本补充，擅长明确的日常任务、代码修复及设计文档制作，在 Terminal-Bench 4.0 等 Agentic Coding 及知识工作评估中取得显著性能跃升。此外，它是首个配备网络安全防护与反蒸馏机制的 Sonnet 模型，目前已在 Claude 平台及各大主流云服务平台全面上线。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-09-29 00:00 | <a href="./2026-09-28.html">Permanent link</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
