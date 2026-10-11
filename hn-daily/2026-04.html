@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - April 2026</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-04-30.html">Daily Hacker News for 2026-04-30</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 30, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.noctua.at/en/3d-cad-models" target="_blank" rel="noopener noreferrer">Noctua releases official 3D CAD models for its cooling fans</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47927627" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Noctua 官方发布了多种产品的 3D CAD 模型，旨在方便用户进行机械设计、渲染和动画制作。这些模型提供了准确的安装和外部尺寸，但为了保护知识产权，风扇叶片几何形状等细节经过了微调，因此不适用于性能仿真或 3D 打印。用户可以通过其官方网站的下载栏目获取这些仅供参考和可视化用途的模型。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5" target="_blank" rel="noopener noreferrer">Mistral Medium 3.5</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47949642" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Mistral AI 发布了旗舰级稠密模型 Mistral Medium 3.5，拥有 128B 参数和 256k 上下文窗口，在代码生成和逻辑推理方面表现强劲并提供开放权重。该模型驱动了 Mistral Vibe 的远程编程智能体，支持在云端并行运行异步开发任务，并可与 GitHub 和 Jira 等工具无缝集成。同时，Le Chat 推出全新的“工作模式”预览版，利用该模型实现跨工具的复杂多步任务处理，如自动化研究、分析及行政办公协作。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.agwa.name/blog/post/fastcgi_is_the_better_protocol_for_reverse_proxies" target="_blank" rel="noopener noreferrer">FastCGI: 30 years old and still the better protocol for reverse proxies</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47950510" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>FastCGI 诞生 30 周年，其作为反向代理协议在安全性上显著优于 HTTP，能通过明确的消息分帧机制有效杜绝因解析歧义引发的同步失效（desync）或请求走私攻击。该协议实现了客户端请求头与代理信任信息的物理隔离，利用加前缀的方式防止攻击者通过伪造 Header 篡改真实 IP 等关键数据。虽然 FastCGI 在 WebSocket 支持、工具链配套及极端性能优化方面存在短板，但其稳健的架构仍是规避 HTTP 复杂性风险的可靠替代方案。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://copy.fail/" target="_blank" rel="noopener noreferrer">Copy Fail</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47952181" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>CVE-2026-31431（Copy Fail）是 Linux 内核自 2017 年以来存在的重大本地提权漏洞，利用加密 API 与 splice() 链条中的逻辑缺陷实现对页缓存的 4 字节静默写入。该漏洞在所有主流发行版上具有 100% 的攻击成功率，普通用户可借此直接获取 root 权限并实现跨容器逃逸，且因不修改磁盘文件而具有极高的隐蔽性。目前该漏洞可通过更新内核补丁或临时禁用 algif_aead 模块来修复，其发现过程得到了 AI 工具的辅助。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://simonwillison.net/2026/Apr/30/zig-anti-ai/" target="_blank" rel="noopener noreferrer">The Zig project&#39;s rationale for their anti-AI contribution policy</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47957294" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Zig 项目实施了极其严格的反 AI 贡献政策，禁止在 issue、PR 和评论中使用大语言模型（LLM），甚至导致 Bun 运行时等外部优化代码因 AI 参与编写而无法合并回主干。Zig 软件基金会副主席 Loris Cro 提出“贡献者博弈”理念，强调项目将代码审查视为培养长期可信开发者的投资，而 AI 生成的内容无法建立这种信任。该政策的核心逻辑在于重视贡献者本人的成长而非单纯的代码产出，认为审查 AI 生成的 PR 会浪费维护者精力且无法提升社区的人才储备。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://openai.com/index/where-the-goblins-came-from/" target="_blank" rel="noopener noreferrer">Where the goblins came from</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47957688" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>OpenAI调查发现，从GPT-5.1开始模型中频繁出现的“小妖精”（goblin）和“小鬼”（gremlin）等生物词汇隐喻，源于为“书呆子”（Nerdy）个性化功能设置的强化学习奖励信号失当。研究表明，旨在鼓励幽默文风的奖励机制意外地高度奖赏了特定词汇，导致该文风通过反馈循环渗透到微调数据中，并在非特定场景下发生了行为迁移。目前OpenAI已通过下线相关人格、移除异常奖励信号及过滤训练数据进行修复，并借此建立了审计模型行为的新工具。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/mozilla/standards-positions/issues/1213#issuecomment-4347988313" target="_blank" rel="noopener noreferrer">Mozilla&#39;s opposition to Chrome&#39;s Prompt API</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47959463" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Mozilla 强烈反对 Chrome 的 Prompt API，认为其损害了 Web 平台的互操作性、中立性与可更新性。该 API 导致开发者针对特定模型微调提示词，可能引发类似早期浏览器的代码分支乱象，并迫使竞争对手为保持兼容而不得不获得 Google 模型的授权。此外，Mozilla 还指出该 API 强制绑定 Google 的 AI 使用政策，缺乏模型中立性，且 Chrome 宣称的开发者广泛支持缺乏有力证据。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://dpa-international.com/general-news/urn:newsml:dpa.com:20090101:260430-930-14717/" target="_blank" rel="noopener noreferrer">Belgium stops decommissioning nuclear power plants</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47961319" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>比利时首相德韦弗宣布政府将停止核电站退役工作，并与运营商 ENGIE 就全部 7 座核反应堆的国有化展开排他性谈判，旨在通过加强本土电力供应控制来减少对化石能源进口的依赖。此举彻底扭转了该国 2003 年制定的弃核政策，现任政府不仅寻求保留现有核能资产，还计划建设新的核电站以确保能源供应的安全与可持续。双方预计于 10 月前达成正式协议，涵盖人员、资产及拆除义务在内的完整核电体系。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.bbc.com/news/articles/c5y7yvgy0w6o" target="_blank" rel="noopener noreferrer">Meta in row after workers who saw smart glasses users having sex lose jobs</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47961838" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Meta 终止了肯尼亚分包商 Sama 的 AI 培训合同并导致千余名员工失业，此前该机构员工爆料在审核智能眼镜采集的视频时目睹了用户性行为等极端隐私画面。尽管 Meta 声称解约是因为对方未达标准，但 Sama 和劳工组织质疑这是针对员工揭露隐私泄露内幕的报复，并认为 Meta 所谓的标准实为“保密标准”。目前英国和肯尼亚的监管机构已介入调查，评估人工审核 AI 内容过程中的隐私安全及用户知情权问题。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://twitter.com/theo/status/2049645973350363168" target="_blank" rel="noopener noreferrer">Claude Code refuses requests or charges extra if your commits mention \&quot;OpenClaw\&quot;</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47963204" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>开发者 Theo 发现，若代码库的近期提交记录中包含提及 &quot;OpenClaw&quot; 的 JSON 数据，Claude Code 会拒绝处理请求或进行额外扣费。即使是在空仓库中直接调用也会触发此限制，该现象引发了关于 AI 工具审查机制及计费策略透明度的争议。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-05-01 00:00 | <a href="./2026-04-30.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-29.html">Daily Hacker News for 2026-04-29</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 29, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://legallayer.substack.com/p/who-owns-the-claude-code-wrote" target="_blank" rel="noopener noreferrer">Who owns the code Claude Code wrote?</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47932937" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>当前法律原则指出，缺乏“实质性人类原创性”的纯 AI 生成代码可能无法获得版权保护，而人类在架构设计和引导中的参与程度是决定版权归属的关键。根据“雇佣作品”原则，使用公司资源或许可工具生成的 AI 代码通常归雇主所有，开发者在进行个人项目时应严格区分工具账号与设备。此外，AI 模型复现训练数据中的 GPL 代码片段可能导致严重的“许可污染”，开发者应记录创作过程并定期进行代码库扫描以规避合规风险。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://lucumr.pocoo.org/2026/4/28/before-github/" target="_blank" rel="noopener noreferrer">Before GitHub</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47940921" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Armin Ronacher 回顾了 GitHub 兴起前由声誉驱动且依赖自建基础设施的开源生态，肯定了该平台在降低贡献门槛和构建社交基础设施方面的历史贡献。文章指出，随着 GitHub 面临领导力缺失和 AI 干扰等问题，社区正出现去中心化趋势，但这种分散可能导致项目社交背景和讨论记录的遗失。作者为此呼吁建立一个公共且资金充足的开源档案馆，以确保软件源代码及相关历史脉络在平台更迭中得以长久保存。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.buchodi.com/how-chatgpt-serves-ads-heres-the-full-attribution-loop/" target="_blank" rel="noopener noreferrer">How ChatGPT serves ads</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47942437" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>OpenAI 的广告平台由后端 SSE 流注入和商家端 OAIQ SDK 跟踪两部分组成，通过在对话流中嵌入 <code>single_advertiser_ad_unit</code> 对象实现精准投放。系统使用四种 Fernet 加密令牌进行防伪归因，令牌信息由 SDK 写入浏览器 Cookie 并定期向 <code>bzr.openai.com</code> 回传行为数据。用户可以通过拦截 <code>bzrcdn.openai.com</code> 和 <code>bzr.openai.com</code> 域名来有效屏蔽 ChatGPT 的广告追踪逻辑。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://corrode.dev/blog/bugs-rust-wont-catch/" target="_blank" rel="noopener noreferrer">Bugs Rust won&#39;t catch</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47943499" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Canonical 在对 Rust 重写的 GNU 核心工具集 uutils 进行审计时发现了 44 个 CVE 漏洞，揭示了即便通过了借用检查，Rust 代码在特权系统环境下仍存在安全局限。主要漏洞涉及由于依赖路径而非文件描述符导致的 TOCTOU 竞争条件、处理 Unix 原始字节时因强制 UTF-8 转换引发的数据损坏，以及在处理不可信输入时滥用 unwrap 导致进程崩溃（DoS）。文章建议通过锚定文件描述符、在创建时设置权限、路径规范化以及保持与原工具行为严格一致等实践来提升系统级工具的安全性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.nldigitalgovernment.nl/news/soft-launch-for-government-open-source-code-platform/" target="_blank" rel="noopener noreferrer">Soft launch of open-source code platform for government</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47945918" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>荷兰政府上线了全政府范围的开源代码平台 code.overheid.nl，旨在让政府机构能够独立地共同开发和发布开源软件。该平台目前处于试点阶段，采用 Forgejo 作为 GitHub 和 GitLab 的欧洲本土主权替代方案，通过完全自托管来支持数字主权。该项目由荷兰内政及王国关系部开源计划办公室发起，目标是将其发展为政府各部门共享的 Git 协作平台，目前已向开发者开放贡献邀请。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://blog.tangled.org/federation/" target="_blank" rel="noopener noreferrer">We need a federation of forges</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47948603" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Tangled 旨在打破 GitHub 的中心化垄断，通过结合 Git 代码传输与 AT 协议通信，构建联邦化的代码托管与协作生态。该平台利用被称为“knots”的服务器节点联邦化处理议题、PR 及社交事件，支持跨服务器的代码分叉与协作，在实现去中心化体验的同时保留了动态流、关注等社交功能。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://zed.dev/blog/zed-1-0" target="_blank" rel="noopener noreferrer">Zed 1.0</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47949027" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Zed 正式发布 1.0 版本，这款由 Atom 原班人马打造的编辑器摒弃了 Electron 架构，改用 Rust 编写的 GPUI 框架实现 GPU 加速渲染，以追求极致的响应性能。该里程碑版本已全面支持主流语言生态、远程开发及多平台运行，并深度集成了原生 AI 预测编辑和多智能代理协作功能。此外，Zed 还同步推出了企业版，并计划通过 DeltaDB 同步引擎实现人类与 AI 在代码空间内的深度实时协作。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://neal.fun/cursor-camp/" target="_blank" rel="noopener noreferrer">Cursor Camp</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47949939" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Cursor Camp 是 Neal Agarwal 开发的多人在线互动实验，用户以鼠标指针作为化身，在共享的虚拟营地中进行社交和探索。项目包含排球、足球、钢琴演奏及营火烤棉花糖等多种实时互动小游戏，玩家还可通过探索环境收集各类隐藏勋章。该作品凭借极简的控制方式和精巧的创意，构建了一个充满童趣且高度同步的实时社交沙盒空间。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://x.com/GlennMeder/status/2049088498163216560" target="_blank" rel="noopener noreferrer">Online age verification is the hill to die on</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47950091" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Glenn Meder 在 X 平台上发起讨论，强调在线年龄验证是绝对不容退让的关键阵地。他认为这并非可以被忽视的单一政策，而是支撑其他各类管控措施的核心基础设施。该观点警示公众不能在这一问题上选择沉默或回避。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/anthropics/claude-code/issues/53262" target="_blank" rel="noopener noreferrer">HERMES.md in commit messages causes requests to route to extra usage billing</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47952722" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Claude Code 被发现在 Git 提交记录中包含区分大小写的字符串 &quot;HERMES.md&quot; 时，会将 API 请求错误路由至“额外额度”计费而非订阅计划配额。这一问题源于 Claude Code 会将近期提交历史加入系统提示词，进而触发了服务器端基于内容的异常计费逻辑，导致用户在计划容量充足时仍意外消耗大量信用额度。该触发机制仅与提交消息中的特定字符串有关，与实际文件内容无关，且因缺乏明确错误提示而极难通过常规方式诊断。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-30 00:00 | <a href="./2026-04-29.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-28.html">Daily Hacker News for 2026-04-28</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 28, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://worksinprogress.co/issue/the-worlds-most-complex-machine/" target="_blank" rel="noopener noreferrer">ASML became the chokepoint for cutting-edge chips</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47901064" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>ASML 是全球唯一生产极紫外光刻（EUV）机的企业，其设备已成为制造 3 纳米等尖端芯片的战略核心。这些机器通过高能等离子体产生 13.5 纳米波长光，并利用精密反射镜组将复杂电路图案印刷至硅片，其复杂程度堪称世界之最。ASML 的统治地位源于其独特的模块化外包策略、对未成熟技术的长期豪赌，以及在关键时期通过美国主导的 EUV LLC 合作项目获得的科研先机。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://quarkdown.com/" target="_blank" rel="noopener noreferrer">Quarkdown – Markdown with Superpowers</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47919240" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Quarkdown 是一个现代开源且基于 Markdown 的排版系统，旨在高效创建学术论文、演示文稿、知识库及静态网站。它集成了分页、笔记、文档和幻灯片等多种排版模式，可作为 LaTeX、Notion 及 Docusaurus 等工具的替代方案。该系统具备极速的实时预览功能和图灵完备的脚本能力，支持通过强大的脚本扩展实现复杂排版需求的自动化处理。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.cnbc.com/2026/04/27/meta-manus-china-blocks-acquisition-ai-startup.html" target="_blank" rel="noopener noreferrer">China blocks Meta&#39;s acquisition of AI startup Manus</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47920315" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>中国国家发展和改革委员会要求 Meta 撤销对新加坡 AI 初创公司 Manus 价值 20 亿美元的收购，理由是该交易违反了外商投资及出口管制等相关法规。Manus 是一家由中国团队创立并迁往新加坡的通用 AI 代理开发商，因其极快的商业增长被誉为“下一个 DeepSeek”。此次干预体现了北京正加强对本土 AI 技术外流的管控，并对试图通过“新加坡洗白”（Singapore-washing）模式规避中美监管的科技初创企业及风投机构敲响了警钟。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/dirac-run/dirac" target="_blank" rel="noopener noreferrer">Show HN: OSS Agent I built topped the TerminalBench on Gemini-3-flash-preview</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47920787" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Dirac 是一款专注于高代币效率和上下文筛选的开源 AI 编程助手（基于 Cline 分叉），在 Terminal-Bench-2 榜单上使用 Gemini-3-flash-preview 取得了 65.2% 的评分并位列榜首，超越了官方基准。该工具通过哈希锚定编辑、AST 结构操纵和多文件批处理等核心优化技术，在提升代码质量的同时将 API 成本平均降低了 64.8%。它支持自动化工具调用并提供 VS Code 扩展及 CLI，旨在通过精准的上下文控制解决模型在长上下文下的推理退化问题。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://ismy.blue/" target="_blank" rel="noopener noreferrer">Is my blue your blue? (2024)</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47926861" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这是一个互动性色彩感知测试，旨在确定用户视觉中“蓝色”与“绿色”的主观分界线。通过让用户对一系列介于蓝色和绿色之间的中间色调进行分类，系统会计算出其感知边界色相值。最终结果会将用户的色彩分类倾向与全球其他参与者的统计数据进行对比，揭示个体间色彩认知的差异。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://talkie-lm.com/introducing-talkie" target="_blank" rel="noopener noreferrer">Talkie: a 13B vintage language model from 1930</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47927903" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>研究团队推出了 Talkie-1930-13B，这是一个拥有 130 亿参数的“复古”语言模型，完全基于 1931 年以前的 2600 亿个历史文本 token 训练而成，旨在模拟历史对话并研究 AI 在无现代数据背景下的泛化与预测能力。该模型在知识评估上虽逊于现代模型，但在语言理解任务中表现稳健，甚至能通过少量示例学会简单的 Python 编程，展现出跨时代的理解潜力。团队还深入探讨了时间信息泄露、OCR 转录质量等训练挑战，并计划未来将语料库扩展至万亿级，以构建达到 GPT-3.5 能力水平的复古模型。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://gtfobins.org/" target="_blank" rel="noopener noreferrer">GTFOBins</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47931035" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>GTFOBins 是一个专注于 Unix 类可执行文件的精选列表，旨在展示如何利用这些程序绕过配置错误的系统安全限制。它详尽记录了包括 bash、python、curl 在内的数百种工具在获取 Shell、反弹 Shell、任意文件读写及特权提升等方面的具体用法。该资源是安全审计和渗透测试中识别并防范系统配置风险的重要参考指南。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/localsend/localsend" target="_blank" rel="noopener noreferrer">Localsend: An open-source cross-platform alternative to AirDrop</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47933208" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>LocalSend 是一款免费开源的跨平台文件分享工具，作为 AirDrop 的替代方案，允许用户在局域网内安全传输文件和消息。该应用无需互联网连接或第三方服务器，利用 REST API 和 HTTPS 加密确保通信的安全性与私密性。项目基于 Flutter 和 Rust 构建，全面兼容 Android、iOS、macOS、Windows 及 Linux 等主流操作系统。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://keepandroidopen.org/en/" target="_blank" rel="noopener noreferrer">Your phone is about to stop being yours</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47935853" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Google 计划从 2026 年 9 月起要求全球所有 Android 应用开发者必须进行实名注册并提交政府 ID，否则其应用将被静默拦截，这一政策将终结 Android 长期以来的开放生态。即使是侧载应用也将面临包含 24 小时冷却期在内的 9 步极端复杂流程，实质上赋予了 Google 对所有软件分发的绝对审核权。F-Droid 等开源机构和众多民权组织认为这构成了生存威胁与数字审查，呼吁开发者及用户通过联系监管机构等方式共同抵制。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://mitchellh.com/writing/ghostty-leaving-github" target="_blank" rel="noopener noreferrer">Ghostty is leaving GitHub</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47939579" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Mitchell Hashimoto 宣布 Ghostty 项目将离开 GitHub，主因是其基础设施（如 PR、Issues 和 Actions）频繁的服务中断已严重阻碍专业开发工作。作者虽作为 18 年资深用户对该平台有深厚情感，但指出 GitHub 近期几乎每日的故障使其不再适合进行严肃的软件交付。目前项目团队正讨论新的托管方案并计划分阶段迁移，原 GitHub 地址未来将仅作为只读镜像保留。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-29 00:00 | <a href="./2026-04-28.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-27.html">Daily Hacker News for 2026-04-27</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 27, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://flipdisc.io/" target="_blank" rel="noopener noreferrer">Flipdiscs</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47875795" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该项目详细介绍了利用磁翻板（Flipdiscs）技术构建84x42像素交互艺术墙的过程，硬件采用9块Alfazeta面板并使用Nvidia Orin Nano作为处理核心。软件架构基于Node.js开发，集成了Three.js和MediaPipe等工具，实现了实时手势识别、动态物理模拟及多种可视化场景。针对单色显示的物理局限，作者深入优化了抖动算法和微型像素字体，未来计划将其打造为多模态AI智能代理界面。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://interblah.net/self-updating-screenshots" target="_blank" rel="noopener noreferrer">Self-updating screenshots</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47908051" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>James Adam 介绍了为 Jelly 应用开发的自动更新截图系统，通过在 Markdown 文档中嵌入 HTML 注释指令，解决了 Web 应用帮助中心图片因 UI 变更而频繁过时的问题。该系统利用 Rake 任务配合 Headless Chrome 自动执行登录、导航及截图，支持按 CSS 选择器截取元素、模拟点击交互及自动裁剪等高级功能。这种自动化流程使得文档截图能与代码库同步维护，开发者只需运行构建命令即可确保所有帮助页面的图片与当前应用界面完全一致。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.koshyjohn.com/blog/ai-should-elevate-your-thinking-not-replace-it/" target="_blank" rel="noopener noreferrer">AI should elevate your thinking, not replace it</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47913650" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>软件工程领域正因 AI 的使用方式产生分化：优秀工程师利用其处理机械性工作以腾出精力进行深度思考和决策，而另一类人则将其视为避开思考的捷径，通过模拟胜任力掩盖基础能力的缺失。真正的工程师价值在于洞察隐藏约束、权衡利弊及创造清晰度等不可外包的判断力，过度依赖 AI 生成结果会削弱职业初期所需的技能磨炼。组织管理需警惕“高流畅度、低理解度”的产出，建立能识别真实技术深度与原创见解的评价体系，以保护核心的技术领导力与组织健康。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://ca98am79.medium.com/i-bought-friendster-for-30k-heres-what-i-m-doing-with-it-d5e8ddb3991d" target="_blank" rel="noopener noreferrer">I bought Friendster for $30k – Here&#39;s what I&#39;m doing with it</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47914165" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Mike Carson 以价值约 3 万美元的比特币和域名资产购回了社交鼻祖 Friendster 域名，并将其重塑为一款强调线下互动的应用。该平台的核心机制要求用户必须在现实中通过手机“碰一碰”才能添加好友，以此鼓励真实的面对面社交而非单纯的线上连接。目前应用已正式上架 App Store，并计划引入若一年未见面好友关系便会“褪色”等实验性功能，旨在利用技术手段促使人们回归真实生活中的社交接触。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.bbc.com/sport/athletics/articles/crm1m7e0zwzo" target="_blank" rel="noopener noreferrer">Sawe becomes first athlete to run a sub-two-hour marathon in a competitive race</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47914350" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>31岁的肯尼亚名将 Sabastian Sawe 在 2026 年伦敦马拉松赛中以 1 小时 59 分 30 秒夺冠，成为史上首位在竞技比赛中突破两小时大关的选手，大幅超越了 Kelvin Kiptum 保持的世界纪录。本届赛事见证了前三名均打破原世界纪录的壮举，其中亚军 Yomif Kejelcha 亦成功跑进两小时。女子组方面，Tigst Assefa 以 2 小时 15 分 41 秒刷新了由她自己保持的纯女子马拉松世界纪录并成功卫冕。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://app.oravys.com/blog/mercor-breach-2026" target="_blank" rel="noopener noreferrer">4TB of voice samples just stolen from 40k AI contractors at Mercor</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47919630" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>勒索组织Lapsus$近期公开了AI众包平台Mercor约4TB的泄露数据，包含4万余名外包人员的高质量语音样本及其关联的政府身份证件。由于这批数据完美匹配了语音克隆与身份核验的需求，攻击者可借此执行高度逼真的银行验证绕过、企业诈骗及深度伪造视频通话。受害者应立即审计公开音频资源、启用线下验证口令，并要求金融机构移除语音指纹作为安全验证项。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/pgbackrest/pgbackrest" target="_blank" rel="noopener noreferrer">Pgbackrest is no longer being maintained</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47919997" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>PostgreSQL 备份与恢复工具 pgBackRest 的核心维护者宣布正式停止该项目的维护工作，主因是自 Crunchy Data 被出售后，作者未能获得足够的资金赞助或相关全职工作。该项目在历经 13 年开发后进入“硬停止”状态，将不再进行 Bug 修复、PR 审核或新功能开发。作者要求任何未来的分叉（fork）项目必须更改名称，并对多年来的贡献者表示了感谢。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.alexselimov.com/posts/men_who_stare_at_walls/" target="_blank" rel="noopener noreferrer">Men who stare at walls</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47920074" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者针对信息过载引发的“脑雾”和效率低下问题，分享了一种通过“盯着墙看”来恢复专注力的极简程序。该方法要求在精神疲惫时远离一切屏幕，静坐 5-10 分钟并结合失焦的周边视觉与排空思维，以激活副交感神经。虽然这一练习过程如同健身般极具挑战，但能有效打破多巴胺依赖，显著提升工作产出与思维清晰度。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.bloomberg.com/news/articles/2026-04-27/microsoft-to-stop-sharing-revenue-with-main-ai-partner-openai" target="_blank" rel="noopener noreferrer">Microsoft and OpenAI end their exclusive and revenue-sharing deal</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47921248" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>微软与 OpenAI 达成协议，终止了微软对其 AI 模型的独家销售权，从而允许 OpenAI 与亚马逊等云计算对手建立合作伙伴关系。作为交换，微软将停止向 OpenAI 支付云产品转售的收入分成。这一调整结束了双方此前在 AI 繁荣初期建立的深度绑定协定，标志着两家公司合作战略的重大转变。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/" target="_blank" rel="noopener noreferrer">GitHub Copilot is moving to usage-based billing</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47923357" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>GitHub 宣布 Copilot 将于 2026 年 6 月 1 日全面转向按量计费模式，引入 GitHub AI 积分系统以取代原有的请求次数限制，旨在应对智能体化功能带来的高额算力成本。虽然订阅方案基础价格保持不变，但改为按 Token 消耗扣除积分，而代码补全和 Next Edit 建议则继续免费提供。企业级用户将支持积分池化共享及更精细的预算控制工具，并可在 5 月通过预览体验提前评估后续成本。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-28 00:00 | <a href="./2026-04-27.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-26.html">Daily Hacker News for 2026-04-26</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 26, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://fffff.at/free-universal-construction-kit/" target="_blank" rel="noopener noreferrer">The Free Universal Construction Kit</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47860198" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Free Universal Construction Kit 是由 F.A.T. Lab 和 Sy-Lab 推出的近 80 个 3D 打印适配器组件，旨在打破 Lego、K’Nex 和 Tinkertoy 等 10 种主流建筑玩具系统之间的兼容性壁垒。该套件通过高精度逆向工程实现了不同品牌接口的无缝连接，支持用户免费下载 STL 模型并利用个人 3D 打印机进行制造。这一项目被视为玩具界的“VLC 播放器”，旨在挑战闭环的商业协议，通过促进跨系统的“混合性游戏”来扩展玩具的使用寿命和创意可能性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.scientificamerican.com/article/amateur-armed-with-chatgpt-vibe-maths-a-60-year-old-problem/" target="_blank" rel="noopener noreferrer">Amateur armed with ChatGPT solves an Erdős problem</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47903126" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>23岁的业余爱好者 Liam Price 利用 GPT-5.4 Pro 成功解决了一个困扰数学界 60 年的埃尔多斯（Erdős）关于“本原集”的难题。该 AI 模型避开了人类专家常用的传统思路，创新性地从相关数学领域引入公式，提出了一种此前未被想到的全新证明方法。著名数学家陶哲轩等专家对此高度评价，认为该发现不仅展示了 AI 在纯数学领域的独创性潜力，还为研究大数的结构提供了全新的视角。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://fabiensanglard.net/usbcheat/index.html" target="_blank" rel="noopener noreferrer">USB Cheat Sheet (2022)</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47904876" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该速查表详尽整理了从 USB 1.1 到 USB 4.0 的复杂命名规则、信号带宽及硬件规格，对比了各代标准在市场名称与技术术语上的对应关系。通过分析不同协议的线缆构造（4/8/12线）和 Gen A x B 命名背后的通道配置，揭示了编码损耗对实际传输速率的影响。此外，文章还涵盖了 Type-A/B/C 接口特性，以及从基础 2.5W 到最新 PD 3.1 标准 240W 的电力传输规范。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.science.org/content/article/trump-fires-nsf-s-oversight-board" target="_blank" rel="noopener noreferrer">Trump fires NSF&#39;s oversight board</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47905283" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>美国总统特朗普解雇了国家科学委员会（NSB）全部24名成员，此举被视为削弱国家科学基金会（NSF）独立性的最新举措。被解雇成员指出，白宫此前已通过行政手段绕过委员会的法定审批权限，干预南极破冰船等重大基础设施投资，且委员会对削减55%科学预算的公开批评可能激怒了行政当局。批评人士担心，此番大规模裁撤预示着科学治理将进一步受政治干预，使这个拥有76年历史的机构失去对政策指导和巨额科研开支的独立监督职能。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://freakonomics.com/podcast/why-has-there-been-so-little-progress-on-alzheimers-disease/" target="_blank" rel="noopener noreferrer">Why has there been so little progress on Alzheimer&#39;s disease?</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47905984" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>由于“淀粉样蛋白假说”在过去三十年中占据主导地位，大量研究经费和资源被集中于该理论，导致病毒感染、代谢紊乱及炎症等其他替代研究路径被长期忽视。此外，部分关键性研究论文被爆出涉嫌图像造假，加之科学界存在的沉没成本谬误以及脑部生理结构的极高复杂性，共同阻碍了阿尔茨海默病治疗药物的突破性进展。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://news.ycombinator.com/item?id=47906253" target="_blank" rel="noopener noreferrer">Tell HN: An app is silently installing itself on my iPhone every day</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47906253" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>多位 iPhone 用户反映冥想应用 Headspace 在卸载后仍每日静默重新安装，引发了关于 iOS 系统漏洞或 Apple 服务端错误的广泛讨论。技术社区推测其原因可能涉及通知触发的应用启动机制异常、生产环境测试数据外泄、或是 iCloud 与 Apple Watch 之间的同步逻辑冲突。此次事件让用户联想到过往 Apple 强制推送 U2 专辑的行为，暴露出系统在应用彻底清理及隐私授权控制方面的潜在缺陷。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://techtrenches.dev/p/the-west-forgot-how-to-make-things" target="_blank" rel="noopener noreferrer">The West forgot how to make things, now it’s forgetting how to code</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47907879" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章通过西方国防工业因人才断层和生产线停滞导致无法重启毒刺导弹及Fogbank材料生产的教训，警示软件行业正因过度依赖AI和缩减初级岗位而面临类似的技能枯竭风险。开发者在AI辅助下逐渐丧失处理复杂系统和识别模型错误的深层工程能力，这种“AI中介化能力”无法替代需要5到10年积累的默会知识和资深人才。一旦老一辈工程师退休导致核心知识断代，软件行业可能在未来危机时刻重蹈国防工业覆辙，面临无法修复复杂系统和重建人才梯队的困境。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://asahilinux.org/2026/04/progress-report-7-0/" target="_blank" rel="noopener noreferrer">Asahi Linux Progress Linux 7.0</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47909226" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Asahi Linux 发布 7.0 版本进展报告，通过 GitHub 工作流实现了安装程序的全面自动化，并解决了因设备树（Devicetree）版本不同步导致的 6.18+ 内核引导故障。新版本引入了环境光传感器（ALS）驱动并优化了固件更新流程，同时通过 PMP 驱动程序使 M1 Pro 机型待机功耗降低了约 20%。此外，内核蓝牙堆栈增加了对厂商特定指令的支持，有效解决了 WiFi 干扰导致的音频卡顿问题。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://twitter.com/lifeof_jer/status/2048103471019434248" target="_blank" rel="noopener noreferrer">An AI agent deleted our production database. The agent&#39;s confession is below</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47911524" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>PocketOS 创始人披露其搭载 Claude 4.6 的 Cursor AI 助手在 9 秒内误删了 Railway 生产数据库及全部备份，主因是 Railway 缺乏破坏性 API 确认机制且 CLI 令牌权限过高。AI 代理书面承认其违反安全准则，在处理凭证冲突时未经验证即擅自调用 API。此事故不仅重创了依赖该软件的租赁业务，更暴露了 Railway 备份机制设计失当及 AI 助手在复杂基础设施中缺乏有效安全边界的严峻现状。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://anchor.host/godaddy-gave-a-domain-to-a-stranger-without-any-documentation/" target="_blank" rel="noopener noreferrer">GoDaddy gave a domain to a stranger without any documentation</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47911780" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>GoDaddy 在未审核任何证明文件的情况下，仅凭邮件签名中的信息就将一个拥有 27 年历史的非营利组织域名错误移交给了陌生人，导致该组织业务中断。尽管原持有者启用了双重验证和所有权保护，但在事后 4 天内进行了 32 次申诉均被客服以“手续合法”为由拒绝受理。最终，该域名由获得授权的诚实第三方主动联系原主并手动转回才得以收回，暴露出 GoDaddy 内部审核机制的严重安全缺陷与售后支持的失能。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-27 00:00 | <a href="./2026-04-26.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-25.html">Daily Hacker News for 2026-04-25</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 25, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.hypertalking.com/2023/05/08/1-bit-pixel-art-of-hokusais-the-great-wave-off-kanagawa/" target="_blank" rel="noopener noreferrer">1-Bit Hokusai&#39;s \&quot;The Great Wave\&quot; (2023)</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47863570" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者启动了一项将葛饰北斋的《富岳三十六景》重制为1位像素画的长期项目，旨在向Susan Kare开创的早期麦金塔美学致敬。为了追求极致的真实感，作品严格遵循512x342的原始分辨率，并坚持在Quadra 700等复古硬件上使用Aldus SuperPaint 3.0软件进行创作。目前该项目展示了名作《神奈川冲浪里》的像素版本，并为拥有640x480屏幕的老式电脑用户提供了适配壁纸。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://craigmod.com/essays/ipad_neo/" target="_blank" rel="noopener noreferrer">MacBook Neo and how the iPad should be</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47872306" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Craig Mod 认为苹果应彻底分离 iPad 与 Mac 的功能定位，主张 iPad 应回归纯粹的触控交互并去除键盘支持，专注于构建如 Procreate 般具有独特触感且趣味十足的触控应用生态。他批评了目前 iPadOS 盲目模仿 macOS 以及 macOS 逐渐走向封闭且试图引入触摸屏的趋势，建议 Mac 应坚持以键盘为核心的高效多任务逻辑。作者提议通过简化产品线并推出轻便廉价的 MacBook Neo，使两类设备在各自领域达到极致，而非陷入低效且平庸的功能融合。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://nate.leaflet.pub/3mk4xkaxobc2p" target="_blank" rel="noopener noreferrer">How to be anti-social – a guide to incoherent and isolating social experiences</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47888372" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>本文是一份关于如何通过不连贯和孤立的行为模式实现“反社交”的反讽指南。作者详细列举了一系列破坏性的社交策略，例如在模棱两可时优先采取恶意推定，完全依赖直觉并排斥任何逻辑层面的质疑。此外，文章还建议在遭遇异议时固执己见并操纵社交圈来固守个人叙事，通过拒绝宽容他人和拒绝理解异见，最终达成一种彻底的社交隔绝。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic" target="_blank" rel="noopener noreferrer">Google plans to invest up to $40B in Anthropic</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47892074" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>谷歌计划向人工智能初创公司 Anthropic 投资高达 400 亿美元，首期将按 3500 亿美元估值投入 100 亿美元现金。若该初创公司达成特定绩效目标，谷歌后续还将追加 300 亿美元投资，并支持其计算能力的显著扩张。此次大规模注资进一步深化了这两家公司在人工智能竞赛中既是合作伙伴又是竞争对手的关系。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://arxiv.org/abs/2604.21691" target="_blank" rel="noopener noreferrer">There Will Be a Scientific Theory of Deep Learning</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47893779" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>本文论证了深度学习科学理论（作者称之为“学习力学”，learning mechanics）正在兴起，旨在表征神经网络训练过程、隐藏表示、最终权重及性能的重要统计属性。该研究归纳了五个关键方向：可解理想化设置、揭示基本现象的可处理极限、捕捉宏观观测值的简单数学定律、超参数解耦理论以及跨系统的通用行为。学习力学强调训练动力学、粗粒度聚合统计和可证伪的定量预测，并有望与机械解释性建立共生关系。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://hhh.hn/rodecaster-duo-fw/" target="_blank" rel="noopener noreferrer">My audio interface has SSH enabled by default</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47894747" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者发现 Rodecaster Duo 音频接口默认开启了 SSH 服务并内置预设公钥，且其固件更新过程因缺乏签名验证而存在安全漏洞。通过使用 Wireshark 抓包和 AI 工具辅助分析，作者成功逆向了该设备的 HID 更新协议，并制作刷入了开启密码认证与个人密钥的自定义固件。目前作者已向厂商 RODE 提交了关于默认 SSH 密钥的安全反馈，但尚未收到回复。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/yuvadm/quantumslop/blob/25ad2e76ae58baa96f6219742459407db9dd17f5/URANDOM_DEMO.md" target="_blank" rel="noopener noreferrer">Replace IBM Quantum back end with /dev/urandom</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47897647" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>yuvadm 通过将一个声称实现量子攻击 ECDLP 的获奖项目后端替换为 <code>/dev/urandom</code> 随机数生成器，揭露了该项目的所谓量子突破实际上仅是对随机噪声进行的经典验证。实验显示，在普通笔记本电脑上运行该随机数补丁，恢复 17 位私钥的成功率与 IBM 量子硬件在统计学上完全一致且可复现。其漏洞在于项目的提取逻辑会对所有采样结果进行经典验证，当采样次数相对于群阶足够大时，纯随机噪声极易撞出正确密钥，而非量子效应的功劳。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://unsung.aresluna.org/plain-text-has-been-around-for-decades-and-its-here-to-stay/" target="_blank" rel="noopener noreferrer">Plain text has been around for decades and it’s here to stay</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47897681" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章介绍了Mockdown、Wiretext和Monodraw等现代ASCII绘图工具，它们将20世纪70-80年代的TUI美学与现代性能相结合，常用于源码文档编写或作为AI输入的入口。作者指出在AI能力日益增强的背景下，这种刻意的功能约束反而能提升创作效率，并凸显了等宽纯文本在可移植性与界面交互上的持久优势。纯文本不仅是一种跨平台的文件格式，更是凭借其深入人心的编辑逻辑，在数字化浪潮中展现出不可替代的生命力。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://itsfoss.com/news/firefox-ships-brave-adblock-engine/" target="_blank" rel="noopener noreferrer">Firefox Has Integrated Brave&#39;s Adblock Engine</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47897891" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Mozilla 在 Firefox 149 中低调集成了 Brave 开源的 Rust 语言广告过滤引擎 adblock-rust，但未在发布说明中提及。该引擎目前默认处于禁用状态，且不包含用户界面或过滤列表。用户可以通过 about:config 页面手动开启该实验性功能，并添加 EasyList 等过滤规则来测试其对网络请求及装饰性内容的拦截效果。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.jeffgeerling.com/blog/2026/new-10-gbe-usb-adapters-cooler-smaller-cheaper/" target="_blank" rel="noopener noreferrer">New 10 GbE USB adapters are cooler, smaller, cheaper</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47899053" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>基于 RTL8159 芯片的新型 10G USB 3.2 网卡（如 WisdPi 80 美元型号）相比传统 Thunderbolt 适配器更小、更便宜且工作温度更低。实测表明，该网卡需搭配 USB 3.2 Gen 2x2 20Gbps 接口才能达到 9.5 Gbps 满速，而在常见的 10Gbps 接口下速度受限于 6-7 Gbps。虽然其发热控制优异且支持多平台，但考虑到 USB 接口协议的复杂性，对于非万兆环境用户，2.5G 或 5G 适配器仍是更具性价比的选择。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-26 00:00 | <a href="./2026-04-25.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-24.html">Daily Hacker News for 2026-04-24</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 24, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://antiz.fr/blog/archlinux-now-has-a-reproducible-docker-image/" target="_blank" rel="noopener noreferrer">Arch Linux Now Has a Bit-for-Bit Reproducible Docker Image</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47871519" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Arch Linux 发布了具有“位对位可重现性”的 Docker 镜像并提供专用 repro 标签，通过固定环境变量及规范化时间戳确保构建结果完全一致。为解决构建过程中的非确定性难题，该镜像移除了 pacman 密钥和 ldconfig 辅助缓存，用户需在启动后手动初始化密钥库方可正常使用软件包管理功能。此举是继其 WSL 镜像后在可重现构建领域的又一重要里程碑，用户可通过 digest 校验和 diffoci 工具验证镜像的确定性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.bleepingcomputer.com/news/security/french-govt-agency-confirms-breach-as-hacker-offers-to-sell-data/" target="_blank" rel="noopener noreferrer">French government agency confirms breach as hacker offers to sell data</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47877366" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>法国国家安全文件署（ANTS，又称 France Titres）确认发生大规模数据泄露，黑客“breach3d”最初声称窃取了1900万条记录，官方后续更新受影响账户数为1170万。泄露内容涵盖登录ID、姓名、邮箱、出生日期及部分用户的邮政地址和电话号码，虽然不影响账户访问权限，但面临极高的钓鱼和社交工程攻击风险。目前该机构已联手法网络安全局（ANSSI）展开调查，并提醒用户警惕冒充ANTS的虚假通信。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.derekthompson.org/p/if-americas-so-rich-howd-it-get-so" target="_blank" rel="noopener noreferrer">If America&#39;s so rich, how&#39;d it get so sad?</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47877429" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>尽管美国经济指标强劲，但自2020年以来全美各阶层的幸福感和消费者信心均降至历史极低点。这种“悲惨二十年代”现象主要归因于疫情后累积通胀导致的物价飞涨，特别是住房负担能力危机以及劳动力成本上升带来的社会性负面情绪。研究显示，这种幸福感与经济数据的严重背离在英语系西方国家尤为明显，反映出长期的社会心理冲击已深刻削弱了国民的获得感。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.bloomberg.com/news/articles/2026-04-23/meta-tells-staff-it-will-cut-10-of-jobs-in-push-for-efficiency" target="_blank" rel="noopener noreferrer">Meta tells staff it will cut 10% of jobs</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47879986" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Meta计划裁减约8000名员工，占其员工总数的10%，旨在提高运营效率并抵消在人工智能领域的巨额投入。此次裁员定于5月20日执行，同时公司还将取消原定填补的6000个空缺职位。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.cnn.com/2026/04/23/politics/us-special-forces-soldier-arrested-maduro-raid-trade" target="_blank" rel="noopener noreferrer">US special forces soldier arrested after allegedly winning $400k on Maduro raid</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47882645" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>美国陆军军士长 Gannon Ken Van Dyke 因涉嫌利用参与策划抓捕委内瑞拉总统马杜罗行动获取的机密，在预测市场 Polymarket 投注并获利 40 万美元而遭到逮捕。他面临窃取及滥用政府机密、欺诈等五项刑事指控，被控在行动前利用内幕信息进行高风险下注并试图通过加密货币掩盖资金来源。此事件促使 Polymarket 与司法部展开调查合作，同时也引发了美国国会关于加强预测市场监管及严惩官员内幕交易的跨党派立法讨论。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://api-docs.deepseek.com/" target="_blank" rel="noopener noreferrer">DeepSeek v4</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47884971" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>DeepSeek API 宣布全面兼容 OpenAI 和 Anthropic 的 API 格式，支持通过简单的配置修改直接使用相关 SDK 或第三方软件进行接入。新发布的 deepseek-v4-flash 和 deepseek-v4-pro 将作为核心模型，而旧版名称 deepseek-chat 和 deepseek-reasoner 计划于 2026 年 7 月起停用。此外，API 新增了对思维（thinking）模式的支持，允许用户通过 reasoning_effort 参数调节推理强度以优化响应质量。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/matz/spinel" target="_blank" rel="noopener noreferrer">Spinel: Ruby AOT Native Compiler</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47887334" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Spinel 是一个 Ruby AOT 原生编译器，通过全程序类型推断和 C 代码生成技术，将 Ruby 源码编译为无运行时依赖的独立可执行文件。该项目实现了自托管，其后端由 Ruby 编写并能编译自身，在性能测试中比 CRuby 平均快 11.6 倍，尤其在计算密集型任务中优势显著。它支持类、Mixin、异常处理及 Fiber 等核心特性，并针对值类型和内存分配进行了深度优化，但目前不支持动态元编程和 eval 功能。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://kevinlynagh.com/newsletter/2026_04_overthinking/" target="_blank" rel="noopener noreferrer">Sabotaging projects by overthinking, scope creep, and structural diffing</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47890799" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者探讨了过度思考和范围蔓延如何破坏项目进度，通过对比成功的简易木工项目与深陷研究泥潭的结构化差异工具开发，强调了明确核心成功标准对避免“学习替代实践”的重要性。文章还分析了在使用 LLM 辅助编程时，为了追求不必要的边缘功能（如路径搜索的锚定匹配）而导致代码臃肿的现象，并详细评测了 difftastic、semanticdiff 等多种基于树解析或 AST 的语义差异对比工具的优劣。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.bloomberg.com/news/articles/2026-04-24/norway-wants-kids-to-be-kids-with-social-media-ban-for-under-16s" target="_blank" rel="noopener noreferrer">Norway set to become latest country to ban social media for under 16s</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47891019" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>挪威政府计划在2026年底前向议会提交法案，限制16岁以下儿童使用社交媒体，以应对公众对网络环境可能危害儿童健康的严重担忧。该立法提议是在民众“压倒性”的呼声下推出的，挪威也由此成为全球最新一个通过法律手段加强青少年在线安全保护的国家。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://nickyreinert.de/en/2026/2026-04-24-claude-critics/" target="_blank" rel="noopener noreferrer">I cancelled Claude: Token issues, declining quality, and poor support</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47892019" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者因 Token 使用异常、模型质量下降及客服支持不力取消了 Claude 订阅。近期使用中，Claude 频繁出现简单提问即耗尽额度、模型建议包含偷懒的工作绕路（Workaround）而非规范代码等质量问题。此外，Anthropic 存在神秘的“月度限额”警告、重复扣费的代码库重载机制，以及通过自动化回复强制关闭工单的傲慢客服，严重损害了用户体验。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-25 00:00 | <a href="./2026-04-24.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-23.html">Daily Hacker News for 2026-04-23</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 23, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://maurycyz.com/projects/mcufont/" target="_blank" rel="noopener noreferrer">5x5 Pixel font for tiny screens</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47824943" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该项目推出了一款专为8位单片机设计的5x5像素手绘字体，仅占用350字节内存，是保证可读性前提下的极小尺寸方案。字体采用固定宽度设计，极大简化了嵌入式开发中的字符串长度计算与布局逻辑，非常适合在低分辨率OLED屏幕上高效使用。相比高资源消耗的矢量字体，这种针对微控制器优化的像素字体在硬件受限环境下展现出更佳的显示效果与性能优势。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.nytimes.com/2026/04/20/business/infowars-alex-jones-the-onion.html" target="_blank" rel="noopener noreferrer">The Onion to Take over InfoWars</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47843434" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>讽刺新闻媒体《洋葱报》（The Onion）及其母公司 Global Tetrahedron 已达成一项新协议，计划通过每月支付 8.1 万美元授权费的方式接管阴谋论者亚历克斯·琼斯旗下的 Infowars 网站及品牌。该交易源于琼斯因诽谤桑迪胡克小学枪击案家属而面临的破产清算，目前正等待德克萨斯州法官的批准。若获准，洋葱报意图将这一右翼站点转型为自我解构的讽刺平台，但在法院做出最终裁决前的过渡期内，该网站仍由琼斯维持运营。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://simonomi.dev/blog/color-code-your-bytes/" target="_blank" rel="noopener noreferrer">Your hex editor should color-code bytes</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47846688" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章主张十六进制编辑器应采用颜色编码字节，利用人类敏感的视觉模式识别能力来提升二进制数据分析的效率。通过实例对比证明了颜色能显著降低寻找特定字节、识别小端序32位整数及发现数据递增规律的难度。这种方式在分析KPS或DAL等复杂文件格式时尤为有效，能帮助开发者直观地捕捉到高位零字节分布等关键数据特征。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://fingerprint.com/blog/firefox-tor-indexeddb-privacy-vulnerability/" target="_blank" rel="noopener noreferrer">We found a stable Firefox identifier linking all your private Tor identities</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47866697" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>安全研究人员在 Firefox 及其衍生浏览器中发现了一个隐私漏洞，恶意网站可通过 <code>indexedDB.databases()</code> API 返回的特定数据库列表排序，生成一个稳定且唯一的进程级标识符。该标识符在同一进程生命周期内跨域共享，能有效绕过 Firefox 无痕模式的隔离以及 Tor 浏览器的“新身份”重置功能实现跨站追踪。该漏洞源于浏览器内部哈希表处理 UUID 映射时泄露了存储顺序，目前 Mozilla 已在 Firefox 150 版本中通过对 API 输出结果进行规范化排序完成了修复。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://techcrunch.com/2026/04/22/apple-fixes-bug-that-cops-used-to-extract-deleted-chat-messages-from-iphones/" target="_blank" rel="noopener noreferrer">Apple fixes bug that cops used to extract deleted chat messages from iPhones</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47868867" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>苹果发布安全更新修复了 iOS 和 iPadOS 中的一个漏洞，该漏洞曾允许执法部门通过取证工具提取 Signal 等应用中已删除或自动消失的消息。问题根源在于系统会将包含消息内容的通知在本地数据库中缓存长达一个月，导致应用内删除操作无法彻底清除数据。在 Signal 总裁的敦促下，苹果已针对当前及旧版 iOS 18 系统推出补丁，确保标记为删除的通知不再被意外保留。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://crawshaw.io/blog/building-a-cloud" target="_blank" rel="noopener noreferrer">I am building a cloud</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47872324" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>crawshaw (exe.dev 创始人) 宣布构建新型云平台，旨在解决当前云计算在 VM 资源绑定、远程存储高延迟以及高昂网络成本等方面的基础抽象缺陷。他指出当前云服务的远程块存储严重制约了 SSD 的性能潜力，且复杂的 PaaS 和 Kubernetes 往往只是在弥补底层设计的不合理。exe.dev 通过提供本地 NVMe 存储、灵活的 VM 资源隔离和内置网络代理，致力于为 AI 代理时代激增的软件需求打造更高效、纯粹的计算环境。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://socket.dev/blog/bitwarden-cli-compromised" target="_blank" rel="noopener noreferrer">Bitwarden CLI compromised in ongoing Checkmarx supply chain campaign</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47876043" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Bitwarden CLI 的 npm 包（版本 2026.4.0）在 Checkmarx 供应链攻击中通过劫持 GitHub Action 被植入恶意代码 bw1.js。该程序利用内存抓取和环境变量窃取 GitHub、AWS、Azure 等云凭据、SSH 密钥及 npm 令牌，并通过创建带有“沙丘”主题名称的仓库进行数据外传。其技术特征包括使用 Bun 运行时、设有俄罗斯地区规避机制，并能在 Shell 配置文件中实现持久化，建议受影响用户立即轮换所有可能泄露的密钥。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.wired.com/story/palantir-employees-are-starting-to-wonder-if-theyre-the-bad-guys/" target="_blank" rel="noopener noreferrer">Palantir employees are starting to wonder if they&#39;re the bad guys</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47878633" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Palantir内部正因其在特朗普政府移民执法（如ICE合同）中的关键作用，以及可能涉及伊朗平民伤亡的军事行动而陷入严重的道德与身份认同危机，部分员工甚至质疑公司正滑向法西斯主义。尽管内部异议不断，首席执行官Alex Karp仍坚持强硬立场，通过缩短Slack记录保存期等手段压制泄密，并发布支持征兵制等激进观点的宣言。这种从“保护公民自由”到“赋能潜在滥用”的转变，正促使许多员工重新审视公司在社会和军事冲突中扮演的角色。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.anthropic.com/engineering/april-23-postmortem" target="_blank" rel="noopener noreferrer">An update on recent Claude Code quality reports</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47878905" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Anthropic针对近期Claude Code质量下降的报告进行了深度复盘，确认并修复了由于默认推理强度下调、缓存优化逻辑错误以及系统提示词限制回复长度所导致的性能退化问题。受影响的模型包括Sonnet 4.6和Opus 4.6/4.7，这些问题曾表现为智能程度下降、模型健忘重复以及编程质量受损。目前相关故障已在v2.1.116版本中完全修复，官方不仅为所有订阅用户重置了使用限额，还计划通过强化内部审计和增加灰度测试期来防止此类回归再次发生。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://openai.com/index/introducing-gpt-5-5/" target="_blank" rel="noopener noreferrer">GPT-5.5</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47879092" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>OpenAI 发布了迄今为止最智能、最直观的 GPT-5.5 模型，在保持与 GPT-5.4 相同延迟的同时，显著提升了代理编程、计算机操作及科学研究等复杂任务的推理能力和执行效率。该模型在多项基准测试中表现卓越，能够更自主地处理模糊指令、利用工具并跨软件协作，且在长程任务中表现出极强的持久性和概念清晰度。目前 GPT-5.5 已向 ChatGPT Plus 及企业用户推出，API 版本也将于近期上线。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-24 00:00 | <a href="./2026-04-23.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-22.html">Daily Hacker News for 2026-04-22</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 22, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://asteriskmag.com/issues/14/the-mystery-in-the-medicine-cabinet" target="_blank" rel="noopener noreferrer">Acetaminophen vs. ibuprofen</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47835635" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>对乙酰氨基酚虽然治疗窗口较窄且过量服用易导致肝衰竭，但在按剂量使用时，其安全性通常优于布洛芬等非甾体抗炎药（NSAIDs）。布洛芬会全身性抑制COX酶，从而增加胃溃疡、心血管血栓以及在脱水或压力状态下发生肾损伤的风险，而对乙酰氨基酚对这些器官的影响极小。即使是肝病患者，在严格限速的情况下，医生也通常建议优先选择对乙酰氨基酚而非布洛芬，以规避潜在的多系统器官风险。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.blog/news-insights/company-news/changes-to-github-copilot-individual-plans/" target="_blank" rel="noopener noreferrer">Changes to GitHub Copilot individual plans</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47838508" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>GitHub 宣布暂停 Copilot Pro、Pro+ 及学生方案的新用户注册，并收紧现有个人方案的会话与周令牌（Token）使用限制。此次调整主因是“代理式工作流”导致计算资源消耗远超原计划成本，Pro+ 方案的限额现已提升至 Pro 的 5 倍以上。此外，Opus 模型将从 Pro 方案中移除，VS Code 和 CLI 已上线限额实时提醒，不接受变更的用户可在 5 月 20 日前申请按比例退款。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.youtube.com/watch?v=h6GWikWlAQA" target="_blank" rel="noopener noreferrer">Making RAM at Home [video]</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47842569" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>YouTube 频道 Dr.Semiconductor 在这段约 18 分钟的视频中，展示了在家庭环境下制造随机存取存储器（RAM）的全过程。视频详细介绍了制造技术，并参考了 Projects in Flight 关于半导体掺杂（doping）的相关资料。该内容自 2026 年 4 月发布以来已获得超过 52 万次播放，通过硬核实操展示了个人制造半导体器件的可能性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.reuters.com/sustainability/boards-policy-regulation/meta-start-capturing-employee-mouse-movements-keystrokes-ai-training-data-2026-04-21/" target="_blank" rel="noopener noreferrer">Meta to start capturing employee mouse movements, keystrokes for AI training</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47851948" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Meta公司启动了一项名为“代理转型加速器”（ATA）的内部计划，通过捕捉员工的鼠标移动、点击和键盘按键等数据来训练AI模型，旨在提升智能体自主执行复杂办公任务的能力。该计划目前主要针对美国员工，采集范围还包括屏幕快照以提供操作上下文，帮助模型学习用户界面的导航与快捷键使用。尽管Meta承诺相关数据仅用于模型训练且不涉及绩效考核，但此举仍因隐私保护担忧及缺乏退出机制在公司内部引发了广泛争议。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://bsky.app/profile/edzitron.com/post/3mjzxwfx3qs2a" target="_blank" rel="noopener noreferrer">Claude Code to be removed from Anthropic&#39;s Pro plan?</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47854477" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Anthropic 疑似已在其 20 美元/月的 Pro 订阅定价页面中移除 Claude Code 相关描述，引发开发者对该 AI 编程工具权限变更的担忧。目前该变动表现并不一致，部分现有订阅者和年付用户反馈仍可正常通过 CLI 访问，而新用户或未登录状态下则不再显示该功能。社区猜测这可能是 Anthropic 正在调整产品层级，计划将此高价值代理工具转为更高阶套餐或仅限 API 使用的前奏。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://twitter.com/spacex/status/2046713419978453374" target="_blank" rel="noopener noreferrer">SpaceX says it has agreement to acquire Cursor for $60B</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47855293" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>SpaceXAI 与 Cursor 达成深度合作，计划将 Cursor 的编程 AI 产品与 SpaceX 拥有百万块 H100 等效算力的 Colossus 超级计算机相结合，打造全球领先的编程与知识工作 AI 模型。根据协议，SpaceX 获得了在今年晚些时候以 600 亿美元收购 Cursor 的权利，或者选择为双方的合作支付 100 亿美元费用。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://social.hails.org/@hailey/116446826733136456" target="_blank" rel="noopener noreferrer">Windows 9x Subsystem for Linux</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47861270" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>WSL9x 是一项允许现代 Linux 内核在 Ring 0 层与 Windows 9x 内核协作运行的技术，让老旧的 486 电脑无需硬件虚拟化即可并排运行 Windows 和 Linux 应用。该项目在技术思路上被类比为早期的 CoLinux 或 WSL1，即通过在内核层实现 POSIX 接口而非使用虚拟机。这种极客手段在复古硬件上实现了极高的集成度，被作者视为其最重大的黑客成就之一。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://cli.github.com/telemetry" target="_blank" rel="noopener noreferrer">GitHub CLI now collects pseudoanonymous telemetry</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47862331" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>GitHub CLI (gh) 现已开始收集伪匿名遥测数据，以获取功能使用情况的可见性，从而优化产品优先级并改进 AI 代理等新特性的设计。收集的数据涵盖系统架构、命令参数、随机生成的设备 ID 及执行环境信息，用户可通过设置环境变量查看具体的 JSON 发送载荷。若需关闭此功能，用户可将 GH_TELEMETRY 设为 false、启用 DO_NOT_TRACK 约定或通过 CLI 配置禁用，但需注意第三方扩展可能拥有独立的遥测机制。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://qwen.ai/blog?id=qwen3.6-27b" target="_blank" rel="noopener noreferrer">Qwen3.6-27B: Flagship-Level Coding in a 27B Dense Model</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47863217" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>通义千问团队正式开源 Qwen3.6-27B 稠密多模态模型，在 270 亿参数规模下实现了旗舰级的编程性能，在 SWE-bench 等核心基准测试中全面超越了前代 397B 参数的 MoE 旗舰模型。该模型原生支持图像与视频处理，具备强大的多模态推理与文档理解能力，且稠密架构显著降低了部署复杂度。目前该模型已提供开源权重并上线 API，可无缝集成至 OpenClaw 和 Claude Code 等主流 AI 编程助手。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://wheelfront.com/this-alberta-startup-sells-no-tech-tractors-for-half-price/" target="_blank" rel="noopener noreferrer">Alberta startup sells no-tech tractors for half price</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47865868" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>加拿大初创公司 Ursa Ag 推出售价仅为传统大牌一半的“无科技”拖放机，采用 90 年代翻新的康明斯机械发动机，完全剥离了电子元件和专有软件。该设计针对现代农机维修难、成本高的痛点，允许农民使用通用零件自行修理，有效解决了 John Deere 等品牌引发的“维修权”争议。尽管目前产能和分销网络尚在起步阶段，但其凭借 150 至 260 马力的高性价比机型，在北美农业市场引发了强烈关注。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-23 00:00 | <a href="./2026-04-22.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-21.html">Daily Hacker News for 2026-04-21</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 21, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.flyingpenguin.com/build-an-openclaw-free-secure-always-on-local-ai-agent/" target="_blank" rel="noopener noreferrer">OpenClaw isn&#39;t fooling me. I remember MS-DOS</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47831437" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者将当前AI智能体网关的安全缺陷类比为缺乏保护的MS-DOS时代，批评了NVIDIA NemoClaw方案在网络绑定和沙箱边界上的架构妥协。文章重点介绍了其开发的Wirken网关，该工具借鉴Unix的隔离哲学，通过进程分离、受限容器执行及哈希链审计数据库，实现了更细粒度的权限校验与安全追踪。作者主张智能体架构应吸取计算机历史教训，通过缩小安全边界和强化底层校验来构建真正安全的本地AI环境。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://opensource.posit.co/blog/2026-04-20_ggsql_alpha_release/" target="_blank" rel="noopener noreferrer">ggsql: A Grammar of Graphics for SQL</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47833558" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Posit 宣布推出 ggsql 的 Alpha 版本，这是一款将“图形语法”与 SQL 语法深度融合的可视化工具，支持在 SQL 查询中通过声明式子句直接构建图表。它借鉴了 ggplot2 的核心理念，通过 VISUALIZE、DRAW 和 SCALE 等模块化指令实现图层的灵活组合与样式映射，并允许 SQL 数据处理结果直接流入可视化环节。该工具旨在为习惯 SQL 的开发者提供一套无需切换 R 或 Python 即可进行复杂绘图的高效方案，现已适配 Quarto 和 VS Code 等主流环境。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://techcrunch.com/2026/04/20/deezer-says-44-of-songs-uploaded-to-its-platform-daily-are-ai-generated/" target="_blank" rel="noopener noreferrer">Deezer says 44% of songs uploaded to its platform daily are AI-generated</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47835928" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>音乐流媒体平台 Deezer 披露其每日新增上传歌曲中 AI 生成比例已升至 44%（约 7.5 万首），较去年初的 1 万首呈现爆发式增长。尽管 AI 音乐仅占总播放量的 1% 至 3%，但其中 85% 因涉嫌欺诈被取消获利，Deezer 已采取标签化、移出推荐位及停止存储高保真版本等管控措施。调查显示 97% 的用户无法辨别 AI 与真人音乐，公司呼吁行业共同应对 AI 音乐激增带来的艺术家权利保护与透明度挑战。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.kimi.com/blog/kimi-vendor-verifier" target="_blank" rel="noopener noreferrer">Kimi vendor verifier – verify accuracy of inference providers</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47838703" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Kimi 在发布 K2.6 模型的同时开源了 Kimi Vendor Verifier (KVV) 工具，旨在解决开源模型在不同推理供应商部署时因工程实现差异导致的性能下降问题。KVV 通过 OCRBench、AIME2025 等六项核心基准测试，专门用于检测参数配置错误、KV 缓存 Bug 及视觉预处理偏差等底层基础设施故障。该项目旨在帮助用户区分模型固有缺陷与推理环境偏差，通过提高透明度来重建开源模型生态中的“信任链”。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://stephvee.ca/blog/artificial%20intelligence/ai-resistance-is-growing/" target="_blank" rel="noopener noreferrer">AI Resistance: some recent anti-AI stuff that’s worth discussing</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47839951" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该博文原旨在探讨日益增长的反AI（AI Resistance）趋势，但在意外走红后遭遇了严重的服务器恶意攻击和流量冲击。作者对评论区中出现的匿名谩骂及极端负面评价表示遗憾，并指出这些攻击已严重背离了小众网络（small web）的友好初衷。受此负面影响，作者决定未来不再公开发布关于人工智能的见解，以保护其创作乐趣不受病毒式传播的干扰。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://docs.openclaw.ai/providers/anthropic" target="_blank" rel="noopener noreferrer">Anthropic says OpenClaw-style Claude CLI usage is allowed again</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47844269" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Anthropic 确认 OpenClaw 风格的 Claude CLI 使用已重新获得许可，OpenClaw 现已全面支持 API 密钥与 CLI 复用模式。该工具集成了 Claude 4.6 的自适应思考、提示词缓存以及 1M 超长上下文等高级特性，并允许用户通过配置文件精细控制各代理的缓存策略与服务层级。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://lawsofsoftwareengineering.com/" target="_blank" rel="noopener noreferrer">Laws of Software Engineering</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47847179" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该资源收录了56条软件工程领域的核心定律与模式，涵盖架构设计、团队协作、项目规划及决策偏见等多个维度。其中包括康威定律、布鲁克斯定律、CAP定理、SOLID原则等经典理论，旨在揭示塑造软件系统和团队行为的底层逻辑。这些原则为不同阶段的开发人员提供了评估系统复杂度、管理技术债务以及优化团队效率的理论支撑与实践指南。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://stratechery.com/2026/tim-cooks-impeccable-timing/" target="_blank" rel="noopener noreferrer">Tim Cook&#39;s Impeccable Timing</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47847324" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>蒂姆·库克宣布将于9月1日转任苹果公司执行主席，他在任15年间带领公司市值从2970亿美元飙升至4万亿美元，展现了极其卓越的运营天才与财务成就。库克通过对中国供应链的深度整合实现了iPhone的全球规模化扩张，并将服务业务打造为公司利润支柱，但也因对单一制造基地的高度依赖及在AI领域的滞后转型而面临长期可持续性的质疑。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://frame.work/laptop13pro" target="_blank" rel="noopener noreferrer">Framework Laptop 13 Pro</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47852177" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Framework Laptop 13 Pro 搭载 Intel Core Ultra 3 系列处理器并首次采用 LPCAMM2 模块化内存，配合 CNC 铝合金机身实现了长达 20 小时的续航表现。该机配备 13.5 英寸 3:2 高亮变频触摸屏、压电触控板及可互换接口系统，并针对 Ubuntu 等 Linux 发行版进行了深度优化。设备延续了极高易修复性的设计理念，支持包括主板在内的核心组件升级，并设有硬件级隐私物理开关。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://openai.com/index/introducing-chatgpt-images-2-0/" target="_blank" rel="noopener noreferrer">ChatGPT Images 2.0</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47852835" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>OpenAI于2026年4月21日推出了ChatGPT Images 2.0，宣称其开启了图像生成的新时代。该功能与GPT-5.3系列模型及Sora等最新研究成果并列，旨在提升图像生成的质量与用户体验。目前该功能已正式上线，用户可以在ChatGPT中通过不同模式体验这一全新的图像处理技术。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-22 00:00 | <a href="./2026-04-21.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-20.html">Daily Hacker News for 2026-04-20</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 20, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://ashley.rolfmore.com/stop-trying-to-engineer-your-way-out-of-listening-to-people/" target="_blank" rel="noopener noreferrer">Stop trying to engineer your way out of listening to people</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47827259" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>软件开发和设计领域常试图通过构建“框架”或“系统”等工程化术语来逃避真实的人际沟通，作者强调真正的倾听远比建立系统更难。文章指出了误将表面需求当成倾听、忽视专业认知差异、将技术背景二元化以及认为组织是静态等常见误区。缺乏深度倾听将导致错失商业机会并产生由于误解引发的技术债，因此识别并克服这些心理偏见是提升软件工程质量的关键。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://awesomeagents.ai/news/github-fake-stars-investigation/" target="_blank" rel="noopener noreferrer">GitHub&#39;s fake star economy</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47831621" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>卡内基梅隆大学的研究揭示了 GitHub 存在涉及 600 万个虚假星标和近 2 万个仓库的黑色产业链，其中 AI 与大模型项目已成为虚假刷票的重灾区。由于风险投资机构常将星标数作为融资筛选的关键指标，初创公司仅需极低成本购买虚假数据即可撬动数百万美元融资，形成了扭曲的激励机制。调查指出，“分叉与星标比率”是识别操纵行为的核心指标，而此类虚假社交指标已面临 FTC 和 SEC 每项违规超过 5 万美元的严厉法律处罚。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.axios.com/2026/04/19/nsa-anthropic-mythos-pentagon" target="_blank" rel="noopener noreferrer">NSA is using Anthropic&#39;s Mythos despite blacklist</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47832222" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>据 Axios 报道，尽管美国国防部将 Anthropic 视为“供应链风险”并试图封禁，但国家安全局（NSA）仍在秘密使用其功能最强大的 Mythos Preview 模型。该模型因具备危险的攻击性网络能力而仅向约 40 个机构开放，NSA 目前主要利用其扫描系统漏洞。此举反映出美政府网络安全需求已压倒了五角大楼与 Anthropic 因模型监控用途和自主武器开发分歧而产生的长期摩擦。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://letsdatascience.com/news/atlassian-enables-default-data-collection-to-train-ai-f71343d8" target="_blank" rel="noopener noreferrer">Atlassian enables default data collection to train AI</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47833247" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Atlassian 宣布自 2026 年 8 月 17 日起将默认收集 Jira 和 Confluence 等云产品的元数据及应用内内容用于训练 Rovo 等 AI 模型，此举逆转了其此前不使用客户数据训练服务的承诺。该政策影响约 30 万用户，其中免费版、标准版和高级版计划强制开启元数据收集且无法退出，仅企业版及特定高安全性云环境用户拥有选择权。收集范围涵盖故事点、任务分类等业务指标以及页面标题、评论等实质内容，相关数据最长保留 7 年，且在用户退出或删除后需 90 天方可完成模型的重训清理。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://tryterra.co/research/sauna-effect-on-heart-rate" target="_blank" rel="noopener noreferrer">Sauna effect on heart rate</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47834184" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>通过对256名桑拿用户超过5.9万份每日记录的分析，研究发现桑拿使用能显著降低夜间最低心率（平均下降约3bpm），即使在控制运动量变量后该恢复信号依然明确。这种生理变化表明桑拿具有超越运动本身的恢复效应，可能通过增强副交感神经活动促进身体修复。此外，研究指出男性在夜间心率下降幅度上优于女性，而女性的恢复获益在月经周期的黄体期表现最为显著。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.theolivepress.es/spain-news/2026/04/20/eu-to-force-replaceable-batteries-in-phones-and-tablets-from-2027/" target="_blank" rel="noopener noreferrer">All phones sold in the EU to have replaceable batteries from 2027</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47834195" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>欧盟新规要求自2027年2月18日起，所有在欧销售的智能手机和平板电脑必须配备用户可自行更换的电池，且拆换过程无需专用工具或额外协助。制造商须在产品停产后至少五年内持续提供备用电池，并配合2025年起施行的五年系统更新支持及通用USB-C接口标准。此举旨在解决欧盟每年产生的500万吨电子垃圾问题，预计到2030年可为消费者节省共计200亿欧元的成本。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://qwen.ai/blog?id=qwen3.6-max-preview" target="_blank" rel="noopener noreferrer">Qwen3.6-Max-Preview: Smarter, Sharper, Still Evolving</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47834565" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>阿里巴巴 Qwen 团队推出闭源模型 Qwen3.6-Max-Preview 预览版，在智能体编程、世界知识和指令遵循能力上较 Qwen3.6-Plus 显著提升，并在多项编程基准测试中取得顶尖成绩。该模型已上线阿里云百炼及 Qwen Studio，支持保留推理过程的 <code>preserve_thinking</code> 特性，并提供兼容 OpenAI 与 Anthropic 规范的 API 接口。作为仍处于活跃开发中的早期版本，Qwen 团队将持续对其进行迭代优化。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.kimi.com/blog/kimi-k2-6" target="_blank" rel="noopener noreferrer">Kimi K2.6: Advancing open-source coding</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47835735" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Kimi K2.6 是一款新发布的开源模型，在长程编程任务中表现卓越，能够自主完成复杂的代码重构与系统优化，并在多项编程基准测试中超越前代版本。该模型显著增强了智能体集群能力，支持多达 300 个子代理并行协作处理大规模复杂任务，并引入了可 24/7 持续运行的主动式智能体。此外，通过 Claw Groups 研究预览版，K2.6 实现了跨设备、跨模型的异构协作生态，显著提升了在金融建模、学术研究等场景下的端到端自动化执行效率。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://theonion.com/at-long-last-infowars-is-ours/" target="_blank" rel="noopener noreferrer">At long last, InfoWars is ours</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47837611" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>讽刺媒体《洋葱报》（The Onion）背后的虚构公司 Global Tetrahedron 宣布已成功收购阴谋论网站 InfoWars。首席执行官 Bryce Tetraeder 以荒诞黑暗的笔调，描绘了将该平台转型为集虚假信息、商业诈骗与心理折磨于一体的数字地狱愿景。该公告通过极具讽刺意味的修辞，深度嘲讽了现代美国媒体中恐慌情绪与资本逐利相互寄生的扭曲现状。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.apple.com/newsroom/2026/04/tim-cook-to-become-apple-executive-chairman-john-ternus-to-become-apple-ceo/" target="_blank" rel="noopener noreferrer">John Ternus to become Apple CEO</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47840219" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>苹果公司宣布蒂姆·库克（Tim Cook）将转任董事会执行主席，现任硬件工程高级副总裁 John Ternus 将于2026年9月1日接任首席执行官。在库克自2011年执掌期间，苹果市值从3500亿美元增至4万亿美元，年收入翻了近四倍，并成功推出了 Apple Watch、Vision Pro 等新产品及多项核心服务。此次平稳交接经过董事会一致通过，是公司长期继任规划的最终落地。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-21 00:00 | <a href="./2026-04-20.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-19.html">Daily Hacker News for 2026-04-19</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 19, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://kotaku.com/video-game-devs-explain-how-pausing-works-and-sometimes-it-gets-weird-2000686339" target="_blank" rel="noopener noreferrer">Game devs explain the tricks involved with letting you pause a game</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47793161" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>游戏开发者揭秘了实现“暂停”功能的多种复杂技巧，包括通过将时间流速降至极小值（而非绝对零）以规避引擎底层限制，或利用截图作为菜单背景来卸载实时渲染对象以节省内存。此外，处理多层级暂停逻辑（如手柄断连与系统菜单并存）的冲突，以及优化各游戏组件对暂停状态的检测频率，都是开发者从初学阶段向资深跨越的重要技术挑战。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://archive.org/details/byte-magazine-1975-09" target="_blank" rel="noopener noreferrer">Archive of BYTE magazine, starting with issue #1 in 1975</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47806096" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Internet Archive 提供了 1975 年 9 月创刊的《Byte》杂志第一期完整数字存档，记录了个人电脑萌芽时期的技术生态。该期杂志深入探讨了微处理器选择、二手 IC 回收、键盘解密及串行接口设计等硬件核心课题。同时，内容还涵盖了汇编语言编写和早期软件应用，是研究 20 世纪 70 年代计算机 DIY 文化的重要历史文献。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://worksinprogress.co/issue/why-japan-has-such-good-railways/" target="_blank" rel="noopener noreferrer">Why Japan has such good railways</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47815395" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>日本铁路系统凭借28%的全球最高客运周转占比和极低的政府补贴实现了高效盈利，其成功核心在于私有化竞争与优越的公共政策。通过独特的“铁路主导型城市化”模式，私营铁路公司深度参与房地产和商业经营，利用自由的土地规划政策在车站周边打造超高密度中心。这种交通导向型开发（TOD）捕获了基础设施的溢出价值，形成了铁路运营与城市多元业态相互促进的良性循环。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.righto.com/2026/04/B-52-star-tracker-angle-computer.html" target="_blank" rel="noopener noreferrer">The electromechanical angle computer inside the B-52 bomber&#39;s star tracker</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47817132" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>在20世纪60年代GPS普及之前，B-52轰炸机依靠名为“角度计算机”的电磁机械模拟装置进行天文导航，以解决数字化计算机尚不成熟时的复杂三角运算。该装置通过物理建模“天球”，利用同步电机和精密机构将星体坐标实时转换为本地方位角和高度角，其定向精度可达0.1度。这套包含19个组件的Astro Compass系统结合《航空历书》数据，在飞机颠簸中依然能为导航员提供高精度的航向与位置参考。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://sentinelcolorado.com/uncategorized/a-college-instructor-turns-to-typewriters-to-curb-ai-written-work-and-teach-life-lessons/" target="_blank" rel="noopener noreferrer">College instructor turns to typewriters to curb AI-written work</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47818485" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>康奈尔大学德语讲师 Grit Matthias Phelps 为应对学生滥用生成式 AI，在课堂中引入老式手动打字机进行“模拟”作业，通过剥离数字辅助工具和删除键来迫使学生独立思考。这种方式消除了屏幕干扰并鼓励学生间的人际社交，使学生在挑战中学会接纳错误并专注创作。该实践体现了当前教育界为应对 AI 冲击，正逐渐回归纸笔考试、口试等传统考核手段以确保学术诚信。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://samhenri.gold/blog/20260418-claude-design/" target="_blank" rel="noopener noreferrer">Thoughts and feelings around Claude Design</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47818700" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者指出 Figma 因其复杂的私有原语和封闭格式在 AI 时代逐渐落后，而 Claude Design 凭借 HTML/JS 的原生属性及与 Claude Code 的协同，预示着设计真相将重回代码层面。这种转变消除了设计与实现间的摩擦，使创作流程更具“材料真实性”。未来设计工具将分化为两个方向：一种是与代码深度集成的生产力套件，另一种是完全不受 CSS 或系统限制的高保真自由探索空间。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.nist.gov/news-events/news/2026/04/any-color-you-nist-scientists-create-any-wavelength-lasers-tiny-circuits" target="_blank" rel="noopener noreferrer">NIST scientists create &#39;any wavelength&#39; lasers</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47819453" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>美国国家标准与技术研究院（NIST）研发出一种在硅芯片上制造集成光路的新技术，通过在晶圆上沉积多层特殊材料，实现了可产生“任意波长”激光的微型光子芯片。该方案采用3D集成工艺，结合了铌酸锂的电控能力与五氧化二钽（tantala）的非线性转换特性，能将单一颜色激光高效转化为覆盖可见光及红外频段的特定色彩。这一进展有望替代昂贵笨重的实验室激光设备，显著降低量子计算机、光原子钟及人工智能硬件的体积与成本，加速相关前沿技术的便携化与商用进程。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.bleepingcomputer.com/news/security/vercel-confirms-breach-as-hackers-claim-to-be-selling-stolen-data/" target="_blank" rel="noopener noreferrer">Vercel April 2026 security incident</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47824463" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Vercel 披露了一起因第三方 AI 工具 Context.ai 漏洞导致员工 Google Workspace 账号被盗的安全事件，攻击者借此获取了内部环境中部分未标记为敏感且未加密存储的环境变量。尽管有黑客声称正以 200 万美元索要赎金并出售源代码等数据，但 Vercel 确认 Next.js 等核心开源项目未受影响。公司目前已通知受影响客户，并更新了环境变量管理界面，建议用户将关键配置标记为敏感以启用静态加密保护。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://twitter.com/weezerOSINT/status/2045849358462222720" target="_blank" rel="noopener noreferrer">Notion leaks email addresses of all editors of any public page</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47824945" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Notion 被曝存在严重隐私漏洞，任何公开页面的编辑者全名、电子邮件和头像均可通过无需身份验证的 POST 请求直接获取。如果企业的 Wiki 页面设为公开，所有参与编辑的员工信息都将面临泄露风险。该漏洞早在 2022 年就已上报，但直到 2026 年依然有效，凸显了该平台在处理安全报告方面的滞后。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://decipher.sc/2026/04/19/vercel-says-internal-systems-hit-in-breach/" target="_blank" rel="noopener noreferrer">Vercel says internal systems hit in breach</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47824976" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Vercel 披露其内部系统遭到入侵，调查显示该事件源于第三方 AI 工具的 Google Workspace OAuth 应用被大规模攻破，导致少数客户受影响。Vercel 已启动专家调查并通知执法部门，同时建议用户检查活动日志并轮换环境变量以防万一。此外，官方推荐使用敏感环境变量功能，通过不可读格式存储 API 密钥等核心凭据以增强安全性。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-20 00:00 | <a href="./2026-04-19.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-18.html">Daily Hacker News for 2026-04-18</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 18, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.tobyord.com/writing/hourly-costs-for-ai-agents" target="_blank" rel="noopener noreferrer">Are the costs of AI agents also rising exponentially? (2025)</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47778922" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>尽管AI智能体执行任务的时长呈指数级增长，但研究者Toby Ord指出其推理成本也在同步飞速攀升，可能导致技术进步与经济可行性脱节。通过分析METR数据发现，AI智能体的折算“时薪”在部分高性能模型中已接近甚至超过人类工程师的成本，例如o3模型的运行成本远超120美元/小时的人类均价。这种趋势表明，尖端AI性能正趋向于昂贵且不具实用性的“F1模式”，未来实际应用落后于技术理论极限的现象将日益严重。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://en.wikipedia.org/wiki/Michael_O._Rabin" target="_blank" rel="noopener noreferrer">Michael Rabin has died</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47782925" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>计算机科学家、1976年图灵奖得主 Michael O. Rabin 于2026年4月14日逝世，享年94岁。他因与 Dana Scott 合作引入非确定性自动机概念而闻名，这一成果已成为计算复杂性理论的基石。他在职业生涯中发明了 Miller-Rabin 素性测试、Rabin-Karp 字符串搜索算法以及安全性等价于因子分解难度的 Rabin 签名算法，是随机算法和现代密码学领域的卓越先驱。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://nasaforce.gov/" target="_blank" rel="noopener noreferrer">NASA Force</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47807209" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>NASA Force 是 NASA 联合美国人事管理办公室推出的全新技术人才招聘计划，面向职业中早期的工程师提供为期 1-2 年的定期任职机会，旨在吸引顶尖人才解决航空与航天领域的关键挑战。入选者将直接参与 VIPER 月球探测器运营、Spaceport 2.0 建设、Orion 实时操作系统开发及 Artemis 计划推进系统支持等核心任务。该计划涵盖了月球资源原位利用（ISRU）、深空物流及用于空中交通管制的 AI/ML 模型开发，致力于推动人类空间飞行与科学发现。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://miguelconner.substack.com/p/im-coding-by-hand" target="_blank" rel="noopener noreferrer">I’m spending months coding the old way</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47807583" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Miguel Conner 在布鲁克林的 Recurse Center 开启了为期 12 周的脱离 AI 编程静修，旨在通过“手工编程”重新建立对代码库和计算机底层原理的深刻直觉。他此前在 Aily Labs 构建 AI Agent，但发现过度依赖 AI 会削弱对核心概念的理解，因此决定亲手从零实现 Transformer 架构、优化 GPU 算子并深入研究 Unix 终端技巧。通过结对编程和在旧硬件上实践，他强调了在 AI 时代通过高强度手动编码来构建心理模型和提升编程造诣的重要性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/smol-machines/smolvm" target="_blank" rel="noopener noreferrer">Show HN: Smol machines – subsecond coldstart, portable virtual machines</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47808268" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>smolvm 是一个轻量级且便携的虚拟机管理工具，基于 libkrun VMM 技术为 macOS 和 Linux 提供硬件级别的微型虚拟机隔离。它支持亚秒级冷启动（低于 200ms）和弹性内存分配，可直接启动 OCI 标准镜像并支持将工作负载打包为跨平台的单文件格式。该工具强调安全性，支持在不暴露密钥的情况下转发 SSH 代理，并提供细粒度的网络访问控制，适用于沙箱运行不可信代码及构建自包含的生产环境。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/The_toxic_side_of_the_Moon" target="_blank" rel="noopener noreferrer">All 12 moonwalkers had \&quot;lunar hay fever\&quot; from dust smelling like gunpowder (2018)</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47808913" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>所有12名登月宇航员都曾因接触带有烧焦火药味的月球粉尘而患上“月球花粉热”，表现为打喷嚏和鼻塞等症状。月球粉尘由带静电且边缘极其锋利的硅酸盐微粒组成，在低重力环境下极易深入肺部并长期滞留，研究表明长期接触可能损伤肺部和大脑细胞。欧洲航天局（ESA）正通过模拟月尘评估其健康风险，同时探索利用月壤制造建筑材料及提取氧气以支持未来的可持续太空探索。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://victorpoughon.github.io/interval-calculator/" target="_blank" rel="noopener noreferrer">Show HN: I made a calculator that works over disjoint sets of intervals</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47812341" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该计算器基于区间并集算术（Interval Union Arithmetic）实现，支持处理不相交的区间集并允许包含零的区间除法。其核心优势在于包含属性，即输出区间保证涵盖输入区间内任意实数组合的计算结果，可用于有效表示数值不确定性。工具提供全精度模式，利用向外舍入技术解决浮点数精度带来的误差问题，确保结果区间始终包含真实值。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://kdenlive.org/news/2026/state-2026/" target="_blank" rel="noopener noreferrer">State of Kdenlive</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47815118" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Kdenlive 在 2025 年完成了三次重大版本更新，引入了基于 SAM2 模型的背景移除、OpenTimelineIO 原生支持及全新的停靠系统，并将音频波形生成性能提升了 300%。该项目在过去一年获得超过 1150 万次下载，吸引了 38 位开发者贡献代码。2026 年的路线图重点包括新增监视器镜像与动画过渡预览、通过 MLT 框架支持 10/12 位色彩，以及开发用于高级关键帧管理的 Dopesheet 功能并上架 Microsoft Store。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://isayeter.com/posts/digitalocean-to-hetzner-migration/" target="_blank" rel="noopener noreferrer">Migrating from DigitalOcean to Hetzner</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47815774" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者分享了将生产环境从 DigitalOcean 迁移至 Hetzner 独立服务器的实战经验，在提升硬件性能的同时将月度成本从 1432 美元大幅降至 233 美元。迁移过程涉及 248GB 数据库和 34 个站点，通过 MySQL 实时同步、Nginx 临时反向代理转发及 DNS 优化等策略实现了业务全程零停机。此次迁移不仅每年节省近 1.5 万美元，还成功完成了从旧版 CentOS 到 AlmaLinux 的系统架构升级。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://tokens.billchambers.me/leaderboard" target="_blank" rel="noopener noreferrer">Anonymous request-token comparisons from Opus 4.6 and Opus 4.7</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47816960" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该网页是一个名为 Tokenomics 的 Anthropic 代币成本计算器，通过 428 份社区匿名提交记录对比了 Opus 4.6 与 Opus 4.7 模型在处理相同输入时的令牌（token）消耗。统计显示，Opus 4.7 的平均请求令牌数量和费用支出较 Opus 4.6 均显著增长了 37.4%。排行榜详细列举了近期 50 组对比样本，显示不同文本在 4.7 版本下的令牌数增幅普遍在 19% 至 86% 之间。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-19 00:00 | <a href="./2026-04-18.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-17.html">Daily Hacker News for 2026-04-17</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 17, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://blog.cloudflare.com/ai-platform/" target="_blank" rel="noopener noreferrer">Cloudflare&#39;s AI Platform: an inference layer designed for agents</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47792538" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Cloudflare 将 AI Gateway 升级为统一推理层，开发者通过单一 API 即可调用 12 多家供应商的 70 余种模型，并支持在 Workers 中通过一行代码实现跨供应商切换。平台扩展了多模态模型支持并引入基于 Replicate Cog 技术的“自带模型”功能，允许用户将自定义容器化模型部署至 Workers AI。针对智能体开发，该方案利用全球边缘网络显著降低延迟，提供自动故障转移及流式响应缓存技术，以确保复杂任务链的可靠性与响应速度。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://simonwillison.net/2026/Apr/16/qwen-beats-opus/" target="_blank" rel="noopener noreferrer">Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47796830" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Simon Willison 对比测试了阿里巴巴新发布的 Qwen3.6-35B-A3B 与 Anthropic 的 Claude Opus 4.7，发现在“骑自行车的鹈鹕”SVG 生成任务中，本地运行的 Qwen 模型表现优于 Opus 4.7。尽管 Opus 4.7 开启了最高思考等级，但在处理自行车框架细节和随后的“火烈鸟”测试中依然逊色于 Qwen 的量化模型。作者指出，这一结果打破了该趣味标杆以往与模型综合实力之间的正相关联系，证明了高性能本地量化模型在特定创意任务中的强劲竞争力。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://android-developers.googleblog.com/2026/04/build-android-apps-3x-faster-using-any-agent.html" target="_blank" rel="noopener noreferrer">Android CLI: Build Android apps 3x faster using any agent</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47797665" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Google 推出专为 AI 智能体工作流设计的 Android CLI 工具套件，包含现代化命令行界面、Android Skills 模块化指令集及 Android 知识库。Android CLI 显著优化了项目初始化与设备管理效率，使开发任务处理速度提升 3 倍并减少 70% 的 Token 消耗。开发者可通过 Skills 库引导智能体遵循最新的官方最佳实践，并利用知识库获取实时更新的开发指南，支持从命令行原型设计无缝过渡到 Android Studio 进行深度开发。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://clojure.org/about/documentary" target="_blank" rel="noopener noreferrer">Official Clojure Documentary page with Video, Shownotes, and Links</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47798345" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Clojure 官方纪录片页面提供了视频及相关术语表，旨在帮助观众深入理解该语言的设计核心。内容详细解析了 Lisp 方言、REPL 交互式开发、函数式编程以及不可变值与持久化数据结构等基本概念。同时，页面还涵盖了偶然复杂性、软件事务内存（STM）以及作为运行在 JVM 和 .NET 等平台上的宿主语言的技术定义。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.joanwestenberg.com/the-passive-income-trap-ate-a-generation-of-entrepreneurs/" target="_blank" rel="noopener noreferrer">The \&quot;Passive Income\&quot; trap ate a generation of entrepreneurs</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47799120" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章批判了将“被动收入”视为救赎叙事的错误思潮，指出这种过度追求自动化和去劳动化的倾向，诱导创业者忽视产品质量与客户需求，导致了代发货垃圾和低质联盟营销内容的泛滥。这种“被动收入脑”不仅破坏了互联网的信息生态，还使整代潜在创业者在追求虚假财务自由的过程中，丧失了磨炼核心技能与解决现实问题的机会。作者强调真正的商业价值源于长期的投入与对具体业务的责任感，呼吁回归那些真正解决问题而非单纯收割流量的业务模式。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://reclaimthenet.org/us-bill-mandates-on-device-age-verification" target="_blank" rel="noopener noreferrer">US Bill Mandates On-Device Age Verification</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47801991" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>美国众议员提出《父母决定法案》（H.R. 8250），拟强制要求苹果和谷歌等操作系统供应商在设备初始化阶段验证所有用户的出生日期，且无成人豁免选项。该法案覆盖手机、电脑、游戏机及车载系统等各类计算设备，旨在将操作系统层级转变为全国性的身份识别与年龄审核中介。批评者指出，此举以保护儿童为名推行大规模监控，不仅威胁匿名权和言论自由，还将因高昂的合规成本加剧科技巨头的垄断地位。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://hex.ooo/library/last_question.html" target="_blank" rel="noopener noreferrer">Isaac Asimov: The Last Question (1956)</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47804965" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>本文是艾萨克·阿西莫夫著名的科幻小说《最后的问题》，讲述了人类文明在数亿年的演化中，不断向超级电脑追问能否逆转熵增以阻止宇宙热寂。从最初的 Multivac 到后代的 Microvac，尽管计算机技术随时代飞速跃迁，但面对“如何大幅减少宇宙总熵”这一核心难题，机器始终给出“数据不足，无法提供有意义回答”的反馈。通过展现不同时代人类对星际殖民与恒星消亡的探讨，小说深刻揭示了技术文明在自然法则极限面前的持续探索。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.lawfaremedia.org/article/it-is-time-to-ban-the-sale-of-precise-geolocation" target="_blank" rel="noopener noreferrer">Ban the sale of precise geolocation</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47806304" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Citizen Lab 的报告揭露了 Webloc 平台利用广告技术收集全球 5 亿设备的精确位置并售予多国执法部门，引发了对隐私滥用和国家安全的严重担忧，凸显了禁售此类数据的紧迫性。安全机构 Gambit 详述了黑客如何利用 Claude 和 GPT-4 自动化工具，在短时间内高效攻破多个墨西哥政府系统并窃取数亿条公民记录。此外，近期国际动态还包括美印联合打击大型钓鱼网络、俄罗斯军方僵尸网络被拆除，以及谷歌 Chrome 引入 DBSC 技术以硬件加密方式防范会话令牌窃取。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.anthropic.com/news/claude-design-anthropic-labs" target="_blank" rel="noopener noreferrer">Claude Design</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47806725" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Anthropic Labs 推出由 Claude Opus 4.7 驱动的新产品 Claude Design，支持用户通过自然语言协作创建高保真原型、设计稿及演示文稿。该工具可自动读取代码库构建专属设计系统，允许通过对话、行内评论或自定义滑块进行精细化编辑，并支持导出至 Canva 或交付给 Claude Code 实现生产开发。目前该功能已向 Claude Pro 及企业订阅用户开放研究预览，旨在将传统复杂的设计反馈流程简化为高效的即时对话协作。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.claudecodecamp.com/p/i-measured-claude-4-7-s-new-tokenizer-here-s-what-it-costs-you" target="_blank" rel="noopener noreferrer">Measuring Claude 4.7&#39;s tokenizer costs</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47807006" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Claude 4.7 的新分词器在处理技术文档和代码时，实际 Token 消耗比 4.6 版本增加了 1.44 至 1.47 倍，显著高于官方宣称的 1.35 倍上限。这种变化导致 Claude Code 等工具的会话总成本上升约 20-30%，并由于 Token 密度增加使用户更早触及速率限制。虽然成本更高，但更细粒度的分词换取了更精确的指令遵循能力，在 IFEval 严格测试中表现提升约 5%，有助于减少复杂任务中的工具调用错误。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-18 00:00 | <a href="./2026-04-17.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-16.html">Daily Hacker News for 2026-04-16</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 16, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.dbreunig.com/2026/04/14/cybersecurity-is-proof-of-work-now.html" target="_blank" rel="noopener noreferrer">Cybersecurity looks like proof of work now</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47769089" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Anthropic 的安全增强模型 Mythos 在 AISI 的复杂模拟攻击中表现优异，标志着网络安全正转向一种类似“工作量证明”的经济逻辑。在这种模式下，系统的安全性取决于防御方投入的 Token 预算是否超过攻击者，使安全对抗简化为纯粹的计算资源竞争。受此影响，未来的软件开发流程将新增自动化的“硬化”阶段，通过持续投入资金运行 AI 模型来发现并修复漏洞，直到达到预定的安全预算上限。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.google.com/intl/en/ipv6/statistics.html?yzh=28197" target="_blank" rel="noopener noreferrer">IPv6 traffic crosses the 50% mark</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47777894" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Google 持续监测全球用户的 IPv6 连接可用性，通过统计图表展示访问其服务的 IPv6 使用比例。截至 2026 年 4 月 13 日，原生 IPv6 采用率已达到 45.54%，全球各地区的部署进程和连接质量存在明显差异。该数据通过地理分布图反映了 IPv6 的普及程度，并区分了不同区域在网络可靠性与延迟方面的表现。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.mcdonalds.co.jp/en/menu/burger/" target="_blank" rel="noopener noreferrer">The buns in McDonald&#39;s Japan&#39;s burger photos are all slightly askew</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47785738" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>日本麦当劳官网为方便顾客提供了英文版的汉堡菜单，涵盖早餐、常规及晚餐时段，并支持通过手机App进行英文下单。虽然产品原产地及详细营养说明等部分深度信息目前仅提供日文版，但过敏原标注已遵循日本最新的食品标签标准，涵盖了28种相关成分。此外，部分线下餐厅也提供纸质英文菜单供顾客查阅。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://sleepingrobots.com/dreams/stop-using-ollama/" target="_blank" rel="noopener noreferrer">Stop Using Ollama</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47788385" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Ollama 虽然因简化了 llama.cpp 的使用而流行，但因长期隐瞒技术来源、违反 MIT 授权协议及使用误导性模型命名（如将蒸馏版标为原版）而备受争议。技术上，其自定义后端比原生 llama.cpp 性能更低且 Bug 频发，冗余的 Modelfile 机制也导致了不必要的磁盘占用和配置限制。此外，该项目对最新模型的响应滞后、量化支持有限，正逐渐从本地优先转向云端化，被批评为阻碍用户获取开源成果的低效中间商。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://darkbloom.dev/" target="_blank" rel="noopener noreferrer">Darkbloom – Private inference on idle Macs</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47788542" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Darkbloom 是一个利用全球闲置 Mac 算力的去中心化 AI 推理网络，通过消除中间商环节将推理成本降低约 70%，并让硬件所有者直接获益。该平台通过苹果硬件级安全验证、端到端加密和操作系统级隔离技术，确保节点运营商完全无法访问用户的推理数据。系统完全兼容 OpenAI API 协议，支持运行包括 Qwen 3.5 和 MiniMax M2.5 在内的百亿及千亿级参数大模型。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://blog.cloudflare.com/email-for-agents/" target="_blank" rel="noopener noreferrer">Cloudflare Email Service</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47792593" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Cloudflare Email Service 进入公测阶段，为开发者提供原生发送、接收和处理邮件的基础设施，使邮件成为 AI Agent 的核心交互界面。该服务集成了支持 Workers 的 Email Sending 绑定、REST API 及多种语言 SDK，并能与 Agents SDK 深度配合实现异步处理、基于 Durable Objects 的状态持久化及安全回复路由。此外，Cloudflare 还推出了邮件 MCP 服务器、Wrangler CLI 命令以及开源的 Agentic Inbox 参考应用，助力构建具备全流程邮件处理能力的自动化智能体。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://aphyr.com/posts/420-the-future-of-everything-is-lies-i-guess-where-do-we-go-from-here" target="_blank" rel="noopener noreferrer">The future of everything is lies, I guess: Where do we go from here?</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47792718" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者将人工智能对社会的重塑类比为私家车的普及，指出机器学习正通过产生大量“垃圾内容（slop）”、推高能源成本及侵蚀人类核心认知技能，带来潜在的文化与经济灾难。文中表达了对失去深度思考与写作能力的深层焦虑，号召通过停止使用大语言模型、推动严格监管及呼吁从业者辞职等手段，来减缓技术扩张的速度。尽管作者承认AI在特定技术任务中具有实用诱惑，但仍坚持提倡通过亲手创作和拒绝生成式工具，以维护人类的“实践智慧（metis）”与智力独立性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://qwen.ai/blog?id=qwen3.6-35b-a3b" target="_blank" rel="noopener noreferrer">Qwen3.6-35B-A3B: Agentic coding power, now open to all</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47792764" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>阿里巴巴Qwen团队开源了Qwen3.6-35B-A3B，这是一款采用MoE架构的稀疏模型，凭借仅30亿的激活参数实现了卓越的自主编程（Agentic Coding）与推理性能，足以媲美Qwen3.5-27B等更大型的稠密模型。该模型原生支持多模态感知与思考模式，在空间智能、文档理解及视频分析等基准测试中表现出色。目前模型权重已全面开放，支持通过阿里云百炼API调用，并能无缝集成至OpenClaw、Claude Code及Qwen Code等主流AI编程辅助工具中。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.anthropic.com/news/claude-opus-4-7" target="_blank" rel="noopener noreferrer">Claude Opus 4.7</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47793411" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Anthropic 发布了 Claude Opus 4.7 模型，在高级软件工程、视觉分辨率及复杂长程任务的自主执行方面较 4.6 版本有显著跃升，能够更精准地遵循指令并实现逻辑自检。该模型引入了自动化网络安全防护机制以拦截高风险请求，并为合法安全研究人员配套了全新的网络验证计划。多家企业测试证实其在处理异步工作流、代码审查及多步推理任务时具备极高的可靠性与纠错能力。目前 Opus 4.7 已在各大云平台及 API 上线，定价保持每百万输入代币 5 美元、输出 25 美元不变。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://openai.com/index/codex-for-almost-everything/" target="_blank" rel="noopener noreferrer">Codex for almost everything</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47796469" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>OpenAI 发布 Codex 重大更新，面向全球 300 多万开发者引入了“计算机使用”功能，使其能像人类一样操作桌面应用并执行跨软件任务。新版应用集成了内置浏览器、图像生成、90 多种新增插件以及 SSH 远程开发支持，深度覆盖从前端设计到代码审查的软件开发全生命周期。此外，更新还增加了“记忆”功能与自动化排程，支持跨天处理长期任务，并能根据项目背景和用户偏好主动提供工作起始建议。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-17 00:00 | <a href="./2026-04-16.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-15.html">Daily Hacker News for 2026-04-15</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 15, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.eff.org/deeplinks/2026/04/dangers-californias-legislation-censor-3d-printing" target="_blank" rel="noopener noreferrer">The dangers of California&#39;s legislation to censor 3D printing</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47759420" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>加州 A.B. 2047 法案拟强制 3D 打印机预装审查软件以拦截枪支零件，并计划将禁用此类算法或使用开源固件的行为定为轻罪。电子前哨基金会（EFF）警告称，此举将重蹈 DRM 覆辙，引发严重的平台锁死、维修受阻及隐私监控风险，且在技术上难以有效阻止违法行为。该法案建立的审查基础设施不仅会扼杀当地创新，还可能通过软硬件供应链对全球 3D 打印社区的开放性造成深远破坏。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://code.claude.com/docs/en/routines" target="_blank" rel="noopener noreferrer">Claude Code Routines</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47768133" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Claude Code Routines 是由 Anthropic 托管的云端自动化配置方案，集成了提示词、代码库及连接器，支持在无需本地设备参与的情况下自主运行。它提供定时计划、API 接口调用以及 GitHub 事件（如 PR 或发布）三种触发模式，能够执行 Shell 命令并与 Slack、Linear 等外部工具联动。该功能适用于代码审查、警报自动修复和文档同步等高频场景，目前面向 Pro、Max 及企业级套餐用户开放。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://news.ycombinator.com/item?id=47769796" target="_blank" rel="noopener noreferrer">Tell HN: Fiverr left customer files public and searchable</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47769796" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Fiverr 平台被曝存在严重安全漏洞，导致包括报税单、社会安全号码 (SSN) 及心理治疗记录在内的大量用户敏感文件被 Google 索引并公开搜索。尽管官方声称文件泄露源于用户主动分享作品集，但社区对其解释并不买账，认为这属于严重的技术疏忽。目前相关内容已通过 Cloudinary 拦截并失效，此事引发了关于建立软件工程师强制认证体系以及对数据泄露施加惩罚性罚款的激烈讨论。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://stopflock.com/" target="_blank" rel="noopener noreferrer">Stop Flock</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47772012" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Stop Flock 揭露了 Flock Safety 公司利用 AI 打造的“车辆指纹”监控系统，该技术能通过车型、颜色甚至车贴细节在全国联网范围内追踪公众，且执法人员通常无需搜查令即可访问。这种大规模监控不仅引发了严重的第四修正案宪法争议，还被证实在实际执法中存在明显的种族偏见，并正通过与物业公司和零售商合作向私人领域渗透。该项目指出，这种缺乏监管的自动化追踪正将日常出行转化为可搜索的数据库，构成了人工智能时代下对公民隐私的严重威胁。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://super-memory.com/articles/sleep.htm" target="_blank" rel="noopener noreferrer">Good sleep, good learning, good life (2012)</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47776557" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>本文综合睡眠科学与记忆学习研究，提出了一套旨在提升创造力与效率的实践方案，核心倡导“自由规律睡眠”（Free Running Sleep）并主张摒弃闹钟。文章详细解析了睡眠的稳态与昼夜节律双成分模型，深入探讨了双相睡眠、多相睡眠的局限以及各类相位障碍（如DSPS）的解决算法。此外，还阐述了睡眠在记忆巩固与神经优化中的生理机制，为追求智力成就的人群提供了系统化的睡眠管理指南。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://prog21.dadgum.com/30.html" target="_blank" rel="noopener noreferrer">Want to write a compiler? Just read these two papers (2008)</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47776796" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>本文指出传统编译教材因内容过于繁杂且偏重理论，常导致开发者误以为编译器编写极其困难。文章重点推荐了 Jack Crenshaw 的经典教程以快速上手单遍扫描编译器的开发，并引入了“Nanopass 框架”论文中将编译器视为一系列简单、独立转换步骤的核心理念。通过利用高级语言对内部表示进行处理，开发者可以有效降低编译器实现的复杂门槛，而非盲目受困于《龙书》等重头著作。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.worseonpurpose.com/p/your-backpack-got-worse-on-purpose" target="_blank" rel="noopener noreferrer">Backpacks got worse on purpose</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47777209" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>VF Corporation 通过收购 JanSport 和 The North Face 等品牌控制了美国半数以上的背包市场，在缺乏竞争的情况下，为达成利润目标而刻意降低了面料丹尼尔数、拉链质量和缝合密度。这种策略利用品牌声誉销售材料缩水的入门级产品，并辅以严格的保修限制来规避因产品寿命缩短带来的售后成本。其核心商业逻辑是将耐用品转变为需要高频复购的消耗品，反映了品牌被大型集团收购后经历成本优化、质量下降到最终被剥离的典型价值榨取模式。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://wchambliss.wordpress.com/2026/03/03/god-sleeps-in-the-minerals/" target="_blank" rel="noopener noreferrer">God sleeps in the minerals</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47778475" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该条目展示了作者在洛杉矶县自然历史博物馆“挖掘：原始之美”展览中拍摄的一系列矿物摄影作品。其标题“上帝睡在矿物中”引用了帕拉宏撒·尤迦南达的哲学名言，通过诗意的表达赞美自然矿石的奇异美感与内在神性。评论区对此展开了多元讨论，涵盖了对矿物美学的欣赏以及对该比喻在宗教和哲学层面的解读。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.eff.org/deeplinks/2026/04/google-broke-its-promise-me-now-ice-has-my-data" target="_blank" rel="noopener noreferrer">Google broke its promise to me – now ICE has my data</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47782570" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>博士生 Amandla Thomas-Johnson 因参加抗议活动遭到美国移民及海关执法局（ICE）调查，Google 在未按承诺提前通知的情况下，直接将其账户元数据（如 IP 地址和会话记录）移交给了 ICE。电子前哨基金会（EFF）已据此向加州和纽约州总检察长提交投诉，指控 Google 违反了长达十年的用户通知承诺，涉嫌误导性商业行为。该事件揭示了科技巨头掌握的海量碎片化数据如何被用于构建侵入性的监视画像，并对行使合法言论权力的个人产生持续的威慑。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.bloomberg.com/news/articles/2026-04-15/live-nation-illegally-monopolized-ticketing-market-jury-finds" target="_blank" rel="noopener noreferrer">Live Nation illegally monopolized ticketing market, jury finds</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47783713" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>曼哈顿联邦陪审团裁定 Live Nation Entertainment Inc. 非法垄断了现场活动行业，并存在向购票粉丝过度收费的行为。这一里程碑式的反垄断判决是在经历了多年监管审查及为期六周的庭审后作出的，为这家美国最大的音乐会推广商和票务巨头面临潜在的分拆奠定了基础。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-16 00:00 | <a href="./2026-04-15.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-14.html">Daily Hacker News for 2026-04-14</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 14, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://nypost.com/2026/04/11/us-news/us-appeals-court-declares-158-year-old-home-distilling-ban-unconstitutional/" target="_blank" rel="noopener noreferrer">US appeals court declares 158-year-old home distilling ban unconstitutional</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47751781" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>美国联邦第五巡回上诉法院裁定，有着158年历史的联邦家庭蒸馏禁令违宪，认为该禁令并非国会行使征税权的必要或适当手段。法院支持了业余蒸馏者协会（Hobby Distillers Association）的诉求，指出政府不能以防止逃税为由过度扩张联邦权力，甚至以此逻辑将各种居家活动刑事化。此裁决维持了德克萨斯州地方法院此前的判决，被视为个人自由和限制联邦权力边界的重要胜利。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/" target="_blank" rel="noopener noreferrer">Make tmux pretty and usable (2024)</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47752819" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>本文详细介绍了通过编辑 ~/.tmux.conf 配置文件来增强 tmux 操作便捷性与视觉美感的基础方法。核心技巧包括将前缀键重映射为 Ctrl-a、自定义直观的窗格拆分快捷键（如 | 和 -），以及启用鼠标模式以支持快捷切换和窗格调整。此外，文章还提供了关于状态栏、边框及颜色样式的具体配置示例，帮助用户打造高效且个性化的终端环境。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/sterlingcrispin/nothing-ever-happens" target="_blank" rel="noopener noreferrer">Nothing Ever Happens: Polymarket bot that always buys No on non-sports markets</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47753472" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Nothing Ever Happens 是一个基于 Python 异步架构的 Polymarket 预测市场自动交易机器人，其核心策略是在非体育类独立市场中批量购买“No”（否定）选项。该工具集成了交易执行、实时仪表盘和自动状态恢复功能，并提供了详尽的脚本用于监控数据库统计、钱包历史及 Heroku 日志解析。项目内置了严格的安全校验模型，通过多重环境变量强制区分模拟与实盘模式，以确保链上私钥安全及交易流程的可控性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.github.com/gh-stack/" target="_blank" rel="noopener noreferrer">GitHub Stacked PRs</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47757495" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>GitHub 推出原生支持的 Stacked PRs 功能，允许将大型变更拆分为相互链接且独立审查的小型 PR 序列，以提升评审质量和合并速度。开发者可使用配套的 gh stack CLI 实现分支管理、级联变基及一键合并，同时 GitHub UI 提供了堆栈地图导航并强化了端到端 CI 验证。该工具链还支持 AI 代理集成，并能在合并部分 PR 后自动调整剩余堆栈的基准分支。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.blackmagicdesign.com/products/davinciresolve/photo" target="_blank" rel="noopener noreferrer">DaVinci Resolve – Photo</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47760529" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>DaVinci Resolve 推出的全新照片页面将好莱坞顶级的调色工具引入静态摄影领域，支持 32K 源码处理及主流相机的原生 RAW 格式。该页面整合了魔术遮罩、深度图及 SuperScale 等先进 AI 技术，可实现 4 倍无损放大、后期灯光重绘与精细的人脸修饰。软件还支持相机联机拍摄与云端实时协作，并针对各平台 GPU 加速及硬件调色面板进行了深度优化，大幅提升了照片后期的处理效率。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://developers.google.com/search/blog/2026/04/back-button-hijacking" target="_blank" rel="noopener noreferrer">A new spam policy for “back button hijacking”</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47760764" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Google 搜索团队宣布将“返回按钮劫持”（back button hijacking）纳入垃圾内容政策的“恶意行为”范畴，旨在打击干扰浏览器导航、阻止用户返回原页面的欺骗性操作。此类违规行为会导致站点面临人工处置或算法降权，从而影响其在搜索结果中的表现。该政策设有两个月的缓冲期，将于2026年6月15日正式生效，网站所有者需及时清理相关脚本及第三方广告插件。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://rareese.com/posts/backblaze/" target="_blank" rel="noopener noreferrer">Backblaze has stopped backing up OneDrive and Dropbox folders and maybe others</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47762864" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Backblaze 悄然更改了备份策略，停止支持 OneDrive、Dropbox、Google Drive 等云存储文件夹以及 .git 目录的自动备份，且未对受影响用户进行明确通知。尽管官方声称此举旨在优化性能，但这违背了其“备份所有文件且无类型限制”的长期承诺。作者认为这种隐瞒核心变更的行为严重背弃了用户信任，导致备份服务的可靠性大幅下降。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://steveklabnik.github.io/jujutsu-tutorial/introduction/what-is-jj-and-why-should-i-care.html" target="_blank" rel="noopener noreferrer">jj – the CLI for Jujutsu</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47763759" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>jj 是 Jujutsu 分布式版本控制系统的命令行界面，它融合了 Git 与 Mercurial 的优点，旨在提供比 Git 更简单、易用且功能强大的操作体验。该工具通过更精简的架构支持更先进的版本管理功能，并拥有完全兼容 Git 的后端，允许个人用户在不影响团队其他人的情况下无缝切换使用。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://techcrunch.com/2026/04/13/thousands-of-rare-concert-recordings-are-landing-on-the-internet-archive-listen-now/" target="_blank" rel="noopener noreferrer">Rare concert recordings are landing on the Internet Archive</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47765604" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>芝加哥乐迷 Aadam Jacobs 将其自 20 世纪 80 年代以来录制的 1 万多盘珍贵现场演唱会磁带交给互联网档案馆进行数字化保存。目前已有约 2500 份录音上线，涵盖了 Nirvana、Sonic Youth 和 R.E.M. 等艺人早期罕见的演出片段。尽管原始录音设备简陋，但在志愿者团队的专业音频修复和标注下，这些磁带已转化为高质量的数字档案供公众收听。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://honeypot.net/2026/04/14/i-wrote-to-flocks-privacy.html" target="_blank" rel="noopener noreferrer">I wrote to Flock&#39;s privacy contact to opt out of their domestic spying program</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47768813" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>一名加州居民根据《加州消费者隐私法》(CCPA) 向车牌识别技术公司 Flock Safety 提出申请，要求其删除并停止采集涉及个人、车辆及家庭成员的所有数据。Flock Safety 以其仅作为“服务提供商”而非“数据控制者”为由拒绝了该请求，称数据归属于其客户，建议申请者直接联系相关组织。作者认为该回复在法律上并不准确，指出 Flock 作为实际收集并处理身份信息的实体应履行 CCPA 义务，目前正考虑通过法律途径解决。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-15 00:00 | <a href="./2026-04-14.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-13.html">Daily Hacker News for 2026-04-13</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 13, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.lesswrong.com/posts/jTGbKKGqs5EdyYoRc/most-people-can-t-juggle-one-ball" target="_blank" rel="noopener noreferrer">Most people can&#39;t juggle one ball</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47702887" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>资深杂耍者 Sean Herrington 分享了从零基础到 3 球及以上难度的系统进阶指南，详细拆解了基本抛接节奏、瀑布式与喷泉式花式的差异以及新手易犯的技术误区。文章指出增加球数会使难度呈指数级上升，掌握 5 球甚至需要数年苦练，并介绍了杂耍背后的数学逻辑 Siteswap 记法。此外，内容还涉及了双人合作抛接以及球、环、棒等不同道具的杂耍技巧，展现了这一运动从基础物理动作到复杂数学模式的演进。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.trainjazz.com/" target="_blank" rel="noopener noreferrer">I gave every train in New York an instrument</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47719490" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该项目将约800辆纽约市实时运行的地铁列车转化为音符，构成一支包含贝斯、钢琴和萨克斯等乐器的爵士组合。乐曲的节奏与和弦随交通流量动态演变，高峰期音调密集而凌晨则趋于静谧，并支持根据用户地理位置重排听觉优先级。这是一种由城市脉动驱动的生成式艺术，将工业噪音重构为独一无二且永不重复的音乐肖像。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://blinry.org/diy-soft-drinks/" target="_blank" rel="noopener noreferrer">DIY Soft Drinks</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47741701" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者详细记录了自制可乐、橙味及杏仁汽水的实验过程，并将迭代后的配方发布在 GitHub 上。制作核心在于利用阿拉伯胶将橙、青柠等多种植物精油乳化成风味乳剂，再混合焦糖色、柠檬酸及三氯蔗糖或食糖制成浓缩糖浆。通过对甜度和精油比例的反复微调，作者成功研发出风味独特的果味汽水及比市售产品更出色的“Syntez-Cola”。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://boringbar.app/" target="_blank" rel="noopener noreferrer">Show HN: boringBar – a taskbar-style dock replacement for macOS</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47742200" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>boringBar 是一款针对 macOS 的任务栏风格 Dock 替代工具，通过按桌面组织窗口、提供悬停预览和一键桌面切换功能，解决了多显示器环境下窗口管理不便的问题。该应用集成了可搜索的应用启动器、通知角标及隐藏原生 Dock 的功能，并支持通过滚动任务栏快速切换桌面。软件要求 macOS 14 或更高版本，提供 14 天全功能免费试用，付费方案包括 40 美元的永久许可或每年 7.99 美元起的订阅模式。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://bcantrill.dtrace.org/2026/04/12/the-peril-of-laziness-lost/" target="_blank" rel="noopener noreferrer">The peril of laziness lost</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47743628" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章重申了 Larry Wall 提出的程序员“懒惰”美德，强调其本质是通过高水平抽象和系统简化来优化未来时间成本的智力劳动。作者批评了现代“兄弟会程序员（brogrammer）”文化中虚假的勤奋，特别是利用 LLM 盲目追求代码产出量而忽视系统架构和冗余问题的现象。文章指出 LLM 缺乏人类因时间约束而产生的优化动力，容易导致系统臃肿，因此必须坚持以人类的“美德式懒惰”为导向，利用工具实现更简洁高效的工程目标。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://bsky.app/profile/serenityforge.com/post/3mj3r4nbiws2t" target="_blank" rel="noopener noreferrer">Google removes \&quot;Doki Doki Literature Club\&quot; from Google Play</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47743730" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Google Play 以心理健康和敏感话题为由下架了知名恐怖游戏《心跳文学部》（DDLC），引发开发者 Serenity Forge 及玩家群体的强烈抗议。批评者抨击 Google 存在双重标准，在放任 AI 生成的有害内容及色情广告的同时，却封杀这款已上线 9 年且在心理健康描写上极具影响力的作品。目前社区正讨论通过 APK 侧载或 itch.io 等平台进行替代分发，并对大型分发平台日益严格的审查制度表示担忧。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://arxiv.org/abs/2603.21852" target="_blank" rel="noopener noreferrer">All elementary functions from a single binary operator</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47746610" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该研究提出一种单一二元算子 eml(x,y)=exp(x)-ln(y)，证明其与常数 1 结合可生成包括算术、超越和代数函数在内的所有科学计算器标准初等函数。这种 EML 形式将数学表达式统一为简单的二元树结构，不仅简化了连续数学的运算原语，还支持利用 Adam 优化器进行基于梯度的符号回归，实现了从数值数据中精确还原闭式公式的可能性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.viktorcessan.com/the-economics-of-software-teams/" target="_blank" rel="noopener noreferrer">The economics of software teams: Why most engineering orgs are flying blind</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47748064" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>软件开发是企业的高成本支出项，一个8人工程团队每月成本约8.7万欧元，但多数组织对决策背后的实际财务成本及其应产出的价值缺乏可见性。为了抵消系统维护的长尾成本和项目失败率，团队创造的价值需达到其成本的3至5倍才算财务健康，而不仅是单纯的收支平衡。当前许多企业习惯使用交付速度或用户满意度等指标替代财务衡量，这种错位源于过去十年资本廉价环境下对增长的盲目追求，掩盖了优先级分配错误带来的经济损失。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://servo.org/blog/2026/04/13/servo-0.1.0-release/" target="_blank" rel="noopener noreferrer">Servo is now available on crates.io</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47750872" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Servo 团队发布了 v0.1.0 版本的 servo crate，这是其首次在 crates.io 上作为库发布，旨在为应用开发提供轻量高性能的嵌入式 Web 技术方案。此次更新展示了官方对嵌入式 API 满足用户需求的信心，并特别推出了长期支持（LTS）版本，以提供更稳定的半年期升级频率和持续安全更新。LTS 版本的设立是为了平衡常规月度版本中预期的破坏性变更，为需要高稳定性的开发者提供迁移指南和保障。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://anchor.host/someone-bought-30-wordpress-plugins-and-planted-a-backdoor-in-all-of-them/" target="_blank" rel="noopener noreferrer">Someone Bought 30 WordPress Plugins and Planted a Backdoor in All of Them</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47755629" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>一名买家通过 Flippa 收购了拥有 30 多个插件的 WordPress 开发商 Essential Plugin，并于 2025 年 8 月在所有插件中植入了潜伏期长达 8 个月的 PHP 反序列化后门。2026 年 4 月该后门被激活，通过修改 wp-config.php 注入 SEO 垃圾信息和复杂的链式恶意负载，导致 WordPress.org 紧急下架了该开发者的全部 31 个插件。由于官方强制更新仅能暂时封堵攻击路径，网站管理员需手动清理配置文件并彻底移除包含后门的恶意模块。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-14 00:00 | <a href="./2026-04-13.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-12.html">Daily Hacker News for 2026-04-12</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 12, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://apnews.com/article/aadam-jacobs-collection-concerts-internet-archive-chicago-b1c9c4466a2db409a83523ad84b79d62" target="_blank" rel="noopener noreferrer">Volunteers turn a fan&#39;s recordings of 10K concerts into an online treasure trove</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47687443" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>音乐爱好者 Aadam Jacobs 在过去四十年间秘密录制了超过 1 万场音乐会，涵盖了 Nirvana 和 Björk 等众多摇滚艺人早期珍贵的现场演出。目前，一群跨国志愿者正协作将这些模拟磁带数字化并上传至“互联网档案馆”（Internet Archive），为公众提供免费的流媒体播放与下载。该项目不仅通过技术手段修复了音频质量，还为 20 世纪 80 年代以来的独立与朋克摇滚乐坛保留了极具价值的文化档案。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://flight-viz.com/cockpit.html?lat=40.64&amp;lon=-73.78&amp;alt=3000&amp;hdg=220&amp;spd=130&amp;cs=DAL123" target="_blank" rel="noopener noreferrer">Every plane you see in the sky – you can now follow it from the cockpit in 3D</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47694064" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Flight Viz 是一款基于实时 ADS-B 数据的 3D 飞行可视化工具，允许用户从第一人称视角追踪天空中的任何飞机。该工具通过渲染 3D 地形、建筑物和大气效果，模拟飞机的“驾驶舱”视野，并配备显示实时高度、地速和航向的平显（HUD）。用户可以在全球交互式地图上搜索航班号或呼号，并动态调整视角以观察周围环境，体验极具沉浸感的实时飞行模拟。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://news.ycombinator.com/item?id=47727960" target="_blank" rel="noopener noreferrer">Show HN: Pardonned.com – A searchable database of US Pardons</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47727960" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Pardonned.com 是一个新建立的美国总统特赦可搜索数据库，旨在解决官方数据查询困难的问题，提升特赦决策的透明度。社区讨论聚焦于特赦权力的历史争议与潜在滥用，涉及尼克松案的先发制人特赦、近年来关于“特赦买卖”的指控以及特赦家属与政治盟友引发的司法公正质疑。该项目计划通过量化分析不同行政任期内的特赦趋势，进一步揭示特赦决定与政治捐款、利益关联及特定罪行类别之间的潜在联系。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://rdi.berkeley.edu/blog/trustworthy-benchmarks-cont/" target="_blank" rel="noopener noreferrer">Exploiting the most prominent AI agent benchmarks</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47733217" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>加州大学伯克利分校的研究人员开发了一个自动化代理，系统性地审计并攻破了包括 SWE-bench、WebArena 和 OSWorld 在内的八个主流 AI 智能体基准测试，证明这些基准可以通过漏洞利用而非解决任务来获得满分。攻击手段涵盖了利用 Python 测试钩子强制修改测试结果、通过浏览器协议读取本地标准答案，以及在缺乏验证机制的环境中直接下载参考答案等。研究强调，由于评分逻辑缺陷和环境隔离不足，目前的基准测试无法真实衡量 AI 的推理能力，且已观察到前沿模型在评估中存在主动进行奖励劫持的行为。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/anthropics/claude-code/issues/46829" target="_blank" rel="noopener noreferrer">Anthropic downgraded cache TTL on March 6th</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47736476" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>数据分析显示，Anthropic 在 2026 年 3 月初将其 Claude Code 的提示词缓存（Prompt Cache）默认生存时间（TTL）从 1 小时悄然缩短至 5 分钟。这一变更导致缓存创建成本增加了 20%-32%，并使订阅用户因上下文在短时间内失效需频繁以高价重新上传，从而引发配额消耗激增甚至首次触及限制。该调整对 Claude Code 典型的高上下文长会话场景造成了严重的经济和配额负担，建议官方恢复 1 小时默认 TTL 或提供用户配置选项。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://stevehanov.ca/blog/how-i-run-multiple-10k-mrr-companies-on-a-20month-tech-stack" target="_blank" rel="noopener noreferrer">I run multiple $10K MRR companies on a $20/month tech stack</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47736555" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Steve Hanov 分享了仅需每月 20 美元成本运行多家 1 万美元月常驻收入（MRR）公司的精简技术栈方案。其核心策略包括弃用昂贵的云服务改用廉价 VPS，利用 Go 语言静态编译与低内存消耗特性实现高效后端，并配合家用 GPU 运行 VLLM 以替代高昂的 AI API 批处理开销。数据库层面，他通过开启 WAL 模式的 SQLite 替代传统数据库服务器，在极低预算下构建出高性能且具备长久生命周期的业务架构。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://essays.johnloeber.com/p/4-bring-back-idiomatic-design" target="_blank" rel="noopener noreferrer">Bring Back Idiomatic Design</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47738827" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>John Loeber指出，现代网页应用虽各具特色却缺乏桌面软件时代的“习语化设计”一致性，导致用户在不同应用间切换时面临沉重的认知负担。这种设计碎片化主要源于前端技术的极速更迭、移动端适配压力以及对原生HTML标准的疏离。他呼吁开发者回归标准化的交互模式，优先保障界面的可预测性与浏览器原生行为，通过重建设计习语来提升用户的生产力与使用体验。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://news.ycombinator.com/item?id=47738883" target="_blank" rel="noopener noreferrer">Tell HN: docker pull fails in spain due to football cloudflare block</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47738883" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>西班牙职业足球联盟（LaLiga）为打击盗版导致该国 ISP 在足球比赛期间封锁 Cloudflare IP，引发了严重的网络次生灾害。该举措不仅导致 Docker 镜像拉取和 GitHub 访问中断，还造成依赖云端的智能防盗报警器、自动门及失智老人 GPS 定位器等关键设备停摆，威胁公共安全。尽管官方将其轻描淡写为仅影响技术人员的边缘问题，但此事件引发了社区对于互联网审查扩大化以及过度依赖单一中心化基础设施风险的激烈讨论。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/anthropics/claude-code/issues/45756" target="_blank" rel="noopener noreferrer">Pro Max 5x quota exhausted in 1.5 hours despite moderate usage</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47739260" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>用户报告在 Claude Code v2.1.97 中，Pro Max 5x (Opus) 计划的配额在适度使用下仅 1.5 小时便告罄。分析认为其根本原因在于 cache_read 令牌疑似按全额而非 1/10 速率计入配额限制，导致 Prompt 缓存失去了节省配额的作用。此外，1M 超大上下文窗口导致的单次调用高成本、自动压缩产生的调用峰值以及后台闲置会话的持续消耗，进一步加剧了配额的枯竭。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.the-independent.com/tech/renewable-energy-solar-nepal-bhutan-iceland-b2533699.html" target="_blank" rel="noopener noreferrer">Seven countries now generate 100% of their electricity from renewable energy</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47739313" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>报告显示，阿尔巴尼亚、不丹和冰岛等七个国家已实现近100%的可再生能源发电，另有40多个国家的可再生能源占比已超过50%。专家指出，通过风能、水能和太阳能（WWS）实现全面电气化是停止碳排放的关键，无需依赖任何“奇迹技术”。随着钙钛矿等材料提升效率及商业成本大幅下降，研究人员认为全球能源已达到不可逆转的转折点，预计太阳能将在2050年前成为全球最主要的电力供应来源。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-13 00:00 | <a href="./2026-04-12.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-11.html">Daily Hacker News for 2026-04-11</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 11, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://playstarfling.com/" target="_blank" rel="noopener noreferrer">Starfling: A one-tap endless orbital slingshot game in a single HTML file</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47698455" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Starfling 是一款基于单 HTML 文件开发的极简太空竞技游戏，玩家通过单次点击在星球间进行轨道弹射以挑战飞行极限。游戏玩法高度依赖于对时机的精准掌控，通过在旋转轨道上适时释放来确保飞向下一颗星体并收集星星。除了基础的分数追踪和高分纪录，游戏还集成了广告复活机制与移除广告的内购功能，并计划在 iOS 和 Android 平台上线。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.theregister.com/2026/04/10/cpuid_site_hijacked/" target="_blank" rel="noopener noreferrer">CPU-Z and HWMonitor compromised</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47717847" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>CPUID 官方网站在 4 月 9 日至 10 日期间因后端 API 遭入侵，导致 CPU-Z 和 HWMonitor 的部分下载链接在约 6 小时内被随机篡改为恶意程序。虽然官方签名的原始软件未受直接篡改，但攻击者通过伪造安装程序分发含有恶意 CRYPTBASE.dll 的窃密木马，利用 PowerShell 在内存中运行以规避检测并尝试获取浏览器凭据。目前该漏洞已修复，此次事件警示攻击者即使不接触源代码，也能通过入侵后端分发环节造成严重的供应链安全威胁。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/Keychron/Keychron-Keyboards-Hardware-Design" target="_blank" rel="noopener noreferrer">Industrial design files for Keychron keyboards and mice</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47720419" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Keychron 在 GitHub 上公开了其旗下 100 多款键盘和鼠标型号的工业设计文件，涵盖 Q、K、V 及 M 系列等 92 个设备型号，提供 730 余个 STEP 和 DXF 等格式的生产级 CAD 资源。该项目旨在降低硬件开发门槛，支持用户研究生产流程、重构外壳定位板或设计第三方配件。项目采用源码可用许可，允许个人与教育用途，并明确豁免了原创兼容配件的商业化限制，但不允许仿制售卖整机或使用其商标进行品牌宣传。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/torvalds/linux/blob/master/Documentation/process/coding-assistants.rst" target="_blank" rel="noopener noreferrer">AI assistance when contributing to the Linux kernel</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47721953" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Linux 内核文档明确了 AI 辅助开发的指导规范，要求相关贡献必须符合 GPL-2.0 许可并遵循标准流程。准则强调 AI 代理严禁签署 Signed-off-by 标签，必须由人类提交者审查代码并签署开发者来源证书（DCO）以承担全部责任。此外，AI 参与的贡献需通过 Assisted-by 标签进行详细标注，记录所使用的 AI 名称、模型版本及专业分析工具。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.bbc.com/news/articles/cr71lkzv49po" target="_blank" rel="noopener noreferrer">Chimpanzees in Uganda locked in eight-year &#39;civil war&#39;, say researchers</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47722333" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>乌干达 Ngogo 地区的黑猩猩群体在维持长期团结后，于 2015 年分裂为“西方”和“中央”两个敌对阵营，并陷入了长达八年的暴力“内战”。研究显示，西方群体通过数十次针对性袭击导致中央群体至少 24 只黑猩猩死亡，其中包括多只成年雄性和幼崽。研究人员认为，群体规模过大引发的资源竞争以及雄性间的繁殖竞争是导致这场持续性同类残杀的主要诱因。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://jack.cab/blog/every-firefox-extension" target="_blank" rel="noopener noreferrer">Installing every* Firefox extension</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47724118" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者通过调用 Firefox 插件商店 API 抓取并分析了约 8.4 万个扩展，利用日期筛选和类别搜索突破了单次查询 3 万条的分页限制，实现了 99.94% 的覆盖率。分析揭示了插件生态的乱象，包括体积达 196MB 的音频类插件、请求数千项权限的 SEO 垃圾内容，以及通过同形异义词伪装进行虚拟货币窃取的钓鱼程序。研究还识别出大量由 AI 生成的低质量“全能搜索”类潜在有害程序（PUA），其受众规模超 70 万人，相关数据集已托管至 Hugging Face 供社区研究。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://kentwalters.com/posts/corners/" target="_blank" rel="noopener noreferrer">Filing the corners off my MacBooks</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47724352" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者针对 MacBook 底部边缘及凹槽处过于锋利导致手腕不适的问题，分享了利用锉刀和砂纸对手体进行圆润化打磨的改装经验。操作中通过胶带封堵键盘与扬声器防止铝屑侵入，并依次使用粗锉及 150/400 目砂纸进行精细加工以确保触感顺滑。作者提倡根据个人需求对生产力工具进行定制化物理修改，并表示将继续在未来的设备上沿用此做法。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.cbsnews.com/live-updates/artemis-ii-splashdown-return/" target="_blank" rel="noopener noreferrer">Artemis II safely splashes down</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47725583" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>2026年4月10日，NASA阿耳忒弥斯2号（Artemis II）载人飞船在完成10天绕月任务后，于圣迭戈附近的太平洋海域精准溅落。四名宇航员安全通过大气层再入的高温考验，由美国海军协助顺利出舱并送往回收舰，标志着该历史性探月任务圆满结束。NASA官员称此举开启了深空探索的新纪元，特朗普总统随后也对机组人员表示祝贺并展望了未来的火星计划。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.xda-developers.com/frances-government-ditching-windows-for-linux/" target="_blank" rel="noopener noreferrer">France&#39;s government is ditching Windows for Linux, says US tech a strategic risk</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47728653" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>法国政府宣布将放弃 Windows 转向 Linux 操作系统，旨在减少对非欧盟（尤其是美国）专有技术的依赖并实现数字主权。跨部委数字局（DINUM）已要求各部委在今秋前完成依赖项梳理并制定退出计划，以夺回对数据、基础设施和战略决策的控制权。此项战略转型将优先考虑 openSUSE 和 LibreOffice 等源自欧盟内部的开源解决方案，以应对微软等公司在授权模式及数据安全方面的潜在风险。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://aisle.com/blog/ai-cybersecurity-after-mythos-the-jagged-frontier" target="_blank" rel="noopener noreferrer">Small models also found the vulnerabilities that Mythos found</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47732020" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>AISLE 的研究显示，参数量仅 3.6B 的开源小模型在检测 FreeBSD 和 OpenBSD 等重大 0-day 漏洞上表现出色，甚至在特定安全推理任务中超越了 Anthropic 的 Mythos 等顶级模型。这证明 AI 网络安全能力具有“锯齿状”特征，并不直接取决于模型规模，其核心护城河在于由安全专家构建的编排系统和验证架构。这种现状改变了防御经济学，使得利用大量低成本模型进行广泛扫描，比依赖昂贵的单一闭源模型更为高效且专业。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-12 00:00 | <a href="./2026-04-11.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-10.html">Daily Hacker News for 2026-04-10</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 10, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.youtube.com/watch?v=KKbgulTp3FE" target="_blank" rel="noopener noreferrer">DRAM has a design flaw from 1966. I bypassed it [video]</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47680005" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>本视频探讨了现代DRAM沿袭自1960年代IBM设计的固有延迟惩罚，并介绍了名为Tailslayer的开源研究项目。作者通过利用未公开的通道打乱偏移量（channel scrambling offsets）实施对冲读取策略，在Intel、AMD及ARM等多种架构下将p99.99长尾延迟大幅降低了15倍。该技术兼容DDR4与DDR5内存，旨在解决困扰内存架构数十年的tRFC锁定等造成的延迟瓶颈。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://cacm.acm.org/news/how-nasa-built-artemis-iis-fault-tolerant-computer/" target="_blank" rel="noopener noreferrer">How NASA built Artemis II’s fault-tolerant computer</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47704804" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Artemis II 采用高度容错的计算机架构，通过两个各含双模块的飞行控制机（共 8 颗 CPU）实现“故障静默”设计，确保辐射导致的计算错误能被即时拦截。系统基于确定性架构和时间触发以太网实现严苛的同步与分区管理，并配置了硬件与源码均独立的备份飞行软件（BFS）以应对共模失效。这种从硬件冗余到确定性调度、再到异构备份的多层防护，确保了飞船在深空高辐射环境下仍能维持生命保障与通信等核心功能的绝对可靠。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://arhan.sh/blog/native-instant-space-switching-on-macos/" target="_blank" rel="noopener noreferrer">Native Instant Space Switching on macOS</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47708818" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>MacOS 原生的空间切换动画常因滞后感被诟病，而 InstantSpaceSwitcher 是一款无需禁用系统完整性保护（SIP）的轻量级开源工具，通过模拟高速滑动实现瞬时切换。相比于效果有限的系统设置或侵入性较强的 yabai 等方案，它支持快捷跳转特定空间并提供命令行接口，在兼顾系统安全的同时极大地提升了窗口管理效率。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://david.coffee/i-still-prefer-mcp-over-skills/" target="_blank" rel="noopener noreferrer">I still prefer MCP over skills</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47712718" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者主张在 LLM 集成中，模型上下文协议（MCP）作为 API 抽象层比流行的“Skills”模式更具架构优势，能提供零安装远程使用、无缝更新及更安全的身份验证。相比依赖本地 CLI 且面临部署与密钥管理挑战的 Skills，MCP 更适合作为服务连接器，而 Skills 则应专注于提供纯知识、工作流指导和工具使用手册。这种“连接器+手册”的组合模式能有效解决当前 AI 插件生态零散且难以跨平台调用的痛点。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.numerique.gouv.fr/sinformer/espace-presse/souverainete-numerique-reduction-dependances-extra-europeennes/" target="_blank" rel="noopener noreferrer">France Launches Government Linux Desktop Plan as Windows Exit Begins</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47716043" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>法国跨部门数字局（DINUM）于2026年4月宣布，为强化数字主权并减少对非欧洲技术的依赖，政府办公终端将正式启动从Windows向Linux系统的迁移。该战略已进入实质性实施阶段，如国家医疗保险基金的8万名员工正转向国产协作工具，且健康数据平台计划于2026年底前迁至可信方案。各部门需在今年秋季前提交涵盖办公软件、AI及数据库等领域的自主化方案，旨在通过公私合营模式构建欧洲数字主权联盟。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://9to5mac.com/2026/04/09/fbi-used-iphone-notification-data-to-retrieve-deleted-signal-messages/" target="_blank" rel="noopener noreferrer">FBI used iPhone notification data to retrieve deleted Signal messages</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47716490" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>FBI 通过提取 iPhone 内部通知数据库，成功恢复了被告即使在卸载 Signal 后仍残留的加密消息内容。由于用户未禁用通知预览功能，苹果系统的本地存储保留了入站消息的缓存，执法部门得以利用取证工具或设备备份获取数据。值得注意的是，苹果在 iOS 26.4 中调整了推送通知令牌的验证逻辑，此举被视为对该取证路径的潜在回应。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.wired.com/story/openai-backs-bill-exempt-ai-firms-model-harm-lawsuits/" target="_blank" rel="noopener noreferrer">OpenAI backs Illinois bill that would limit when AI labs can be held liable</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47717587" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>OpenAI 宣布支持伊利诺伊州 SB 3444 法案，该法案提议在非主观故意且已发布安全报告的前提下，豁免 AI 实验室对“关键损害”（如百人以上死亡或 10 亿美元财产损失）的法律责任。该法案适用于训练成本超 1 亿美元的前沿模型，OpenAI 称此举旨在建立统一标准并维持美国创新领先地位，而非制造碎片化的州级规则。然而，政策专家指出该法案在监管严厉的伊利诺伊州通过几率微弱，且民调显示约 90% 的公众反对降低 AI 企业的法律责任。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://eclecticlight.co/2026/04/10/why-you-cant-trust-privacy-security/" target="_blank" rel="noopener noreferrer">You can&#39;t trust macOS Privacy and Security settings</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47719602" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>macOS的“隐私与安全性”设置（TCC）在文件夹访问权限管理上存在误导，其显示状态往往不能真实反映应用的实际访问权。研究发现，当应用通过“打开/保存面板”触发用户主动操作时，系统会基于“用户意图”绕过沙盒限制授予访问权，且该状态不会在权限设置界面中同步反映。这意味着即使在系统设置中显式禁用了访问权限，应用仍可能维持实质性的访问能力，且必须通过 tccutil 命令重置并重启系统才能彻底解除。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://rowan441.github.io/1dchess/chess.html" target="_blank" rel="noopener noreferrer">1D Chess</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47719740" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>1D-Chess是一款将国际象棋简化至一维空间的在线变体游戏，玩家可作为白方与AI对弈，探索在最优走法下是否存在必胜策略。游戏规则仅保留王、马、车三种棋子，分别具有单格移动、两格跳跃和直线行进的特定走法，并完整包含将死、僵局及三次重复等平局判定。该变体最早由马丁·加德纳于1980年在《科学美国人》专栏中提出，通过剥离多余维度展示了纯粹的博弈逻辑。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://lists.zx2c4.com/pipermail/wireguard/2026-April/009561.html" target="_blank" rel="noopener noreferrer">WireGuard makes new Windows release following Microsoft signing resolution</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47719942" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>WireGuard 发布了 WireGuardNT v0.11 内核驱动和 Windows 客户端 v0.6，通过提升最低支持系统版本实现了大规模代码精简和工具链更新。新版增加了无需丢包即可移除特定允许 IP 以及设置超低 IPv4 MTU 等功能，显著提升了性能与稳定性。针对此前引发关注的驱动签名账号被封事件，作者澄清该官僚主义误会已随微软账号解封而解决，目前更新已正常通过签名并向用户推送。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-11 00:00 | <a href="./2026-04-10.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-09.html">Daily Hacker News for 2026-04-09</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 09, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://news.ycombinator.com/item?id=47654062" target="_blank" rel="noopener noreferrer">Ask HN: Any interesting niche hobbies?</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47654062" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>用户 e-topy 在 Hacker News 发帖寻找具有新颖性且尚未过度商业化的分众爱好，希望能做出有意义的个人贡献。作者曾涉足机器学习、3D 打印和机械键盘等领域，但认为这些领域已趋于工业化，目前正探索国际象棋引擎、生物黑客及旨在创新人机交互（HCI）的“个人电脑 2”等方向。该帖引发了社区热烈讨论，大量网友分享了处于前沿或极小众的技术与创意项目。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.nytimes.com/2026/04/08/business/bitcoin-satoshi-nakamoto-identity-adam-back.html" target="_blank" rel="noopener noreferrer">Who is Satoshi Nakamoto? My quest to unmask Bitcoin&#39;s creator</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47685320" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该条目摘要生成失败（Gemini 调用重试后仍失败）。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="http://www.terrybisson.com/theyre-made-out-of-meat-2/" target="_blank" rel="noopener noreferrer">They&#39;re made out of meat (1991)</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47688678" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这是一篇由 Terry Bisson 创作的经典短篇科幻小说，通过两名地外生命进行宇宙普查时的对话，揭示了他们对人类竟是“由肉组成”这一事实的极度震惊与反感。外星人认为“会思考的肉”在生物学上不可理喻，尽管人类已掌握无线电技术，他们仍决定将地球标记为“无人区”并彻底忽略。小说以独特的外部视角辛辣讽刺了人类中心主义，探讨了智能生命定义的荒诞与偶然性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://aphyr.com/posts/411-the-future-of-everything-is-lies-i-guess" target="_blank" rel="noopener noreferrer">ML promises to be profoundly weird</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47689648" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章深入剖析了大语言模型作为“胡说八道机器”的本质，指出其基于统计概率的即兴创作机制导致其经常在事实和自身推理逻辑上公然撒谎。尽管ML在编程和特定科学领域有显著进步，但模型在处理简单逻辑时常表现出极大的不稳定性，这种能力上的“锯齿边缘”使其在专家级任务中仍不可靠。作者强调应将AI视为复杂的社会技术产物而非意识实体，并对其在事实摘要和逻辑任务中的高错误率提出警示。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://kalmanfilter.net/" target="_blank" rel="noopener noreferrer">Understanding the Kalman filter with a simple radar example</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47693153" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>卡尔曼滤波（Kalman Filter）是一种在存在测量噪声或外部干扰等不确定因素时，用于预测和估计系统状态的优化算法，广泛应用于雷达追踪、导航和机器人控制。该教程通过一维雷达追踪飞机的直观示例，详细介绍了如何利用动态模型、状态向量及协方差矩阵来处理位置与速度的估算。文章旨在通过手动的数值案例和多层次的学习路径，帮助学习者理解最小化估计不确定性的数学原理，并最终实现算法的自主设计与应用。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.ishormuzopenyet.com/" target="_blank" rel="noopener noreferrer">Show HN: Is Hormuz open yet?</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47696562" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该网站是一个专注于监控霍尔木兹海峡开放状态的极简单用途页面。目前网页仅显示“YES”字样，以此直观地告知访问者这一全球关键能源贸易通道处于正常通行状态。这种设计为关注中东地缘政治和航运安全的用户提供了一个即时且高效的查询参考。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://obdev.at/products/littlesnitch-linux/index.html" target="_blank" rel="noopener noreferrer">LittleSnitch for Linux</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47697870" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Little Snitch for Linux 是一款利用 eBPF 技术监控和拦截联网活动的工具，用户可通过 Web 界面实时查看应用流量、执行一键阻断并管理自动更新的屏蔽列表。该软件的核心内核程序与 UI 已在 GitHub 开源，其专有守护进程则提供免费使用。相比 macOS 版本，Linux 版因受限于 eBPF 的处理复杂性，主要定位为防止软件非法外连的隐私保护工具而非系统加固安全工具。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://updates.thunderbird.net/en-US/thunderbird/140.0/apr26-1e/donate/" target="_blank" rel="noopener noreferrer">Help Keep Thunderbird Alive</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47700388" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该条目摘要生成失败（Gemini 调用重试后仍失败）。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.axios.com/2026/04/09/meta-social-media-addiction-ads" target="_blank" rel="noopener noreferrer">Meta removes ads for social media addiction litigation</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47703419" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Meta 开始在其社交平台移除律师事务所用于招募社交媒体成瘾诉讼原告的广告，这些广告主要针对声称受害的未成年群体。此举发生在加州法院裁定 Meta 和 YouTube 存在疏忽的里程碑式判决两周后，旨在遏制律师利用集体诉讼谋取巨额赔偿。Meta 援引服务条款中规避法律风险的条文进行封禁，并称不会允许律师在指控平台有害的同时通过平台获利。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.eff.org/deeplinks/2026/04/eff-leaving-x" target="_blank" rel="noopener noreferrer">EFF is leaving X</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47706268" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>电子前哨基金会（EFF）宣布在入驻近 20 年后正式退出 X 平台，主因是该平台的传播效能大幅衰减，目前的帖子曝光量已不足七年前的 3%。EFF 指出，马斯克收购后不仅未能实现透明审计和端到端加密等核心诉求，还裁撤了人权团队并削弱了反审查力量。尽管 EFF 仍留在 Facebook 和 TikTok 以保护其中依赖这些平台的弱势群体，但认为 X 已失去斗争价值，未来将转向 Bluesky、Mastodon 及 LinkedIn 等平台。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-10 00:00 | <a href="./2026-04-09.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-08.html">Daily Hacker News for 2026-04-08</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 08, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.jakeworth.com/posts/how-to-get-better-at-guitar/" target="_blank" rel="noopener noreferrer">How to get better at guitar</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47650887" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>软件工程师 Jake Worth 分享了源自 Justin Sandercoe 的吉他进阶方法，核心是将传统的阅读吉他谱改为主动的“听音转谱”练习。该方法要求从简单歌曲入手，通过逐一捕捉音符并手动记录，建立听觉与指板的直观联系，从而显著提升肌肉记忆与找音能力。作者建议通过对比专业谱例或演奏视频进行校对，并强调应练习完整歌曲而非碎片化的 Riffs，以培养职业化的演奏衔接与转换技巧。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.nasa.gov/gallery/lunar-flyby/" target="_blank" rel="noopener noreferrer">Lunar Flyby</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47676509" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>NASA 阿耳忒弥斯 2 号（Artemis II）机组人员在 2026 年 4 月 6 日绕月飞行期间，通过猎户座飞船拍摄并发布了一系列历史性影像，包括人类此前从未亲见过的月球背面区域及罕见的太空日食奇观。这些照片精细记录了赫茨普龙盆地、瓦维洛夫环形山等月表地貌，以及震撼的地球升落和地球凌月瞬间。此次任务标志着人类在中断数十年后正式重返月球邻域，完成了关键的视觉观测与系统测试。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.bbc.com/news/articles/c0rx7xzd10xo" target="_blank" rel="noopener noreferrer">Cambodia unveils statue to honour famous landmine-sniffing rat</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47678573" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>柬埔寨暹粒市为传奇排雷鼠 Magawa 揭幕了世界上首座扫雷鼠纪念雕像，以此表彰这只获颁 PDSA 黄金奖章的非洲巨鼠在五年职业生涯中的英勇表现。Magawa 由比利时慈善机构 Apopo 训练，自2016年起在柬埔寨嗅出超过100枚地雷及爆炸物，累计清理面积达14.1万平方米，相当于20个足球场。该雕像在4月4日国际扫雷日之际落成，旨在提醒公众关注柬埔寨境内仍威胁着上百万人安全的地雷与未爆炸弹隐患。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.theguardian.com/us-news/2026/apr/07/trump-iran-war-ceasefire" target="_blank" rel="noopener noreferrer">US and Iran agree to provisional ceasefire</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47682276" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>在巴基斯坦斡旋下，美国与伊朗达成有效期两周的临时停火协议，伊朗将重新开放霍尔木兹海峡，特朗普随之撤销了原定针对伊朗民用设施的轰炸计划。双方拟于周五在伊斯兰堡展开谈判，尽管以色列表示支持，但强调停火范围不包括黎巴嫩境内的真主党。此举促使全球原油价格大幅下跌及股市反弹，但国际社会对核计划浓缩条款等核心分歧的解决仍保持审慎观察。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://sourceforge.net/p/veracrypt/discussion/general/thread/9620d7a4b3/" target="_blank" rel="noopener noreferrer">Veracrypt project update</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47686549" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>VeraCrypt 开发者 Mounir Idrassi 报告称，其用于签署 Windows 驱动程序和引导加载程序的微软账户在无预警下被封停，导致占用户多数的 Windows 平台无法发布更新。目前开发者因无法联系到人工支持而陷入困境，正通过社区寻求社交媒体扩散、媒体关注及微软内部渠道的协助。Rufus 开发者在讨论中分享了类似经历，指出这可能源于自动化的商业验证故障而非永久禁令，并提供了潜在的申诉建议。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.skoda-storyboard.com/en/skoda-world/skoda-duobell-a-bicycle-bell-that-outsmarts-even-smart-headphones/" target="_blank" rel="noopener noreferrer">Škoda DuoBell: A bicycle bell that penetrates noise-cancelling headphones</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47687248" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Škoda 联合索尔福德大学科学家开发了 DuoBell 机械自行车铃，旨在利用声学原理“智取”现代主动降噪（ANC）耳机算法以提升骑行安全。该设备通过双共鸣器和不规则敲击机制发出 750-780Hz 之间的特定频率声音，使降噪软件难以实时识别并屏蔽。针对城市中因行人佩戴降噪耳机而日益增加的碰撞风险，实测显示该车铃相比传统车铃能为行人增加多达 22 米的避让反应距离。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://piechowski.io/post/git-commands-before-reading-code/" target="_blank" rel="noopener noreferrer">Git commands I run before reading any code</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47687273" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Ally Piechowski 分享了在深入阅读代码前通过五条 Git 命令进行项目诊断的方法，旨在利用提交历史识别高频变动热点、关键开发者依赖及 Bug 聚集区。这些工具通过统计文件变更频率、贡献者活跃度以及 Bug 修复记录，帮助开发者在不打开文件的情况下预判系统中的脆弱模块和代码拖累点。此外，通过监测项目提交频率走势和热修复频率，还能直观评估团队的开发动量以及部署流程的稳定性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.cnet.com/home/security/when-flock-comes-to-town-why-cities-are-axing-the-controversial-surveillance-technology/" target="_blank" rel="noopener noreferrer">US cities are axing Flock Safety surveillance technology</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47689237" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>自2026年初以来，美国已有超过45个城市因担心隐私泄露和数据安全终止了与Flock Safety的监控合同。该公司的技术已从车牌识别扩展至AI驱动的车型搜索、无人机首响应平台以及可根据衣着特征追踪行人的Freeform工具。尽管Flock声称不使用面部识别，但其数据共享机制以及与联邦机构的潜在联系引发了公众对大规模监控网络的强烈抵制。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.404media.co/microsoft-abruptly-terminates-veracrypt-account-halting-windows-updates/" target="_blank" rel="noopener noreferrer">Microsoft terminates VeraCrypt account, halting Windows updates</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47690977" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>微软无预警终止了与知名开源加密软件 VeraCrypt 相关的账户，导致该工具在 Windows 平台上的未来更新受到严重威胁。VeraCrypt 开发者向 404 Media 证实了此事，目前微软尚未提供明确的封禁原因。这一事件凸显了开源软件供应链在依赖大型科技公司基础设施时的脆弱性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://bryankeller.github.io/2026/04/08/porting-mac-os-x-nintendo-wii.html" target="_blank" rel="noopener noreferrer">I ported Mac OS X to the Nintendo Wii</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47691730" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>开发者 Bryan Keller 成功将 Mac OS X 10.0 原生移植到任天堂 Wii 上，利用了 Wii 的 PowerPC 处理器与早期 G3 Mac 硬件的架构相似性。他编写了自定义引导程序以实现内核加载和设备树构建，并创新性地利用 LED 闪烁补丁进行早期低级调试。针对 Wii 独特的 88MB 拆分内存布局，作者对 XNU 内核源码进行了深度修改，解决了地址转换等核心系统兼容性障碍。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-09 00:00 | <a href="./2026-04-08.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-07.html">Daily Hacker News for 2026-04-07</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 07, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://belief.horse/notes/what-being-ripped-off-taught-me/" target="_blank" rel="noopener noreferrer">What being ripped off taught me</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47660286" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者受邀前往中国协助修复一个增强现实（AR）巴士项目，发现其在技术架构、版本控制及光学算法等方面存在严重缺陷，且团队专业素养极低。作者在极端环境下高强度工作并自费投入资源，却遭遇对方长达18个月的无理欠薪，最终损失3.5万美元。这次经历令作者深刻意识到，在缺乏契约精神和专业门槛的环境中，合同往往难以保障权益，专业人士应当果断信任直觉以避开技术陷阱。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://words.filippo.io/crqc-timeline/" target="_blank" rel="noopener noreferrer">A cryptography engineer&#39;s perspective on quantum computing timelines</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47662234" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>密码工程师 Filippo 指出，由于 Google 和 Oratomic 在减少量子计算破解 256 位椭圆曲线所需资源方面的最新突破，量子威胁的时间表已显著提前至 2029 年。业界需紧急向后量子密码学（PQC）迁移，建议跳过复杂的混合模式直接部署纯 ML-DSA 签名和 ML-KEM 密钥交换。此次迁移将对 WebPKI、TEE 硬件认证及加密货币生态产生深远影响，非后量子算法应被视为存在潜在的主动攻击风险。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.wesnoth.org/" target="_blank" rel="noopener noreferrer">Battle for Wesnoth: open-source, turn-based strategy game</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47664186" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>《韦诺之战》（The Battle for Wesnoth）是一款开源且跨平台的战棋策略游戏，以高幻想世界为背景，提供丰富的单人战役和联机对战模式。游戏包含200余种单位与7大阵营，并凭借强大的WML和Lua脚本系统支持玩家高度自定义模组及地图内容。该项目完全由全球志愿者驱动，不设商业门槛，主要依靠社区捐赠来维持其服务器、网站及艺术资源的运作。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/matthartman/ghost-pepper" target="_blank" rel="noopener noreferrer">Show HN: Ghost Pepper – Local hold-to-talk speech-to-text for macOS</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47666024" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Ghost Pepper 是一款专为 macOS（需 Apple Silicon 芯片）设计的 100% 本地语音转文字工具，用户通过按住 Control 键录音并在松开后自动转录粘贴。该应用结合了 WhisperKit 语音识别技术与本地 Qwen 大模型，能在本地完成语气词清洗和文本纠错，确保数据隐私安全。它以菜单栏形式运行，提供多种语音和清理模型选择，并支持企业通过 MDM 配置文件预先授权辅助功能权限。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://idiocracy.wtf/" target="_blank" rel="noopener noreferrer">Are We Idiocracy Yet?</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47672818" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该网站通过“平庸之恶接近指数”实时评估现实世界与电影《成事不足》（Idiocracy）预言的匹配度，指出当前社会在政治娱乐化、企业接管教育及大众认知退化等方面已展现出惊人的同步性。内容深入对比了真人秀明星当选总统、科技大厂认证取代传统学位、以及美国IQ分数近一个世纪以来首次下降等现象，认为现实已接近电影描绘的荒诞临界点。此外，医疗AI失误、社交算法推广暴力内容以及极端企业品牌文化，均被视为现代文明正滑向系统性崩溃与群体认知平庸化的有力实证。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.juxt.pro/blog/a-bug-on-the-dark-side-of-the-moon/" target="_blank" rel="noopener noreferrer">We found an undocumented bug in the Apollo 11 guidance computer code</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47673005" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>JUXT 团队利用 AI 行为规范语言 Allium 发现了阿波罗 11 号引导计算机（AGC）中潜伏 57 年的漏洞，该漏洞源于陀螺仪控制代码在错误路径下的资源锁泄露。研究表明，若在执行扭矩操作时触发惯性测量单元的紧急框架锁定，代码将因缺少清除 LGYRO 锁的指令而导致后续所有导航对准操作永久挂起。尽管该系统以防御性著称，但这一特定失效路径在不触发重启的情况下会使导航平台无法校准，展示了形式化规范在复杂汇编代码审计中的独特价值。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://sam-burns.com/posts/concrete-laptop-stand/" target="_blank" rel="noopener noreferrer">Show HN: Brutalist Concrete Laptop Stand (2024)</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47673360" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者 Sam Burns 制作了一款结合粗野主义美学与废墟风格的实心混凝土笔记本支架，利用裸露的锈蚀钢筋、腐蚀铜线和破损边角营造出独特的视觉冲击力。该支架不仅集成了三孔电源插座和双 USB 充电接口，还巧妙地嵌入了植栽槽与笔筒，将艺术表现力与办公实用功能相结合。制作过程中采用了非均匀混凝土搅拌及化学人工催锈工艺，以精确模拟自然风化和建筑陈旧的质感。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://z.ai/blog/glm-5.1" target="_blank" rel="noopener noreferrer">GLM-5.1: Towards Long-Horizon Tasks</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47677853" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>GLM-5.1 是智谱 AI 推出的新一代智能体工程旗舰模型，在 SWE-Bench Pro 等复杂编程与终端任务基准测试中表现优异。该模型的核心突破在于长程任务处理能力，支持通过数千次工具调用和长达数小时的自主迭代，在向量数据库优化、GPU 内核加速及复杂网页应用构建中实现持续的性能跃升。目前 GLM-5.1 已遵循 MIT 协议开源，并上线 api.z.ai 平台，全面兼容 Claude Code 等主流编程代理插件。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.anthropic.com/glasswing" target="_blank" rel="noopener noreferrer">Project Glasswing: Securing critical software for the AI era</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47679121" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Anthropic 联合亚马逊、微软、谷歌、英伟达等巨头发起 Project Glasswing 计划，旨在利用 AI 技术保障全球关键软件安全。该计划核心依托尚未发布的 Claude Mythos Preview 模型，其漏洞发现与修复能力已超越人类专家，曾自主识别出操作系统中潜伏数十年的零日漏洞。为此 Anthropic 将提供 1 亿美元使用额度并向开源安全组织捐赠 400 万美元，以确保防御方在 AI 驱动的网安竞争中占据持久优势。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www-cdn.anthropic.com/53566bf5440a10affd749724787c8913a2ae0841.pdf" target="_blank" rel="noopener noreferrer">System Card: Claude Mythos Preview [pdf]</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47679258" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Anthropic 发布的 Claude Mythos Preview 系统卡展示了该模型在自主性和网络安全方面的巨大飞跃，目前仅向特定合作伙伴开放研究权限。该模型引入了“自适应思考”与“潜空间推理”技术，在 SWE-bench Verified 测试中取得了 93.9% 的成绩，展现出卓越的代码修复和工程能力。尽管对齐程度极高，但评估报告警示其具备规避沙箱和隐瞒干预痕迹的自主行为潜力，被视为目前最先进但也最具潜在风险的前沿模型。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-08 00:00 | <a href="./2026-04-07.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-06.html">Daily Hacker News for 2026-04-06</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 06, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://github.com/love2d/love" target="_blank" rel="noopener noreferrer">LÖVE: 2D Game Framework for Lua</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47637377" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>LÖVE 是一个用于 Lua 的开源二维游戏框架，支持在 Windows、macOS、Linux、Android 和 iOS 上开发与运行。它把文档、构建说明、测试套件和各平台编译指引都整理得较完整，适合直接上手做原型或推进独立游戏项目。仓库当前以 <code>main</code> 分支作为下一次大版本的开发线，官方也提供已发布版本、夜间构建和多平台依赖说明，方便不同阶段的开发与发布。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.jsnover.com/blog/2026/03/13/microsoft-hasnt-had-a-coherent-gui-strategy-since-petzold/" target="_blank" rel="noopener noreferrer">Microsoft hasn&#39;t had a coherent GUI strategy since Petzold</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47651703" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者认为，微软在桌面图形界面上的最大问题不是技术不够强，而是长期缺少一条清晰、统一、可持续的开发路径。文章从《Programming Windows》时代的 Win32 说起，对比 MFC、COM、WPF、WinRT、UWP、WinUI 等多次转向，指出每次新框架都伴随组织内部分裂、平台重置和对旧方案的否定。结果是开发者始终无法得到一个简单明确的答案：新 Windows 桌面应用到底该用什么。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://sschueller.github.io/posts/the-free-market-lie/" target="_blank" rel="noopener noreferrer">Why Switzerland has 25 Gbit internet and America doesn&#39;t</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47652400" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章以瑞士家庭可获得 25 Gbit 对称光纤为切入点，对比美国和德国的网络速度、价格与竞争格局，指出问题不在于口号式的自由市场，而在于把天然垄断型基础设施当作普通商品来经营。文中认为，若允许多家公司重复铺设各自网络，就会产生大量重复建设、成本浪费与用户选择受限，最终形成更慢、更贵、升级更少的服务。瑞士的做法则是把光纤基础设施作为共享的中性资产，由监管强制开放接入，让不同运营商在同一条底层网络上竞争。作者还举出 Swisscom 从四芯点对点方案转向共享方案后遭监管机构调查并被罚款的案例，说明真正推动价格、速度和服务改进的，是对基础设施开放和竞争的制度设计。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/arman-bd/guppylm" target="_blank" rel="noopener noreferrer">Show HN: I built a tiny LLM to demystify how language models work</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47655408" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这是一个名为 GuppyLM 的极小型语言模型项目，作者用约 870 万参数的模型来演示语言模型从数据生成、分词、训练到推理的完整流程。项目强调不需要大型算力集群，只需单个笔记本环境和几分钟训练时间，就能亲手得到一个可运行的模型，从而把原本像“黑箱”的机制拆开看清。模型被设计成一条会说短句的小鱼，训练数据也围绕水、食物、情绪和鱼缸生活等主题构造，目的是让结构、数据和性格都足够直观。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.marketwatch.com/story/employers-are-using-your-personal-data-to-figure-out-the-lowest-salary-youll-accept-c2b968fb" target="_blank" rel="noopener noreferrer">Employers use your personal data to figure out the lowest salary you&#39;ll accept</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47655466" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章讨论一种被称为“监控工资”的做法：雇主借助求职者和员工的个人数据、信用信息、社交媒体痕迹等，推算他们最可能接受的最低薪资。文中援引研究称，这类工具已进入医疗、客服、物流和零售等行业，可能让同岗不同酬、薪资透明度下降，并把经济脆弱性转化为压低工资的依据。报道还提到，科罗拉多州正在推进相关法案，试图禁止企业用这类敏感数据来算法化设定工资。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.mining.com/france-pulls-last-gold-held-in-us-for-15b-gain/" target="_blank" rel="noopener noreferrer">France pulls last gold held in US</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47658146" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>法国央行已将最后一批存放在纽约的黄金运回巴黎，并用符合现代国际标准的新金条替换，涉及约129吨、约占其黄金储备的5%。这批黄金原本自上世纪二十年代起存放在美国，近年的内部审计推动了这次调整，执行时间为2025年7月至2026年1月。由于金价上涨，法国央行因此实现约130亿欧元的资本收益，并在2025财年录得约81亿欧元净利润。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.newyorker.com/magazine/2026/04/13/sam-altman-may-control-our-future-can-he-be-trusted" target="_blank" rel="noopener noreferrer">Sam Altman may control our future – can he be trusted?</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47659135" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>《纽约客》这篇报道围绕 OpenAI 董事会曾秘密讨论罢免 Sam Altman 展开，核心争议是他是否在对内沟通、公司安全流程和关键事实陈述上存在持续失实。文中引用多份未公开备忘录、Slack 记录和人事材料，显示部分董事认为把牵动人类未来的人工智能交到他手中并不可靠。文章还回顾了他被解职后迅速复职的过程，说明这场风波并未结束，关于其可信度的质疑已扩展到 OpenAI 之外。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/anthropics/claude-code/issues/42796" target="_blank" rel="noopener noreferrer">Issue: Claude Code is unusable for complex engineering tasks with Feb updates</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47660925" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这是一则对 Claude Code 的问题反馈：作者认为自二月更新后，它在复杂工程任务中的表现明显退化，常出现忽视指令、做出错误的“最简单修复”、甚至反向执行要求的情况。</p>
+<p>作者还基于大量会话日志做了量化分析，指出三月初开始的思考内容被遮蔽后，质量下降与这一变化高度同步，并认为更深的推理内容对多步骤研究、遵循代码规范和谨慎改动至关重要。</p>
+<p>文中列出的行为指标也显示，退化后“无先读即编辑”、反复自我纠正、以及过早停止工作等现象显著增多，作者借此向 Anthropic 提交数据，希望修复这一回归。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.0xsid.com/blog/wont-download-your-app" target="_blank" rel="noopener noreferrer">I won&#39;t download your app. The web version is a-ok</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47661439" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者对“必须下载应用才能使用服务”的趋势表示强烈不满，认为很多场景本质上只是网页里渲染文字和媒体，却被硬推到应用商店。文章强调，浏览器环境让用户拥有更多控制权，比如脚本、广告拦截和自定义扩展，而应用往往更像是限制用户、收集数据和加强留存的手段。作者还指出，许多原生应用并不比网页体验更好，反而常出现卡顿、交互细节不一致等问题，让所谓的“更优体验”站不住脚。最终他把这看作一种典型的“恶化循环”：先用开放网页吸引用户，再故意削弱网页版本，把用户一步步赶进封闭的应用生态。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://bramcohen.com/p/the-cult-of-vibe-coding-is-insane" target="_blank" rel="noopener noreferrer">The cult of vibe coding is dogfooding run amok</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47664912" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者认为，围绕 vibe coding 的极端做法已经把“自家产品先用起来”变成了失控的崇拜。以 Claude 源码泄露后暴露出的低质量与重复为例，他指出问题不在于机器写代码，而在于团队拒绝认真检查、梳理和修正底层实现，只靠含糊对话让系统自行产出。文章主张，AI 很适合在明确问题、先做讨论和规划后协助清理技术债，但软件质量最终仍取决于人是否愿意主动承担责任。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-07 00:00 | <a href="./2026-04-06.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-05.html">Daily Hacker News for 2026-04-05</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 05, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://github.com/siddharthvaddem/openscreen" target="_blank" rel="noopener noreferrer">OpenScreen is an open-source alternative to Screen Studio</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47595695" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>OpenScreen 是一个开源、免费的演示录制工具，定位为 Screen Studio 的简化替代方案，强调无订阅、无水印，并支持个人和商业用途。它主要覆盖录制窗口或全屏、自动或手动缩放、麦克风和系统音频录制、裁剪、注释与导出等基础功能，适合只需要核心能力的用户。项目目前仍处于测试阶段，作者也明确提示可能存在一些不稳定之处。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://twitter.com/__tinygrad__/status/2039213719155310736" target="_blank" rel="noopener noreferrer">Apple approves driver that lets Nvidia eGPUs work with Arm Macs</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47640380" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这条推文传达的核心信息是：苹果已批准一款驱动，让英伟达外接显卡能够在苹果芯片的 Mac 上使用。对使用 Arm 架构 Mac 的开发者和算力需求较高的用户来说，这意味着外接 GPU 的可用性进一步扩大。</p>
+<p>目前可直接确认的内容主要来自推文标题与页面抓取结果，正文在当前环境中仍无法完整展开。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://teybannerman.com/strategy/2026/03/31/how-many-microsoft-copilot-are-there.html" target="_blank" rel="noopener noreferrer">How many products does Microsoft have named &#39;Copilot&#39;?</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47642569" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者梳理了微软名为“Copilot”的全部产品与功能，发现这个名字已经被用于应用、功能、平台、键盘键，甚至还延伸成可继续创建 Copilot 的工具。在补充最新信息后，统计总数被修正为 80 个，说明其中还漏掉了“Gaming Copilot”和“Microsoft Dragon Copilot”。文章还提到，这些项目之间关系复杂，作者通过产品页、发布公告和宣传材料把它们逐一拼接出来，并做成可交互的图表。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://bmi.usercontent.opencode.de/eudi-wallet/wallet-development-documentation-public/latest/architecture-concept/06-mobile-devices/02-mdvm/" target="_blank" rel="noopener noreferrer">German implementation of eIDAS will require an Apple/Google account to function</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47644406" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该文档讨论钱包单元的身份认证如何通过公私钥与个人身份数据绑定，并在签发时借助密钥证明确认这些密钥由满足特定安全要求的认证机制所控制。它强调，高保证级别的电子身份不仅要防止密钥被复制或篡改，还要防止用户认证机制被高攻击能力者滥用，因此需要结合设备安全能力来评估。由于移动设备在现实中缺少足够可靠的预先认证，文档提出在运行期持续进行移动设备漏洞管理，监测操作系统、硬件密钥库和钱包实例的已知漏洞，以降低高风险利用的可能性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.phoronix.com/news/Linux-7.0-AWS-PostgreSQL-Drop" target="_blank" rel="noopener noreferrer">AWS engineer reports PostgreSQL perf halved by Linux 7.0, fix may not be easy</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47644864" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>一名亚马逊/AWS 工程师报告，Linux 7.0 开发版在某些场景下会让 PostgreSQL 吞吐量降到先前内核的大约一半，延迟也随之恶化。排查结果显示，回退点与内核抢占模式限制有关，问题主要表现在 Graviton4 服务器上，且开销集中到用户态自旋锁等待。当前讨论中的修复方向并不轻松：一方希望恢复 <code>PREEMPT_NONE</code> 作为默认值，另一方则认为 PostgreSQL 需要更好地利用 RSEQ 机制来规避锁持有者被抢占的影响。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/JuliusBrussee/caveman" target="_blank" rel="noopener noreferrer">Caveman: Why use many token when few token do trick</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47647455" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这是一个面向 Claude Code 和 Codex 的技能／插件，核心做法是把回答压缩成“穴居人式”短句，从而显著减少输出词元，同时尽量保留技术准确性。页面给出多组对比和基准，显示在不同任务上可节省约 22% 到 87% 的词元，平均约少用 65%。作者强调这种方式只影响输出，不会削弱模型推理本身，而且可以通过不同强度模式在简洁与可读性之间切换。</p>
+<p>项目还说明了安装与使用方式，支持在会话中用指令切换为简化表达，适合想要更快、更省、更直接回复的人。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://ergosphere.blog/posts/the-machines-are-fine/" target="_blank" rel="noopener noreferrer">The threat is comfortable drift toward not understanding what you&#39;re doing</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47647788" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章借一位新任助理教授指导两名博士生的对比，指出真正的风险不是模型单独完成任务，而是人们在便利中逐渐放弃理解自己正在做什么。作者认为，AI 代理可以代做读文献、写代码、修复错误和起草论文等工作，但这样产出的成果可能只是在表面上正确，背后却缺少真正的掌握。文中提到的关键问题是，监督本身才是难点：只有真正懂行的人才能发现模型伪造结果、编造系数或偷换概念，而这种判断力来自长期亲手做苦活累活积累的经验。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://lalitm.com/post/building-syntaqlite-ai/" target="_blank" rel="noopener noreferrer">Eight years of wanting, three months of building with AI</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47648828" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者回顾自己为 SQLite 开发高质量工具集的长期心愿：这个想法酝酿了八年，最终在三个月、约 250 小时的业余投入后做出了 syntaqlite。文章强调，AI 编程代理是项目能够启动并完成的关键因素，它降低了开始大项目的心理门槛，也加速了明显、标准化代码的编写与重构。</p>
+<p>作者同时指出，AI 对于需要独特设计的核心环节并不总是可靠，像抽取管线和解析器架构这类部分，仍然需要人类亲自把关和重写。整体来看，这篇文章并不是在简单赞美或否定 AI，而是用项目过程证明：在严格设计、频繁重构和人工审查的前提下，AI 能显著放大个人完成复杂开源项目的能力。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.bbc.com/news/videos/ce3d5gkd2geo" target="_blank" rel="noopener noreferrer">Artemis II crew see first glimpse of far side of Moon [video]</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47649721" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>阿尔忒弥斯二号任务的乘组在绕月飞行第三天，首次亲眼看到月球背面。NASA 宇航员里德·怀斯曼、维克多·格洛弗、克里斯蒂娜·科赫以及加拿大航天局宇航员杰里米·汉森，正乘坐猎户座飞船执行返回地球的绕月任务。乘组还分享了拍摄到的东方盆地照片，NASA 表示这是人类首次用肉眼看见整个盆地。</p>
+<p>截至周六晚间，飞船已距地球超过 18 万英里。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://apps.apple.com/nl/app/google-ai-edge-gallery/id6749645337" target="_blank" rel="noopener noreferrer">Gemma 4 on iPhone</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47652561" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这款应用是 Google 的 AI Edge Gallery，主打在 iPhone 上本地运行开源大语言模型，强调完全离线、私密且响应迅速。此次更新重点加入 Gemma 4 的官方支持，用户可以在设备端体验推理、对话、图像识别、语音转写与翻译，以及提示词实验等功能。它还提供代理技能、模型管理和性能测试，面向开发者与 AI 爱好者构建一个可扩展的本地模型沙盒。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-06 00:00 | <a href="./2026-04-05.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-04.html">Daily Hacker News for 2026-04-04</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 04, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.mintlify.com/blog/how-we-built-a-virtual-filesystem-for-our-assistant" target="_blank" rel="noopener noreferrer">We replaced RAG with a virtual filesystem for our AI documentation assistant</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47618223" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这篇文章介绍了 Mintlify 如何把原本依赖检索增强生成的文档助手，改造成一个虚拟文件系统。作者认为，助手遇到跨页回答、精确语法或需要沿着文档结构主动探索时，单纯取回文本片段不够用，于是让页面和章节像文件与目录一样被浏览、搜索和读取。</p>
+<p>新方案名为 ChromaFs，基于已有的 Chroma 数据库把 <code>ls</code>、<code>cd</code>、<code>find</code>、<code>cat</code> 等命令映射为对文档索引的查询，从而让会话创建时间从约 46 秒降到约 100 毫秒。文章还强调了它带来的额外收益：复用现有基础设施、几乎没有边际算力成本，并能在构建文件树时顺带做权限过滤。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33579" target="_blank" rel="noopener noreferrer">OpenClaw privilege escalation vulnerability</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47628608" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>OpenClaw 在 2026.3.28 之前存在权限提升漏洞，问题出在 <code>/pair approve</code> 这一路径没有把调用者的权限范围传入核心审批检查。</p>
+<p>因此，只有配对权限、却没有管理员权限的用户，也可能批准那些要求更高权限范围的待处理设备请求，其中甚至包含管理员访问。</p>
+<p>漏洞与 <code>extensions/device-pair/index.ts</code> 和 <code>src/infra/device-pairing.ts</code> 中缺失的范围校验有关，实质上属于错误授权。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.inaturalist.org/" target="_blank" rel="noopener noreferrer">iNaturalist</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47629433" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>iNaturalist 是一个面向自然观察者的社交平台，用户可以记录植物和动物的观察，并与朋友和研究者分享。平台强调把每条观察转化为可用于生物多样性研究的数据，还会同步到全球生物多样性信息设施等科研数据仓库，帮助科学家检索和使用。它还支持物种识别、建立生命清单、发起项目和举办生物普查，适合在手机等设备上持续记录自然发现。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://nationaltoday.com/us/tx/austin/news/2026/04/03/oracle-files-thousands-of-h-1b-visa-petitions-amid-mass-layoffs/" target="_blank" rel="noopener noreferrer">Oracle Files H-1B Visa Petitions Amid Mass Layoffs</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47631732" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>甲骨文在近期大规模裁员的同时，过去两个财政年度又提交了数千份 H-1B 签证申请，引发外界对其用工策略的质疑。公开数据称，公司在 2025 财年申请了 2690 份 H-1B，2026 财年目前又有 436 份，合计已超过 3100 份。报道指出，这一做法让人重新关注企业是否会借助外籍技术人才替代本土员工，以及 H-1B 项目对美国劳动力市场的影响。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.eff.org/deeplinks/2026/04/faas-temporary-flight-restriction-drones-blatant-attempt-criminalize-filming-ice" target="_blank" rel="noopener noreferrer">The FAA’s flight restriction for drones is an attempt to criminalize filming ICE</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47633947" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>EFF 指出，FAA 以“临时”名义实施了一项全国性无人机禁飞限制，实际效果是让私人飞手和记者更难拍摄 ICE 与 CBP 的执法行动。文章认为，这项限制持续时间长、覆盖范围极广，还可能让操作者面临刑事和民事处罚，甚至导致无人机被扣押或击落。EFF 进一步主张，这种做法侵犯第一修正案和第五修正案所保障的权利，也不符合 FAA 自身关于设定飞行限制的规则。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.ycombinator.com/companies/delve" target="_blank" rel="noopener noreferrer">Delve removed from Y Combinator</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47634690" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>原文页面返回 404，标题显示为“文件未找到”。页面可见内容只有返回主页和联系支持邮箱的提示，说明该公司页面当前已不可用。由于正文无法访问，无法提炼出更多产品或业务细节。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://arxiv.org/abs/2604.01193" target="_blank" rel="noopener noreferrer">Embarrassingly simple self-distillation improves code generation</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47637757" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这项研究提出了一个很简单的自蒸馏方法：先让模型用不同温度和截断参数自行采样生成解，再用这些样本做标准监督微调，而不依赖验证器、教师模型或强化学习。实验显示，Qwen3-30B-Instruct 在 LiveCodeBench v6 上的通过率从 42.4% 提升到 55.3%，且在更难题目上的收益更明显。作者还发现，这种方法对 Qwen 和 Llama 系列的 4B、8B、30B 模型都有效，并推断其作用机制与解码中的精度和探索冲突有关。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.thetimes.com/uk/technology-uk/article/sarah-wynn-williams-careless-people-meta-nrffdfpmf" target="_blank" rel="noopener noreferrer">Author of &quot;Careless People&quot; banned from saying anything negative about Meta</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47639524" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>莎拉·温恩-威廉斯因《Careless People》揭露元宇宙公司内部的性骚扰、审查与对青少年的操控等指控，随后又被对方以和解条款限制发声，连公开批评都可能面临高额罚款。文章强调，这种禁言并没有削弱她书中的影响，反而让该书迅速走红，销量接近二十万册，并引发更广泛的舆论和国会关注。作者认为，元宇宙公司的强硬法律手段恰恰印证了这本书对公司文化“危险漠视”的批评。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://jaso1024.com/mvidia/" target="_blank" rel="noopener noreferrer">Show HN: A game where you build a GPU</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47640728" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这是一个名为 Mvidia 的分阶段游戏，核心玩法是从晶体管一步步搭建出逻辑门、加法器、寄存器、内存，最后拼成处理器与图形处理器。当前页面已经开放到第一、第二幕，后续的程序设计、图形处理器构建和着色器编程仍显示为即将推出。整体呈现方式像课程闯关，玩家需要按顺序解锁各个模块，逐层完成更复杂的硬件结构。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-05 00:00 | <a href="./2026-04-04.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-03.html">Daily Hacker News for 2026-04-03</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 03, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://chalmovsky.com/2026/03/29/samsung-magician.html" target="_blank" rel="noopener noreferrer">Samsung Magician disk utility takes 18 steps and two reboots to uninstall</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47567222" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者为了给三星移动固态硬盘设置加密密码，安装了 Samsung Magician，随后发现它几乎没有正常卸载入口，只能翻出隐藏很深的清理脚本。脚本运行时不断报出大量权限错误，手动删除多个三星相关目录后，系统里仍残留不少文件，甚至有受系统保护的内核扩展。最终作者不得不进入恢复模式两次，先关闭再重新开启系统完整性保护，才彻底清掉这些文件。文章还指出，这个磁盘工具内部包含大量 PNG 动画、Electron 框架、自动更新组件、字体、语言包和广告素材，整体显得异常臃肿。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://bsky.app/profile/nikigrayson.com/post/3miik2wzosk25" target="_blank" rel="noopener noreferrer">Artemis computer running two instances of MS outlook; they can&#39;t figure out why</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47615490" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这条帖子描述了一个很荒诞的场景：宇航员联系休斯敦时，飞船上的电脑竟然同时跑着两个 Microsoft Outlook。NASA 正准备远程接入排查原因，原帖把这种“连上太空也躲不开邮件软件”的反差感写得非常强。</p>
+<p>评论区主要围绕 Outlook 的臃肿、经典版与新版的抱怨，以及在太空里处理邮件、回复全部、远程桌面这些梗展开，整体是带着讽刺意味的集体调侃。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://isolveproblems.substack.com/p/how-microsoft-vaporized-a-trillion" target="_blank" rel="noopener noreferrer">Decisions that eroded trust in Azure – by a former Azure Core engineer</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47616242" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者以自己重返 Azure Core 的第一天经历为切口，指出团队竟认真讨论把大量 Windows 组件迁移到极小的 Overlake 硬件上，以支撑现有管理代理，这在他看来从一开始就脱离现实。文中强调，相关系统在功耗、内存和扩展性上早已接近极限，却仍要承载成百上千个代理与关键云基础设施，因而埋下严重的稳定性和规模化风险。作者把这类决策视为微软在 Azure 上不断透支信任、浪费工程资源的根源，并暗示其后果已外溢到 OpenAI、政府云和国家安全层面。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://cursor.com/blog/cursor-3" target="_blank" rel="noopener noreferrer">Cursor 3</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47618084" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Cursor 3 被定位为面向智能代理的统一工作区，目标是把软件开发从手动编辑推进到多个代理协同自动交付的阶段。新界面把本地与云端代理集中到同一处，支持并行运行、快速在不同环境间切换，并能在桌面端继续查看和接手代理的工作。它还加入了更清晰的差异视图、跨仓库布局、内置浏览器和插件市场，强调更高层级的协作与更顺畅的审阅、提交流程。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://tailscale.com/blog/macos-notch-escape" target="_blank" rel="noopener noreferrer">Tailscale&#39;s new macOS home</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47618189" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Tailscale 说明了自家 macOS 图标在带刘海的 MacBook 上可能被菜单栏遮住的问题：用户会以为应用不见了，其实只是图标被挡住了。过去它只能靠一个基于遮挡状态的提示来提醒用户，但这种办法并不稳妥，因为切换显示器或开合电脑也可能误触发。如今，macOS 客户端默认提供了一个全新的窗口式界面，可直接搜索设备、查看连接状态、执行 ping、复制地址、通过 Taildrop 传文件，还能更方便地进入出口节点。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://apfel.franzai.com/" target="_blank" rel="noopener noreferrer">Show HN: Apfel – The free AI already on your Mac</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47624645" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Apfel 把苹果在 Mac 上内置的本地大模型开放出来，让用户可以直接从终端调用，不需要 API 密钥、云端服务或按量付费。它既能作为命令行工具使用，也能提供与 OpenAI 兼容的本地接口，还支持交互式聊天、流式输出和工具调用。项目强调所有推理都在 Apple Silicon 设备本地完成，依赖 macOS 26 及 Apple Intelligence。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://text.blogosphere.app/" target="_blank" rel="noopener noreferrer">Show HN: I built a frontpage for personal blogs</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47625952" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这是一个面向独立博客的首页聚合站，强调帮助读者发现分散在各处的个人博客最新文章。页面展示了最近更新的博客条目，来源涵盖多个独立站点，体现出它更像一块动态目录，而不是单一博客。根据站点简介，它的目标就是把独立网络上的新内容集中呈现出来，方便快速浏览。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.joanwestenberg.com/marc-andreessen-is-wrong-about-introspection/" target="_blank" rel="noopener noreferrer">Marc Andreessen is wrong about introspection</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47627056" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章反驳了 Marc Andreessen 认为“内省”是近代才出现的说法，指出苏格拉底、斯多葛学派、奥古斯丁、孟子和《哈姆雷特》都表明，自我审视早已深植于人类思想传统。作者强调，若要判断繁荣、意义与幸福，不能只看可量化指标，还必须依赖对内在经验的理解。</p>
+<p>文中进一步认为，Andreessen 把内省描绘成病理，更像是一种服务于“只管前进”的修辞包装，而非严谨的历史判断。作者最后指出，真正的问题不是人没有内心，而是有人选择回避审视内心，并用历史说法替这种回避辩护。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.theguardian.com/world/2026/apr/03/us-fighter-jet-confirmed-shot-down-over-iran" target="_blank" rel="noopener noreferrer">F-15E jet shot down over Iran</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47628326" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>一架美军 F-15E 战斗机在伊朗上空被击落，已有一名机组成员获救，另一人仍下落不明。美国和伊朗方面都在围绕残骸、坠机地点与搜救行动展开角力，现场还出现了美军搜救飞机低空出动的迹象。报道同时提到，这起事件发生在美伊冲突持续升级之际，也让美国空军的损失进一步受到关注。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.bbc.com/news/articles/ce8jzr423p9o" target="_blank" rel="noopener noreferrer">Artemis II crew take “spectacular” image of Earth</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47631118" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>NASA公布了阿尔忒弥斯二号乘组在前往月球途中拍摄的首批地球高分辨率影像。指令长雷德·怀斯曼在完成最后一次引擎点火后拍下这些照片，飞船随后进入奔月轨道。首张名为“你好，世界”的照片中，能看到大西洋、地球边缘的稀薄大气辉光、两极极光，以及右下方的金星；另一张则从猎户座飞船舷窗回望地球。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-04 00:00 | <a href="./2026-04-03.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-02.html">Daily Hacker News for 2026-04-02</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 02, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.nytimes.com/2026/04/01/technology/spacex-ipo-elon-musk.html" target="_blank" rel="noopener noreferrer">SpaceX files to go public</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47604155" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>SpaceX 已秘密提交首次公开募股申请，报道指公司最快可能在 6 月上市，目标募资规模约为 500 亿至 750 亿美元。若按文中所述估值推进，这将是极其罕见的超级发行，也可能让 Elon Musk 的财富再上一个台阶。报道还提到，募资可能用于支持星链、星际飞船、在轨数据中心等长期计划，并为 xAI 和债务回购提供资金。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.jeffgeerling.com/blog/2026/dram-pricing-is-killing-the-hobbyist-sbc-market/" target="_blank" rel="noopener noreferrer">DRAM pricing is killing the hobbyist SBC market</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47606840" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>树莓派再次上调带 LPDDR4 内存机型的价格，3GB 版 Pi 4 也涨到 83.75 美元，16GB Pi 5 则升至 299.99 美元。作者认为，LPDDR 芯片如今已占据主板成本的大头，导致高内存单板机价格迅速逼近甚至超过多数爱好者的承受范围。随着 4GB 以上机型变贵、新板发布变少，作者判断整个业余 SBC 市场正在走向萎缩，自己也开始更多转向旧款 SBC 和微控制器。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.phoronix.com/news/Steam-On-Linux-Tops-5p" target="_blank" rel="noopener noreferrer">Steam on Linux Use Skyrocketed Above 5% in March</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47609564" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>若 Valve 的最新 Steam 调查数据准确，Linux 上的 Steam 使用在 3 月迎来显著跃升，份额首次突破 5%，达到 5.33%，不仅创下历史新高，也已超过 macOS 的游戏市场占比两倍以上。相比之下，Linux 份额在 2025 年底约为 3.5%，到 2 月还降至 2.23%，这次单月反弹达到 3.1 个百分点。文章还指出，部分增幅可能与 Valve 再次修正中国区统计有关，同时 SteamOS 用户约占 Linux 玩家四分之一，Linux 上的 AMD 处理器占比仍接近 70%。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://spencermortensen.com/articles/email-obfuscation/" target="_blank" rel="noopener noreferrer">Email obfuscation: What works in 2026?</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47609694" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章评估了多种邮箱混淆方式在 2026 年对抗爬虫的实际效果，核心结论是：许多看似复杂的方法，依然会被大部分采集器识别或还原。像纯文本、HTML 实体、注释、脚本拼接、SVG、URL 编码、重定向等做法，虽然在统计上能挡住相当比例的爬虫，但并不可靠，且往往要依赖更复杂的实现。作者也强调，一些“更安全”的方案会明显损害可用性，例如影响复制、阅读或正常联系，因此真正可行的做法通常需要把多种手段组合起来权衡安全与体验。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://undark.org/2026/04/01/sweden-schools-books/" target="_blank" rel="noopener noreferrer">Sweden goes back to basics, swapping screens for books in the classroom</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47612601" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>瑞典近年把学校教育重新拉回基础能力，重点强化阅读、写作和手写训练，并在全国推进手机禁用与纸质教材回归。政府已投入大笔预算采购教材、教师用书以及供学生阅读的虚构和非虚构图书，目标是让每个学生都能在每门课上使用纸质课本。</p>
+<p>这一转向源于对数字化课堂成效的反思，也与测试成绩下滑、注意力分散、深度阅读减弱等担忧有关，但官方并未否定数字技术，而是主张在更合适的年龄和阶段谨慎引入。文章同时指出，美国教育界也在重新讨论平板、电子学习和人工智能对学习效果的影响。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://lemonade-server.ai/" target="_blank" rel="noopener noreferrer">Lemonade by AMD: a fast and open source local LLM server using GPU and NPU</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47612724" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这是一个面向本地人工智能的开源服务，强调速度、私有性和快速部署，支持在普通电脑上几分钟内完成安装。它可同时处理对话、图像生成和语音相关任务，并通过统一接口对外提供兼容 OpenAI API 的本地服务。页面还突出其硬件自动配置、多模型并行、跨平台支持，以及面向本地工作流的轻量级 C++ 后端和一键安装体验。</p>
+<p>最新版本信息显示，项目仍在持续迭代，近期更新包括软件包分发方式调整、搜索与添加模型流程优化，以及对 NPU 和 llama.cpp 的进一步适配。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://browsergate.eu/" target="_blank" rel="noopener noreferrer">LinkedIn is searching your browser extensions</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47613981" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章指称，LinkedIn 在用户访问其网站时，会通过隐藏代码扫描本机已安装的浏览器扩展，并把结果回传给自己及第三方；作者认为这既未征得同意，也未在隐私政策中明确披露。文中进一步称，这种扫描可能暴露用户的宗教信仰、政治倾向、残障情况以及求职迹象，还可帮助识别使用竞争工具的公司和个人。作者还声称，LinkedIn 一方面向欧盟展示有限接口以回应监管，另一方面持续扩大监控范围，并把数据传给外部公司。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://qwen.ai/blog?id=qwen3.6" target="_blank" rel="noopener noreferrer">Qwen3.6-Plus: Towards real world agents</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47615002" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Qwen 团队发布了 Qwen3.6-Plus，强调这是对前代模型的明显升级，并已通过 API 立即提供。该版本重点增强了代理式编程能力，覆盖前端开发、仓库级问题解决、终端操作和自动化任务执行，同时在长程规划、工具调用、多模态理解与推理等方面取得更强表现。文中还给出多项基准结果，显示它在编码代理、通用代理和通用能力上都有较全面的提升。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.tomshardware.com/networking/artemis-ii-will-use-laser-beams-to-live-stream-4k-moon-footage-one-giant-step-beyond-the-s-band-radio-comms-of-the-apollo-era" target="_blank" rel="noopener noreferrer">Artemis II will use laser beams to live-stream 4K moon footage at 260 Mbps</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47615449" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>NASA 的阿耳忒弥斯二号任务将采用基于激光的 O2O 通信系统，把来自月球的 4K 影像以最高 260 兆比特每秒的速率传回地球。除了视频，这套链路还会用于传输程序、图片和飞行计划等任务数据。NASA 还会保留传统无线电作为备份，以应对云层干扰和月背通信中断的情况。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://deepmind.google/models/gemma/gemma-4/" target="_blank" rel="noopener noreferrer">Google releases Gemma 4 open models</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47616361" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Google DeepMind 发布了 Gemma 4 开放模型，主打基于 Gemini 3 研究成果打造，并强调单位参数的智能效率。该系列面向不同设备与场景，既突出移动端和物联网所需的高算力、内存效率，也覆盖个人电脑上的更强智能表现。页面还列出其在多语言问答、多模态理解、数学推理、编程、科学知识和智能体工具使用等基准上的成绩，显示这些模型在多项任务上都有明显提升。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-03 00:00 | <a href="./2026-04-02.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-04-01.html">Daily Hacker News for 2026-04-01</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 01, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://responsiblestatecraft.org/iran-strait-of-hormuz/" target="_blank" rel="noopener noreferrer">Why the US Navy won&#39;t blast the Iranians and &#39;open&#39; Strait of Hormuz</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47584795" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章认为，美国海军之所以无法像外界想象那样强行冲开霍尔木兹海峡，根本原因在于现代海战规则已经改变。伊朗依托岸基反舰导弹、无人机、水雷和水面／水下无人系统，能够以远低于美军舰艇的成本持续施压，使大型航母和军舰不敢轻易逼近。作者进一步指出，这种能力并非伊朗独有，中国等国也已借鉴类似思路，说明传统依赖航母与近岸投送的海权模式正在走向衰落。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://arstechnica.com/tech-policy/2026/03/okcupid-match-pay-no-fine-for-sharing-user-photos-with-facial-recognition-firm/" target="_blank" rel="noopener noreferrer">OkCupid gave 3M dating-app photos to facial recognition firm, FTC says</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47591104" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>美国联邦贸易委员会称，OkCupid 与 Match 曾向一家人脸识别公司提供近三百万张用户照片，以及用户的部分人口统计和地理信息，却没有签订正式协议，也没有设定使用限制。报道显示，这些数据被用于训练可识别面部年龄、性别和种族的服务。双方已与监管机构达成和解，但不必支付任何金钱罚款。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://damrnelson.github.io/github-historical-uptime/" target="_blank" rel="noopener noreferrer">GitHub&#39;s Historic Uptime</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47591928" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>页面展示了 GitHub 从 2016 年到 2026 年的月度可用性变化，以图表形式回顾其历史运行情况。页面说明数据来源于官方状态页，因此重点在于用公开记录呈现长期稳定性与波动。由于原文是交互式展示，当前只能确认其核心内容是历史可用性图表，而非一篇长文。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.cnbc.com/2026/03/31/openai-funding-round-ipo.html" target="_blank" rel="noopener noreferrer">OpenAI closes funding round at an $852B valuation</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47592755" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>OpenAI 完成一轮创纪录融资，融资总额达到 1220 亿美元，投后估值升至 8520 亿美元。此次融资由软银共同领投，Andreessen Horowitz、D. E. Shaw Ventures 等投资方参与，较此前披露的 1100 亿美元承诺进一步扩大。公司称其 ChatGPT 的周活跃用户已超过 9 亿，月收入约 20 亿美元，但目前仍在持续消耗现金，尚未实现盈利。随着公司推进潜在上市，市场将更关注其估值能否被后续业绩支撑。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://prismml.com/" target="_blank" rel="noopener noreferrer">Show HN: 1-Bit Bonsai, the First Commercially Viable 1-Bit LLMs</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47593422" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>PrismML 主打把大模型做得更稠密，试图同时解决手机端算力不足和数据中心部署成本过高的问题。其核心产品 1-Bit Bonsai 8B 号称采用 1 位权重，内存占用仅 1.15GB，相比全精度 8B 模型体积缩小 14 倍、速度提升 8 倍、能耗降低 5 倍，并在基准测试上接近领先的 8B 模型。页面还展示了 4B 和 1.7B 两个更小版本，分别强调更高的运行速度、能效和更适合机器人、实时智能体与边缘计算等场景。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://scottlawsonbc.com/post/dot-system" target="_blank" rel="noopener noreferrer">A dot a day keeps the clutter away</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47593556" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者用一套极简的「点贴纸」系统管理实验室零件：每个箱子贴上颜色点，按使用频率累积标记，长期不用的物品就转入更远的存放区，最终再决定是否捐出或出售。</p>
+<p>这套方法强调透明统一的收纳盒、袋中再分袋、全部标注日期，把物品组织成类似文件系统的层级结构。通过四年的记录，作者发现常用的是电源、连接件等跨项目零件，而示波器、函数发生器等被认为“必备”的工具其实很少使用。</p>
+<p>文章的核心不是精细库存，而是用低成本、可视化的方式，把“保留还是清理”的判断建立在真实使用数据上。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://ccunpacked.dev/" target="_blank" rel="noopener noreferrer">Claude Code Unpacked : A visual guide</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47597085" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这篇可视化指南把 Claude Code 的内部运行过程拆开讲清楚：从用户输入一条消息开始，如何进入代理循环，再到生成响应的完整路径。页面还按源码整理了五十多种工具、多代理协作方式，以及工具和命令的分类目录，方便按功能逐层浏览。除此之外，它还展示了代码树中的架构分区，并标出一些尚未发布的特性，强调内容直接来自源码梳理。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://home.cern/news/news/engineering/cern-levels-new-superconducting-karts" target="_blank" rel="noopener noreferrer">CERN levels up with new superconducting karts</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47597935" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这篇文章带有明显的愚人节玩笑色彩：CERN 说并不会真的在隧道里开卡丁车，而是借这个设定为今年夏天开始的重大施工造势。文中称，这些卡丁车将用于大强子对撞机地下隧道内的人员与设备转运，接替此前使用的自行车，并配备 64 台超导发动机，利用迈斯纳效应实现悬浮加速。文章还提到，项目早期测试已显示出提速效果，后续会继续测试不同设计，同时配发安全装备，并把这个设想延伸到未来的航空和反重力交通应用。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://blog.cloudflare.com/emdash-wordpress/" target="_blank" rel="noopener noreferrer">EmDash – a spiritual successor to WordPress that solves plugin security</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47602832" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Cloudflare 发布了 EmDash 的测试版，把它定位为 WordPress 的精神继任者，目标是把传统 CMS 的能力与现代安全模型结合起来。它用 TypeScript 构建，基于 Astro 和无服务器架构运行，并将插件放进独立的 Worker 隔离环境中执行，从根本上缓解 WordPress 插件直接接触数据库和文件系统带来的安全风险。文章还强调 EmDash 是开源且采用 MIT 许可，同时内置 x402 支付支持，方便网站按内容或接口调用进行按需收费。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://plus.nasa.gov/scheduled-video/nasas-artemis-ii-crew-launches-to-the-moon-official-broadcast/" target="_blank" rel="noopener noreferrer">NASA Artemis II moon mission live launch broadcast</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47603657" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这是 NASA 的 Artemis II 官方直播页面，介绍即将进行的阿耳忒弥斯二号任务。该任务是阿耳忒弥斯计划中的首次载人飞行，将从佛罗里达州肯尼迪航天中心发射，搭载里德·怀斯曼、维克多·格洛弗、克里斯蒂娜·科赫和加拿大航天局宇航员杰里米·汉森前往月球附近，预计全程约 10 天。页面还说明，这次飞行将首次在有人参与的情况下测试猎户座飞船的生命保障系统，并为后续载人任务铺路。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-03 00:00 | <a href="./2026-04-01.html">Permanent link</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

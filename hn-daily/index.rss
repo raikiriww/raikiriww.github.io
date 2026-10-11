@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Hacker News Daily</title>
+    <link>https://blog.raikiriww.xyz/hn-daily/</link>
+    <description>Daily top stories from Hacker News with Chinese summaries</description>
+    <language>zh-cn</language>
+    <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+    <item>
+      <title>Daily Hacker News for 2026-10-10</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-10-10.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-10-10.html</guid>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on October 10, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://patkerr.co.uk/2d-vehicles/">2D Vehicles</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49991852">(comments)</a></span>
+<div class="summary"><p>作者 Pat Kerr 介绍了其在 1996 年编写的 2D 物理原型，该原型后续被移植为初代《侠盗猎车手》（GTA）的车辆系统核心，并在诞生 30 周年之际以 JavaScript 重构为网页项目 Motion Lab。系统核心采用了当时游戏中罕见的 2D 刚体动力学，统一管理线速度、角速度与力矩，使物体在外壳与行为切换下支持汽车、飞船及砖块三种模式。针对车辆模拟，作者设计了一种将车轮速度分解为前向滚动与侧向抗力的简化阻尼模型，在无需复杂真实摩擦力学计算的情况下实现了极具特色的驾驶操控与漂移手感。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://github.com/franzenzenhofer/big-arrow-on-the-screen">Show HN: Let your AI agents paint big arrows, boxes and text on your screen</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50018817">(comments)</a></span>
+<div class="summary"><p>big-arrow-on-the-screen（bigarrow）是一款专为 macOS 设计的开源命令行工具，可作为 Claude Code 和 Codex 等 AI Agent 的扩展技能使用。当智能体在系统操作中遇到需要人工介入的步骤（如系统权限授权、2FA 验证或应用引导）时，该工具能在屏幕顶层绘制醒目的箭头、线框与附带复制按钮的提示标牌来精准指引用户。该工具采用纯 Swift 编写，具备置顶显示但不夺取键盘焦点、允许鼠标点击穿透目标元素以及超时或完成后自动销毁等特性。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://typesafe.ai/blog/series-ai">Typesafe AI raises $870M at $7.5B</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50023450">(comments)</a></span>
+<div class="summary"><p>TypeSafe AI 宣布以 75 亿美元估值完成 8.7 亿美元 A 轮融资，由 Andreessen Horowitz 领投，Sequoia Capital 及原有投资者 DCVC 等参投，Martin Casado 随之加入董事会。该公司致力于构建面向自动化的机器原生智能基础设施，其首款模型 Jev 已在三分之一的财富 500 强企业中落地并为客户节省数百万美元。团队计划将资金用于进一步拓展机器原生模型矩阵，并全面完善智能软件开发基础设施与企业级功能。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://carrierexplode.com/">Show HN: Carrier-Explode: iPhone, Pixel and Galaxy carrier settings decoded</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50024499">(comments)</a></span>
+<div class="summary"><p>carrier-explode 2.0 发布并大幅改进了后端架构，该项目专门解析并对比来自 iPhone、Pixel 和 Galaxy 固件中的运营商配置。用户可按机型查询各运营商对 APN、VoLTE、Wi-Fi Calling 及 5G 的支持情况，亦可比对不同版本或运营商固件的具体改动。所有数据均支持通过 API 获取 JSON 格式，或作为每日更新的 CC0 协议公开数据集导出。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://gizmodo.com/youtuber-says-cops-paid-him-a-visit-after-he-built-flock-style-camera-to-track-cops-2000824306">YouTuber Says Cops Visited Him After He Built a Flock-Style Camera to Track Cops</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50026555">(comments)</a></span>
+<div class="summary"><p>加拿大软件工程师兼 YouTuber Anthony Sistilli 自行开发了一套类似 Flock 的自动车牌识别（ALPR）摄像头系统，专门用于追踪警车的行动轨迹并在网络上分享。随后两名当地警员登门质询其收集数据的意图，并表示警员个人行踪与班次信息若被掌握将带来巨大安全风险。Sistilli 借此指出警方热衷于监控公众却对自身被追踪极度戒备的讽刺现状，并深入探讨了 ALPR 技术在数据滥用、营销夸大及缺乏监管透明度等方面的广泛争议。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://rea.tools/">REA Reverse – Engineer Anything</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50028275">(comments)</a></span>
+<div class="summary"><p>REA 是一款面向 AI 编程智能体的逆向工程工具，支持协助智能体分析原生二进制文件、JavaScript 与 Electron 应用以及浏览器运行时行为。该工具能够自动提取并向智能体提供目标程序的底层指令、反编译代码及运行脚本，替代了繁琐的人工反汇编与单步跟踪流程。借助 REA 提供的上下文，智能体不仅能解释深层业务逻辑，还能直接复现与重建功能，例如还原 Chrome 恐龙游戏的加速度规则或重构 Windows 计算器的百分比计算机制。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/">Telegram Desktop vulnerability allowed any user&#39;s file to be stolen</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50029123">(comments)</a></span>
+<div class="summary"><p>Telegram Desktop（7.2.8 及更早版本）存在高危漏洞（CVE-2026-107181），其单实例进程间通信（IPC）通过本地 Socket 传递指令时未对分号进行转义，导致攻击者可通过恶意 tg:// 链接注入 IPC 指令。注入指令可进一步调用缺乏鉴权的内部协议 interpret:，并结合群聊附件默认自动下载到固定路径的机制，加载预置指令文件以实现任意本地文件读取。攻击者可将受害者的敏感文件外发至指定聊天频道，并在未设置本地密码的默认配置下窃取并解密会话凭据，最终实现单次点击完全接管账户。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://cphpost.dk/2026-10-10/news/round-up/123456-password-used-in-massive-danish-cpr-data-breach/">`123456&#39; password used in Danish CPR data breach</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50031269">(comments)</a></span>
+<div class="summary"><p>丹麦国家公民登记系统（CPR）日前发生严重数据泄露，约880万人的个人信息遭到暴露，起因是拥有合法查询权限的IT公司Pays ApS凭证被黑客入侵。调查显示该公司安全防护极其脆弱，包括管理员在内的至少三个账户竟然使用了“123456”作为密码。黑客借此在近22天内进行了约1400万次非授权查询，直至官方收到异常庞大的查询账单后才察觉并阻断此次泄露。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://carette.xyz/posts/lobbying_and_corruption/">Lobbying Is Corruption</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50032556">(comments)</a></span>
+<div class="summary"><p>针对 George Hotz 对美国“游说”机制的讽刺性解释——即富商与企业通过 Super PAC 竞选献金换取利益立法、政客离职后进入对应机构任职，作者 Antonin 从欧洲人视角指出这本质上就是腐败。文章援引维基百科关于“合法腐败”的定义，强调游说只是掌权者利用立法特权为私利滥用受托权力披上的合法外衣。作者认为美国热衷于重塑概念来美化腐败，游说与贿赂并无本质不同，唯一的区别仅在于游说者穿着体面的西装且有律师监督。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://community.bitwarden.com/t/published-version-update-in-app-stores/102750">Bitwarden Dual License Model</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50033407">(comments)</a></span>
+<div class="summary"><p>Bitwarden 官方宣布，自下一个版本起在各大应用商店分发的应用将切换为商业许可构建版本，但普通用户无需任何操作且现有功能与永久免费计划保持不变。官方强调此举并非走向闭源，GitHub 上的 GPLv3 开源代码库将继续更新，用户仍可自由审计代码并自建托管，变更主要旨在约束二次打包转售行为。针对未来双版本的差异，官方表示部分新功能与组件将仅在商业版本中提供，新开发特性也将逐案评估适用的许可类型。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-10-10.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+    <item>
+      <title>Daily Hacker News for 2026-10-09</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-10-09.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-10-09.html</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on October 09, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://antonfrolov.substack.com/p/i-hired-an-illustrator-to-draw-my">I hired an illustrator to draw my house. Now it&#39;s my Home Assistant dashboard</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49986882">(comments)</a></span>
+<div class="summary"><p>为了解决家人不愿使用 Home Assistant 原生界面的问题，作者雇佣专业插画师为其住宅绘制了手绘平面图作为智能家居仪表盘。插画基于统一画布导出了房屋的日夜底图及各设备的开关状态 WebP 动图，并在 Home Assistant 中通过 picture-elements 卡片与 YAML 模式实现了设备联动与分层视图复用。最终仪表盘通过 Kiosk 模式常驻在客厅电视屏幕上，凭借生动直观的视觉反馈成功吸引家人主动在手机和电脑上使用。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.dexerto.com/entertainment/man-discovers-his-parents-coffee-machine-used-1tb-of-data-in-10-days-3416399/">Man discovers his parents&#39; coffee machine used 1TB of data in 10 days</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49995495">(comments)</a></span>
+<div class="summary"><p>一名拥有十余年IT从业经验的男子在排查父母的网络时发现，其家中的智能咖啡机在短短10天内产生了高达1TB的数据流量。经进一步分析，这极可能是咖啡机设备故障引发的局域网大量广播，虽未将过多数据上传至外部互联网，但已造成家庭无线接入点（AP）严重过载。鉴于该物联网（IoT）设备存在导致网络瘫痪的潜在隐患，他最终决定拔掉该设备电源并为父母更换新咖啡机。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://htmx.org/essays/yes-and/">Yes, and</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50003796">(comments)</a></span>
+<div class="summary"><p>针对AI时代是否还应成为程序员的疑问，Carson Gross给出了“Yes, and...”的回答，强调编程本质是用计算机解决问题并控制系统复杂度，这一核心能力依然具有长远价值。他警示初学程序员必须坚持亲手编写代码以建立深刻认知与代码审查能力，避免盲目依赖AI生成而落入失控陷阱，应将AI视作答疑助教而非代写工具。此外，未来单纯编码的权重可能下降，清晰沟通、业务理解与系统架构能力将更为关键，在当前就业低谷期建议通过个人社交网络寻找各类企业的实际技术岗位。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.theranos.world/">Theranos.world</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50009295">(comments)</a></span>
+<div class="summary"><p>Theranos World 是一个还原 Theranos 创始人伊丽莎白·霍姆斯（Elizabeth Holmes）办公桌的交互式网页模拟项目。用户可以在沉浸式场景中操作其 2015 年风格的 MacBook、iPhone 以及 Edison 血液检测仪，并体验喝青汁、开关台灯等细节互动。设备中内置的所有短信、电子邮件与演示文稿均源自法庭审判中公开的真实证据，为公众提供了直观查阅该案历史记录与内部沟通的窗口。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://iminafleeting.com/">Sorry, I&#39;m in a meeting</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50018088">(comments)</a></span>
+<div class="summary"><p>Fleeting 是一款通过播放逼真假会议录音来帮助职场人伪装忙碌、防御时间被他人占用的防打扰工具。它提供每段约12分钟、由AI合成声音与画面的虚构会议音频，支持随机起点播放、连续会议自动切换以及“离会/挂断”互动道别效果。该网站还支持在个人日历中添加占位日程以制造忙碌假象，并支持全屏运行来隐藏浏览器界面，全方位模拟真实的会议场景。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.nobelprize.org/prizes/peace/2026/press-release/">Nobel Peace Prize for 2026 to Navanethem Pillay</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50018420">(comments)</a></span>
+<div class="summary"><p>挪威诺贝尔委员会宣布将2026年诺贝尔和平奖授予南非知名法学家纳瓦内特姆·“纳维”·皮莱（Navi Pillay），表彰其数十年来为促进和平与强化国际法体系所作出的杰出贡献。皮莱从反对种族隔离的法律斗争起步，曾历任卢旺达国际刑事法庭法官、国际刑事法院法官及联合国人权事务高级专员等要职，并在历史性审判中推动将强奸及性暴力认定为灭绝种族与危害人类罪。委员会强调，在当前国际法机构面临严峻冲击与强权政治抬头的背景下，皮莱坚持通过司法机制追究战争罪责并捍卫公平正义，有力诠释了法治是保障全球持久和平不可或缺的基石。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://deno.com/blog/cloudflare">Cloudflare acquires Deno</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50019911">(comments)</a></span>
+<div class="summary"><p>Deno 团队宣布整体加入 Cloudflare，未来重心将转向与 Workers 及 Durable Objects 团队融合的统一平台与 celld 项目，为分布式系统和大规模 AI Agent 构建更简化的抽象与伸缩能力。官方将为 Deno 运行时提供一年的漏洞与安全维护后停止官方开发并保持开源，Deno Deploy 则在继续运营 6 个月后关停并提供向 Cloudflare Workers 的迁移支持。此外，包注册表 JSR 基础设施将迁移至 Cloudflare 并持续正常运营，团队也将继续维护 rusty_v8 并推动其集成至 workerd。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://oxide.computer/blog/our-445m-series-d">Our $445M Series D</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50020014">(comments)</a></span>
+<div class="summary"><p>硬件系统初创公司 Oxide Computer Company 宣布完成由 Eclipse 领投的 4.45 亿美元 D 轮融资，新进投资方包括 Atreides Management 以及长期芯片战略伙伴 AMD。公司此前已通过常规计算机销售实现运营盈利并缴纳所得税，但面临需求远超供给且激增的订单积压，硬件制造需要巨额前期现金采购组件和锁定库存。本轮资金将用于全面化解交付与供应链资本风险、扩建制造产能，以在保持公司长期独立运营的前提下承接更多市场需求。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.reuters.com/world/us-imposes-sanctions-international-criminal-court-hours-after-former-judge-wins-2026-10-09/">US imposes sanctions on ICC hours after former judge wins Nobel Peace Prize</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50021066">(comments)</a></span>
+<div class="summary"><p>2026年10月9日，美国政府在国际刑事法院（ICC）前法官纳维·皮莱（Navi Pillay）荣获诺贝尔和平奖数小时后，宣布对国际刑事法院实施全面制裁。美方将该机构定性为“流氓法庭”，制裁直接针对法院机构整体，禁止各类实体与其开展金融、保险与技术交易以削弱其运作能力，美财政部同时为部分业务提供了六个月过渡宽限期。此次行动源于 ICC 就阿富汗及涉以色列高官战争罪行签发逮捕令的调查行动，国际刑事法院对此予以强烈谴责，称美方制裁是对国际法治与司法独立基础的严重侵犯。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://minesweeper.mikelacher.com/">Triple-A Minesweeper</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50022292">(comments)</a></span>
+<div class="summary"><p>《Triple-A Minesweeper》是创作者 Mike Lacher 制作的一款讽刺性互动网页游戏，将经典的 Windows 扫雷重构为充满现代 3A 商业大作陈规套路的恶搞版本。作品全面戏仿了 3A 游戏的典型要素，包括冗长的引擎与中间件开屏 Logo、耳鸣且视线模糊的主角苏醒序章、黄色任务标记以及神经 HUD 通讯系统。在扫雷过程中，玩家会不断接收到充斥恩怨情仇的无线电台词、NPC 支线悬赏与背叛反转，通关后还会进入慢镜头并滚动播放包含数百个虚构职能岗位的庞大演职员名单。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-10-09.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+    <item>
+      <title>Daily Hacker News for 2026-10-08</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-10-08.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-10-08.html</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on October 08, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://100r.ca/site/home.html">Living off-grid: Hundred Rabbits</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49970767">(comments)</a></span>
+<div class="summary"><p>记载了 Hundred Rabbits 在 Pino 号帆船上的离网生活与项目日志，涵盖船体改造、水箱安装及在不稳定网络环境下的创作日常。团队在此期间发布了航海日志电子书《No Bears None》与多款基于 Uxn 的游戏（如新版《Donsol》和《Lepore Express Line》），并更新了 GrimGrains 美食食谱。此外，他们还重点研究了纸笔密码学（如一次性密码本）、复兴 70 年代编程语言 POP-2 以及人造语言实验，并持续开展读书会与漫画创作。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://ascii.rest/">Animated ASCII Art for Web Pages</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49993857">(comments)</a></span>
+<div class="summary"><p>ascii.rest 是由 @bas3line 开发的开源网页动态 ASCII 艺术作品库，共包含 216 个动态作品。该项目采用 TypeScript 编写且完全零依赖，遵循 MIT 开源许可协议。它支持在 React、Next.js、Astro 等前端框架中无缝集成，也可以直接通过单个 HTML 标签嵌入到普通网页中。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://bigwords.page/">Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49994443">(comments)</a></span>
+<div class="summary"><p>Bigwords.page 是一款免注册、免安装应用的免费网页工具，可将手机、平板、电脑或智能电视等任何屏幕转变为全屏标语、告示牌或倒计时展示屏。该工具采用“URL即应用”的设计理念，所有数据均存放在 URL Fragment 中而不经过服务器存储，具备隐私保护特性且便于直接分享或书签保存。它支持文字自动自适应填满屏幕，并提供 Markdown 格式排版、多页幻灯片定时轮播、动态倒计时以及浏览器本地生成二维码等功能。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://scottaaronson.blog/?p=10169">The Mathocalypse</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49997718">(comments)</a></span>
+<div class="summary"><p>OpenAI 与 Anthropic 的最新 AI 模型集中攻克了包括唯一游戏猜想 (UGC)、L=BPL 以及 3SUM 在内的 372 项长期悬而未决的数学与理论计算机科学难题。尽管部分成果附带 Lean 形式化验证证书，但证明过程极为晦涩且结构奇特，使人类学者面临前所未有的解读与消化挑战。这些成果以平均每题 3 小时的算力在 8000 个经典问题中实现了约 5% 的突破，彻底震撼了理论学术界，并引发了对 AI 时代数学研究范式重构的深刻讨论。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.dgt.is/blog/2026-10-07-deepseek-freek-out/">Why isn&#39;t the industry freaking out about DeepSeek 4.1 Flash?</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50000488">(comments)</a></span>
+<div class="summary"><p>作者在大量实际项目中深度使用 DeepSeek 4.1 Flash，认为其表现与 Opus 等前沿模型无异，足以胜任复杂的自主规划与开发任务。该模型通过将 KV 缓存压缩约 437 倍，大幅降低了 GPU 显存与能源消耗，使全天开发会话的预计成本极低（通常不足 1 美元）。相比科技行业对高价前沿模型的盲目追捧，此类高性价比且更环保的蒸馏模型正在改变开发者的工作流程并推动高阶智能的普及。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://mathstodon.xyz/@tao/117395269325940185">“Math 2.0” will need to value mathematical progress more holistically</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50002008">(comments)</a></span>
+<div class="summary"><p>陶哲轩（Terence Tao）提出“Math 2.0”理念，主张改变“Math 1.0”单纯追求率先解答开放难题的模式，转而更加全面地重视数学阐释、社区建设与新方向的开拓，并重塑教育及职业晋升评价标准。讨论进一步指出，若将 AI 仅用于暴力形式化求解，会导致“证明消化不良”与学科荒漠化，而 AI 的真正潜力在于促进跨学科合成，将高级数学工具与物理及现实边界相融合。因此，“Math 2.0”应依据证明的可消化性与跨学科自洽性评估数学进展，使数学研究发展为有机互联的森林。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://quesma.com/blog/invisible-cities-one-shot/">I gave Opus 5.5 one prompt and six hours to visualize Invisible Cities</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50004790">(comments)</a></span>
+<div class="summary"><p>作者 Piotr Migdał 使用单条 Prompt 和 6 小时时限，测试模型基于 Three.js 可视化卡尔维诺《看不见的城市》的能力。GPT-6 Astra 耗时 53 分钟（约 10 美元 API 成本）完成了端到端构建，但包含部分设计冗余；Claude Opus 5.5 则通过 6 个并行子代理在 1 小时 25 分钟内（约 74 美元 API 成本）生成了令人惊叹的高质量交互设计。该实验展示了最新大模型在 AI 辅助设计与复杂数据可视化领域的巨大跨越。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://news.ycombinator.com/item?id=50006366">Tell HN: I&#39;ve been paying for a rural Tanzanian&#39;s education for 10 years</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50006366">(comments)</a></span>
+<div class="summary"><p>本帖探讨了长期小额捐赠、微金融（如 Kiva）及技术志愿服务对贫困地区的深远影响，指出微小资金也能显著改善当地教育与生活。讨论同时抨击了有效利他主义（EA）逐渐偏向 AI 灭绝风险研究的现象，并就慈善项目的透明度与真实性展开辩论。针对网友对其“坦桑尼亚教育项目”的合规性质疑，发起人 Luke Bodmer 提供了详细的个人学术背景及 EIN 税号以消除顾虑。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://apnews.com/article/h1b-visa-program-vance-microsoft-e7b3a407f822702b269ee277d21343ea">Trump administration is suspending Microsoft from a green card program</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50006832">(comments)</a></span>
+<div class="summary"><p>特朗普政府以涉嫌欺诈和用低成本外劳取代本地工人为由，宣布暂停微软及多家科技公司通过H-1B签证申请绿卡的资格。副总统万斯指责微软在裁员6000名美国员工的同时获取数千个签证及绿卡，微软对此回应称绝大多数H-1B申请仅为现有员工的身份延期而非新聘外劳。此外，特朗普政府还计划对留学生OPT工作许可收取高额费用，并对哈佛、麻省理工等九所高校涉嫌滥用J-1签证展开欺诈调查。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://cactuscompute.com/blog/whistle">Whistle: Speech to Text in 16.9 MB</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50008427">(comments)</a></span>
+<div class="summary"><p>Cactus Compute 推出开源语音识别模型 Whistle，体积仅 16.9 MB，无需依赖即可在 CPU 上运行，支持 7 种语言转录、词级时间戳与语音嵌入。该模型与 Needle 共享 C++ 引擎，首个 Token 延迟低至 11.1 ms，解码速度达 1319 tokens/s，在 LibriSpeech 等多项基准测试中的字错误率表现优于 Whisper base。Whistle 预编译支持 17 个目标平台，可与 Needle 联合加载，实现从语音输入直接到 JSON 工具调用的端到端处理。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-10-08.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+    <item>
+      <title>Daily Hacker News for 2026-10-07</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-10-07.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-10-07.html</guid>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on October 07, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/">EmbeddingGemma 2: An open, lightweight multimodal embedding model</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49980487">(comments)</a></span>
+<div class="summary"><p>Google DeepMind 推出了开源轻量级多模态嵌入模型 EmbeddingGemma 2，基于 Gemma 4 架构并采用 Apache 2.0 许可证，拥有 7.4 亿参数，可在统一空间中映射文本、代码、图像、视频和音频。该模型具备 8K 上下文窗口，在代码与多模态基准测试中表现优异，并通过套娃表示学习（MRL）支持将向量维度从 768 维降至最低 128 维，从而节省高达 6 倍的存储开销。EmbeddingGemma 2 专为端侧与隐私优先场景优化，量化后运行内存低至 191MB 至 567MB，可与 Gemma 4 无缝协同构建高效的本地 RAG 与离线跨模态检索系统。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://news.ycombinator.com/item?id=49982498">Tell HN: GitHub refuses to remove cracked copies of my software after a month</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49982498">(comments)</a></span>
+<div class="summary"><p>该讨论围绕开发者发帖指责 GitHub 在一个月后仍拒绝下架其软件破解副本展开。网友分析 GitHub 拒绝是因为作者错误提交了针对绕过技术保护措施的 17 U.S.C. §1201 通知，建议改用标准的 §512(c) 版权侵权下架通知。知识产权律师建议开发者要么交由专业维权团队处理，要么接受损耗放弃追踪，亲自维权往往耗费精力且效果有限。讨论还进一步探讨了 AI 降低软件逆向克隆门槛后，SaaS 架构与专利对保护软件知识产权的作用。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://developers.openai.com/api/docs/guides/decisions">Decisions API is in public beta</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49984025">(comments)</a></span>
+<div class="summary"><p>OpenAI 推出处于公测阶段的 Decisions API（通过 <code>/v1/decisions</code> 端点调用），相比 Responses API 返回类型化评估结果的速度提升约 10 倍，目前仅支持 <code>gpt-6-luna</code> 模型。该 API 支持谓词（predicate）、选择（choice）和评分（score）三种问题类型，分别用于判断条件概率、从固定选项中单选分类以及按量表计算概率加权得分。其计费仅按输入 Token 收费（每百万 Token 0.10 美元，免收输出与缓存费），适用于内容分类与请求路由等场景，并支持 ZDR 和 HIPAA 规范。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://openai.com/index/sharing-ai-progress-in-mathematics/">Sharing AI progress in mathematics</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49984923">(comments)</a></span>
+<div class="summary"><p>OpenAI 公布了由其内部前沿模型生成的最新数学研究成果，并在 GitHub 上开源了基于 Lean 语言的计算机可验证证明形式化代码。在高等研究院（IAS）顾问小组的指导下，OpenAI 披露了模型推理摘要及算力消耗统计等细节以提升科学透明度，平均每项成果约消耗 3 小时 ChatGPT Pro 的思考算力。此外，OpenAI 将资助相关学术研讨会与会议，并正推进该前沿模型的负责任发布。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://github.com/szabadkai/c64-keyboard-font/">A font recreated from photographs of classic Commodore 64 keycaps</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49990224">(comments)</a></span>
+<div class="summary"><p>该项目（C64 Keyboard）基于作者的中欧版 Commodore 64 键盘键帽照片，通过几何化矢量重建与比例优化，还原了经典 C64 键帽印刷字体及全部 63 个 PETSCII 图形符号。该字体包含大写字母、数字、标点、重音字符及功能键标签，提供 TTF、OTF、Webfont 格式以及包含网页预览与可编辑轮廓的源码包。作者 Levente Szabadkai 已通过 CC0 1.0 协议将其贡献至公有领域，支持无限制的商业及非商业使用。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://developer.chrome.com/blog/jpeg-xl-in-chrome">Shipping JPEG XL in Chrome</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49991227">(comments)</a></span>
+<div class="summary"><p>Chrome 宣布自 Chrome 155 起原生支持 JPEG XL (.jxl) 图像格式解码，该格式相比传统 JPEG 可提升 30-50% 的压缩率，并具备无损压缩、HDR 支持及渐进式解码等特性。为从源头消除 C++ 解码器常见的内存安全漏洞，Chrome 引入了纯 Rust 实现的解码器 jxl-rs，并通过 Rust SIMD 抽象层确保硬件性能不打折。这一决策源于 Web 开发者长期以来的积极反馈，Chrome 团队同时参与了 Interop 2026 调查以确保跨浏览器的互操作性。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.classaction.org/news/visa-mastercard-major-banks-facing-new-litigation-over-anticompetitive-merchant-credit-card-transaction-fees">Visa, Mastercard, major banks facing new litigation over &#39;anticompetitive&#39; fees</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49993914">(comments)</a></span>
+<div class="summary"><p>圣地亚哥一家披萨店代表美国商家对 Visa、Mastercard 及各大主要银行发起新的集体诉讼，指控其联合制定反竞争规则以人为抬高信用卡交易手续费，每年向商家榨取超千亿美元垄断费用。诉状指出，被告通过“强制接受所有卡片”和禁止商家引导客户使用低成本支付方式等条款消解了市场竞争机制。鉴于先前 50 多亿美元的和解协议仅赔偿至 2019 年 1 月 24 日，本案旨在为 2019 年 1 月 25 日至今遭受持续性反竞争损害的美国商家争取索赔。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://openai.com/index/gpt-6-for-everyone/">GPT‑6 and Intelligent UI for everyone</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49996425">(comments)</a></span>
+<div class="summary"><p>OpenAI 正式面向全球每周超过 12 亿 ChatGPT 用户推出 GPT-6 模型，并引入全新的“智能 UI”（Intelligent UI）功能，能够结合文本、视觉效果及表单、图表等交互组件根据提问实时生成契合的答复界面。GPT-6 实现了思考与回答的交替并行，显著缩短了响应等待时间（网络搜索场景回答速度提升 44%），并提升了复杂推理与搜索回答的质量。此外，GPT-6 在安全防护与能力边界认知上均有增强，即日起向 Plus、Pro、Business 及 Enterprise 等付费用户（基于 GPT-6 Sol）推送，并于次日拓展至免费及 Go 用户（基于 GPT-6 Luna）。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.anthropic.com/claude-haiku-5-5">Claude Haiku 5.5</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49996437">(comments)</a></span>
+<div class="summary"><p>Anthropic 推出了 Claude Haiku 5.5 模型，作为迄今最快且性价比极高的小型模型，其平均运行成本比 Haiku 4.5 降低约 75%，专为摘要、数据库查询、子智能体协作以及浏览器与计算机使用等高吞吐量任务设计。在多项基准评估及 Asana 的实际测试中，Haiku 5.5 展现出优异的性能与响应速度，任务延迟降低超 30% 且推理速度提升高达 2.5 倍。同时，官方还下调了 Claude Sonnet 5.5 的缓存读取价格，并为 Max 和 Team 订阅用户每月提供 $100 至 $500 的 API 赠额。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007">Margaret Hamilton, who led software development for the Apollo program, has died</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49998895">(comments)</a></span>
+<div class="summary"><p>著名计算机科学家、阿波罗计划软件开发领导者玛格丽特·汉密尔顿（Margaret Hamilton）逝世，享年90岁。在MIT任职期间，她开创了“防御性编程”与优先级调度系统，在阿波罗11号登月关键时刻成功处理系统过载危机，并推动“软件工程”确立为独立学科。此后她创立了Hamilton Technologies等公司并开发通用系统语言（USL），致力于提升复杂系统的可靠性。她于2016年荣获总统自由勋章，是现代计算领域与STEM女性的杰出先驱。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-10-07.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+    <item>
+      <title>Daily Hacker News for 2026-10-06</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-10-06.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-10-06.html</guid>
+      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on October 06, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://reflection.ai/blog/introducing-beam">Beam: Reflection&#39;s 501B open-weight model</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49969183">(comments)</a></span>
+<div class="summary"><p>Reflection 推出首个开源权重模型 Beam，这是一个总参数 5010 亿、激活参数 230 亿的稀疏混合专家（MoE）模型，主打编程、推理与 Agent 工作负载。模型基于 23.8 万亿 Token 进行预训练，并在 1.05 万张 NVIDIA GB300 GPU 上完成了超 1 亿次 rollout 的大规模强化学习（RL），有效解决了异步 RL 训练中的策略过期与稳定性难题。在 SWE Bench 和 Terminal Bench 等基准测试中，Beam 展现出媲美顶级开源模型的编程与推理能力，同时显著提升了推理效率，所需推理计算量较同类模型降低了 3 至 4 倍。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors">Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49970667">(comments)</a></span>
+<div class="summary"><p>Claude Opus 5.5 AI Agent 团队成功发现了两种适用于下一代自旋电子学存储器的室温 Luttinger 补偿磁性半导体候选材料（YBaMnFeO₅ 与 KV[Cr(CN)₆]）。这两种材料具备带隙且净磁矩为零，既解决了传统铁磁体外溢磁场干扰问题，又能按电子自旋高效分选信息。其中 AI 理论设计的 YBaMnFeO₅ 磁有序温度高但合成难度大，而 1999 年已合成的 KV[Cr(CN)₆] 磁有序温度达 376 K，兼具稳定的晶体结构与极高的实用化前景。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.niemanlab.org/2026/10/chatgpt-is-adding-real-cartoonists-signatures-to-fake-new-yorker-cartoons/">ChatGPT is adding real cartoonists&#39; signatures to fake New Yorker cartoons</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49971846">(comments)</a></span>
+<div class="summary"><p>据Nieman Lab报道，ChatGPT在生成《纽约客》风格单格漫画时，会在未经授权的情况下伪造附带Brendan Loper、Emily Flake等15位以上真实签约漫画家的签名与笔名。尽管母公司Condé Nast与OpenAI达成了内容许可，但明确表示从未授权将漫画用于AI模型训练，且漫画家保留个人版权并视签名为真实性认证标识。受害者与法律专家指出，伪造签名已超越单纯的画风模仿，属于侵犯劳动价值与假冒身份的行为，并可能引发针对“形象权（right of publicity）”的法律诉讼。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.debugbear.com/blog/example-dot-com-redesign-history">Example.com just launched the biggest redesign in decades</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49971921">(comments)</a></span>
+<div class="summary"><p>本文回顾了保留域名 example.com 过去二十年间的视觉演化与技术架构变迁。2026年9月该网站迎来重大改版，引入多语言支持与渐变动画，IANA 随后澄清拆分脚本与更新页面旨在减少高流量下的带宽消耗。文章还梳理了其从2002年早期表格布局、2013年迁移至 CDN 到近期 Cloudflare 托管与 favicon 优化的演变历程，并强调该域名仅供文档示范，提醒开发者切勿将其用于服务监控或可用性测试。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.nobelprize.org/prizes/physics/2026/">Nobel Prize in Physics 2026: Francis Halzen</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49976265">(comments)</a></span>
+<div class="summary"><p>2026年诺贝尔物理学奖授予弗朗西斯·哈尔森（Francis Halzen），由其独享全部奖金。该奖项旨在表彰他在冰立方中微子天文台（IceCube Neutrino Observatory）作出的决定性贡献，以及在发现天体物理起源的高能中微子方面取得的重大突破。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.helgilibrary.com/companies/jetbrains">JetBrains reported a net financial loss first time in its tracked history</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49977072">(comments)</a></span>
+<div class="summary"><p>2025年JetBrains营收达到160.08亿捷克克朗，同比增长6.3%，创下公司历史新高并在捷克媒体公司中排名第一。然而受营业与人员费用快速增长影响，公司当年净亏损3.15亿捷克克朗，净利率降至-1.97%，净资产收益率（ROE）跌至-11.1%，这是其有记录以来首次出现年度净亏损。尽管出现亏损，公司当年的EBITDA仍录得9.18亿捷克克朗，且截至2025年底依然拥有75.84亿捷克克朗的净现金。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://pola.rs/posts/release-polars-2/">Polars 2.0</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49977177">(comments)</a></span>
+<div class="summary"><p>Polars 2.0 正式发布，重点将 SQL 支持提升为一等公民，通过优化器改进在 TPC-H 和 TPC-DS1 基准测试中超越了 DuckDB 和 DataFusion。新版本默认启用流引擎与 Out-of-Core（磁盘溢出）支持，大幅改善了高内存工作负载下的内存效率与稳定性。此外，该版本新增了原生 Map 数据类型及字典表达式，并强化了更严格的类型校验机制，帮助用户和 AI 引擎更早地发现数据错误并实现快速迭代。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.techdirt.com/2026/10/06/metas-muse-is-an-adorable-privacy-and-security-dumpster-fire/">Meta’s Muse is an adorable privacy and security dumpster fire</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49977588">(comments)</a></span>
+<div class="summary"><p>Meta推出的智能体AI产品Muse（内部代号Hatch）虽然宣称重视隐私与安全，但在上线后暴露出一系列严重的系统漏洞与隐私侵犯问题。该产品不仅存在可被利用获取设备root权限及监听Mac用户的零日漏洞，还会无视权限设置强行将用户的私信记录上传至云端，并擅自对用户及其社交圈进行深度数据画像。媒体披露Meta为赶上线进度仓促推行半成品补丁并拒绝延期，在缺乏监管的环境下强行推进数据收集，引发了内部及外界对其可能发生大规模数据泄露的严重担忧。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://mistral.ai/news/mistral-large-4///">Mistral Large 4</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49977979">(comments)</a></span>
+<div class="summary"><p>Mistral 宣布推出旗舰级原生多模态模型 Mistral Large 4（代号 le Chonk），拥有 1 万亿总参数和 490 亿激活参数，在 Mistral Studio 提供预览 API 并将于月底开源模型权重。该模型由 Mistral 在欧洲数据中心使用 3,800 张 NVIDIA Grace Blackwell GPU 从零训练，主打 AI 主权与私有化部署，覆盖超过 160 种语言。评测显示 ML4 在网络安全漏洞修复（82%）、智能体编程（Coding Agent Index 达 49.8%）、视觉定位以及法务金融等领域表现出顶尖性能，并具备强劲的防提示词注入与安全对齐能力。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://mistral.ai/news/mistral-large-4/">Mistral Large 4: \&quot;Le Chonk\&quot;</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=49978116">(comments)</a></span>
+<div class="summary"><p>Mistral AI 推出了包含 1 万亿总参数与 490 亿激活参数的原生多模态模型 Mistral Large 4（代号“le Chonk”）公开预览版，模型权重将于月底开源。该模型在欧洲数据中心基于 3,800 块 NVIDIA Grace Blackwell GPU 训练而成，在网络安全、智能体代码编写、视觉定位及科学数学等领域均具备顶尖性能。ML4 专为企业 AI 主权与高安全需求打造，支持 160 多种语言，提供超越封闭模型限制的自主部署与安全防御能力。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-10-06.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+  </channel>
+</rss>

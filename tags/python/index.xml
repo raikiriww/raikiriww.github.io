@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on raikiriww's blog</title><link>https://blog.raikiriww.xyz/tags/python/</link><description>Recent content in Python on raikiriww's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2026</copyright><lastBuildDate>Wed, 11 Oct 2023 10:29:09 +0800</lastBuildDate><atom:link href="https://blog.raikiriww.xyz/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>Python 写入文件失败</title><link>https://blog.raikiriww.xyz/posts/python-write-file-failed/</link><pubDate>Wed, 11 Oct 2023 10:29:09 +0800</pubDate><guid>https://blog.raikiriww.xyz/posts/python-write-file-failed/</guid><description>&lt;p&gt;公司有一个同事做的项目，其中有一个 Python 写的程序会反复降低 CPU 的电压直至死机重启，程序会在降压前保存本次的数据。听起来很合理，先保存数据再降低电压，如果死机了导致重启，那上次的数据也保存到本地了。但在 windows 电脑上实际运行时，每次程序导致 windows 死机重启后，保存的数据文件都为空。他没搞定这个就离职了，于是我就接手来查这个 bug 了。&lt;/p&gt;
+&lt;h2 class="relative group"&gt;查找问题
+&lt;div id="查找问题" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%9f%a5%e6%89%be%e9%97%ae%e9%a2%98" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p&gt;大概的代码示例如下：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 写入文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;file_path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;w&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;some_data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;logging&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;warning&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Write to checkpoint file&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 降低 CPU 电压，过低会导致死机&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;set_voltage_offset&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;v_off&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;从代码结构来看确实没什么问题，是先保存数据再降低电压，即使后边的操作导致死机也是在写入操作完成后，应该不会影响保存的数据才对。但事实是确实有影响，在 windows 上测试了好几次保存的数据都为空。&lt;code&gt;with open()&lt;/code&gt; 语句是 Python 中常用的文件操作语句，不应该会导致写入异常，于是怀疑是降压操作导致的。&lt;/p&gt;
+&lt;h2 class="relative group"&gt;分析问题
+&lt;div id="分析问题" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%88%86%e6%9e%90%e9%97%ae%e9%a2%98" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p&gt;在 Python 中，当使用 &lt;code&gt;with open()&lt;/code&gt; 语句来写入文件时，它会负责管理文件的打开和关闭，通常情况下， &lt;code&gt;with&lt;/code&gt; 语句块结束后，Python 会自动关闭文件，并确保所有数据写入硬盘。但，这个操作不是立即发生的。&lt;/p&gt;
+&lt;p&gt;当写入文件时，操作系统通常会缓存这些操作，以便一次性的将多个写入操作合并，从而提高效率。这意味着即使 Python 代码执行了写入操作（也就是 write()），也不能保证这些数据已经永久的保存到了硬盘上。如果在 with 语句块结束后立即死机，这些数据可能会丢失。&lt;/p&gt;
+&lt;h2 class="relative group"&gt;解决方法
+&lt;div id="解决方法" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%b3%95" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p&gt;现在知道了导致数据保存失败的原因是出在 windows 的系统缓存机制上，那只要找到方法可以强制系统将缓存的数据写入硬盘就好了。修改后的代码如下：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 写入文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;file_path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;w&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;some_data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;# 确保数据从 Python 的内部缓冲区写入操作系统的缓冲区&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;flush&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;# 确保数据从操作系统的缓冲区写入磁盘&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fsync&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fileno&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;logging&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;warning&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Write to checkpoint file&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 降低 CPU 电压，过低会导致死机&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;set_voltage_offset&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;v_off&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;新增了两行代码。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;f.flush()&lt;/code&gt; 的作用为刷新 Python 的内部缓冲区，确保所有数据写入操作系统的缓冲区。但这个并不能保证操作系统会立刻将数据写入硬盘。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;os.fsync(f.fileno())&lt;/code&gt; 的作用为强制操作系统将其缓冲区的数据写入硬盘。这样就保证了如果之后的代码导致系统死机，这部分数据也会完整的保存在硬盘上。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;将修改后的程序在 windows 上测试，数据每次都会完整的保存在硬盘上。&lt;/p&gt;
+&lt;h2 class="relative group"&gt;后记
+&lt;div id="后记" class="anchor"&gt;&lt;/div&gt;
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+&lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%90%8e%e8%ae%b0" aria-label="锚点"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p&gt;在 Microsoft 的一篇&lt;a href="https://learn.microsoft.com/en-us/troubleshoot/windows-server/backup-and-storage/turn-disk-write-caching-on-off" target="_blank" rel="noreferrer"&gt;官方文档&lt;/a&gt;中有提到 &lt;strong&gt;disk write caching&lt;/strong&gt; ，也就是写入缓存，并给出了关闭的方法。&lt;/p&gt;
+&lt;p&gt;关于 &lt;strong&gt;disk write caching&lt;/strong&gt; ，官方的描述为：&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Additionally, turning disk write caching on may increase operating system performance; however, it may also result in the loss of information if a power failure, equipment failure, or software failure occurs.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;确实与我遇到的情况一样。&lt;/p&gt;
+&lt;p&gt;还有一篇更详细一点的介绍：https://learn.microsoft.com/en-US/windows/client-management/client-tools/change-default-removal-policy-external-storage-media&lt;/p&gt;
+&lt;p&gt;总的来说 &lt;strong&gt;disk write caching&lt;/strong&gt; 在一般情况下可以提高性能。但在需要确保极端情况下写入数据完整性时，可以考虑关闭或者手动强制写入。&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://blog.raikiriww.xyz/posts/python-write-file-failed/featured.png"/></item></channel></rss>

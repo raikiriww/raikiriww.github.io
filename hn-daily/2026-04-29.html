@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - 2026-04-29</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-04-29.html">Daily Hacker News for 2026-04-29</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 29, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://legallayer.substack.com/p/who-owns-the-claude-code-wrote" target="_blank" rel="noopener noreferrer">Who owns the code Claude Code wrote?</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47932937" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>当前法律原则指出，缺乏“实质性人类原创性”的纯 AI 生成代码可能无法获得版权保护，而人类在架构设计和引导中的参与程度是决定版权归属的关键。根据“雇佣作品”原则，使用公司资源或许可工具生成的 AI 代码通常归雇主所有，开发者在进行个人项目时应严格区分工具账号与设备。此外，AI 模型复现训练数据中的 GPL 代码片段可能导致严重的“许可污染”，开发者应记录创作过程并定期进行代码库扫描以规避合规风险。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://lucumr.pocoo.org/2026/4/28/before-github/" target="_blank" rel="noopener noreferrer">Before GitHub</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47940921" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Armin Ronacher 回顾了 GitHub 兴起前由声誉驱动且依赖自建基础设施的开源生态，肯定了该平台在降低贡献门槛和构建社交基础设施方面的历史贡献。文章指出，随着 GitHub 面临领导力缺失和 AI 干扰等问题，社区正出现去中心化趋势，但这种分散可能导致项目社交背景和讨论记录的遗失。作者为此呼吁建立一个公共且资金充足的开源档案馆，以确保软件源代码及相关历史脉络在平台更迭中得以长久保存。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.buchodi.com/how-chatgpt-serves-ads-heres-the-full-attribution-loop/" target="_blank" rel="noopener noreferrer">How ChatGPT serves ads</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47942437" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>OpenAI 的广告平台由后端 SSE 流注入和商家端 OAIQ SDK 跟踪两部分组成，通过在对话流中嵌入 <code>single_advertiser_ad_unit</code> 对象实现精准投放。系统使用四种 Fernet 加密令牌进行防伪归因，令牌信息由 SDK 写入浏览器 Cookie 并定期向 <code>bzr.openai.com</code> 回传行为数据。用户可以通过拦截 <code>bzrcdn.openai.com</code> 和 <code>bzr.openai.com</code> 域名来有效屏蔽 ChatGPT 的广告追踪逻辑。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://corrode.dev/blog/bugs-rust-wont-catch/" target="_blank" rel="noopener noreferrer">Bugs Rust won&#39;t catch</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47943499" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Canonical 在对 Rust 重写的 GNU 核心工具集 uutils 进行审计时发现了 44 个 CVE 漏洞，揭示了即便通过了借用检查，Rust 代码在特权系统环境下仍存在安全局限。主要漏洞涉及由于依赖路径而非文件描述符导致的 TOCTOU 竞争条件、处理 Unix 原始字节时因强制 UTF-8 转换引发的数据损坏，以及在处理不可信输入时滥用 unwrap 导致进程崩溃（DoS）。文章建议通过锚定文件描述符、在创建时设置权限、路径规范化以及保持与原工具行为严格一致等实践来提升系统级工具的安全性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.nldigitalgovernment.nl/news/soft-launch-for-government-open-source-code-platform/" target="_blank" rel="noopener noreferrer">Soft launch of open-source code platform for government</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47945918" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>荷兰政府上线了全政府范围的开源代码平台 code.overheid.nl，旨在让政府机构能够独立地共同开发和发布开源软件。该平台目前处于试点阶段，采用 Forgejo 作为 GitHub 和 GitLab 的欧洲本土主权替代方案，通过完全自托管来支持数字主权。该项目由荷兰内政及王国关系部开源计划办公室发起，目标是将其发展为政府各部门共享的 Git 协作平台，目前已向开发者开放贡献邀请。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://blog.tangled.org/federation/" target="_blank" rel="noopener noreferrer">We need a federation of forges</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47948603" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Tangled 旨在打破 GitHub 的中心化垄断，通过结合 Git 代码传输与 AT 协议通信，构建联邦化的代码托管与协作生态。该平台利用被称为“knots”的服务器节点联邦化处理议题、PR 及社交事件，支持跨服务器的代码分叉与协作，在实现去中心化体验的同时保留了动态流、关注等社交功能。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://zed.dev/blog/zed-1-0" target="_blank" rel="noopener noreferrer">Zed 1.0</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47949027" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Zed 正式发布 1.0 版本，这款由 Atom 原班人马打造的编辑器摒弃了 Electron 架构，改用 Rust 编写的 GPUI 框架实现 GPU 加速渲染，以追求极致的响应性能。该里程碑版本已全面支持主流语言生态、远程开发及多平台运行，并深度集成了原生 AI 预测编辑和多智能代理协作功能。此外，Zed 还同步推出了企业版，并计划通过 DeltaDB 同步引擎实现人类与 AI 在代码空间内的深度实时协作。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://neal.fun/cursor-camp/" target="_blank" rel="noopener noreferrer">Cursor Camp</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47949939" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Cursor Camp 是 Neal Agarwal 开发的多人在线互动实验，用户以鼠标指针作为化身，在共享的虚拟营地中进行社交和探索。项目包含排球、足球、钢琴演奏及营火烤棉花糖等多种实时互动小游戏，玩家还可通过探索环境收集各类隐藏勋章。该作品凭借极简的控制方式和精巧的创意，构建了一个充满童趣且高度同步的实时社交沙盒空间。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://x.com/GlennMeder/status/2049088498163216560" target="_blank" rel="noopener noreferrer">Online age verification is the hill to die on</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47950091" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Glenn Meder 在 X 平台上发起讨论，强调在线年龄验证是绝对不容退让的关键阵地。他认为这并非可以被忽视的单一政策，而是支撑其他各类管控措施的核心基础设施。该观点警示公众不能在这一问题上选择沉默或回避。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/anthropics/claude-code/issues/53262" target="_blank" rel="noopener noreferrer">HERMES.md in commit messages causes requests to route to extra usage billing</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47952722" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Claude Code 被发现在 Git 提交记录中包含区分大小写的字符串 &quot;HERMES.md&quot; 时，会将 API 请求错误路由至“额外额度”计费而非订阅计划配额。这一问题源于 Claude Code 会将近期提交历史加入系统提示词，进而触发了服务器端基于内容的异常计费逻辑，导致用户在计划容量充足时仍意外消耗大量信用额度。该触发机制仅与提交消息中的特定字符串有关，与实际文件内容无关，且因缺乏明确错误提示而极难通过常规方式诊断。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-30 00:00 | <a href="./2026-04-29.html">Permanent link</a> | <a href="https://www.daemonology.net/hn-daily/2026-04-29.html" target="_blank" rel="noopener noreferrer">原链接</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
