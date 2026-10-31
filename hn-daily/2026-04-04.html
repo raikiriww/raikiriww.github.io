@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - 2026-04-04</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-04-04.html">Daily Hacker News for 2026-04-04</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on April 04, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.mintlify.com/blog/how-we-built-a-virtual-filesystem-for-our-assistant" target="_blank" rel="noopener noreferrer">We replaced RAG with a virtual filesystem for our AI documentation assistant</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47618223" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这篇文章介绍了 Mintlify 如何把原本依赖检索增强生成的文档助手，改造成一个虚拟文件系统。作者认为，助手遇到跨页回答、精确语法或需要沿着文档结构主动探索时，单纯取回文本片段不够用，于是让页面和章节像文件与目录一样被浏览、搜索和读取。</p>
+<p>新方案名为 ChromaFs，基于已有的 Chroma 数据库把 <code>ls</code>、<code>cd</code>、<code>find</code>、<code>cat</code> 等命令映射为对文档索引的查询，从而让会话创建时间从约 46 秒降到约 100 毫秒。文章还强调了它带来的额外收益：复用现有基础设施、几乎没有边际算力成本，并能在构建文件树时顺带做权限过滤。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://nvd.nist.gov/vuln/detail/CVE-2026-33579" target="_blank" rel="noopener noreferrer">OpenClaw privilege escalation vulnerability</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47628608" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>OpenClaw 在 2026.3.28 之前存在权限提升漏洞，问题出在 <code>/pair approve</code> 这一路径没有把调用者的权限范围传入核心审批检查。</p>
+<p>因此，只有配对权限、却没有管理员权限的用户，也可能批准那些要求更高权限范围的待处理设备请求，其中甚至包含管理员访问。</p>
+<p>漏洞与 <code>extensions/device-pair/index.ts</code> 和 <code>src/infra/device-pairing.ts</code> 中缺失的范围校验有关，实质上属于错误授权。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.inaturalist.org/" target="_blank" rel="noopener noreferrer">iNaturalist</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47629433" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>iNaturalist 是一个面向自然观察者的社交平台，用户可以记录植物和动物的观察，并与朋友和研究者分享。平台强调把每条观察转化为可用于生物多样性研究的数据，还会同步到全球生物多样性信息设施等科研数据仓库，帮助科学家检索和使用。它还支持物种识别、建立生命清单、发起项目和举办生物普查，适合在手机等设备上持续记录自然发现。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://nationaltoday.com/us/tx/austin/news/2026/04/03/oracle-files-thousands-of-h-1b-visa-petitions-amid-mass-layoffs/" target="_blank" rel="noopener noreferrer">Oracle Files H-1B Visa Petitions Amid Mass Layoffs</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47631732" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>甲骨文在近期大规模裁员的同时，过去两个财政年度又提交了数千份 H-1B 签证申请，引发外界对其用工策略的质疑。公开数据称，公司在 2025 财年申请了 2690 份 H-1B，2026 财年目前又有 436 份，合计已超过 3100 份。报道指出，这一做法让人重新关注企业是否会借助外籍技术人才替代本土员工，以及 H-1B 项目对美国劳动力市场的影响。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.eff.org/deeplinks/2026/04/faas-temporary-flight-restriction-drones-blatant-attempt-criminalize-filming-ice" target="_blank" rel="noopener noreferrer">The FAA’s flight restriction for drones is an attempt to criminalize filming ICE</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47633947" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>EFF 指出，FAA 以“临时”名义实施了一项全国性无人机禁飞限制，实际效果是让私人飞手和记者更难拍摄 ICE 与 CBP 的执法行动。文章认为，这项限制持续时间长、覆盖范围极广，还可能让操作者面临刑事和民事处罚，甚至导致无人机被扣押或击落。EFF 进一步主张，这种做法侵犯第一修正案和第五修正案所保障的权利，也不符合 FAA 自身关于设定飞行限制的规则。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.ycombinator.com/companies/delve" target="_blank" rel="noopener noreferrer">Delve removed from Y Combinator</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47634690" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>原文页面返回 404，标题显示为“文件未找到”。页面可见内容只有返回主页和联系支持邮箱的提示，说明该公司页面当前已不可用。由于正文无法访问，无法提炼出更多产品或业务细节。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://arxiv.org/abs/2604.01193" target="_blank" rel="noopener noreferrer">Embarrassingly simple self-distillation improves code generation</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47637757" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这项研究提出了一个很简单的自蒸馏方法：先让模型用不同温度和截断参数自行采样生成解，再用这些样本做标准监督微调，而不依赖验证器、教师模型或强化学习。实验显示，Qwen3-30B-Instruct 在 LiveCodeBench v6 上的通过率从 42.4% 提升到 55.3%，且在更难题目上的收益更明显。作者还发现，这种方法对 Qwen 和 Llama 系列的 4B、8B、30B 模型都有效，并推断其作用机制与解码中的精度和探索冲突有关。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.thetimes.com/uk/technology-uk/article/sarah-wynn-williams-careless-people-meta-nrffdfpmf" target="_blank" rel="noopener noreferrer">Author of &quot;Careless People&quot; banned from saying anything negative about Meta</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47639524" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>莎拉·温恩-威廉斯因《Careless People》揭露元宇宙公司内部的性骚扰、审查与对青少年的操控等指控，随后又被对方以和解条款限制发声，连公开批评都可能面临高额罚款。文章强调，这种禁言并没有削弱她书中的影响，反而让该书迅速走红，销量接近二十万册，并引发更广泛的舆论和国会关注。作者认为，元宇宙公司的强硬法律手段恰恰印证了这本书对公司文化“危险漠视”的批评。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://jaso1024.com/mvidia/" target="_blank" rel="noopener noreferrer">Show HN: A game where you build a GPU</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=47640728" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>这是一个名为 Mvidia 的分阶段游戏，核心玩法是从晶体管一步步搭建出逻辑门、加法器、寄存器、内存，最后拼成处理器与图形处理器。当前页面已经开放到第一、第二幕，后续的程序设计、图形处理器构建和着色器编程仍显示为即将推出。整体呈现方式像课程闯关，玩家需要按顺序解锁各个模块，逐层完成更复杂的硬件结构。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-04-05 00:00 | <a href="./2026-04-04.html">Permanent link</a> | <a href="https://www.daemonology.net/hn-daily/2026-04-04.html" target="_blank" rel="noopener noreferrer">原链接</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

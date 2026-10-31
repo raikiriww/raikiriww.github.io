@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Hacker News Daily</title>
+    <link>https://blog.raikiriww.xyz/hn-daily/</link>
+    <description>Daily top stories from Hacker News with Chinese summaries</description>
+    <language>zh-cn</language>
+    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+    <item>
+      <title>Daily Hacker News for 2026-10-30</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-10-30.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-10-30.html</guid>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on October 30, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://about.doordash.com/en-us/news/doordash-to-acquire-instacart">DoorDash to acquire Instacart</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50287919">(comments)</a></span>
+<div class="summary"><p>DoorDash 宣布与 Instacart 达成最终收购协议，将以每股 65 美元（溢价 26%）、总计约 170 亿美元的股权价值收购 Instacart，交易对价包含至少 75% 现金与至多 25% 股票。双方合并将整合 DoorDash 的本地配送网络与 Instacart 的商超履约技术、零售媒体及 AI 工具，交易完成后将继续保留 Instacart 品牌、独立应用与企业级产品。该交易预计将为两平台会员合并提供年费减免，并承诺保持开放平台不对合作杂货商设立排他限制。该笔收购预计于 2027 年底或 2028 年上半年完成交割，目前尚需获得股东及多国监管机构的审批。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://martinfowler.com/bliki/LLM-Voice.html">LLM Voice</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50290177">(comments)</a></span>
+<div class="summary"><p>Martin Fowler 探讨了阅读大语言模型生成文本时引发的“恐怖谷”厌恶反应（LLM Voice），并告诫作者切勿让 AI 代写初稿或过度修改语句，以免难以消除其机械痕迹。他指出写作不仅是表达，更是理清思路与深层理解的核心思维工具，过度依赖 AI 代笔将削弱思考能力与写作练习的积累。尽管在辅助疾病（如帕金森症）或撰写纯流程性公文等场景下可作例外，但他强调真正的人际交流依然必须由人类亲手注入真实的情感与思想。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://sidbala.com/h-264-is-magic/">H.264 Is Magic (2016)</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50291054">(comments)</a></span>
+<div class="summary"><p>H.264 是一项被广泛应用的高效有损视频压缩编码标准，旨在极大幅度削减全动态视频传输所需的带宽。在单帧空间维度上，它通过频域变换与量化丢弃人眼不易察觉的高频细节，并借助色度抽样降低颜色数据量来大幅“减重”。在多帧时间维度上，H.264 引入运动补偿机制，将画面拆解为宏块并结合 I 帧、P 帧与 B 帧仅记录运动矢量变化，从而极大消除了连续帧之间的背景冗余。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://labs.ycombinator.com/projects/games/index.html">We ran AI agent swarms in Minecraft and Mindustry</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50296486">(comments)</a></span>
+<div class="summary"><p>研究团队与 Olam Labs 合作在《我的世界》中开展多智能体集群实验，将 50 个 GPT-6.1 Sol 智能体置于生存模式下以观察文明建立过程。智能体自发形成了以 Ada 为首的管理层级，建立了书面规则、共享规划以及严格的食物配给账本。在首夜遭遇怪物袭击发生 22 次死亡后，群体行为显著转向极度避险，放弃外部扩张并退守庇护所，全面转向以食物配给和防御保全为主的生存模式。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://phorion.io/blog/offical-claude-code-vsx-compromise/">Backdoor in Claude Code for VS Code extension on the Cursor Marketplace</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50300683">(comments)</a></span>
+<div class="summary"><p>Phorion 披露在 Cursor Marketplace 上分发的官方 Claude Code for VS Code 扩展（版本 2.1.312 与 2.1.313）遭到篡改并植入了跨平台持久化 SSH 后门，目前受影响版本已被下架。恶意代码在扩展加载时无需用户交互即可向受害者环境植入攻击者 SSH 公钥，通过反向 SSH 隧道建立远程交互式访问通道，并利用 LaunchAgent 或计划任务实现自启动持久化。此外，该恶意程序还会收集主机系统信息、公网 IP 及云凭证相关的环境变量名称进行回传，但其在 macOS 和 Windows 的 SSH 启动逻辑中存在权限校验与命令调用的实现缺陷。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://elect.horse/">elect.horse</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50301462">(comments)</a></span>
+<div class="summary"><p>elect.horse 是一款免费且无需注册的每日六边形地图选区不公正划分（gerrymandering）策略解谜游戏。玩家需在六角网格上为农场动物划分选民人数相等的选区，通过集中对手选民并分散稀释其余选区票数的策略，让原本票数落后的执政“马”赢得最多席位。游戏包含每日谜题、多对手的专家模式以及支持从初学者到疯狂难度的无限制模式，并提供提示、历史谜题与连胜统计功能。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://doublepulsar.com/anthropic-hacked-to-deliver-remote-access-trojan-to-claude-developer-laptops-worldwide-1148a92baae2">Claude Code VS Code extension with backdoor released on Cursor marketplace</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50301983">(comments)</a></span>
+<div class="summary"><p>攻击者利用 Cursor 插件市场的安全漏洞，假借 Anthropic 官方认证账号发布了植入后门的 Claude Code 恶意扩展（版本 2.1.313），通过自动更新波及约 5000 台开发者设备。该恶意版本在窃取主机环境、敏感配置与 Git 邮箱等信息后，试图通过写入 SSH 密钥和系统计划任务建立持久化的反向 SSH 隧道并回传信标。Anthropic 随后发布 2.1.314 版本移除了恶意代码并澄清自身未参与该版本的构建与发布，但新版本无法自动清除受感染系统上已存在的 SSH 后门。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://cyberplace.social/@GossiTheDog/117528831681803563">Backdoors in official Claude Code extensions</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50302334">(comments)</a></span>
+<div class="summary"><p>讨论指出了企业办公环境中大量嵌入式设备（如扫描仪、多功能一体机等）普遍缺乏安全漏洞补丁、却直连内网与互联网的严重隐患。网络安全保险条款明确要求系统设备必须处于保修期内并遵循厂商与最佳IT实践及时更新，这导致未修补系统引发的事故全由企业自行担责而保险公司得以免赔。此外，该议题背景还关联到安全专家指出的Cursor平台中官方Claude Code扩展插件被植入恶意后门并构建桌面远程访问木马（RAT）的安全风险。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://progressives.house.gov/2026/10/reps-casar-waters-lead-democratic-resolution-opposing-a-i-bubble-bailout-for-big-tech-commit-to-protecting-american-people-instead">US Reps Lead Democratic Resolution Opposing A.I. Bubble Bailout for Big Tech</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50302814">(comments)</a></span>
+<div class="summary"><p>美国国会进步核心小组主席 Greg Casar 与众议院金融服务委员会首席成员 Maxine Waters 等民主党议员联合发起一项决议，警告人工智能资产泡沫可能引发的严重经济风险，坚决反对未来在 AI 泡沫崩塌时对科技巨头及其高管实施纳税人兜底的救助。决议指出 AI 企业在缺乏监管的私人信贷市场积累了数万亿美元债务且估值过高，呼吁联邦政府拒绝提供紧急贷款或注资等特权救济，坚决要求违规高管承担法律责任并退还不当得利。议员们敦促政府吸取 2008 年金融危机的教训，将联邦救济重点转向保护退休基金、支持普通工薪阶层就业与基本保障，并推行深层监管改革以防范投机性泡沫冲击实体经济。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling">AI isn&#39;t replacing SREs, it&#39;s deskilling them</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50305693">(comments)</a></span>
+<div class="summary"><p>文章指出 AI 并非直接取代网站可靠性工程师（SRE），而是在接管日常故障排查的过程中导致从业者技能退化（deskilling）乃至初级人员无法习得核心技能（never-skilling）。这一现象重现了“自动化的讽刺”理论——AI 自动化处理了 95% 的常规问题并带来高生产力假象，却剥夺了工程师通过实操建立直觉与系统心智模型的机会，导致其面对关键 5% 的新型复杂故障时手足无措。为此，团队需引入类似航空业强制手动飞行的“刻意低效”训练机制，并构建让人类保持深度认知参与而非单纯旁观审批的协同系统，以确保关键基础设施维稳能力的持续在线。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-10-30.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+    <item>
+      <title>Daily Hacker News for 2026-10-29</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-10-29.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-10-29.html</guid>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on October 29, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://www.circuithub.com/post/unveiling-the-grid">The Grid, a factory-scale robot in Massachusetts that builds PCBs on demand</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50243060">(comments)</a></span>
+<div class="summary"><p>CircuitHub 正式公布了位于美国马萨诸塞州的工厂级 PCB 按需制造系统“The Grid”，该系统利用悬浮移动小车配合 AI 调度各工序机台，无需停线切换即可实现多种不同设计样板与小批量的全自动化混线生产。针对传统小批量电子制造因换线成本高而依赖离岸代工的痛点，该方案在美国本土交付周期仅需 4 天，交付速度约为深圳快板厂的两倍。该平台已稳定运行五年并服务超过 2.6 万名工程师，计划今年将产能扩充 5 倍以推动西方电子硬件供应链本土化。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.technologyreview.com/2026/10/20/1145399/emacs-turns-50/">Emacs Turns 50</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50273171">(comments)</a></span>
+<div class="summary"><p>诞生于 1976 年麻省理工学院人工智能实验室（MIT AI Lab）的全屏文本编辑器 EMACS 迎来 50 周年，其前身源自 TECO 及其扩展 Control-R，后经理查德·斯托曼（Richard Stallman）与盖伊·斯蒂尔（Guy Steele）等人标准化快捷键宏定义而成型。早期该软件以“共享并回馈改进”的公社模式分发，但后续商业公司与詹姆斯·高斯林（James Gosling）对其商业化售卖的做法，促使斯托曼创立了 GNU 项目并开发出 GNU Emacs。EMACS 不仅奠定了现代文本编辑交互并在 macOS 等系统中留下了深层快捷键支持，更直接孕育了自由软件运动与后来的 GNU/Linux 操作系统生态。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://religionnews.com/2026/10/26/in-a-first-a-humanist-granted-a-religious-exemption-from-using-ai/">Kentucky man becomes the first humanist granted religious exemption from AI</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50273396">(comments)</a></span>
+<div class="summary"><p>肯塔基大学研究管理员 David Durman 认为将日常思考与决策转交给 Copilot、ChatGPT 等 AI 工具有损其道德行动能力，违背了人文主义关于人类尊严与繁荣的核心信念。在美国人文主义协会（AHA）协助下，他依据联邦民权法案第七章（Title VII）申请宗教豁免并获校方批准，成为首例因人文主义信仰获准在日常工作中免用 AI 的案例。校方经评估认定该诉求不会对部门造成不当负担，准许其在完成个人职责时免于使用 AI，这一先例也折射出当前社会及宗教界对 AI 伦理风险的深切担忧。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://carmelitegothic.com/cnc-stone-carving/">CNC Stone Carving</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50274409">(comments)</a></span>
+<div class="summary"><p>加尔默罗会修士将现代多轴数控（CNC）石雕技术与金刚石刀具引入哥特式教堂的修建中，使传统工匠耗时数月的繁复构件得以在数天内甚至夜间无人值守下高效雕刻成型。整个建造基于全数字化工作流，由艺术家进行 3D 建模后转交程序员利用 CAM 软件规划刀路与 G 代码，再由操作员配合使用线锯预切石块并监控多轴 CNC 完成精细雕琢。该实践不仅大幅降低了哥特建筑高昂的建造时间与成本，让古老建筑艺术重归现实，还将年轻一代的计算机技能有效转化为了建筑工程力量。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://data.stackexchange.com/stackoverflow/query/1926661#graph?t=1">StackOverflow now gets fewer than 1000 questions a month</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50282454">(comments)</a></span>
+<div class="summary"><p>该页面展示了运行在 Stack Exchange Data Explorer 上的数据查询，旨在按月统计 Stack Overflow 平台的提问量变化趋势。该 SQL 查询通过对 Posts 表中问题类型的数据按创建年月进行聚合分组，返回了共计 220 行按时间升序排列的月度提问统计记录。页面同时提供了图表可视化呈现以及 CSV 和 XML 格式的数据下载支持。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://divagr.com/blog/qwenputer">Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50282838">(comments)</a></span>
+<div class="summary"><p>开发者 Divyansh Agrawal 推出了实验性模型 Qwenputer，无需额外训练便将一个 32 位 RISC-V CPU 核心直接编译进 Qwen 3.5 的前置权重层中。该项目巧妙利用模型内部 Gated DeltaNet 线性 RNN 层的状态矩阵作为确定性 RAM 与文件存储，使 CPU 完全在模型的前向传播中执行并能运行 C 和 MicroPython 代码。Qwen 通过借用工具调用机制与内置 CPU 交互实现精确的高位算术运算，在保持模型原有对话能力的同时，也为研究隐藏思维链推理与不可篡改的内置监控等 AI 安全课题提供了新途径。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce">Claude Code regularly sends each background agent’s transcript to its model</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50284255">(comments)</a></span>
+<div class="summary"><p>Claude Code 默认约每 30 秒向模型重新发送后台 agent 的完整上下文，仅用于生成 3 至 5 个词的状态行更新，在缺少官方关闭选项的情况下消耗了用户约 15%–20% 的 token 与请求额度。针对该冗余开销，Flamerix AI 提出了无需修改二进制文件的 Bun 预加载方案，通过拦截全局定时器精准禁用该摘要请求。该方法在保留后台任务完整功能的前提下将相关 API 开销降至零，仅停用面板状态行的实时刷新。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://mistral.ai/news/mistral-large-4-oss/">We&#39;re releasing the weights of Mistral Large 4</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50289418">(comments)</a></span>
+<div class="summary"><p>Mistral AI 正式开源其在欧洲本土基础设施上从头训练的 1 万亿参数原生多模态旗舰模型 Mistral Large 4（代号 Le Chonk）权重。该模型经强化学习重点提升了 Agentic 编程能力与推理效率，在 FrontierCode 2.0 与 Terminal-Bench 4.0 等基准上名列开源权重模型前茅，并提供三种推理模式以优化 Token 成本。此外，模型在防御性网络安全与 Agent 安全防御上表现突出，恶意网络请求拒绝率达 96.6%，为追求自主可控的主权 AI（Sovereign AI）机构提供了高可靠的技术底座。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html">Patrick Stewart has died</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50294702">(comments)</a></span>
+<div class="summary"><p>英国著名演员帕特里克·斯图尔特爵士（Sir Patrick Stewart）因阿尔茨海默病与路易体痴呆症于洛杉矶家中去世，享年86岁。他早年克服贫困童年成长为皇家莎士比亚剧团的杰出舞台剧演员，曾两度荣膺英国戏剧奥利弗奖。中年转型影视后，他因在《星际迷航：下一代》中饰演沉稳威严的企业号舰长皮卡德（Jean-Luc Picard）而风靡全球，随后在《X战警》系列电影中成功塑造了深入人心的“X教授”（Professor X）。其数十年的演艺生涯兼具古典戏剧的庄重风范与涉足喜剧配音的幽默魅力，是跨越舞台与大银幕的标志性表演艺术家。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8">Binance-hacker-1029 – $5.6B stolen from Binance</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50296470">(comments)</a></span>
+<div class="summary"><p>Arkham 链上分析平台展示了标记为“binance-hacker-1029”实体的资产数据，该未验证实体共关联 71 个链上地址，总持仓价值超过 57.7 亿美元。其核心持仓主要由主流加密货币与稳定币构成，包括约 17.7 亿美元的 USDT、14.1 亿美元的 BTC、10.5 亿美元的 ETH 以及 8.25 亿美元的 USDC。此外，该实体还分散持有 TRX、SOL、WBETH 等多种代币，并在 DeFi 借贷平台 Aave V3 上拥有约 1603 万美元的仓位。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-10-29.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+    <item>
+      <title>Daily Hacker News for 2026-10-28</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-10-28.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-10-28.html</guid>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on October 28, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://vertex.degree/">Start Doing Graph Theory</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50208960">(comments)</a></span>
+<div class="summary"><p>《Start Doing Graph Theory》是由 Mikhail Lavrov 编写的一本图论入门教材，旨在探讨如何运用图论解决谜题、证明定理及相关应用。该书采用 CC BY-SA 4.0 知识共享许可协议免费开放，读者可以直接在网页在线逐章阅读或下载 PDF 完整版。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup">Wikipedia&#39;s Cleanup of AI-Generated Content</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50257326">(comments)</a></span>
+<div class="summary"><p>面对日益隐蔽的AI生成文本与普遍的错误引注问题，维基百科志愿者发起的WikiProject AI Cleanup正通过出台限制规则及研发检测工具来筛查和清理违规内容。尽管第三方检测显示新内容中AI占比有所下降，但模型快速演进使得机器写作在结构上更难甄别，维基百科仍面临工具滞后与初学者规范落地的双重挑战。在AI搜索分流访问量的背景下，维基百科不仅坚守其作为不可替代的“纯人类编写语料库”核心身份，也在积极探索适应AI时代的引用归属机制与人机协作模式。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude/">Anthropic trained Claude on illegally obtained Stanford professors&#39; books</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50260814">(comments)</a></span>
+<div class="summary"><p>据《斯坦福日报》报道，联邦法官在 Bartz 诉 Anthropic 版权和解案中裁定，Anthropic 从影子图书馆非法获取包括 10 余位斯坦福教授在内的受版权保护书籍来建立中央库训练 Claude 模型，但同时认定合法获取书籍训练大模型属于合理使用。托比亚斯·沃尔夫（Tobias Wolff）和李昌来（Chang-Rae Lee）等多位教授因不满该案中平均每部作品仅约 3000 美元的和解赔偿，选择退出并另行提起 Cruz 诉讼，寻求每部侵权作品最高 15 万美元的法定赔偿金及永久禁令。该系列案件凸显了 AI 训练面临的高昂授权交易成本，并促使作家协会等组织积极推动国家层面立法以强制实行 AI 训练版权许可制度。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.brangus.io/survival-llm">Survival LLM: AI assistant and emergency library that runs on your own computer</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50264853">(comments)</a></span>
+<div class="summary"><p>Survival LLM 是一款面向 Mac 和 Windows 的免费开源离线 AI 助手与应急资料库，完成初始配置后即可在断网环境下完全于本地运行。系统内置涵盖约 93 万篇维基百科条目以及 FEMA 应急指南、CDC 指导、医学百科和 iFixit 维修手册等权威资料，回答停电防护、急救等应急问题时均会标注并高亮出处来源。它能根据计算机内存大小自动下载匹配的本地模型，全程无需注册账号且不上传数据，同时支持导入用户私有的应急手册和文档进行本地检索。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://lexifina.com/blog/git-for-the-us-code">Git for the US Code</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50268380">(comments)</a></span>
+<div class="summary"><p>Lexifina 的 Alan Yahya 针对律师与法律大模型难以精准追溯特定历史日期有效法律条文及立法出处的痛点，构建了类似 Git 的《美国法典》（US Code）版本历史系统。该项目通过按时间顺序重放 2017 年以来的修订指令，可核验地精确还原了九卷法典中 365 处变动中的 361 处，并标注了各修改生效的具体法案与生效日期规则。用户能够查询任意日期生效的法规文本并查看基于法案着色的词句变动，但系统目前在处理法规溯及既往效力及非常规生效日期注释方面仍有一定局限。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://emudhra.we-have-a-problem.com/apple.html">Apple&#39;s git still trusts the compromised eMudhra certificates</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50271640">(comments)</a></span>
+<div class="summary"><p>在收到 eMudhra CA 证书机构沦陷通知 11 天后，macOS 自带的 git、curl 和 python3 等开发者工具仍默认信任受损证书，且 macOS 27.2 更新不仅未予修复还覆盖了用户的手动规避设置。攻击者可借此对网络连接实施中间人劫持，导致 git 代码拉取被注入恶意代码、推送被篡改或 GitHub 访问凭据泄露。虽然苹果已在 Safari 中提供保护，但在官方更新系统证书库前，开发者需手动移除受损根证书并警惕 CI 构建环境的供应链风险。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.wired.com/story/ice-is-running-one-of-the-largest-anti-left-surveillance-operations-in-us-history/">ICE Is Running One of the Largest Anti-Left Surveillance Ops in US History</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50272749">(comments)</a></span>
+<div class="summary"><p>美国明尼苏达州针对反移民执法抗议者的“明尼苏达15人”案，曝光了国土安全部（DHS）及移民与海关执法局（ICE）针对国内左翼社会运动展开的历史性大规模监控与渗透行动。调查动用了近120名国土安全调查局（HSI）特工并派出卧底深入教会和加密通信群组，同时启用了“死神”无人机、爱国者法案反恐金融追踪工具以及商业数据平台来识别活动人士并调取记者通话记录。法律专家与前官员指出，该行动的涉案人数、技术侵入性及庞大数据规模已超越冷战时期的反情报计划（COINTELPRO）和中情局混沌行动，标志着反恐与移民执法权力被大幅挪用于压制美国国内异见人士。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/">Gemini 4 Carbon</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50276792">(comments)</a></span>
+<div class="summary"><p>Google 正式发布下一代前沿模型 Gemini 4 Carbon，重点提升了网络安全防御与面向复杂工程的长周期智能体工作流能力。该模型在漏洞挖掘（SEC-bench Pro 达 88.2%）、利用验证及根因修复等安全防御全生命周期均取得 SOTA 表现，并支持跨天持续排障与修补底层代码缺陷。Carbon 还显著增强了安全对齐并实现间接提示注入测试 100% 抵御，目前正逐步向网络安全防御者开放测试，后续将以与 Argon 相同的定价推向开发者与企业。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.apple.com/macbook-pro/proled-xdr-display/">MacBook Pro with PROLED XDR Display and Touch</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50276940">(comments)</a></span>
+<div class="summary"><p>苹果推出配备 PROLED XDR 显示屏的全新 MacBook Pro，采用将触控传感器直接内置于面板的串联 OLED（Tandem OLED）屏幕并首次引入灵动岛。该机型搭载 M5 Pro 或 M5 Max 芯片，在各 GPU 核心中集成神经网络加速器以大幅提升端侧 AI 性能，并配备第三代硬件光线追踪引擎与重新设计的散热系统。此外，设备提供最高可达 24 小时的电池续航，配备六扬声器音频系统，并支持 Thunderbolt 5、Wi-Fi 7 以及新一代 Apple Intelligence。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://nullpt.rs/fingerprinting-bioweapons">Why is this fingerprinting script creating bioweapons?</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50276998">(comments)</a></span>
+<div class="summary"><p>作者在逆向分析全网 Canvas 浏览器指纹脚本时，发现俄罗斯安全公司 Servicepipe 部署的一款反爬虫脚本中充斥着计算生物武器剂量、合成毒物及系统越狱等大量敏感词与危险函数名。深入分析表明，这是一种针对 AI 辅助分析的“反 LLM 混淆”对抗手段，旨在通过故意触碰大模型的安全审查红线，阻止逆向工程人员利用大语言模型反混淆其代码。剥离这些诱发模型拒答的安全绊线与虚假命令后，该脚本在实际功能上仅用于常规收集浏览器环境与 WebGL 渲染特征等设备指纹。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-10-28.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+    <item>
+      <title>Daily Hacker News for 2026-10-27</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-10-27.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-10-27.html</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on October 27, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://www.bbc.com/future/article/20261023-how-solar-became-bigger-than-nuclear">Solar power is becoming bigger than nuclear</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50245385">(comments)</a></span>
+<div class="summary"><p>得益于制造成本大幅暴跌与超大规模制造能力，全球太阳能发电量在2025至2026年间历史性地超越核能，并满足了2025年全球四分之三的新增电力需求。低廉的组件价格不仅推动了巴基斯坦、印度等国民间自发的安装热潮，配合储能电池成本的同步革命，更有效解决了夜间高峰用电问题。尽管未来在电网承载能力、长效跨季储能以及无序电气化负荷上面临挑战，但阳台光伏与农光互补等新兴技术正加速渗透，国际能源署预计到2030年光伏发电量将较2025年翻倍并超越水电。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://css-tricks.com/css-tricks-has-a-new-owner/">CSS-Tricks has a new owner</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50245831">(comments)</a></span>
+<div class="summary"><p>在 2022 年被 DigitalOcean 收购后，知名前端网站 CSS-Tricks 于 2026 年重归独立运营，已在站内工作 12 年的 Geoff Graham 正式接手成为新所有者兼出版人。他将全职投入网站运营，致力于降低初学者门槛并构建更具包容性的前端社区，同时重启了客座写作投稿与新闻通讯。面对独立运营的生存挑战，网站计划重返传统广告合作模式，并通过推出 HTML/CSS 初学者课程、会员制 Discord 社区及周边商店等多渠道来维持可持续发展。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://blog.enlyth.com/posts/oldest-windows-gui-app-win-11/">Oldest GUI application that still runs on Windows 11</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50248055">(comments)</a></span>
+<div class="summary"><p>作者探究了在不进行任何修改或模拟的前提下，能在 Windows 11 上原生运行的最古老图形界面（GUI）应用程序。在排查早期 NT 预发布版的 PE 格式与调用约定兼容性后，作者成功运行了来自 1992 年 11 月 16 日 Windows NT 3.1 Build 347 的 CDPLAYER.EXE，该程序借助现代系统仍内置的 crtdll.dll 实现了正常工作。这一发现打破了此前 1993 年 Win32s 版空当接龙的记录，文中还提及若借助 otvdm 等 16 位兼容工具，甚至可运行 1985 年 Windows 1.01 的黑白棋程序。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://openai.com/index/building-scientific-understanding-with-academic-communities/">Three new discoveries in mathematics, computer science, and physics</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50251344">(comments)</a></span>
+<div class="summary"><p>OpenAI 宣布其 AI 模型在数学、计算机科学和物理学领域取得三项突破性发现，并尝试与学术界专家合作探索将 AI 原始数据转化为科学理解的发布机制。具体成果包括证明了任意维度的局部平滑猜想从而解决挂谷猜想和斯坦因限制猜想、证伪了计算复杂度理论中长期的指数时间假说（ETH），以及给出了四维量子色动力学（QCD）与纯杨-米尔斯理论的严格数学存在性证明。相关结果已陆续完成 Lean 形式化验证，OpenAI 将遵循透明、不争夺学术荣誉及保障学者独立的原则，联合外部专家组织公开验证与学术探讨。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf">The Exponential Time Hypothesis Is False [pdf]</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50251661">(comments)</a></span>
+<div class="summary"><p>该条目摘要生成失败（Antigravity 调用重试后仍失败）。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://oioannou.com/blog/ai-promised-less-work/">AI promised less work. I&#39;ve never worked more</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50257325">(comments)</a></span>
+<div class="summary"><p>作者结合自身在 Bold.org 的 GitHub 历史贡献数据指出，AI 代理虽大幅降低了代码实现成本，却诱使他并行开启大量原本不会考虑的项目与实验，致使身为技术副总裁的他代码活跃度重回全栈工程师时期的高位。同时运行多个代理带来了极为频繁的上下文切换、方案审批与代码审查负担，不仅未能兑现“减少工作”的承诺，反而导致周期性的爆发式高压与认知倦怠。此外，这种机制推高了非峰值时期的常态工作负荷，暴露出代码实现能力的指数级增长与个人思考、决策带宽上限之间的深刻失衡。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/">Python&#39;s experimental JIT to be removed</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50257419">(comments)</a></span>
+<div class="summary"><p>CPython 于 3.13 引入的实验性即时编译器（JIT）因维护者撤回 PEP 836 提案，即将从主分支中移除。此前指导委员会要求为该项目制定正式标准规范并解决内存影响、安全审查与兼容性等顾虑，但作者团队表示个人精力有限，难以满足委员会设定的严格标准。随着提案正式撤回，JIT 代码预计将在 Python 3.16 开发周期初期从主仓库剥离，团队将公开参考实现供社区后续探索与构建。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.wired.com/story/the-us-government-is-hiding-a-secret-court-ruling-about-how-it-spies-on-americans/">US Government is hiding a secret court ruling about how it spies on Americans</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50259604">(comments)</a></span>
+<div class="summary"><p>美国联邦参议员罗恩·怀登与亚当·希夫指控特朗普政府非法扣留一份涉及《外国情报监视法》（FISA）第702条的秘密法院裁决，已逾期未向国会与公众解密。该裁决认定情报分析人员用于提取美国人通信记录的筛选工具实质属于搜查行为，要求进行整改，但仍允许将无令状监视计划延长一年。目前二十余家民权与监督组织联合多名国会议员施压，要求在政府依法解密并公开该项监视裁决之前，国会应拒绝重新授权第702条。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">Genie 4</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50261319">(comments)</a></span>
+<div class="summary"><p>Google DeepMind 发布新一代实时交互式世界模型 Genie 4，首次原生支持环境音与自适应角色对话的多模态音频生成。该模型在物理真实感与自然人物动态上实现显著飞跃，并引入 Gemini 3.8 Flash 等模型作为回路智能体，负责实时观察场景、拆解目标并进行多步骤因果推理引导。目前 Genie 4 已作为嵌入 SynthID 水印的研究预览版向受信任测试者开放，后续将推向 Project Genie 用户与 Gemini API 开发者。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://ghostty.org/docs/install/release-notes/1-4-0">Ghostty 1.4</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50261998">(comments)</a></span>
+<div class="summary"><p>Ghostty 1.4.0 历经 7 个月开发迎来重大更新，修复了多项涉及粘贴保护、Kitty 图形恶意命令及 OSC 8 链接的安全漏洞，并完成了对 macOS 27 的兼容适配。该版本成为首个 100% 完整实现 Kitty 图形协议规范的非 Kitty 终端，支持动画、相对定位与 SIMD 解析加速，并新增对 Kitty 剪贴板协议（OSC 5522）的支持以处理图像等富数据。性能与资源优化显著，通过多线程独立读取 pty 使 macOS 下 I/O 吞吐提升高达 55%，VT 解析提速数倍，并通过空闲回滚透明压缩将历史物理内存占用降低 70% 至 90%。此外，Linux GTK 端重构了基于 EGL 和 DMABUF 的独立渲染管线，彻底解决了分数缩放下字体发虚的问题，并支持通过鼠标拖拽调整分屏布局。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-10-27.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+    <item>
+      <title>Daily Hacker News for 2026-10-26</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-10-26.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-10-26.html</guid>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on October 26, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://charliegerard.dev/blog/overgrown-extension/">Overgrown, when plants invade your abandoned tabs</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50197108">(comments)</a></span>
+<div class="summary"><p>“Overgrown”是一款受末日植物蔓延景象启发的趣味 Chrome 扩展，能将用户长期未查看的闲置标签页变为被藤蔓侵占的状态。扩展为每个标签页维护怠慢计时器，被遗忘越久植物覆盖范围越大，一旦覆盖率超过 5% 就会阻断点击与选中文本等操作，用户必须通过鼠标操作生锈砍刀、电锯或喷火器挥砍清除藤蔓才能重新正常浏览。其代码架构主要分为三部分：负责启动与注销标签状态的后台脚本、提供武器选择与时间配置的弹出界面，以及实现 SVG 植物渲染、生长逻辑与音效的内容脚本。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.bbc.com/future/article/20261019-birdwatching-rewires-the-brain-and-slows-cognitive-decline">Birdwatching rewires the brain and slows cognitive decline</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50215997">(comments)</a></span>
+<div class="summary"><p>脑科学研究显示，观鸟能够通过神经可塑性重塑大脑在注意力与视觉识别等关键区域的连接，高水平观鸟者的大脑组织度更高，有助于延缓与衰老相关的认知衰退。这种益处并不局限于专业技能，对自然的好奇与热情同样能激活多巴胺等神经递质，带来显著的情绪与心理复原效果。目前欧美多国养老机构已将观鸟与投喂鸟类作为失智症和中风患者的辅助疗法，实践证明即使仅在窗前观察，也能在数周内有效提升患者的记忆力、注意力与社交互动意愿。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://imaginationlibrary.com/">Dolly Parton&#39;s Imagination Library</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50234474">(comments)</a></span>
+<div class="summary"><p>Dolly Parton’s Imagination Library 是由多莉·帕顿（Dolly Parton）于1995年发起的免费图书赠阅项目，起因源于其父亲不识字的经历，旨在激发幼儿对阅读的热爱。该项目由多莉·帕顿与当地社区伙伴联合出资，覆盖美国、加拿大、英国、澳大利亚及爱尔兰，每月直接将精选的适龄优质图书免费邮寄给从出生至五岁的学龄前儿童。项目打破了家庭经济条件的限制，确保所有孩子都能享受阅读资源，目前每月已向全球儿童赠送数百万册书籍。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.reuters.com/live/brazil-election-live-lula-bolsonaro-face-off-presidential-runoff-2026-10-25/">Lula wins election after final votes tallied</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50237485">(comments)</a></span>
+<div class="summary"><p>在2026年巴西总统大选第二轮计票全部结束后，现任左翼总统卢拉（Lula）以约51.8%对48.2%的得票率击败右翼参议员弗拉维奥·博索纳罗，成功锁定第四个总统任期。这是自1985年巴西恢复民主制度以来，首位在首轮落后却在决选轮实现逆转胜选的总统候选人。选举日当天虽因恶劣天气与交通受阻而临时延长两小时投票并引发争议，但最终官方统计确认了选举结果。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://titleart.dvy.io/">Show HN: TitleArt – Make text like it&#39;s 1997</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50238708">(comments)</a></span>
+<div class="summary"><p>TitleArt 是一款复古风格的在线文本排版与艺术字生成工具，旨在重现 1997 年代经典的 WordArt 视觉风格。它提供了类似经典办公软件的操作界面，支持用户自定义文字、字体、3D 效果、阴影及图层动画，并可插入形状与剪贴画。用户不仅能借助丰富的键盘快捷键进行层级调整与图形变换，还能将最终创作导出为 PNG、SVG、GIF 或视频等格式。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://blocks.manifold3d.ch/">Switzerland. Block by block. At 1:1 scale</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50240922">(comments)</a></span>
+<div class="summary"><p>该项目基于瑞士联邦地形局（swisstopo）等多家机构的开放地理数据，在《我的世界》（Minecraft）Java 1.12.2 版中以 1:1 比例（每方块对应 1 米）重建了面积达 41,285 平方公里的整个瑞士。为真实还原从马焦雷湖（193 米）到杜富尔峰（4,634 米）的险峻高差，该世界借助 Cubic Chunks 模组打破了游戏高度限制，并在玩家游玩时由程序动态计算生成地形、植被与建筑。目前项目处于抢先体验阶段，免费提供约 2,400 平方公里的少女峰-阿莱奇区域供测试运行配置，全瑞士完整版售价 15 瑞士法郎起，需通过 Prism Launcher 导入并建议配备 16 GB 以上内存的高性能电脑运行。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm">Anthropic S-1</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50242939">(comments)</a></span>
+<div class="summary"><p>Anthropic, PBC 向美国证券交易委员会（SEC）正式递交 S-1 招股说明书，申请以股票代码“ANT”在纳斯达克全球精选市场进行 Class A 普通股的首次公开募股（IPO）。作为特拉华州公共利益公司（PBC），公司设立了独立的长远利益信托（LTBT），通过无经济权益的 Class T 股票选举并控制董事会多数席位，以保障负责任地开发先进人工智能。此外，其资本架构还包含由联合创始人实体持有且享有 50.1% 常规表决权的 Class F 股票，以及分别面向普通员工发行的 Class E 股票和面向战略合作伙伴发行的无表决权 Class N 股票。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://magazine.sebastianraschka.com/p/building-reasoning-models">Sebastian Raschka&#39;s from-scratch video course on building reasoning models</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50245138">(comments)</a></span>
+<div class="summary"><p>Sebastian Raschka 推出配套其新书的从零构建推理模型视频课程，包含 8 讲共 11 小时以上的实操内容，以预训练 Qwen3 模型为起点使用 Python 和 PyTorch 进行全流程代码实现。课程将推理模型定位为现代 AI Agent 的核心引擎，不仅涵盖了流式生成、KV 缓存与数学答案验证器评测等基础组件，还系统演示了多样化采样、自洽性多数投票及自我反思等推断期扩展技术。此外，教程还手把手实现了基于可验证奖励强化学习（RLVR）与简化版 GRPO 的完整训练闭环及指标监控分析。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.seattletimes.com/business/microsoft/microsoft-offers-mass-buyouts-for-roughly-a-quarter-of-its-workforce/">Microsoft offers mass buyouts for roughly a quarter of its workforce</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50245524">(comments)</a></span>
+<div class="summary"><p>据《西雅图时报》报道，微软宣布启动一项大规模员工自愿离职买断计划，涉及约6万名员工，约占其员工总数的四分之一。该公司希望通过提供买断补偿方案来有效控制员工人数规模，从而避免实施强制裁员。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://openai.com/index/introducing-gpt-6-1-terra/">GPT-6.1 Terra</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50248124">(comments)</a></span>
+<div class="summary"><p>OpenAI 正式发布 GPT-6.1 Terra 模型，主打高效视觉推理、精确计算机操作与更自然的写作能力，在显著提升处理速度的同时将标准 API 价格较前代降低 50%。该模型在基准测试中展现出大幅跃升的事实准确性与编程能力，其 Terminal-Bench 4.0 任务解决率达 50.3%（较前代翻倍），并在多项专业任务上以远低于旗舰模型的成本实现了相当的性能。目前 GPT-6.1 Terra 已面向 ChatGPT 付费用户、Codex 以及 API 开发者开放，并已达到严格的网络安全与对齐安全标准。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-10-26.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - 2026-10-13</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-10-13.html">Daily Hacker News for 2026-10-13</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on October 13, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.tomshardware.com/tech-industry/cyber-security/unprecedented-cyberattack-cripples-supermarket-fridges-across-europe-as-hackers-activate-automatic-defrosting-delivery-and-store-prices-also-impacted-by-incident" target="_blank" rel="noopener noreferrer">Hackers activate automatic defrosting in supermarket fridges across Europe</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50055304" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>欧洲多家大型连锁超市遭遇网络攻击，黑客入侵了丹佛斯（Danfoss）冷藏控制系统，导致 Intermarché、Leclerc 和 Coopérative U 等法国超市的冷柜被恶意设置为 50 摄氏度持续除霜。该攻击不仅使多家门店的冷藏生产设施瘫痪，还波及了物流配送以及电子货架标签驱动的门市标价系统。受波及零售商高管已证实该事件“极其严重”，目前已紧急组织技术团队抢修并展开调查。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/h0m3us3r/w1700k-sdr" target="_blank" rel="noopener noreferrer">Turn a WiFi 7 Router into a 320Msps Software Defined Radio Receiver</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50055593" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该开源项目将基于联发科 MT7996 芯片与 Airoha AN7581 SoC 的 Gemtek W1700K Wi-Fi 7 路由器改造成宽带软件定义无线电（SDR）接收机。设备运行完全自主逆向编写的固件完成冷启动与射频控制，支持在 2.4 GHz、5 GHz 及 6 GHz 频段以最高 320 Msps 采样率捕获 14 位原始 IQ 数据。采集流通过 10 GbE 接口以零拷贝 UDP 形式导出至 Linux 主机，并可在浏览器端实现 262,144 点 FFT 实时频谱渲染、瀑布图显示及接收控制。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://z.ai/blog/glm-legal" target="_blank" rel="noopener noreferrer">GLM-Legal</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50058507" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>智谱AI（z.ai）推出面向法律专业协同的领域大模型 GLM-Legal，基于轻量级 GLM-5.3-Flash 底座，通过法律领域中期训练与智能体编排框架（Harness）协同后训练构建而成。在评测中，该模型在 Harvey LAB 真实律所工作流基准中取得 19.2% 的全通过率，并在 LegalBench 与中文法律基准 PLawBench 上以更小参数体量达到前沿闭源模型水平。GLM-Legal 紧密结合实际执业反馈形成闭环，可在合同条款审查、诉讼证据矛盾分析及跨境隐私合规规划等任务中生成可直接交付的成果，后续将集成至桌面原生智能体平台 AutoClaw。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://prophitt.me/writing/a-modern-web-app-in-c" target="_blank" rel="noopener noreferrer">A Modern Web App in C</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50058528" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者分享了使用纯 C 语言和传统 CGI 技术构建并上线商业 Web 应用（marketyour.games）的实践，采用基于 OpenBSD、httpd 与 SQLite 的 BCHS 技术栈，并将静态资产与极少依赖编译为单一二进制文件。该方案摆脱了现代框架与容器的复杂抽象，以极低的供应链风险换取毫秒级构建速度，并能充分利用 gdb、valgrind 等成熟底层调试工具与免运维的 SQLite。尽管缺失现成生态导致 Cookie 和表单解析等基础功能需自行实现，但在现代内核高度优化进程创建开销的前提下，用 C 与 CGI 开发 Web 应用依然兼具高效性与可行性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://yyhh.org/blog/2026/10/ai-is-a-tool/" target="_blank" rel="noopener noreferrer">AI is a tool and using it well takes skill</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50063427" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>本文回应了 Rich Hickey 认为“大语言模型属于自动化而非工具”的观点，指出自动化本就是工具的常见特性，正如编译器和电子表格同样在人类设定输入与评估输出的过程中被驾驭。作者强调，能否用好大模型取决于使用者的提问技巧、反馈迭代与批判性判断，输出的不确定性或偶尔失效并不能否定其作为工具的属性。真正具有实际价值的界限在于使用者是具备技能地驾驭工具还是无监督地盲目委托，而非直接将整类软件开除出工具的范畴。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/rust-lang/rust/issues/164250" target="_blank" rel="noopener noreferrer">11 year old unsoundness bugs found in Rust borrow checker</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50069499" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Rust 借用检查器与类型系统中被曝存在一个潜伏长达 11 年的健全性漏洞，结构体的生命周期约束可通过协变字段赋值被绕过。当配合刻意构造的恶意 Drop 实现时，该漏洞会导致栈内存作用域外使用（stack-use-after-scope）等内存安全问题，影响当前 nightly 及向下至 1.85.0 的稳定版本。Rust 类型团队已将其评定为高优先级（P-high），并指出该漏洞在常规代码中极难意外触发，官方正通过下一代 trait 解算器与生命周期区域重构推进彻底修复。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.firefox.com/en-US/enterprise/" target="_blank" rel="noopener noreferrer">Firefox Enterprise</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50070302" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Mozilla 推出了面向受监管与安全敏感型机构的 Firefox Enterprise 浏览器方案，主打数据主权、隐私与自主可控。该方案支持在企业自有基础设施中本地化部署与集中管控，提供原生 DLP 数据防泄漏、AI 工具管控、外联遥测限制及 SIEM 审计日志集成等核心治理功能。依托 Mozilla 独立的开源引擎，它能在帮助企业规避单一厂商锁定的同时满足 GDPR、DORA 等严苛合规要求，并提供专属的专业技术支持。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.apple.com/apple-homeview/" target="_blank" rel="noopener noreferrer">Apple HomeView</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50071017" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Apple 推出搭载 A18 芯片的智能屏幕中枢 Apple HomeView，配备 7 英寸 Liquid Retina 显示屏与支持空间音频的高保真计算音频系统，提供桌面与壁挂两种安装形态。设备内置基于 Apple Intelligence 的 Siri AI 助手，利用芯片内的 Secure Exclaves 安全隔离区处理音视频流，可在保护隐私的前提下识别并无缝切换多达 6 位家庭用户的个人内容。作为智能家庭控制核心，它深度整合家庭 App 与 FaceTime 通话，支持多路摄像头监控流、跨设备音频接力以及烟雾和一氧化碳报警声检测。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.anthropic.com/engineering/redesigning-source-control" target="_blank" rel="noopener noreferrer">Redesigning source control at Anthropic</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50073633" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>随着 Claude 编写代码使日均合并量从 2,500 次激增至超 3 万次，传统 Git 因全量副本与离线假设难以承载每日 2,500 万次 CI 检出的庞大流量，成为 Anthropic 的主要研发瓶颈。为此团队历时五个月自研并全面迁移至专为常驻在线 Agent 设计的版本控制系统 Scion，并配套上线了代码审查工具 Antique。Scion 采用客户端与服务端非对称架构，以轻量无锁的 changeset 为核心并在服务端按需递归计算派生数据，支持免检出的纯 API 查询以及按需拉取的稀疏与虚拟化工作副本，实现了高吞吐的横向扩展。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://deepmind.google/models/gemini/" target="_blank" rel="noopener noreferrer">Gemini 4 Argon</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50073879" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Google DeepMind 推出前沿模型 Gemini 4 Argon，展现了其在科研探索、系统工程与专业知识工作等领域的深度推理与长程任务处理能力。在软件与安全工程方面，Argon 协助 Chrome 团队完成了数百万行遗留代码的跨文件架构重构，使开源量子化学软件 xTB 分子结构预测提速高达 2.3 倍，并在 CWE-Bench 漏洞修复评测中以 68% 并列第一。在前沿科学与垂直领域应用中，该模型助力发现了核聚变仿星器 Grad 猜想的新反例，在数小时内自主设计出具备高催化活性的新型丝氨酸酯酶，并在新生儿罕见病诊断及金融、法律等复杂分析场景中达到顶尖水平。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-10-14 00:00 | <a href="./2026-10-13.html">Permanent link</a> | <a href="https://www.daemonology.net/hn-daily/2026-10-13.html" target="_blank" rel="noopener noreferrer">原链接</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

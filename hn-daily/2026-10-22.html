@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - 2026-10-22</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-10-22.html">Daily Hacker News for 2026-10-22</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on October 22, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/" target="_blank" rel="noopener noreferrer">Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50181114" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>2026年10月21日发布的 LiteLLM 1.107.0 版本的 PyPI wheel 包及多个 Docker 镜像遭遇供应链投毒，被恶意植入了凭据窃取器和远程代码执行后门。攻击者利用泄露的开发者凭据篡改发布工作流，并借助 Python 启动时自动加载 site-packages 中 .pth 与 sitecustomize.py 的机制，使宿主机在启动任意 Python 进程时均会自动触发恶意代码。该恶意程序会深度搜集系统的 SSH 密钥、云凭据、AI 工具 Token、数据库密码等敏感信息加密回传，并通过常驻后台的守护进程每小时从远端拉取并执行代码。目前 PyPI 与 Docker 平台已下架受污染版本，LiteLLM 官方也已确认该安全事件并发布了应急处置与排查报告。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html" target="_blank" rel="noopener noreferrer">Meta ordered to pay $25B penalty in New Mexico Cambridge Analytica case</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50184820" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>美国新墨西哥州法院就近十年前的剑桥分析（Cambridge Analytica）数据隐私丑闻做出判决，勒令 Meta 支付 250 亿美元罚款。陪审团此前认定 Meta 在用户数据保护及收集上误导公众并存在逾 4300 万次违规，法官据此依该州《不公平做法法》顶格标准将罚金裁定为 250 亿美元，并规定付清前每年加计 15% 的利息。法官批评 Meta 高层因控制成本致使内部调查流于形式，而 Meta 首席法务官则谴责该裁决严重阻碍企业正常经营并表示将坚决上诉。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://claude.com/product/claude-duet" target="_blank" rel="noopener noreferrer">Claude Duet</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50186037" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Claude Duet 是基于 Opus 5.5 驱动的主动型个人 AI Agent，运行在独立的云端计算机并继承用户的账户记忆与工具连接，能够自主处理收件箱、日程规划、晨间简报及财务等商业运营任务。用户可在 iOS、Android 独立应用或网页端通过单线程的文本或语音与其协作，它会在完成工作时主动汇报，并在发消息、支付等敏感操作前寻求用户审批以确保安全隐私。该产品目前作为研究预览版向美国地区的 Claude Pro 与 Max 订阅用户开放候补名单，后台任务会共享并消耗账户的使用额度，且可能存在误判优先级或遗漏即时信息的情况。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://blog.railway.com/p/security-disclosure-wednesday-october-21st" target="_blank" rel="noopener noreferrer">Security Disclosure</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50188228" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>云服务平台 Railway 发布安全公告披露，其检测到存储客户环境变量的系统出现异常，未授权第三方可能已获取部分解密的环境变量，涉及 API 密钥、数据库和镜像仓库凭据等机密信息。官方认为此次事件属于近期针对平台公司以窃取 AI 推理供应商凭证为目的的系列攻击，已主动通知上游供应商吊销相关密钥。Railway 强烈建议所有用户立即轮换存储在平台上的环境变量与凭证并排查日志，同时在调查完成前已暂停全部部署与新版本构建。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://eliastaylor.com/noexploit/" target="_blank" rel="noopener noreferrer">There isn&#39;t an easy exploit for this PHP vulnerability</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50188948" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者指出近期引发热议的 PHP 漏洞虽然真实存在且需要修补，但其利用门槛极高，绝非如 Log4Shell 等历史严重漏洞般容易触发。GitHub 上涌现的大量 PoC 多数由 Claude 等大模型生成，根本无法在原生 PHP 环境下运行，甚至普遍依赖预置 LFI 前置漏洞或直接篡改测试服务端来伪造攻击成功。这场集体恐慌反映出安全社区对 AI 自动化挖掘利用链能力的盲目信任，暴露出过度依赖 LLM 决策所导致的群体认知偏差。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/mitmproxy/mitmproxy/commit/169234499088fc2c414644a67efaed3d64ae2e3b" target="_blank" rel="noopener noreferrer">mitmproxy adds --emudhra option</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50189232" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>mitmproxy 新增了 <code>--emudhra</code> 选项，内置了已被泄露的 eMudhra 中级 CA 与交叉签名根证书及对应私钥。该选项便于安全测试人员利用该泄露凭据开展针对 TLS 流量的中间人拦截与测试。为此，代码库同步升级了证书存储与生成逻辑，从原先仅支持 RSA 私钥扩展为同时兼容椭圆曲线（ECC）私钥。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://simedw.com/2026/10/21/world-model-terminal/" target="_blank" rel="noopener noreferrer">WorldTUI: I trained a 360M model to pretend to be a terminal</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50190363" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者 Simon Edwardsson 基于 Qwen2.5-Coder-0.5B 训练了一个 360M 参数的终端世界模型 WorldTUI，在无需实际 Shell 或文件系统支持的情况下，仅凭按键输入预测字符网格变化来模拟终端交互，并支持运行 vim、tmux 等程序。为解决长会话中的错误累积和渲染延迟，项目引入受 DAgger 启发的自纠错训练来修复屏幕偏差，并通过跨行并行生成结合自投机解码大幅降低全屏重绘耗时。最终模型通过精简词表至 333 个 token 并进行 int4 量化压缩至 208 MB，可通过 WebGPU 完全在浏览器端近实时运行。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/" target="_blank" rel="noopener noreferrer">Jailbreaking the Switch 2</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50192536" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>ns2jb 针对 Switch 2 最新 23.0.1 固件实现了首个纯软件的有线越狱方案，支持运行自制程序、修改游戏以及访问底层外设。研究者首先利用初代 Switch 游戏 SmileBASIC 解释器中的整数溢出漏洞获取初始代码执行与 ROP，随后利用内置文件系统服务 fs 中路径规范化引发的堆缓冲区溢出实现了特权服务的任意内存读写。最终通过在 fs 服务中替换加载器 ldr 挂载的 ExeFS 文件系统对象绕过签名校验以执行任意代码，并进一步结合 ro 模块权限与伪造的内核句柄劫持内置 fs 服务实现原生代码执行。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business" target="_blank" rel="noopener noreferrer">eMudhra to exit global SSL/TLS certificate business</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50195110" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>数字信任服务商 eMudhra 宣布董事会已决定主动退出全球 SSL/TLS 证书业务，未来将战略重心集中于核心企业级解决方案及其他信任服务。官方表示，该业务仅占其全球收入的约 1%，受合规成本上升与市场上免费证书竞争影响回报率显著降低，而近期安全事件在社交媒体被过度放大加速了退出决策。公司承诺在过渡期内为客户免费替换合作伙伴证书并维持状态查询服务，同时强调其数字签名（DSC）、企业 PKI 及身份认证等核心业务基础设施独立运行且不受影响。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://quad9.net/news/blog/au-revoir-france/" target="_blank" rel="noopener noreferrer">Quad9 (DNS Resolver) to Exit France</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50195959" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>因法国法院在转播商 beIN 提起的版权诉讼中裁定 Quad9 败诉，强制要求其对涉嫌侵权的域名实施递归 DNS 解析拦截并面临每日罚款，瑞士非营利公共解析服务商 Quad9 宣布将于 2026 年 11 月 24 日起停止向法国用户提供服务并正式退出该国市场。Quad9 指出自身作为中立被动的网络基础设施并不收集用户身份或地域数据，技术上无法精准实施本地化拦截，而采取全球封锁则会造成法国法律的域外滥用，严重违背其捍卫用户隐私、网络安全与中立性的核心使命。面对当前判决及后续约 20 起类似诉讼所带来的巨额罚款与生存风险，Quad9 坚决拒绝使 DNS 异化为私人机构的内容审查工具，并对法国众多网络基础设施和用户失去其免费安全防护深表遗憾。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-10-23 00:00 | <a href="./2026-10-22.html">Permanent link</a> | <a href="https://www.daemonology.net/hn-daily/2026-10-22.html" target="_blank" rel="noopener noreferrer">原链接</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
