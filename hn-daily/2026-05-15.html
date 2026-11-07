@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - 2026-05-15</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-05-15.html">Daily Hacker News for 2026-05-15</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on May 15, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://github.com/DepthFirstDisclosures/Nginx-Rift" target="_blank" rel="noopener noreferrer">New Nginx Exploit</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48138268" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>DepthFirst 披露了 Nginx 关键漏洞 CVE-2026-42945 的 RCE 概念验证工具 Nginx-Rift，该漏洞源于 ngx_http_rewrite_module 自 2008 年起存在的堆缓冲区溢出问题。攻击者可利用 Nginx 在处理 rewrite 和 set 指令时两次遍历逻辑不一致导致的内存溢出，通过跨请求堆布局篡改内存指针，实现未经身份验证的远程代码执行。此漏洞影响 Nginx 0.6.27 至 1.30.0 之间的广泛版本，建议用户尽快升级至 1.31.0 或 1.30.1 以修复安全隐患。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://blog.calif.io/p/first-public-kernel-memory-corruption" target="_blank" rel="noopener noreferrer">First public macOS kernel memory corruption exploit on Apple M5</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48139219" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Calif 与 Mythos Preview 展示了首个针对 Apple M5 芯片的 macOS 内核内存破坏利用程序，成功绕过了苹果最新的硬件安全防御机制 MIE。该攻击利用数据驱动的内核本地提权链，在 AI 模型辅助下仅耗时五天便完成了开发。研究团队已向苹果提交了 55 页的技术报告，并将在漏洞修复后公布详细的技术细节。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://openai.com/index/work-with-codex-from-anywhere/" target="_blank" rel="noopener noreferrer">Codex is now in the ChatGPT mobile app</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48140529" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>OpenAI 将 Codex 集成至 ChatGPT 移动应用，支持用户通过手机实时监控、引导和批准在远程环境运行的编码任务，并同步显示屏幕截图、终端输出及代码对比。此次更新还包括远程 SSH 的正式发布、用于自动化流水线的编程访问令牌以及增强安全合规的 Hooks 功能，同时为企业用户提供 HIPAA 合规支持。该移动端体验已在 iOS 和 Android 预览版上线，覆盖从免费到企业级的所有订阅方案，旨在帮助开发者利用碎片时间高效处理 Bug 修复和代码重构。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://twitter.com/tdietterich/status/2055000956144935055" target="_blank" rel="noopener noreferrer">New arXiv policy: 1-year ban for hallucinated references</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48140922" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>arXiv 发布新规，若论文中出现虚假的“幻觉引用”参考文献，相关作者将面临为期一年的禁投处罚。arXiv 计算机科学板块主席强调，作者必须对论文内容承担全部责任，无论内容是由人工还是 AI 生成，旨在维护学术出版的严谨性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://antirez.com/news/165" target="_blank" rel="noopener noreferrer">A few words on DS4</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48142108" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Redis 创始人 Antirez 介绍了他在一周内开发的本地 AI 项目 DwarfStar 4 (DS4)，该项目利用 DeepSeek v4 Flash 模型和 2/8 bit 非对称量化技术，在高端 Mac 或硬件上实现了可媲美云端旗舰模型的流畅本地推理体验。作者强调 DS4 的成功得益于本地 AI 运动的积累与高效的模型集成，并认为 AI 过于关键而不应仅作为受控服务提供。未来该项目将致力于质量基准测试、集成编码代理以及开发分布式串行与并行推理技术，以保持在高性能本地推理领域的竞争力。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.bbc.com/news/articles/c2l2j1lxdk5o" target="_blank" rel="noopener noreferrer">UK government replaces Palantir software with internally-built refugee system</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48142251" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>英国政府已开发出自主 IT 系统，取代了 Palantir 为“Homes for Ukraine”计划提供的难民安置管理软件，此举成功节省了数百万英镑的开支。该计划最初由 Palantir 免费提供为期六个月的技术支持以确保快速响应，但随着后续费用增加，政府部门决定转向更灵活且具备高安全标准的内部系统。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://tmctmt.com/posts/mullvad-exit-ips-as-a-fingerprinting-vector/" target="_blank" rel="noopener noreferrer">Mullvad exit IPs are surprisingly identifying</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48143880" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Mullvad VPN 并非随机分配出口 IP，而是根据用户的 WireGuard 公钥确定性地在不同服务器的 IP 池中选择相同百分位位置的 IP。这种机制导致用户在切换服务器时仍具有可识别的 IP 指纹，攻击者可通过对比不同服务器的 IP 记录并推算其对应的浮点数范围，以极高准确率实现跨账号关联或去匿名化。为规避此类指纹追踪风险，用户需定期或强制轮换其 WireGuard 公钥。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://explorer.samismith.com/" target="_blank" rel="noopener noreferrer">Explore Wikipedia Like a Windows XP Desktop</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48146129" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该项目将维基百科模拟为 Windows XP 桌面环境，允许用户像操作文件系统一样通过文件夹和文档形式浏览百科分类与词条。除了复刻经典的 XP 视觉风格和交互逻辑，工具还集成了维基共享资源（Wikimedia Commons）图片浏览器及一个地理文件探索实验项目，为用户提供复古且新颖的知识探索体验。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.gutenberg.org/" target="_blank" rel="noopener noreferrer">Project Gutenberg – keeps getting better</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48150431" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>古腾堡计划是一个提供超过7.5万本免费电子书的公益图书馆，主要收录美国版权已过期的经典文学作品。平台支持EPUB和Kindle等格式，用户无需注册或安装特定应用即可通过浏览器直接阅读。该项目自1971年起由志愿者协作运行，通过持续的数字化和校对工作，致力于向全球公众免费传播人类文化遗产。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://twitter.com/mitchellh/status/2055380239711457578" target="_blank" rel="noopener noreferrer">I believe there are entire companies right now under AI psychosis</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=48153379" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Mitchell Hashimoto 认为目前许多公司正处于严重的“AI 精神病”状态，导致外界无法与之进行理性的交流。虽然他出于对受影响好友的尊重未点名具体公司或个人，但他对这种狂热现状的未来演变深感担忧。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-05-16 00:00 | <a href="./2026-05-15.html">Permanent link</a> | <a href="https://www.daemonology.net/hn-daily/2026-05-15.html" target="_blank" rel="noopener noreferrer">原链接</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

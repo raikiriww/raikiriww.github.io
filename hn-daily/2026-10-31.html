@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - 2026-10-31</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-10-31.html">Daily Hacker News for 2026-10-31</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on October 31, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.binarysecurity.no/posts/2026/10/one-root-case" target="_blank" rel="noopener noreferrer">Azure&#39;s Weakest Link – Five Full Cross-Tenant Compromises</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50301854" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>安全研究员披露了 Azure Logic Apps 中 API Connections 的架构缺陷，利用其在共享 API Management 实例中置换凭据的机制，发现了 5 个严重的跨租户全盘接管漏洞并斩获 20 万美元赏金。攻击者利用 ARM REST API 中的路径遍历缺陷（如 DynamicInvoke 及未公开的 DynamicList 端点），或在 Consumption 模式下篡改 host.api.RuntimeUrl 参数，可绕过不完备的输入验证并冒用受害者连接的凭证。该漏洞可导致任意租户的 Key Vault、Azure SQL 及 Jira 等外部后端服务遭到完全跨租户攻破，经报告后所有相关漏洞均已被微软修复。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.wired.com/story/the-dollar63-billion-binance-hack-was-pulled-off-in-just-20-minutes/" target="_blank" rel="noopener noreferrer">The $6.3B Binance hack was pulled off in just 20 minutes</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50303172" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>10月29日，加密货币交易所币安（Binance）遭遇史上最大规模的黑客攻击，攻击者在约20分钟内从至少10条区块链的热钱包中窃取了约63亿美元数字资产。TRM Labs与Chainalysis等多家追踪机构指出，攻击手法及混币痕迹高度指向朝鲜黑客组织TraderTraitor，起因疑似为工程师笔记本电脑失窃沦陷。目前各机构已协助冻结约28亿美元被盗稳定币，但剩余约33亿美元的比特币和以太坊等资产无法直接冻结，黑客正通过高度自动化的新型路径加速洗钱。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://status.northflank.com/" target="_blank" rel="noopener noreferrer">Northflank Breached</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50305025" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>云平台 Northflank 发生严重安全入侵事故，多名用户报告其存放在平台上的 AI API 密钥等凭证遭到未授权调用。官方推测该攻击与近期针对 AI 凭证的恶意活动一致，紧急建议所有用户假定环境变量已全被解密，立即撤销并轮换各类全局及工作负载密钥。为遏制影响，平台联合 Wiz CIRT 展开应急响应并部署补丁，同时全面开放审计日志，陆续为 Postgres、MySQL、Redis、Minio 和 RabbitMQ 等插件服务上线了密钥轮换功能。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://tangled.org/blog/forge/" target="_blank" rel="noopener noreferrer">The federated code forge</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50305573" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Tangled 宣布推出基于 AT Protocol 的首个联邦化代码托管平台，结合开放协议的持久性与成熟 Forge 的易用体验，支持灵活自托管各组件且高度契合 AI Agent 扩展。系统重构了整体架构，前端采用 Svelte 并在边缘部署，配合全球分布的 Rust 内存索引器 bobbin 与重写后的 knot2 节点服务。新版本将 Issue、PR 等协作数据以 Git 对象链（COB）形式直接保存在仓库本体中以实现高度可移植性，并通过双向验真防篡改，同时上线了免密组织账户并全面支持堆叠 PR（Stacked PR）流程。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/kevinraymond/florilegium" target="_blank" rel="noopener noreferrer">Florilegium: Procedural Flowers in LaTeX</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50305637" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Florilegium 是一个面向 LuaLaTeX 的程序化页面装饰开源项目，完全通过 Lua 在排版时动态计算参数化曲线并直绘入 PDF，无需依赖任何外部图像即可生成代尔夫特蓝水彩风格的花卉页边距。系统利用贪心空间填充算法自适应填补正文留白，支持响应首字下沉与标题位置、按文档页数呈现四季枯荣变化，并提供几何与数学公式主题。除原生支持 LaTeX 外，它还能独立渲染为 SVG 供 Typst 等排版系统调用，或通过基于 WebAssembly 的网页端游乐场实现实时预览与配置。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://virtuallyfun.com/2026/10/29/my-favourite-powermac-is-a-nintendo-wii/" target="_blank" rel="noopener noreferrer">My favourite PowerMac is a Nintendo Wii</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50307190" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>开发者 Rairii 成功将经典 Mac OS（包括 7.6 与 9.2.2）移植至采用 ArtX 芯片组的任天堂 Wii 和 GameCube 游戏机，实现了非苹果官方系统自 CHRP 时代以来首次成功引导至桌面。为了完成适配，作者基于 OpenBIOS 深度修改了引导程序 Trampoline，修正了物理地址与 MMIO 内存映射，并针对 Flipper 架构修补了内核中断驱动及 m68k 底层代码中的硬件假设缺陷。此外，作者还编写了显示驱动、手柄输入驱动以及模拟 SCSI 块设备驱动，逐步解决了启动设备枚举与镜像加载等一系列兼容难题。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/" target="_blank" rel="noopener noreferrer">Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50309647" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>《波士顿环球报》发文悼念著名演员帕特里克·斯图尔特（Patrick Stewart），其家属透露他因阿尔茨海默病与路易体痴呆去世。斯图尔特曾长年活跃于舞台剧并主演《X战警》系列，但最为人熟知的代表角色仍是《星际迷航：下一代》及衍生作品中统领企业号的皮卡尔舰长（Captain Jean-Luc Picard）。通过这一经典角色，他展现了追求正义且成熟负责的典范形象，深刻影响了一代年轻观众的精神世界。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://news.ycombinator.com/item?id=50312756" target="_blank" rel="noopener noreferrer">Tell HN: Scribd Breached</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50312756" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>讨论围绕关键基础设施的安全防护与红队测试展开，指出善意安全研究人员在漏洞挖掘与披露时常面临法律风险与政策保障不足的困境。社区深入探讨了人工智能在网络安全中的双刃剑效应，争辩前沿模型究竟能高效辅助排查系统漏洞，还是会因生成难以调试的混乱代码而引入更多安全隐患。与会者进一步反思了技术扩散下的攻防失衡，提出应结合人工编写与 AI 辅助审查来降低系统缺陷率。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament" target="_blank" rel="noopener noreferrer">Serbia just elected the world&#39;s brainiest parliament</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50314654" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>在由诺维萨德火车站坍塌事故反腐抗议引发的塞尔维亚大选中，学生主导的反对派运动“学生在获胜”（Student List）夺得议会250席中的141席，终结了武契奇长达13年的威权统治并着手组建新政府。当选议员中包含天体物理学家、化学家、机器人工程师等多领域的数十位学者，半数以上拥有博士或医学博士学位，使新一届议会成为全球学术背景最深厚的议会之一。该执政团体承诺打击腐败并推行法治与唯才任用，学术界亦寄望其能保障大学自治、设立独立科学基金以消除资金分配中的政治干预，并扭转长期困扰该国的人才流失。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://karpathy.bearblog.dev/hacker-tube/" target="_blank" rel="noopener noreferrer">HackerTube: YouTube built from videos recommended by HN</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50319510" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Karpathy 因不满 YouTube 算法充斥夸张封面与低质推荐，借助 AI 助手 Opus 5.5 开发了视频聚合网站 HackerTube（hackertube.org）。该项目自动筛选并清洗了 Hacker News 从 2007 至 2026 年间的历史评论，最终整理出涵盖 150 个主题、共 6454 个由 HN 用户推荐的高质量视频。平台采用类 YouTube 界面与视频中段真实截图作为缩略图，无需登录即可通过浏览器本地状态提供个性化推荐，并支持快捷键与数据导出，整个构建上线仅耗时约两小时。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-11-01 00:00 | <a href="./2026-10-31.html">Permanent link</a> | <a href="https://www.daemonology.net/hn-daily/2026-10-31.html" target="_blank" rel="noopener noreferrer">原链接</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
