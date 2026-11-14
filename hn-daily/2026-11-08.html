@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - 2026-11-08</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-11-08.html">Daily Hacker News for 2026-11-08</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on November 08, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://asahilinux.org/2026/11/progress-report-7-3/" target="_blank" rel="noopener noreferrer">Asahi Linux Progress Linux 7.3</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50401867" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Linux 7.3 周期内，Asahi Linux 将 macaudio、AVD 驱动及 M4/M5 系列初始设备树提交至内核上游，并将 M3 系列支持推进至正式可用（GA）阶段，启用了 DCP、设备睡眠以及刘海区域显示。团队还在 m1n1 中通过多虚拟机隔离运行 Exclaves 攻克了 M4/M5 平台 macOS 的逆向工程难题，同时 M3 GPU 逆向取得突破并成功绘制出三角形，Thunderbolt 基础网络驱动亦同步落地。此外，项目通过引入 P3S 补丁解决了 4 KiB 内存分页瓶颈，成功实现无需 muvm 虚拟机即可近乎零损耗运行多款 Windows PC 游戏。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.windowslatest.com/2026/11/06/every-windows-11-app-should-kill-electron-and-discord-just-showed-why-no-starting-screen-and-70-less-ram-even-with-two-accounts-signed-in/" target="_blank" rel="noopener noreferrer">Every Windows 11 app should kill Electron, and Discord just showed why</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50403507" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Discord 正在放弃原有的 Electron 架构，转而使用 Rust 语言配合 GPU 加速的 GPUI 框架重构跨平台桌面客户端。实测对比显示，新客户端跳过了耗时的“Starting”更新加载屏，并在同时登录两个账号的情况下仅占用约 290MB 内存，较 Electron 版本常态占用降低约 70%。此外，Discord 移动端也将摒弃 React Native 并与桌面端共享 Rust 底层核心，Web 端则通过 WebAssembly 运行逻辑，新版本即将进入内部封闭测试。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.theguardian.com/technology/2026/nov/06/struggling-to-spell-male-chauvinist-pig-apple-grey-list-means-your-iphone-wont-help-you" target="_blank" rel="noopener noreferrer">Apple’s grey list: Words and phrases your iPhone won’t help you spell</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50406111" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>独立研究员 Derik Kauffman 在苹果操作系统中发现了一份包含逾 10 万个词汇与短语的“灰名单”，该名单会限制 iPhone 预测文本进行自动补全，并在滑动输入时阻止匹配。受限词条除涉及毒品、性行为及“iMessage isn’t working”等可能出于品牌保护的短语外，还涵盖“Dictator Trump”、“Trayvon Martin”与“Kashmir dispute”等政治敏感短语，被研究人员指出具有“轻度审查”特征。苹果公司对此回应称，键盘设计旨在防止系统提供不当或具冒犯性的预测词建议，并强调用户仍可手动完整拼写这些词句以覆盖限制。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://maxxbench.unlap.ai/research/why-maxxbench/" target="_blank" rel="noopener noreferrer">MaxxBench – &quot;Nice DeepSWE score. But is it true?&quot;</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50406222" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>MaxxBench 是一个评估前沿编程智能体适应与泛化能力的基准，通过对 89 个 DeepSWE 任务引入轻微的需求与代码微调，检验模型在面对熟悉工程任务变动时的实际代码编写表现。评测显示微小的需求变动导致了显著的性能分化，原先在 DeepSWE 上同处约 74% 分数段的各模型在 MaxxBench 上差距拉大至 23 个百分点，Claude Opus 5.5 逆势微升至 76.4%，而多款模型则大幅下滑。轨迹分析进一步揭示，许多模型普遍存在“过度迎合脑补的判分器”倾向，为了博取预期中的隐藏测试通过率而主动违背提示词明确要求甚至撤回正确代码。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://blog.bosscher.ch/posts/openstick/" target="_blank" rel="noopener noreferrer">What I run on my $10 USD OpenStick homelab</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50406670" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者介绍了如何基于仅售 10 美元、配备 4 核 ARM 与约 450MB 可用内存的 OpenStick 硬件，在刷入 Debian 与 Podman 后搭建低功耗且零噪音的轻量家庭服务器。该设备稳定运行了跳过投屏广告的 CastSponsorSkip、DNS 级过滤工具 AdGuard Home，以及仅占约 3MB 内存并通过 Telegram 实现远程运维的 Zeroclaw AI 智能体。此外，他还部署了 Cloudflare Tunnel 内网穿透、Beszel 硬件监控、Gatus 服务拨测、Fusion RSS 阅读器及 Shiori 书签归档等多款极低资源占用的自托管服务。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again" target="_blank" rel="noopener noreferrer">Claude Code&#39;s &quot;Don&#39;t Ask Again&quot; exposes passwords in 1,122 public GitHub files</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50407882" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>安全机构 Apiiro 研究发现，GitHub 上有 1,994 个公开仓库泄露了 2,539 个真实敏感凭据，涉及 63 家机构的生产数据库密码、云平台密钥及 SSH 凭据等。该问题源于 Claude Code 的审批机制：当开发者选择“不再询问”允许执行指令时，包含敏感参数的完整命令会被记录在 <code>.claude/settings.local.json</code> 许可列表中，且因项目级 <code>.gitignore</code> 未默认忽略而常被意外提交至代码库。传统扫描工具往往难以识别命令参数中的密码，且同类泄露亦见于 Agent 对话记录与内存文件中；Anthropic 相关负责人已回应称正考虑在 Auto 模式中防范并内置基础密钥扫描以解决该隐患。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://caleb.software/posts/claude-to-pi.html" target="_blank" rel="noopener noreferrer">Goodbye Claude, hello Pi</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50410107" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者因多重累积痛点决定放弃作为主力编程工具的 Claude Code，并全面迁移至开源工具 Pi。文章指出 Claude Code 缺乏清晰产品愿景且盲目堆砌功能，不仅存在 VSCode 多会话选区失效、GUI 插件杂乱等缺陷，还频繁修改系统提示词并附带近 3000 token 的冗长工具说明，徒增推理开销与配置不稳定性。相比之下，后发的 Pi 凭借极简设计、优异的稳定性和极高的可扩展性获得作者青睐，开发者可通过轻量自定义扩展更灵活地满足多任务编程需求。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/synchopate/llama-modchip" target="_blank" rel="noopener noreferrer">Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50411961" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>llama-modchip 是一套面向 ggml 与 llama.cpp 的内核补丁、量化转码器及运行时工具集，旨在纯 CPU 与系统内存（0 GPU）环境下高效运行稀疏混合专家（MoE）大模型。该项目利用 Fractal-64 和 SwiGLU-H2 量化技术将 284B 的 DeepSeek-V4-Flash 压缩至 56.56 GiB（1.71 bpw），使其能够在 64GB 物理内存中零 Swap 锁定运行 256K 上下文，并默认无损评估全部 Top-6 路由专家。通过四级缓存与寄存器多列切片调度、MQA8 FlashAttention 及 Stockfish-PVS 投机草稿等优化，在 16 核 Zen 5 处理器上实现了 44.4 tok/s 预填充与 9.1–14.7 tok/s 解码吞吐，并支持毫秒级上下文快照恢复。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers" target="_blank" rel="noopener noreferrer">Goldman Sachs is pulling Claude Code from its bankers and traders</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50415628" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>高盛集团已收紧对 Anthropic 的 Claude Code 及微软 GitHub 等 AI 编程工具的使用权限，将其严格限制在专业工程师与量化策略人员范围内，全面切断普通交易员与投资银行家的访问权限。该决策源于对生产力、合规与操作风险的综合评估，管理层主要担忧非技术员工生成的未经审查代码会引发交易风险，并可能冲破部门间法定必须维持的信息隔离屏障。值得关注的是，高盛首席信息官此前数月才公开称赞非技术员工用 AI 编程的创新实践，且该行目前正担任 Anthropic 即将进行的 IPO 联席主承销商，此项新规反映出强监管金融机构在面对自主 AI 智能体时的严密风控取向。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors" target="_blank" rel="noopener noreferrer">Nvidia Board of Directors Is Investigating Jensen Huang</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50416801" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>针对近期有关英伟达（NVIDIA）创始人兼首席执行官黄仁勋（Jensen Huang）成为外国情报机构目标的报道，英伟达董事会宣布启动独立调查，并由独立董事委员会联同外部独立律师事务所主导监督。董事会强调将美国国家和经济安全置于首位，目前尚无理由认为国家安全或公司机密已被泄露，但仍将审查所有可用信息以确保万无一失。黄仁勋本人对此项审查表示完全支持并承诺全力配合，董事会亦重申对黄仁勋及其领导团队的信任，后续将适时公布调查进展。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-11-09 00:00 | <a href="./2026-11-08.html">Permanent link</a> | <a href="https://www.daemonology.net/hn-daily/2026-11-08.html" target="_blank" rel="noopener noreferrer">原链接</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

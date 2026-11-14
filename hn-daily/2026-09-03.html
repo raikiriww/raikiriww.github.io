@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - 2026-09-03</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-09-03.html">Daily Hacker News for 2026-09-03</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on September 03, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://kciter.so/posts/the-expensive-main-thread/en/" target="_blank" rel="noopener noreferrer">The browser&#39;s main thread is expensive</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49522137" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>浏览器主线程同时承担着运行JavaScript与大部分页面渲染管道（如样式计算、布局、绘制）的重任，一旦被长任务占用便会导致界面冻结并恶化INP和TBT等性能指标。针对主线程资源昂贵的问题，可以通过拆分、批处理、优先级排序与延迟这四种策略合理管理任务规模与执行时机。其中拆分长任务是基础，利用 setTimeout 或 rAF 在任务间隔中让出主线程控制权，能为页面绘制和用户输入响应提供时间窗口，从而消除卡顿体验。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/" target="_blank" rel="noopener noreferrer">Three sites made 215,128 “best software” pages for AI. Perplexity cites them</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49536375" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Trellner Research 对 Perplexity 在 380 个软件类别的 AI 推荐引用分析发现，59.8% 的引用来源位于 Tranco 流量排名前 10 万名之外，23.4% 甚至不在前 100 万名内。高频引用源 Guideflow 仅为一家厂商的营销博客，而 wifitalents.com 等三个关联网站共生成了超过 21.5 万个专门面向 AI 检索（Grounding）机器阅读的“最佳软件”页面。研究表明 AI 检索依赖大量低流量和人工干预的机器生成内容，且部分厂商链接还存在重定向至赌博网站等风险。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.nytimes.com/2026/09/02/technology/google-ad-tech-remedies.html" target="_blank" rel="noopener noreferrer">Google avoids a breakup of its ad tech business</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49537131" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>美国联邦法官在司法部诉 Google 广告技术反垄断案的救济阶段作出裁决，拒绝了司法部要求拆分 Google 广告技术业务（含 AdX 交易所）的诉求。法庭未采用强制剥离等结构性拆分措施，而是要求 Google 实施行为性救济，提高其广告技术工具与竞争对手平台的互操作性。该裁决使 Google 成功避免了业务拆分风险，成为其在多起反垄断诉讼中取得的重大裁决胜利。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://pola.rs/posts/announcing-polars-2/" target="_blank" rel="noopener noreferrer">Pre-Release of Polars 2.0</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49546753" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Polars 2.0 发布首个预发布版本（RC1），其最大改变是将 LazyFrame 查询的默认引擎切换为流式引擎（streaming engine），预计提升高达 5 倍的性能并大幅降低内存占用。2.0 版本引入了更严格的类型与结构校验（如禁止隐式损耗性类型转换和不匹配的 DataFrame 水平拼接），并新增了专门的异常类型以引导旧 API 迁移。此外，Polars 未来还将继续推进 Out-of-Core 支持、全新 IO 插件体系以及全流程异步支持。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0" target="_blank" rel="noopener noreferrer">Audacity 4.0</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49548395" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Audacity 4.0 将应用界面基于 Qt 进行了全新重构，支持原生高 DPI 渲染、自定义工作区以及全新的剪辑编辑模型。新版本优化了剪辑的分组、切割与多轨移动体验，更新了实时效果器和频谱图，并引入全新的 .aup4 项目格式与 Windows ASIO 支持。此外，4.0 版本暂时移除了 Audacity 3 中的时间轨道、MIDI 轨道及脚本管道等部分功能，计划在后续版本中逐步恢复。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT Is Throwing 404</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49550614" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>抓取到的网页正文呈现为 ChatGPT 的默认登录与界面引导内容。页面提示用户登录或注册以获取更智能的回答、上传文件及图片，并支持通过 Google 或 Apple 账号继续登录。此外，内容中还包含了清除当前聊天对话的确认说明以及外观和语言等系统设置选项。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://anyhumanever.com/" target="_blank" rel="noopener noreferrer">Any Human Ever – One life, drawn at random from all who have ever lived</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49550698" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Any Human Ever是一个基于真实数据的人类个体随机抽取交互项目，旨在从人类历史上曾生活过的1000多亿人中随机展现一个个体的人生。用户可以按照出生年份、地理位置到具体个人故事的步骤，逐步抽取并阅读真实历史人物的经历。项目还提及因人口呈指数级增长，随机抽取的出生年份在统计上更倾向于近代。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://neil.fraser.name/news/2026/09/03/" target="_blank" rel="noopener noreferrer">.name Termination</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49550772" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Neil Fraser 讲述了其使用近 25 年的三级域名 neil.fraser.name 因 Verisign 提出申请并获 ICANN 批准而即将被强制终止。该决定将影响约 2.2 万名域名持有者，不仅导致网站、邮箱及依赖该域名的 IoT 设备瘫痪，还将引发严重的安全风险。若空置的二级域名被他人抢注并重建三级域名，将可能导致关联账号被劫持及代码权限泄露，作者已准备通过法律途径维权。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://inference-docs.cerebras.ai/models/overview" target="_blank" rel="noopener noreferrer">Qwen 3.8 27B available on Cerebras at 1500 tokens/s</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49554520" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Cerebras 推理平台上线 Qwen 3.8 27B 模型，在公共端点上提供约 1500 tokens/s 的推理速度，并支持最高 128k 上下文。平台托管的公共模型均保持原始未剪枝架构，仅在存储时采用选择性权重量化，激活值与注意力机制均保持全精度。此外，Cerebras 的 REAP 剪枝模型仅在 Hugging Face 上供研究使用，官方承诺不会擅自修改生产端点的模型架构。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://openai.com/index/gpt-6-astra/" target="_blank" rel="noopener noreferrer">GPT-6 Astra</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=49554643" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>OpenAI 推出新一代旗舰模型 GPT-6 Astra，在计算机使用、软件工程、网络安全及数理科学等领域实现全面突破。该模型在 FrontierMath（98% 得分）、ARC-AGI-3（99.9%）与 ExploitBench（100%）测试中刷新纪录，并在 OSWorld 2.0 和 Mind2Web 中带来显著的速度与效率提升。在安全与对齐方面，Astra 实现了 0% 的越权违规率，能主动识别零日漏洞同时拒绝协助网络攻击，即日起陆续向 ChatGPT 各付费层级、API 及 AWS 用户开放。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-09-04 00:00 | <a href="./2026-09-03.html">Permanent link</a> | <a href="https://www.daemonology.net/hn-daily/2026-09-03.html" target="_blank" rel="noopener noreferrer">原链接</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

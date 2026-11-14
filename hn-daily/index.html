@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-11-13.html">Daily Hacker News for 2026-11-13</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on November 13, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://github.com/hyperionaidev/smolmaxxing/" target="_blank" rel="noopener noreferrer">I&#39;m making LLMs work on small and old devices</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50468888" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>开源项目 smolmaxxing 致力于在电视盒子、老旧平板和中低端手机等算力受限设备上运行超出其硬件限制的大语言模型。该方案基于 llama.cpp 进行定制，通过引入针对芯片特性的 1-bit 与 2-bit 定制算子、裁剪生僻词表以压缩内存，并采用闪存流式分页与预取技术按需加载 MoE 专家权重。实测显示，该项目成功在可用内存仅约 1GB 的小米电视盒子与 iPad Air（2013）上运行了 8B 和 16B 模型，并在可用内存约 3GB 的手机上实现了最高 80B 模型的端侧推理。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/simpsoka/zigzag" target="_blank" rel="noopener noreferrer">Show HN: My $300 embroidery machine needed a subscription, so I built my own app</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50470488" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>ZigZag 是一款基于 Rust 开发的免费开源刺绣设计软件，旨在替代刺绣设备昂贵的订阅制软件，支持 Mac、Windows 和 Linux。它可将 SVG 矢量图转化为榻榻米填针、缎面针等多种刺绣针迹，具备路径规划与剪线优化功能，支持导出 PES、DST 等多种格式或通过蓝牙直连 Brother Skitch 刺绣机。此外，该工具内置了 MCP（模型上下文协议）支持，允许 AI Agent 协同绘制和编辑图案，并提供类似 Illustrator 的可视化操作界面与 CLI 工具。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://status.cloud.microsoft/" target="_blank" rel="noopener noreferrer">Service degradation on Microsoft 365</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50471731" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该页面为微软官方服务健康状态监控门户，发布了 Microsoft 365 发生服务降级（Service degradation）的相关状态。页面汇总了商业与企业版 Microsoft 365、Azure 及 Power Platform 管理中心等关键服务的运行状况。用户可通过页面指引前往 Azure Service Health 门户获取更详尽的健康信息，亦可查阅面向个人与家庭消费级产品的服务状态与社区资源。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/" target="_blank" rel="noopener noreferrer">Rust 1.100</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50472038" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Rust 1.100.0 稳定版正式发布，历经十年研发最终全面稳定了代表发散计算的 never 类型（<code>!</code>）并将 Infallible 设为其别名，同时稳定了核心 Allocator API。新版本还引入了在退出路径自动执行闭包的 core::mem::DropGuard，以及用于显式构造零大小类型的 std::mem::conjure_zst。此外，Cargo 新增了未使用依赖检查告警、重构构建目录以减少缓存冲突，并引入 min-publish-age 依赖冷却机制以防御供应链攻击。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/" target="_blank" rel="noopener noreferrer">Gemini 4 Hydrogen and Orchestrator</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50472260" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Google Antigravity 正式推出轻量高效的 Gemini 4 Hydrogen 模型及全新的 Orchestrator 动态协同模式，可在单个任务流程中智能调度 Carbon 与 Hydrogen。该模式由高推理能力的 Carbon 负责方案规划与复杂故障修复，并交由 Hydrogen 快速执行编码与测试，在达到接近 Carbon 成功率的同时平均节省 24% 的配额并提速 19%。此外，开发者可通过 Antigravity SDK 自定义多模型流水线，或将支持四档推理深度的 Hydrogen 作为独立模型使用，相关功能现已面向付费订阅用户及企业版开放。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/" target="_blank" rel="noopener noreferrer">Reverse engineering my Coway air purifier to ditch the cloud</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50474959" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者为了摆脱频繁故障且容易被封号的 Coway 官方云服务，决定对 Coway Airmega IconS 空气净化器进行逆向工程以实现本地控制。借助大语言模型协助配置的树莓派 AP 与 nftables 转发规则，作者搭建了透明中间人代理环境以监听净化器的网络通信。流量分析发现该设备未预装根证书，而是通过未加密的明文 HTTP 动态下载亚马逊根 CA 证书；作者利用 mitmproxy 插件将其替换为自建 CA 证书，成功解密并捕获了设备的后续全部通信。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.wired.com/story/nvidia-employees-petition-for-jensen-huangs-return/" target="_blank" rel="noopener noreferrer">Nvidia employees petition to bring back Jensen Huang</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50477231" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>黄仁勋因承认婚外情及面临多起涉及下属的不当关系指控而突然辞任英伟达CEO，导致公司市值大幅蒸发并引发监管调查。然而，英伟达内部员工在公司意见箱中发起请愿并留下了1600余条评论，压倒性地呼吁董事会倾听员工心声并让其复职。众多员工对黄仁勋在调查刚展开便离职感到震惊与不解，坚信其卓越的领导力对公司无可替代，并担忧失去创始人掌舵将重创英伟达的未来发展。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://status.claude.com/incidents/nn11wk485zfn" target="_blank" rel="noopener noreferrer">Elevated errors on claude.ai, Claude Code, and platform.claude.com</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50481187" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Anthropic 官方状态页通报了一起涉及 claude.ai、Claude Console、Claude Code 及 Claude Cowork 等服务的故障事件。该问题最初表现为用户在 claude.ai 和 Claude Code 上的身份认证异常，团队随后展开调查并部署了修复补丁。经过持续监控，官方确认受影响的服务已恢复稳定，该故障已被彻底解决。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://twitter.com/LibreOffice/status/2121205272479998268" target="_blank" rel="noopener noreferrer">LibreOffice actually works 365 days a year</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50486482" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该内容源自社交平台 X 上 LibreOffice 官方账号发布的动态，调侃称 LibreOffice 全年 365 天均能稳定工作，借由字面与双关暗指其作为办公套件的可用性。页面抓取信息同时呈现了其官方简介，强调 LibreOffice 是一款免费、注重隐私且由全球开源社区维护的开源办公套件，不仅是 OpenOffice 的继任者，也在去中心化社交平台 Fosstodon 建立了官方阵地。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247" target="_blank" rel="noopener noreferrer">FAA issues national ground stop</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50489641" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>美国联邦航空管理局（FAA）周五因“安全原因”对全美所有离港航班发布了罕见的全国地面停飞令，导致数千架次航班延误及数十万旅客滞留，多座主要机场容量逼近极限。官方初步调查指出，此次停飞由高空控制中心的电信网络故障引发，目前未发现网络攻击等恶意破坏迹象，亦无证据表明与前一日的微软宕机事件存在关联。尽管在空航班依托备用通信机制仍可安全运转与降落，但地面飞机无法起飞引发的跑道与停机位瘫痪，已使事件从应急安全管控迅速升级为全美严峻的航空物流危机。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-11-14 00:00 | <a href="./2026-11-13.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-11-12.html">Daily Hacker News for 2026-11-12</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on November 12, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://github.com/janestreet/agent_skills/blob/master/socratic-tutor/SKILL.md" target="_blank" rel="noopener noreferrer">Socratic Tutor</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50438261" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Jane Street 在其 agent_skills 项目中开源了名为 Socratic Tutor 的智能体技能，旨在通过苏格拉底式教学法为需要深入学习特定主题的用户提供结构化辅导，以启发式提问取代单向授课。该技能在启动前会确认辅导意图，将主题拆解为多个子技能并通过摸底测验初始化 0 至 5 级的 ASCII 技能图谱。在教学循环中，系统坚持一次一问、暴露逻辑矛盾以辅助纠错、穿插间隔复习与动态降级，并在所有子技能达标后进行综合终考以确保用户真正达到精通。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://av.github.io/safe-sand/" target="_blank" rel="noopener noreferrer">Hyper-realistic sand with WebGL2</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50453288" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该项目是一款基于 WebGL2 与 JavaScript 构建的超逼真网页流沙模拟器，支持在手机、平板及桌面端浏览器中直接运行。用户可通过触控或鼠标推抹沙粒，倾斜设备利用重力引导流沙滑移，或通过晃动手机将沙粒打散。应用内置了五种不同特性的沙子类型与底衬材质切换，并结合动态光照、颗粒拟真音效与触觉反馈，提供沉浸式的沙盘物理交互体验。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/" target="_blank" rel="noopener noreferrer">A false smoke alarm almost drowned Jane Street&#39;s only NYC datacenter</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50455394" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Jane Street 前系统团队工程师回忆了一起险些摧毁纽约核心机房的事故：施工扬尘误触烟雾报警器后，联锁机制关闭了机房空调，同时干式消防喷淋管道完成注水充压。失去制冷导致机房温度急剧上升，一旦突破约 150°F 的热敏阈值，自动喷淋将喷水彻底淹没机房。住在附近的作者紧急赶回现场，在温度飙升至 143.6°F 的危急关头徒手拔除所有机柜电源阻止了灾难，随后用 OCaml 编写了直接采集全量服务器温度并计算均值告警的监控程序。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/" target="_blank" rel="noopener noreferrer">Gemini Decisions API</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50456791" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Google DeepMind 推出由全新 Gemini Decision 1 模型驱动的 Gemini Decisions API，专为工具选择、策略检查、模型路由及上下文评分等闭集决策任务打造。该 API 支持在单次前向传递中直接处理涵盖文本、图像、音频、视频和 PDF 的多模态输入，可同时评估多达 1,000 个是否题、多选题或量表评分问题，无需逐字生成文本即可直接返回概率与置信度评分。其端到端延迟仅为 150 至 250 毫秒，定价为每百万输入 tokens 0.10 美元且完全不收取输出 token 费用，目前已在 Google 内部的模型路由与安全检测等场景中落地应用。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/" target="_blank" rel="noopener noreferrer">United Airlines bans AI agents from booking flights on behalf of travelers</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50458900" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>美国联合航空（United Airlines）宣布禁止第三方人工智能代理（AI Agent）代表旅客预订机票，理由是共享账户凭证存在敏感信息泄露、意外扣费及里程遭滥用等安全风险，且代办值机可能违反联邦关于行李安全核验的法规。美联航正通过更新订票政策，在自有平台以及旅行社和聚合服务商渠道全面封堵未授权 AI 助手的访问权限。行业分析人士指出，此举除降低海量 AI 爬虫查询带来的高昂成本外，核心目的在于遏制新中间商介入以夺回预订渠道的主导权。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad" target="_blank" rel="noopener noreferrer">Nvidia is preparing to oust Jensen Huang</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50459703" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>英伟达首席执行官黄仁勋因两起婚外情丑闻正式辞职，事件涉及一名疑似中国间谍及一名公司员工。公司董事会已启动新任 CEO 的遴选工作并考察内外部人选，过渡期间由财务总监科莱特·克雷斯（Colette Kress）出任临时 CEO。此外，自 1993 年创办起即在任的资深董事哈维·C·琼斯（Harvey C. Jones）被任命为英伟达首位董事长，克雷斯已发内部信安抚员工并计划于 11 月 18 日举行全体会议。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.mcmillen.dev/sigbovik/" target="_blank" rel="noopener noreferrer">93% of paint splatters are valid Perl programs (2019)</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50459745" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该文探讨了编程语言领域一个戏谑性的长期开放问题：在墙上涂抹油漆是否可能不构成合法的 Perl 代码。作者采用实证方法，利用光学字符识别（OCR）软件对100张油漆飞溅图像进行测试，发现高达93%的油漆飞溅图案均能被成功解析为有效的 Perl 程序。论文详细分析了这些油漆飞溅程序的属性并展示了无法通过解析的样本，该研究发表于2019年的恶搞学术会议 SIGBOVIK。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://ipo.anthropic.com/us/" target="_blank" rel="noopener noreferrer">Anthropic IPO</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50465829" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Anthropic 已正式提交首次公开募股（IPO）申请，计划在纳斯达克以股票代码“ANT”公开发行 Class A 普通股，路演于 11 月 10 日启动，预计于 11 月 18 日确定发行价并于 19 日挂牌交易。其披露的 2026 年第三季度财务数据显示，单季营收达 170 亿美元（同比增长超 12 倍），调整后营业利润率为 15%，因估值上涨导致可转债等衍生负债公允价值重估产生非现金费用，净亏损录得 233 亿美元。此外，礼来、Salesforce、沃尔玛及乐天等多家大型企业展示了部署 Claude 与 Claude Code 后在多智能体工作流、编码及业务自动化方面带来的显著效率跃升。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f" target="_blank" rel="noopener noreferrer">Jensen Huang resigns</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50467087" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>英伟达联合创始人兼首席执行官黄仁勋在被曝出与涉嫌中国间谍的女性及公司下属存在多起婚外情后正式辞职，引发对其涉及国家安全和技术出口控制的广泛审查。英伟达董事会已任命首席财务官 Colette Kress 出任临时首席执行官并选任首位董事长，受该突发人事变动影响，公司股价开盘一度大跌14%。尽管英伟达表示无证据表明机密泄露，但美国国会议员仍坚持传唤并质询黄仁勋，调查相关商业交往与芯片出口是否存在国家安全风险。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/" target="_blank" rel="noopener noreferrer">Gemini 4 Hydrogen</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50471431" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Google 正式推出面向日常编程与智能体工作流的高效模型 Gemini 4 Hydrogen，支持 100 万 token 上下文窗口并按百万输入 $1.50、输出 $7.50 统一定价。该模型提供 low 到 xhigh 四档思考等级，相较 3.8 Flash 任务速度提升 2.5 倍并显著降低幻觉与越权风险，在代码库精细修改、智能体执行及多模态分析基准中均展现优异性能。Hydrogen 既可作为独立主力模型，也能在 Google Antigravity 等平台与 Carbon 协作分工以优化成本与耗时，即日起全面上线 API、开发者工具、Gemini 应用及 Google 搜索。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-11-13 00:00 | <a href="./2026-11-12.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-11-11.html">Daily Hacker News for 2026-11-11</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on November 11, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/" target="_blank" rel="noopener noreferrer">AI usage generates a fragile codebase</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50438318" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章指出过度依赖 AI 生成代码会导致代码库脆弱化，主要表现为 AI 编写测试流于表面、生成的代码过于复杂、削弱开发者对系统架构的理解，以及代码产出过快导致人工代码审查失效。这种脆弱性会在实际运维中引发线上故障频发、排查恢复周期延长，并产生大量无法被自动化测试覆盖而仅对真实用户可见的隐蔽缺陷。作者强调高质量软件必须融入人类开发者的视角与细致把控，过度脱离人类直觉的 AI 开发模式将难以支撑大规模可扩展系统，最终导致产品体验与开发体验的双重恶化。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/GoogleChrome/modern-web-guidance" target="_blank" rel="noopener noreferrer">Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50443812" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Modern Web Guidance 是由 Google Chrome、Microsoft Edge、Mozilla Firefox 与 MDN 等团队联合推出的开源项目，旨在为编码 Agent 提供现代 Web 平台规范、最佳实践与浏览器兼容性数据。针对大语言模型因训练数据陈旧而倾向生成臃肿过时 JavaScript 的痛点，该项目通过 CLI 将精炼且节省 Token 的专家指引直接注入 Agent 上下文中。内容涵盖现代 CSS 布局、原生 UI 组件、性能优化、无障碍及端侧 AI 等数百项前沿特性，帮助 Agent 优先采用高效的浏览器原生 API 与轻量级回退方案。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/" target="_blank" rel="noopener noreferrer">Synaptics patent claims stop work on DisplayLink drivers</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50443824" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>开发者 Mike Lothian 因官方驱动体验不佳且频繁崩溃，借助大语言模型辅助并使用 Rust 逆向开发了用于 DisplayLink 扩展坞的开源 Linux 驱动 Vino。但在其向持有该技术的 Synaptics 寻求协议协助时，对方非但未予支持，反而发出停终信指控其侵犯多项专利，并以每周递增 2.5 万美元的索赔相威胁要求其撤回所有提交。尽管 Lothian 试图通过开放发明网络（OIN）寻求专利交叉许可保护，但 OIN 确认其保护范围排除了编解码器技术，最终导致 Lothian 被迫妥协并下架了代码仓库。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://starlink.com/mini-2" target="_blank" rel="noopener noreferrer">Starlink Mini 2</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50444129" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Starlink 推出新一代便携式卫星互联网套件 Mini 2，集成了 Wi-Fi 6 并新增了支持快拆更换的电池系统。该设备配备 71 Wh 电池，续航可达 4.5 小时且支持 60W USB-C 供电与充电，无需外部电源即可在约 60 秒内快速对准天空连网。机身厚度仅 23.1 毫米，整机含电池与脚架重 1.6 千克，具备 IP67 防尘防水等级和标准 1/4-20 相机螺孔，专为户外移动探险场景设计。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america/" target="_blank" rel="noopener noreferrer">Scion is back and is going to sell a kei truck in America</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50445401" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>丰田宣布正式复活 Scion 品牌并更名为“Scion by Toyota”，将其重构为探索移动出行设计与概念的“自由实验室”。该品牌首款量产车 KEI-01 是一款基于大发微卡贴牌的超轻型卡车（kei truck），符合美国低速车辆安全标准，计划于 2027 年底以小批量试点形式直接面向车队商用及农用市场投放。此外，该产品线还同步亮相了搭载 Tacoma 涡轮发动机与纯电静音模式的 SxS 全地形越野概念车，以及主打户外便携个人出行的 BKE 概念车。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/" target="_blank" rel="noopener noreferrer">Apple has new Mac app coming to make running local AI models easy</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50446520" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>爆料显示苹果正在开发一款名为 Harbor 的全新 Mac 应用（目前在 Claris 品牌下进行非公开预览），旨在将 Mac 转化为本地私有 AI 推理服务器。该应用支持在 Apple Silicon 芯片上直接浏览、下载和运行开源权重模型，确保数据完全停留在本地而不上传云端。此外，Harbor 支持通过雷雳 5（Thunderbolt 5）自动组网并汇聚多台 Mac 的统一内存，无需命令行或复杂配置即可集群运行超出单机负载的大模型并处理更高并发请求。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.vulncheck.com/blog/anthropic-glasswing-november-update" target="_blank" rel="noopener noreferrer">Tracking Anthropic-discovered vulnerabilities</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50447074" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>VulnCheck 对 Anthropic“Project Glasswing”启动七个月后的追踪分析显示，在其报告的近 3.8 万项漏洞发现中仅修复了 217 项，可归属的 CVE 仅占全网约 0.5% 且仅有 2 项在野被利用。由于内部人工审查遭遇瓶颈，Anthropic 推出的开源扫描工具实际上将繁重的分流验证负担转嫁给了开源项目维护者。以 curl 项目为例，其收到的报告中逾半数被判定非漏洞且确认项均为低危，直接对 Anthropic 宣称的 94.2% 真阳性率及其高危漏洞发现的宣传提出了有力质疑。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028" target="_blank" rel="noopener noreferrer">Tim Peters has died</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50450488" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Python 创始人 Guido van Rossum 在官方论坛发帖悼念，宣布资深核心开发者与语言共同设计者 Tim Peters（1952–2026）已于 7 月 15 日逝世。Tim Peters 对 Python 影响极其深远，他不仅撰写了著名的《Python 之禅》（PEP 20）并推动了混合算术等早期关键设计，还在 2002 年发明了被 Java 和 Android 等广泛采纳的 Timsort 排序算法。他在社区邮件列表中以耐心细致、幽默温和的解答被称为“Timbot”，奠定了早期核心开发包容理性的讨论基调，众多开发者纷纷发帖缅怀其技术贡献与深远影响。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://pietromiotti.com/latest/maya-site" target="_blank" rel="noopener noreferrer">My AI agents found an unmapped Maya site</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50452455" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者利用 48 个 AI Agent 分析了约 1200 平方公里的公开激光雷达（Lidar）丛林测绘数据，在 72 小时内排查出一处包含金字塔、广场和庭院的玛雅时期遗址。团队通过 AI 辅助撰写西语报告提交给墨西哥国家人类学与历史研究所（INAH），并获得官方反馈确认该坐标此前未在官方名录中登记。尽管后续核实表明考古学界近期已在学术文献中测绘过该地点，但这一跨界“再发现”完整验证了非专业人士借助 AI Agent 与算力加速科学探索的可行性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/aws/aws-emulator" target="_blank" rel="noopener noreferrer">AWS emulator</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50456631" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该条目摘要生成失败（Antigravity 调用重试后仍失败）。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-11-12 00:00 | <a href="./2026-11-11.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-11-10.html">Daily Hacker News for 2026-11-10</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on November 10, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.watched.earth/" target="_blank" rel="noopener noreferrer">Show HN: Every satellite that passed over any place this week, and its photos</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50428907" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Watched（watched.earth）是由开发者构建的卫星过境追踪与影像查看工具。用户输入地球上的任意地点，即可检索过去一周内飞越该地上空的所有卫星，并直接查看它们拍摄的实际地表照片。该服务整合了 CelesTrak 提供的上万个在轨物体轨道数据，同时呈现过境物体的实时运行参数与太阳直射点坐标。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener noreferrer">Claude Fable 5.2 and Mythos 5.2</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50429068" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Anthropic 推出专为解决极具挑战性技术任务打造的新模型 Claude Fable 5.2 与 Claude Mythos 5.2，二者采用相同底层模型，Fable 搭载网安与生物防护向所有用户开放，Mythos 则向生命科学与网络安全领域的合规研究机构开放。该版本生成速度提升达 30% 且价格进一步降低，并支持高达 2.5 倍加速的快速模式，在代码、推理、网络安全及科学基准测试中全面优于 Opus 5.5。在测试中，新模型展现出强大的自主工程与科研能力，不仅协调上千子智能体成功构建了原型操作系统，还在黑洞物理难题推导、复杂病毒衣壳结构预测以及仅用 30 小时完成费马大定理形式化证明等任务上取得重大突破。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/thisisme6598/gemini_files/" target="_blank" rel="noopener noreferrer">Google Gemini routes personal Drive files and emails to human annotators</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50429426" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>技术文档指出，面向个人消费级账号的 Google Gemini 已静默推翻此前绝不经人工审查的承诺，修改隐私规则将关联的个人 Gmail 和 Drive 文件纳入人工标注审查流水线。实测发现，在开启关联应用后，用户在会话中即便未显式提及标签，闲聊日常话题也会概率性自动触发后台检索，导致敏感个人信息甚至完整文档被静默注入会话上下文。鉴于 Google 现有的自动脱敏过滤机制难以有效消除叙述性数据中的隐私标识，此类私人文件正面临被第三方人工标注员直接查阅的安全隐患。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://e-means.github.io/" target="_blank" rel="noopener noreferrer">E-means: Outperforming k-means in one-tenth the epochs</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50429734" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>e-means 是一种针对 k-means 聚类的新型优化算法，通过引入指数移动平均（EMA）的小批量更新规则替代传统的全批量 Lloyd 算法。该方法仅需 1.2 至 3 个 epoch 即可达到甚至超越传统方法 25 个 epoch 的损失水平，在 GPU 和 CPU 上分别实现了最高 45 倍与 15 倍的运行时间提速，且更易跳出局部极小值。此外，它通过缩放法则（Scaling Laws）自动推导最优批大小与步长而免去人工调参，并结合余弦退火衰减与分裂大簇的死簇复活机制，兼顾了更优的收敛质量与极高的吞吐效率。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://postalpro.usps.com/zcb" target="_blank" rel="noopener noreferrer">USPS now offers official ZIP Code boundary polygons</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50431058" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>美国邮政署（USPS）正式推出基于实际投递地址与位置信息的全美官方 ZIP Code 边界多边形地图数据，能够随投递分布变动动态反映真实边界。该数据作为邮政编码边界的权威基准，可用于纠正既有数据，并广泛赋能地图测绘、物流导航路径优化，以及房地产与保险等行业的人口统计数据展示。USPS 针对不同使用场景提供内部版、企业版和公开发行版等产品形态，均支持每季度定期更新。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider/" target="_blank" rel="noopener noreferrer">Amazon saves millions by replacing Sonnet 4.6 with Strands Decider</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50436640" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>亚马逊工程师在其庞大的内部工单系统中采用 Strands Decider E4B 决策模型替代了 Claude Sonnet 4.6，用于 20 个固定类别的工单自动分类。该决策模型不生成文本，而是直接对候选标签计算概率与置信度，使单次调用延迟降低 78% 并大幅压缩 Token 消耗。在保持乃至超越生产环境 Sonnet 分类精度的前提下，单工单处理成本降低了 98%（每百万工单成本从约 22,200 美元骤降至约 500 美元），预计年节省开支达数百万美元。团队通过 AWS AppConfig 三路开关完成双模型流量并行验证与平滑上线，展示了决策模型在已知固定目录的高并发分类场景中的显著成本与性能优势。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://deepmind.google/blog/introducing-alphaproof-code/" target="_blank" rel="noopener noreferrer">AlphaProof Code</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50439193" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Google DeepMind 推出多智能体形式化验证框架 AlphaProof Code，由人类专家拟定数学规范并结合基于 Gemini Carbon 的 AI 智能体，首次对 Signal 协议底层实现代码完成了深度机器可检查的形式化安全证明。该系统跨越了从理论设计到编译后运行代码的鸿沟，自主生成数百万行 Lean 语言证明并把人工复审范围压缩至代码库的 1%，将以往耗时数年的验证周期缩短至四周。团队还通过成功检出重现的历史漏洞验证了其可靠性并开源了相关成果，为未来保障医疗设备与电网等关键基础设施软件安全提供了高标准范式。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://docodethatmatters.com/home-automation-overnight-success/" target="_blank" rel="noopener noreferrer">Smart home devices should work without the internet</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50441707" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者总结了十年智能家居自动化的实践经验，提出核心设备绝不能依赖厂商云端服务器、必须在断网状态下依然正常运转的首要原则。整套方案采用自持硬件、刷写 Tasmota 的 ESP 模块、MQTT 协议以及树莓派上运行的 Node-RED 构建本地中枢，确保断网或厂商服务停摆时物理开关与本地仪表盘仍可稳定工作。针对家庭多成员场景，作者还确立了引入智能控制不得废除传统实体开关、提供多种冗余交互入口（物理按键、平板仪表盘、NFC 标签等）以及拒绝无本地 API 的黑盒设备等实用准则。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.blender.org/download/releases/5-3/" target="_blank" rel="noopener noreferrer">Blender 5.3 released with Gaussian Splat support</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50442426" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Blender 5.3 正式发布，原生引入了 3D 高斯泼溅（Gaussian Splats）支持，允许将 PLY、SPZ 和 glTF 等格式作为点云导入，并支持通过几何节点处理以及在 EEVEE、Cycles 和 Workbench 中直接渲染。渲染与合成方面，Cycles 渲染器的 Principled BSDF 新增光色散支持并集成了 NVIDIA DLSS 4.5 光线重构降噪，EEVEE 增加了材质光照节点与全景相机渲染，合成器亦支持堆叠场景效果与几何节点。此外，该版本还引入了统一管理工程资产与设置的全新项目系统，并在视频剪辑器中加入了完整的波纹编辑框架与 OpenTimelineIO 支持。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://neil.fraser.name/news/2026/11/10/" target="_blank" rel="noopener noreferrer">.name Grandfathered</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50442736" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>经过长期的抗争与申诉，Verisign 撤回了原定终止 2.2 万个域名及电子邮件重定向的计划。虽然三级 .name 域名将不再开放新注册，但所有既有域名和邮件重定向服务将无限期保留。作者特别向参与向 ICANN 提交复审请求、提供法律援助以及在官僚体制中勇于抗争的众多支持者表达了感谢。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-11-11 00:00 | <a href="./2026-11-10.html">Permanent link</a></p>
+</section>
+<section class="report-block">
+  <h2><a href="./2026-11-09.html">Daily Hacker News for 2026-11-09</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on November 09, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://declarative-dragging.github.io/" target="_blank" rel="noopener noreferrer">Declarative Dragging</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50368481" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>针对传统拖拽交互需要编写大量几何、反馈与动画代码的痛点，Joshua Horowitz 等人提出了荣获 UIST 2026 最佳论文奖的“声明式拖拽”（Declarative Dragging，D2）范式。该方法采用模型驱动机制，开发者无需直接编程底层视觉行为，只需声明拖拽元素所能导向的应用未来模型状态。系统引擎会自动推测性渲染这些可能的目标状态并提取元素位置，以此自动合成为平滑、具备动画反馈的拖放交互。团队开发了面向 Web SVG 的实现库 Dragology，支持特性的可组合性，并已成功应用于多视角数学探索工具及 Hazel 编程环境的代码重构交互中。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://mailroute.net/blog/outlook-rejecting-email-without-dmarc" target="_blank" rel="noopener noreferrer">Outlook.com is rejecting email from domains without DMARC</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50416158" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>自 2026 年 11 月 5 日起，微软旗下 Outlook.com 与 Hotmail 等消费级邮箱在未公开公告的情况下，开始拦截未配置 DMARC 记录的域名所发送的邮件。与以往仅针对日发信量超 5000 封的大规模发件人不同，该限制已波及低发信量的普通发件人，且因部分邮件间歇性退信（报错 550 5.7.1）而极易被忽略。受影响域名只需确保 SPF 或 DKIM 正常对齐，并在 DNS 中添加一条基础的 DMARC TXT 记录（v=DMARC1; p=none）即可解决拦截问题。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://nvidianews.nvidia.com/news/a-message-to-our-company" target="_blank" rel="noopener noreferrer">Nvidia CEO Jensen Huang&#39;s letter to staff about affair</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50418016" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>英伟达（NVIDIA）创始人兼CEO黄仁勋（Jensen Huang）向员工致信，就对妻子不忠的婚外情行为向家人、员工、董事会及股东公开致歉，表示承担全部责任并恳请外界给予其家人隐私空间。黄仁勋强调自己仍将全身心致力于英伟达的工作，并将努力重新赢回各方的信任。针对媒体报道中提及的国家安全关切，英伟达董事会已启动独立调查，黄仁勋表示完全支持并全力配合该调查。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://ketchup3d.github.io/app/" target="_blank" rel="noopener noreferrer">KetchUp – Open-source SketchUp alternative built with Rust and WebGPU</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50418176" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>BenchUp（原 KetchUp）是一款基于 Rust 与 WebGPU/WebGL2 构建的开源 3D 建模应用，专为木工、家具制作和 DIY 设计打造，旨在作为 SketchUp 的免费替代品。它无需注册账号，既可在主流桌面浏览器中直接运行，也提供 Windows、macOS 和 Linux 原生客户端，支持推拉成形、尺寸标注、吸附对齐及群组管理等实用建模功能。用户的所有工程数据均保存在本地设备并可导出为 .ketchup 文件，同时支持导入 SketchUp 几何结构及导出 OBJ 模型，便于在动手制作前精确规划与推敲设计。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://matteoraso.github.io/im-not-convinced-the-ai-bubble-exists.html#im-not-convinced-the-ai-bubble-exists" target="_blank" rel="noopener noreferrer">I&#39;m not convinced the AI bubble exists</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50418975" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章反驳了AI行业存在严重泡沫且即将破裂的观点，指出数万亿美元的巨额投入主要用于数据中心等一次性基础设施建设，而非高额的常规运营成本，基建落成后支出将大幅回落。结合Anthropic招股书等财务数据，AI在排除基建成本后展现出极高利润率与爆发式营收增长，且在未满足的市场需求、用户习惯与企业系统集成锁定下具备强劲的长期变现能力。此外，Alphabet与Meta等巨头的市盈率仍稳定在20倍左右的健康区间，表明行业估值由实际盈利与健康业务驱动，与依靠非理性投机的历史泡沫有着本质区别。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/" target="_blank" rel="noopener noreferrer">Unlocking any car from X brand in most of the world</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50419215" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>安全研究员 Shubham Shah 与 Sam Curry 分析了某知名汽车品牌的车联网平台，在公开暴露的管理后台与前端 JavaScript 代码包中发现了硬编码 API 密钥及身份系统的管理员凭据。研究人员利用后台无鉴权接口实现了通过车牌号和 VIN 检索车主账户敏感信息，并使用路径遍历绕过 Nginx WAF 限制以直接调用 ForgeRock OpenIDM 接口重置任意用户密码。结合车企允许跳过多因素认证（MFA）的配置缺陷，攻击者可完全接管车主账户并实现对全球任意车辆的远程解锁与控制。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://twitter.com/shanemelaugh/status/2119192075505893695" target="_blank" rel="noopener noreferrer">Is Opus 5.5 nerfed? Thinking patterns changed on November 3</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50422069" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Shane Melaugh 在 X 上通过分析 1,400 次 Claude Code 会话指出，Opus 5.5 的模型名称虽未变动，但其推理模式自 11 月 3 日起发生剧烈转变。实测显示模型在“high”档位下的推理量大幅缩减，容易过快介入任务并陷入混乱而无法修复 Bug，需提升至“xhigh”档位才能正常解决问题。作者据此认为此前流行的“所有场景均使用 high 档位”策略已不再适用，验证了用户关于该模型实际表现遭到削弱（nerfed）的体验。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.foldableflight.com/" target="_blank" rel="noopener noreferrer">Fold Epic Paper Airplanes</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50424581" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Foldable Flight 是一个大型折纸飞机数据库平台，收录了大量配有分步视频教程的自制纸飞机模型。网站支持按 A4、美标信纸等规格筛选，并根据速度、滑翔性能与折叠难度（从入门到专家级）对机型进行详细指标评级。其展示的模型涵盖保持世界滞空与飞行距离纪录的原型机、仿真战斗机、回旋特技机及各类赛事获奖设计。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy" target="_blank" rel="noopener noreferrer">Payments Canada announces launch of Canada&#39;s Real-Time Rail (RTR) payment system</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50427362" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>加拿大支付协会（Payments Canada）宣布正式推出国家实时支付系统 Real-Time Rail（RTR），为加拿大企业与个人提供全天候 24/7 的即时支付清算与结算基础设施。该系统采用 ISO 20022 数据标准，并使加拿大成为首个在上线首日即强制推行集中化防欺诈服务（涵盖收款人确认与交易风险评分等）的 G7 国家。首批接入机构包括 Wealthsimple、Questbank 等，随着各大主要金融机构陆续上线，预计系统在首年内即可覆盖超过 90% 的加拿大国民，并在未来十年显著降低交易成本并推动数百亿加元的经济增长。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener noreferrer">Claude Fable 5.2 and Mythos 5.2</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50429906" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Anthropic 推出升级模型 Claude Fable 5.2 与 Claude Mythos 5.2，专为应对最严苛的技术挑战而设计；二者基于同一底层架构，Fable 面向大众并内置网络与生物安全防护，Mythos 则针对特定验证机构开放高级能力。新模型输出速度提升 30% 且使用成本更低，在智能体编程、网络安全、理论物理及衣壳蛋白质预测等尖端基准与实践中表现超越 Opus 5.5。此外，模型在展现出色多智能体协作与复杂工程推理能力的同时，完成了严格的安全与对齐测试，显著增强了防蒸馏攻击等安全性。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-11-10 00:00 | <a href="./2026-11-09.html">Permanent link</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - 2026-11-01</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-11-01.html">Daily Hacker News for 2026-11-01</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on November 01, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://www.parameter.ai/labs/we-found-a-gap-at-openai" target="_blank" rel="noopener noreferrer">Do the math: How we took over ChatGPT accounts</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50314699" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Parameter 安全团队披露了一个严重的 ChatGPT 漏洞（P1），攻击者只需诱导受害者打开一个普通的公开对话分享链接，即可完全接管其账户。该攻击链结合了 MathLive 图表库与 HTML 预览功能，利用缺乏来源校验的 postMessage 机制向主页面注入未沙箱化的 iframe，并借助 YouTube 的 oEmbed JSONP 回调成功绕过 CSP 限制执行任意 JavaScript。注入的代码能够以受害者身份直接调用已认证的后端 API，实现枚举和窃取受害者的私密对话数据；目前 OpenAI 已全面修复该跨域通信漏洞。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf" target="_blank" rel="noopener noreferrer">TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50319143" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Linux 内核的 IPv4 TCP 握手流程中存在高危远程未授权释放后使用（UAF）漏洞（CVE-2026-98432，CVSS 评分为 9.8，波及 4.4 及以上版本），攻击者可通过带有 IPv4 选项的连接请求触发条件竞争，从而导致内核信息泄露、内存破坏乃至远程代码执行。Anthropic 研究员已借助 Claude 针对启用多路径 TCP（MPTCP）监听的服务（如 Go 1.24+ 构建的应用）成功验证了远程获取 root 权限的利用方案，目前上游内核已合并补丁改为使用 RCU 机制延迟释放选项内存。Debian、RHEL 与 Amazon Linux 等发行版已陆续推送修复内核，但 Ubuntu 截至报告时全版本仍未修复，受影响系统应尽快升级重启或配置 nftables 规则丢弃携带 IP 选项的入站 TCP 报文进行临时缓解。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://twitter.com/jiahaoshao1/status/2116475922190922088" target="_blank" rel="noopener noreferrer">Anthropic blocks users for anything touching training larger models</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50319358" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>研究人员邵佳豪（Jiahao Shao）公开指责 Anthropic 及其 CEO Dario Amodei，称自己仅使用 Claude 协助提交任务与分析数据而非模型蒸馏，却仍被判定为“训练竞争对手”。他透露目前只要涉及强化微调（RFT）、监督微调（SFT）或训练更大模型等操作，均会面临账号被封、Opus 5.5 降级为 Opus 5 或会话被直接终止的处罚。他严厉批评 Anthropic 依靠全球数据训练自身模型，却将从事科研自动化的付费用户视作敌人。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.smithsonianmag.com/science-nature/italian-farmer-found-unknown-seeds-attic-with-nothing-lose-planted-them-result-biblical-180989644/" target="_blank" rel="noopener noreferrer">An Italian farmer found some unknown seeds in his attic and planted them</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50320963" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>20世纪90年代初，意大利帕尔马农民克劳迪奥·格罗西（Claudio Grossi）在阁楼发现曾祖父遗留的旧种子并试种，培育出单株长有七个麦穗、高约六英尺的罕见小麦，后经证实为古老的圆锥小麦（Triticum turgidum，被称为“奇迹小麦”）。科学检测显示，该小麦比现代商品小麦麸质更低，但富含磷、铁以及赖氨酸、色氨酸等必需氨基酸，兼具独特的坚果香气与优质风味。奇迹小麦无需化肥和除草剂即可自然生长且高度耐旱，在气候变化加剧极端天气的背景下，为提升作物遗传多样性和保障粮食安全提供了极具韧性的解决方案。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve" target="_blank" rel="noopener noreferrer">Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50320995" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该项目基于轻量级智能体工具 Memdoor，将前沿的多智能体协作方法实现为由 8 个 YAML 文件定义的无代码工作流。系统组织 5 个拥有独立上下文的 Qwen3.8-27B 小型模型分别承担规划、双向构思、求解、评审与修复角色，全程仅通过磁盘文件进行信息交互与验证。在 LiveCodeBench Hard 题目评测中，该工作流以 9.8 的平均表现复现并达成了基准性能，击败了单次调用的 Fable 5，单次运行中位成本仅约 0.39 美元。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.visitnorway.com/plan-your-trip/travel-tips-a-z/norwegian-scenic-routes/worlds-best-toilets/" target="_blank" rel="noopener noreferrer">Restrooms along the Norwegian Scenic Routes</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50324388" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>挪威国家景观路线（Norwegian Scenic Routes）沿线打造了一系列兼具前卫建筑美学与实用功能的公共洗手间，由 Snøhetta 等知名建筑事务所操刀，使其巧妙融入峡湾与自然风光。这些特色公厕涵盖了享有峡湾壮丽全景的 Stegastein、采用波浪造型并承载二战潜艇纪念意义的 Ureddplassen，以及依托雷达站遗址、采用太阳能供电或苔藓伪装的生态建筑。挪威公共道路管理局通过将公路便民设施升华为极具吸引力的旅游地标，展现了现代建筑与自然环境的深度融合。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.reddit.com/r/technology/comments/1xl2pr3/lenovos_encrypted_fingerprint_usb_drive_is_just/" target="_blank" rel="noopener noreferrer">Lenovo&#39;s &#39;encrypted&#39; fingerprint USB is just an unencrypted SD card in a case</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50326099" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>联想宣称的“加密”指纹 USB 驱动器被曝光其内部实为装在特制外壳中的未加密 SD 卡，指纹识别器仅用于接通 USB 连接，卡内数据根本没有任何加密。尽管外包装标榜具备 AES-256 加密，但这纯属“安全剧场”，后续跟进调查还在其他同类“安全”USB 产品中发现了后门和硬编码密钥。社区讨论强烈批评了将不可撤销的指纹生物识别误当作加密密钥的荒谬设计，并建议对敏感数据应采用 LUKS 或 VeraCrypt 等经过验证的系统级加密方案。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.tomshardware.com/tech-industry/big-tech/police-chief-physically-unplugs-flock-cameras-after-the-company-ignores-contract-cancellation-city-takes-matters-into-its-own-hands-amid-privacy-controversies" target="_blank" rel="noopener noreferrer">Police chief unplugs Flock cameras after company ignores contract cancellation</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50326118" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>普利茅斯（Plymouth）市议会一致投票决定终止与监控公司 Flock 的合同并要求其拆除市内摄像头，但该公司在收到通知逾一周后仍置之不理。在持续的隐私争议与对方的漠视下，普利茅斯警察局长埃里克·法登（Eric Fadden）亲自拔掉了全市 Flock 摄像头的电源线，采取直接行动确保这些设备彻底断电停用。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://hackerbooks.org/" target="_blank" rel="noopener noreferrer">Show HN: HackerBooks – HackerTube, but for books mentioned on HN</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50326821" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>HackerBooks 是一个汇总 2007 至 2026 年间 Hacker News 评论中所提及书籍的检索与推荐平台，收录了逾 1.5 万本社区讨论书目并每日更新推荐。该网站支持按历史综合评分、提及频次与推荐人数进行排序，直观展现了技术社区的阅读偏好与知识图谱。排名前列的书籍涵盖《哥德尔、艾舍尔、巴赫》（Gödel, Escher, Bach）、《思考，快与慢》、《代码整洁之道》以及《活出意义来》等广受推崇的经典著作。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.vox.com/politics/508526/patrick-stewart-jean-luc-picard-star-trek-liberalism" target="_blank" rel="noopener noreferrer">Patrick Stewart taught us what good men do with power</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50327650" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>文章探讨了如何通过建立科学的个人财务架构来实现可持续的慈善回馈，强调行善不应局限于财富巅峰时的临时举动，而是一项贯穿各阶段的财务纪律。先锋领航（Vanguard）顾问建议在锁定必要生活与未来保障支出的基础上，逆向测算实际“捐赠能力”，并将公益捐助列为常规预算以消除决策犹豫。此外，稳固的个人财务可充当投身社会创新的安全启动跑道，而采取直接捐赠增值股票等资产配置方式，还能在免除资本利得税的同时最大化支持公益事业。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-11-02 00:00 | <a href="./2026-11-01.html">Permanent link</a> | <a href="https://www.daemonology.net/hn-daily/2026-11-01.html" target="_blank" rel="noopener noreferrer">原链接</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
