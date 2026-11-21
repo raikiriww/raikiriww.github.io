@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - 2026-11-13</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-11-13.html">Daily Hacker News for 2026-11-13</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on November 13, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://github.com/hyperionaidev/smolmaxxing/" target="_blank" rel="noopener noreferrer">I&#39;m making LLMs work on small and old devices</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50468888" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>开源项目 smolmaxxing 致力于在电视盒子、老旧平板和中低端手机等算力受限设备上运行超出其硬件限制的大语言模型。该方案基于 llama.cpp 进行定制，通过引入针对芯片特性的 1-bit 与 2-bit 定制算子、裁剪生僻词表以压缩内存，并采用闪存流式分页与预取技术按需加载 MoE 专家权重。实测显示，该项目成功在可用内存仅约 1GB 的小米电视盒子与 iPad Air（2013）上运行了 8B 和 16B 模型，并在可用内存约 3GB 的手机上实现了最高 80B 模型的端侧推理。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://github.com/simpsoka/zigzag" target="_blank" rel="noopener noreferrer">Show HN: My $300 embroidery machine needed a subscription, so I built my own app</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50470488" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>ZigZag 是一款基于 Rust 开发的免费开源刺绣设计软件，旨在替代刺绣设备昂贵的订阅制软件，支持 Mac、Windows 和 Linux。它可将 SVG 矢量图转化为榻榻米填针、缎面针等多种刺绣针迹，具备路径规划与剪线优化功能，支持导出 PES、DST 等多种格式或通过蓝牙直连 Brother Skitch 刺绣机。此外，该工具内置了 MCP（模型上下文协议）支持，允许 AI Agent 协同绘制和编辑图案，并提供类似 Illustrator 的可视化操作界面与 CLI 工具。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://status.cloud.microsoft/" target="_blank" rel="noopener noreferrer">Service degradation on Microsoft 365</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50471731" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该页面为微软官方服务健康状态监控门户，发布了 Microsoft 365 发生服务降级（Service degradation）的相关状态。页面汇总了商业与企业版 Microsoft 365、Azure 及 Power Platform 管理中心等关键服务的运行状况。用户可通过页面指引前往 Azure Service Health 门户获取更详尽的健康信息，亦可查阅面向个人与家庭消费级产品的服务状态与社区资源。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/" target="_blank" rel="noopener noreferrer">Rust 1.100</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50472038" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Rust 1.100.0 稳定版正式发布，历经十年研发最终全面稳定了代表发散计算的 never 类型（<code>!</code>）并将 Infallible 设为其别名，同时稳定了核心 Allocator API。新版本还引入了在退出路径自动执行闭包的 core::mem::DropGuard，以及用于显式构造零大小类型的 std::mem::conjure_zst。此外，Cargo 新增了未使用依赖检查告警、重构构建目录以减少缓存冲突，并引入 min-publish-age 依赖冷却机制以防御供应链攻击。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/" target="_blank" rel="noopener noreferrer">Gemini 4 Hydrogen and Orchestrator</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50472260" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Google Antigravity 正式推出轻量高效的 Gemini 4 Hydrogen 模型及全新的 Orchestrator 动态协同模式，可在单个任务流程中智能调度 Carbon 与 Hydrogen。该模式由高推理能力的 Carbon 负责方案规划与复杂故障修复，并交由 Hydrogen 快速执行编码与测试，在达到接近 Carbon 成功率的同时平均节省 24% 的配额并提速 19%。此外，开发者可通过 Antigravity SDK 自定义多模型流水线，或将支持四档推理深度的 Hydrogen 作为独立模型使用，相关功能现已面向付费订阅用户及企业版开放。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/" target="_blank" rel="noopener noreferrer">Reverse engineering my Coway air purifier to ditch the cloud</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50474959" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者为了摆脱频繁故障且容易被封号的 Coway 官方云服务，决定对 Coway Airmega IconS 空气净化器进行逆向工程以实现本地控制。借助大语言模型协助配置的树莓派 AP 与 nftables 转发规则，作者搭建了透明中间人代理环境以监听净化器的网络通信。流量分析发现该设备未预装根证书，而是通过未加密的明文 HTTP 动态下载亚马逊根 CA 证书；作者利用 mitmproxy 插件将其替换为自建 CA 证书，成功解密并捕获了设备的后续全部通信。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.wired.com/story/nvidia-employees-petition-for-jensen-huangs-return/" target="_blank" rel="noopener noreferrer">Nvidia employees petition to bring back Jensen Huang</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50477231" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>黄仁勋因承认婚外情及面临多起涉及下属的不当关系指控而突然辞任英伟达CEO，导致公司市值大幅蒸发并引发监管调查。然而，英伟达内部员工在公司意见箱中发起请愿并留下了1600余条评论，压倒性地呼吁董事会倾听员工心声并让其复职。众多员工对黄仁勋在调查刚展开便离职感到震惊与不解，坚信其卓越的领导力对公司无可替代，并担忧失去创始人掌舵将重创英伟达的未来发展。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://status.claude.com/incidents/nn11wk485zfn" target="_blank" rel="noopener noreferrer">Elevated errors on claude.ai, Claude Code, and platform.claude.com</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50481187" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Anthropic 官方状态页通报了一起涉及 claude.ai、Claude Console、Claude Code 及 Claude Cowork 等服务的故障事件。该问题最初表现为用户在 claude.ai 和 Claude Code 上的身份认证异常，团队随后展开调查并部署了修复补丁。经过持续监控，官方确认受影响的服务已恢复稳定，该故障已被彻底解决。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://twitter.com/LibreOffice/status/2121205272479998268" target="_blank" rel="noopener noreferrer">LibreOffice actually works 365 days a year</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50486482" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该内容源自社交平台 X 上 LibreOffice 官方账号发布的动态，调侃称 LibreOffice 全年 365 天均能稳定工作，借由字面与双关暗指其作为办公套件的可用性。页面抓取信息同时呈现了其官方简介，强调 LibreOffice 是一款免费、注重隐私且由全球开源社区维护的开源办公套件，不仅是 OpenOffice 的继任者，也在去中心化社交平台 Fosstodon 建立了官方阵地。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247" target="_blank" rel="noopener noreferrer">FAA issues national ground stop</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50489641" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>美国联邦航空管理局（FAA）周五因“安全原因”对全美所有离港航班发布了罕见的全国地面停飞令，导致数千架次航班延误及数十万旅客滞留，多座主要机场容量逼近极限。官方初步调查指出，此次停飞由高空控制中心的电信网络故障引发，目前未发现网络攻击等恶意破坏迹象，亦无证据表明与前一日的微软宕机事件存在关联。尽管在空航班依托备用通信机制仍可安全运转与降落，但地面飞机无法起飞引发的跑道与停机位瘫痪，已使事件从应急安全管控迅速升级为全美严峻的航空物流危机。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-11-14 00:00 | <a href="./2026-11-13.html">Permanent link</a> | <a href="https://www.daemonology.net/hn-daily/2026-11-13.html" target="_blank" rel="noopener noreferrer">原链接</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

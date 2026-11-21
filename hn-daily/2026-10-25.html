@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - 2026-10-25</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-10-25.html">Daily Hacker News for 2026-10-25</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on October 25, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://broccoli2shell.com/" target="_blank" rel="noopener noreferrer">Broccoli2Shell: Brotli decoder RCE in Node.js, Python and more</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50219177" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Google 的 Brotli 参考 C 语言解码器被曝存在严重的越界写入漏洞（CVE-2026-111497，被称为 Broccoli2Shell 或 Node2Shell），影响 1.0.3 至 1.2.0 版本，波及 Node.js、Python 绑定库（Brotli/brotlicffi）以及众多直接打包或链接该 C 库的各类应用。该缺陷源于解码器未正确校验块切换错误，攻击者可通过构造畸形 Brotli 数据流诱使解码器持续向内部 8 字节缓冲区追加数据并发生越界写入，进而引发内存泄漏或远程代码执行（RCE）。任何在 HTTP 客户端获取外部响应或服务端解析请求体时自动解压恶意 Brotli 数据的场景均面临被攻击风险，安全团队已在 Node.js 环境下成功验证利用并已有公开 PoC。目前官方及生态均已发布修复版本（如 Node.js 22.23.4/24.22.1/26.12.1 和 Python Brotli 1.2.1+），受影响方应尽快升级运行时与依赖并重新部署。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.southampton.ac.uk/~doug/quantum_physics/index.html" target="_blank" rel="noopener noreferrer">I don&#39;t understand quantum physics (2018)</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50219666" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>本文为物理学者道格拉斯·罗斯（Douglas Ross）编写的量子物理导览，系统梳理了从经典物理走向量子力学的发展脉络与基础概念。全文目录涵盖波粒二象性、海森堡不确定性原理、波函数及其塌缩、量子叠加态与量子隧穿等核心物理现象，并深入解析了隐变量与代表性思想实验。此外，作者还探讨了不同量子诠释、量子世界的微观尺度成因、概率决定论以及量子力学的正确性与完备性问题，并附有相关数学公式与术语参考。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://aardappel.github.io/goose/" target="_blank" rel="noopener noreferrer">The Goose Programming Language</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50224100" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Goose 是一种兼具内存安全特性的系统级编程语言，完全摒弃了堆分配器、垃圾回收（GC）以及显式生命周期注解。该语言采用编译器静态管理的数据栈与碰撞指针模型，动态数据均内联紧凑存储并在作用域结束时统一释放，且数组扩容不会导致已有引用失效。它还提供紧凑相对引用、变长代数数据类型以及零开销就地构建机制，可直接编译为单个 C 文件，在基准测试中展现出优于 C++ 和 Rust 的运行速度与内存利用效率。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://danluu.com/ambitious/" target="_blank" rel="noopener noreferrer">We should be more ambitious with the software we build</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50225695" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>作者结合 Michael Malis 开发 pgrust 以及自身在短时间内构建专用正则引擎、加速 Rust 编译等实践，指出随着 AI 辅助能力的跨越式提升，开发者的成本模型已发生转变，应当对构建软件抱有更大的雄心。尽管当下大量低质 AI 代码引发了普遍怀疑，但只要坚持严谨的测试与基准评估，以往耗时过长的底层工具重写与系统自研如今不仅完全可行，甚至能反哺上游成熟系统并发现潜在缺陷。虽然模型仍无法在没有人工验证的情况下做到完全开箱即用，但这种门槛的骤降使得开发者能够更高效地攻坚复杂领域并探索以往难以企及的大型项目。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class" target="_blank" rel="noopener noreferrer">America has lost 200k of jobs in media, film and the arts. How much is AI?</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50226419" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>过去四年间，美国创意与媒体行业在没有宏观经济衰退的情况下逆势削减了逾20万个工作岗位，创下可比肩2001与2008年经济危机的就业低谷，其中影视与音乐制作领域流失过半。尽管好莱坞重组与版权隐忧等因素使AI的直接影响难以精确量化，但数字艺术全行业裁员而线下实体娱乐稳步增长的反差，揭示出生成式AI在内容生成与流媒体竞争中的实质冲击。文章对比互联网对传统出版与音乐商业模式的瓦解，指出影视和出版业面临版权稀释与收益萎缩的严峻挑战，但新技术也可能催生类似短视频带动图书逆势增长等不可预测的溢出效应。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras" target="_blank" rel="noopener noreferrer">Cerebras Deploys Trillion-Parameter AI Models</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50227356" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Cerebras 阐述了在 WSE-3T 晶圆级芯片上部署万亿参数前沿模型的技术方案，以约 3 万亿参数的开源模型 Kimi K3 为例，展示了如何实现每秒 1000 至 2000+ token 的高速推理。系统将 4-bit 权重量化后的模型按层拆分并映射至 59 块具备 44 GB 片上 SRAM 的晶圆上，其中稠密层独占单晶圆并预留空间存放 KV 缓存，线性注意力层则两层合用一晶圆。各晶圆间通过以太网 RDMA 组建流水线且仅传递激活值，使模型权重常驻片上，并通过流水线满载多阶段并发处理微批次以兼顾超低延迟与高吞吐。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.panamericandispatch.org/p/meta-ignores-brazilian-court-order" target="_blank" rel="noopener noreferrer">Meta Ignores Brazilian Court Order to End Bolsonaro Favoritism</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50229587" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>巴西民间组织 Sleeping Giants Brasil 与 CTRL+Z 向高等选举法院提交新证据，指控 Meta 旗下的 Instagram 与 WhatsApp 在动图检索、标签排序及 Meta AI 回答中存在对参议员弗拉维奥·博索纳罗的偏袒，并将现任总统卢拉持续关联至负面贬损内容。主审法官贝尔利泽随后发出指令，限期 Meta 在24小时内整改违规并解释排名与 AI 运行机制，同时警告若持续违规每日罚金将从50万雷亚尔提高至100万雷亚尔。除诉讼施压外，维权组织还在 Meta 圣保罗总部举行抗议，要求其在大选期间落实候选人平等待遇并公开平台算法透明度标准。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://lynchlab.net/llm-skin-cancer" target="_blank" rel="noopener noreferrer">A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50233779" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>皮肤科医生 Magnus Lynch 使用 200 例经活检确诊的皮损图像测试发现，经微调的 10 年前经典卷积神经网络 Inception v3 诊断准确率达 62%，显著优于 GPT-6 Astra 和 Claude Fable 5.1 等前沿大语言模型（二者准确率均约 42%）。该 CNN 在准确识别黑色素瘤以及鉴别痣、脂溢性角化病等良性病变方面优势明显，而前沿大模型则出现严重的偏向性误诊，且在模拟患者咨询时对几乎所有病例都过度建议就医。这一实验表明，在专业医学影像诊断任务中，基于领域数据微调的小型专用架构依然大幅胜过未经专业适配的顶级通用多模态大模型。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://talkweb.eu/openweb/4558/" target="_blank" rel="noopener noreferrer">I refuse to accept a censored Internet. Join Me at FOSDEM 27</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50233929" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Bogomil Shopov 宣布将在 FOSDEM 设立“数字异见者”（Digital Dissident）开发者分会场并开启演讲征稿。该会场针对多国日益严苛的网络审查与监控，核心聚焦受威胁群体从突破网络封锁、抗元数据泄露通信到安全爆料与设备加固的端到端防御链条。会议旨在打破反审查与隐私工具零散分割的现状，推动开发者跨项目分享威胁模型并加强工具链之间的互操作性协作。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://theintercept.com/2026/10/01/oregon-police-misconduct-public-records-cost-fee/" target="_blank" rel="noopener noreferrer">Oregon Police Are Charging a Local News Outlet $2.5M for Records About One Cop</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50234232" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>俄勒冈州尤金市当地媒体 Double Sided Media 依法申请调阅涉嫌暴力执法的警官 Justin Peckels 的公共记录，却遭警方开出近 250 万美元的天价费用清单。警方辩称需耗费逾 4.4 万个工时检索全市所有雇员记录，被批故意将检索范围扩大至全市政府以设置高额经济壁垒，借此恐吓记者放弃调查。报道指出该局一边斥巨资采购 AI 监控技术，一边却在信息公开中故意制造技术障碍，反映出地方执法部门滥用收费机制逃避监督、庇护警察不当行为的普遍问题。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-10-26 00:00 | <a href="./2026-10-25.html">Permanent link</a> | <a href="https://www.daemonology.net/hn-daily/2026-10-25.html" target="_blank" rel="noopener noreferrer">原链接</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

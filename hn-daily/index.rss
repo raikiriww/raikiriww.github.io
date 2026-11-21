@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Hacker News Daily</title>
+    <link>https://blog.raikiriww.xyz/hn-daily/</link>
+    <description>Daily top stories from Hacker News with Chinese summaries</description>
+    <language>zh-cn</language>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+    <item>
+      <title>Daily Hacker News for 2026-11-20</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-11-20.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-11-20.html</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on November 20, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://github.com/openjdk/jdk/pull/32781">Someone reported java4shell bug in September 2026</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50558906">(comments)</a></span>
+<div class="summary"><p>该条目关联 OpenJDK 的 Pull Request #32781（编号 JDK-8392044），主要修复 x86_64 架构下 AVX-512 Base64 解码器在处理带填充的短尾部残留字节时覆盖输出缓冲区的缺陷。相关逻辑在掩码向量序列处理 1 至 63 字节剩余数据时存在隐患，可导致输出缓冲区越界覆写。该修复提案于 2026 年 9 月提交，并在同年 11 月被安全相关代码作为公开修复方案交叉引用并推进处理。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.anthropic.com/research/claude-black-hole-physics">Claude solves two open problems in the physics of black holes</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50563148">(comments)</a></span>
+<div class="summary"><p>Anthropic 发布研究表明，Claude 成功解决了理论物理中关于黑洞与量子引力的两个长期未决难题。针对 Hawking-Page 相变问题，Claude 完成了二十多年前提出但极其繁琐的数学计算，证实即便在时空失去确定几何形状的量子微观极端状态下，黑洞形成的突变相变依然存在。针对量子引力的自举（bootstrapping）研究，Claude 敏锐捕捉到此前被忽略的数值规律，精确推导并证明了简化模型中最轻黑洞质量上限的最优极限制且无法进一步降低。这两项成果由多个 Claude 智能体自主协作推导并经过 Lean 形式化数学验证，展现了 AI 攻克理论物理核心前沿问题的能力。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://ecohustler.com/article/one-corporation-to-pollute-them-all/">Carnival Cruises emits ten times more sulphur oxide than all of Europe&#39;s cars (2019)</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50572116">(comments)</a></span>
+<div class="summary"><p>可持续交通组织 Transport &amp; Environment（T&amp;E）的研究报告显示，全球最大豪华邮轮运营商嘉年华集团（Carnival Corporation）2017年在欧洲沿岸排放的硫氧化物（SOx）几乎是全欧洲2.6亿辆汽车总和的10倍，第二大运营商皇家加勒比亦达汽车总量的4倍。西班牙、意大利及巴塞罗那、威尼斯等沿海旅游重镇受害最深，主要源于邮轮燃烧高硫劣质燃料且海运监管宽松，同时邮轮排放的氮氧化物（NOx）也对多国港口城市造成严重污染。报告呼吁欧洲尽快建立零排放港口标准并将排放控制区（ECA）扩展至所有海域，通过强制立法推动邮轮采用岸电、电池和氢能等成熟清洁技术。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://signal.org/blog/protecting-your-privacy/">Signal Is Serious About Protecting Your Privacy</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50572348">(comments)</a></span>
+<div class="summary"><p>针对苹果、谷歌和微软在操作系统中深度集成 AI 智能体扫描并捕获屏幕数据的问题，Signal 认为此类系统级 AI 严重破坏了其端到端加密与独立隐私保证。继在 Windows 上屏蔽 Recall 截图后，Signal 正通过在 iOS 和部分 Android 系统中拦截截屏及检测屏幕读取来阻止 AI 助手获取聊天内容，但该防护仍属局部补救且在缺乏接口支持的 macOS 上难以落地。为此，Signal 呼吁各大操作系统厂商提供详尽的技术规范，并为开发者开放简单统一的退出（opt-out）机制，以从根本上杜绝 AI 智能体对应用数据的非授权访问。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://kottke.org/17/06/if-you-cant-explain-something-in-simple-terms-you-dont-understand-it">If you can&#39;t explain something in simple terms, you don&#39;t understand it (2017)</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50572355">(comments)</a></span>
+<div class="summary"><p>物理学家理查德·费曼（Richard Feynman）秉持“若无法用浅显语言解释某事物，就说明并未真正理解它”的理念，认为无法将深奥理论简化至大一新生水平即代表人类对其认知尚有欠缺。苹果公司亦采用类似准则，要求工程师用通俗直白的语言阐明复杂技术，以此检验其是否彻底掌握。费曼善于以直观方式解释科学，同时也勇于直面认知边界并坦承未知，其黑板遗言“凡我不能创造的，我就未能理解”深刻印证了他对彻底理解概念的极致追求。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://architectlabs.com/blog/frostbite">Frostbite: A new CPU architecture discovered, designed and verified by AI</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50572503">(comments)</a></span>
+<div class="summary"><p>Architect Labs 推出了由 AI 系统端到端自主发现、设计与验证的通用 CPU 架构 Frostbite，实现了从架构探索、RTL 到最终 GDS 的全流程自主迭代。该架构采用全新指令集并基于交互网（interaction nets）理论，利用局部重写与无共享可变状态的线性特征，消除了传统复杂缓存一致性协议的功耗和面积开销并天然释放并行计算能力。在包含 15 项留出评估集的 25 项工作负载测试中，Frostbite 相比现代双发射顺序超标量 CPU 核心取得了 4.59 倍的能效比（性能功耗比）提升。开发过程中引入自研形式化规约语言 ASL 紧密协同系统模型与硬件实现，并借助 Lean 定理证明与自主物理功耗对齐确保了多智能体跨层次协同优化的严谨性。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://alpo.ge/remark.pdf">Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf]</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50574968">(comments)</a></span>
+<div class="summary"><p>数学家 Levent Alpöge 发文宣布，他与 AI 模型 Claude 合作完成了黎曼猜想（RH）及广义黎曼猜想（GRH）的证明，并已完成全套论证的 Lean 形式化验证。该证明借鉴了解决函数域黎曼猜想的斯捷潘诺夫（Stepanov）思路，结合 Claude 建议的迭代 theta 提升、自守形式与岩泽理论等多领域数论工具，在整数情形下成功构造出关键重数界。由于机器论证展开后长达 25 万余页，作者现阶段仅公开了 Lean 形式化代码包与推导时间线，后续计划进一步精简并整理为人类可读的正式论文。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://poolp.org/posts/2026-11-20/ill-never-buy-framework-hardware-again/">I&#39;ll never buy Framework hardware again</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50576855">(comments)</a></span>
+<div class="summary"><p>作者发表文章表示不再购买 Framework 硬件，并在该文引发 Hacker News 广泛关注后做出简要说明。作者强调其目的并非恶意攻击品牌，而是敦促官方尽快修复和改善售后支持，切实向付费用户交付能够正常工作的笔记本电脑。作者同时呼吁停止不必要的舆论炒作，希望 Framework 正视并解决产品支持层面的实际问题。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/">Hurried Announcement: Alessandro Masullo GRH</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50579568">(comments)</a></span>
+<div class="summary"><p>数学家 Ravi Vakil 紧急宣布 Alessandro Masullo 提出了广义黎曼猜想（GRH）的拟议证明，并强调该成果完全由人类独立完成且未使用任何 AI。知名数学家 Brian Conrad 已对该证明进行了数月的深入核查与反馈，目前进展评估良好。鉴于当前情况，他们决定提前公开该草案，希望学界尽快协助进行同行核验、形式化验证并填补可能存在的微小漏洞。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://thinkingmachines.ai/news/inkling-2-mini/">Inkling 2 Mini</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50581260">(comments)</a></span>
+<div class="summary"><p>Thinking Machines Lab 推出轻量开源权重模型 Inkling 2 Mini，总参数量为 26.4B（激活 3.4B），内存占用约 20GB，可完全离线在消费级笔记本电脑上运行。该模型采用循环 Transformer（looped transformer）架构，每个 token 会重复执行 3 次中间层计算，从而在生成更少 token 的同时延长内在推理时间。评测显示其在 DeepSWE v1.1 等 100B 参数以下开源模型的智能体编程任务及每焦耳能效表现上处于领先，并通过高效结合搜索与工具弥补了小参数模型的知识储备局限。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-11-20.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+    <item>
+      <title>Daily Hacker News for 2026-11-19</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-11-19.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-11-19.html</guid>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on November 19, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://blog.harrison.page/garage-door-spam/">Garage Door Spam</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50519231">(comments)</a></span>
+<div class="summary"><p>作者因不满车库门开启器厂商 Chamberlain 在 myQ 应用中充斥垃圾广告并切断第三方 API，改用运行开源固件的本地控制板 ratgdo32 进行替代。该方案接入本地局域网并支持 Apple HomeKit，实现了无云端依赖的本地语音控制与状态管理。作者还利用设备的 JSON 接口结合 Slack 与 Tailscale，自制了夜间未关门定时提醒及远程健康监控，彻底摆脱了官方云服务的束缚与广告干扰。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://europeanbusinessmagazine.com/ai-agents-better-questions-kpmg/">AI agents ask better questions than KPMG accountants in audit trial</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50547777">(comments)</a></span>
+<div class="summary"><p>KPMG 英国在针对一家富时 250 指数上市公司的审计试验中，部署了 100 多个 AI 智能体参与全流程审查。试验表明，AI 智能体在部分财务问题的调查深度与提问质量上甚至超越了人类审计团队，展现出协同分析与处理复杂任务的潜力。尽管该技术可能颠覆传统四大会计师事务所依赖初级人员的运营模式，但由于存在监管规则匹配失误及数据质量等局限，人类的专业监督与最终判断仍是不可替代的核心防线。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://microsoft.ai/news/microsoft-ignite-2026/">Seven new models at scalable price-performance</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50548021">(comments)</a></span>
+<div class="summary"><p>在微软 Ignite 2026 大会上，Microsoft AI 发布了七款主打高性价比的全新模型，旨在以极低成本支持企业 24/7 全天候运行各类工程与安全智能体。该阵容覆盖网络安全防御模型 MAI Cyber 2 Flash、企业日常编码模型 MAI Code 2 系列、图像编辑模型 MAI Image 2.7、低延迟实时语音模型 MAI Realtime 1，以及决策路由模型 Decision 1.1 等。此外，微软第二代 AI 加速芯片 Maia 200 已投产运行，并同步推出了支持企业使用私有数据定制并在自身 Azure 环境中安全掌控模型的 MAI Licensed Weights 授权方案。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/">Gemini 4 Neon</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50552424">(comments)</a></span>
+<div class="summary"><p>Google 正式推出 Gemini 4 Neon 模型，主打前沿级智能与快速端到端执行能力，专为复杂软件工程、分析研究及网络安全防御等生产级工作流打造。该模型提供 100 万 token 上下文窗口，定价为每百万输入 token 3 美元、输出 15 美元，在 Artificial Analysis 编程智能体等多项基准测试中位列前茅，且任务执行成本显著低于同类大模型。此外，Neon 提供四档可调思考等级以精确控制推理深度与算力消耗，兼具极低的作弊造假率与出色的防间接提示注入安全防护，现已在 Google AI Studio、Google Antigravity 与 Gemini 应用中向开发者及订阅用户开放。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://violetpixel.com/blog/2026-11-17-we-need-smart-people-who-give-a-shit/">We need smart people who give a shit</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50554045">(comments)</a></span>
+<div class="summary"><p>文章指出，现代复杂而脆弱的基础设施（如银行网络与航空系统）之所以能维持运转，全赖一批既精通底层细节又极具责任心的核心专业人才在兜底。然而，管理层为了追求廉价与高产，正试图用缺乏真实理解能力和责任感的生成式 AI 取代这些专家，甚至让在职人员退化为大模型看护者，彻底剥夺了技术人员的系统掌控力与归属感。作者警告，近期频发的重大系统中断正是此类关键人员流失的恶果，盲目迷信 AI 输出必将让社会和资本付出惨痛的代代价。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://element.io/blog/how-the-european-commission-rolled-out-matrix-to-more-than-40-000-staff/">How the European Commission rolled out Matrix to more than 40k staff</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50558533">(comments)</a></span>
+<div class="summary"><p>该网页汇总了 2026 年 Matrix 大会公共部门分论坛的系列演讲与演示视频，重点探讨基于 Matrix 开放标准实现安全通信与数字主权。其中核心内容涵盖欧盟委员会（European Commission）题为“主权与互操作性”的实践分享，展示其向超四万名员工推广 Matrix 的落地历程，并包含多国公共机构参与的跨域联合研讨。此外，论坛还收录了联合国国际计算中心（UNICC）、荷兰国防部主权通讯项目及德国公共与医疗领域的规模化应用案例。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://macanorak.com/uk-government-forced-to-admit-it-issued-apple-a-secret-encryption-order/">UK government forced to admit it issued Apple a secret encryption order</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50562113">(comments)</a></span>
+<div class="summary"><p>英国调查权力法庭裁定，英国政府必须公开承认曾依据《调查权力法案》向苹果公司签发秘密的“技术能力通知”（TCN），推翻了政府长期坚持的“不予证实或否认”立场。此前英国政府曾秘密要求苹果提供 iCloud 加密数据后门，导致苹果暂停向英国新用户开放高级数据保护（ADP）功能，并引发人权组织与苹果的法律诉讼。该裁决判定披露该指令的存在不会损害国家安全，打破了此类监管命令的绝对保密壁垒，而关于该加密命令本身合法性的实质性审理预计将于 2027 年展开。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://ounapuu.ee/posts/2026/11/19/unsafeguards/">Fuck Your AI Safeguards</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50562262">(comments)</a></span>
+<div class="summary"><p>作者在使用 Claude Code 审查并修复其产品安全隐患时，因 Anthropic 严苛的“AI 安全防护”（Safeguards）及繁琐苛刻的豁免审查机制遭到阻断。他指出黑客等恶意人员完全可以利用无限制的开源模型发动攻击，过度且僵化的安全审查反而阻碍了合法工程师评估利用代码、修复漏洞并保护自身服务。最终作者转用欧洲托管的开源权重模型才得以验证并修复该安全缺陷，并严厉批评头部 AI 实验室以安全为名限制正常防御需求，甚至借此为商业利益构筑监管护城河。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/">Anthropic’s Nasdaq debut</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50562754">(comments)</a></span>
+<div class="summary"><p>Anthropic 以每股 83 美元在纳斯达克挂牌上市，募资逾 810 亿美元创下史上最大规模 IPO 纪录，开盘全稀释估值一度突破 2 万亿美元。作为首家上市的前沿人工智能大模型企业，该公司的公开亮相成为华尔街检验生成式 AI 商业前景与投资热情的关键试金石。尽管首日收盘上涨约 17% 至 97.17 美元，但股价冲高回落也反映出市场在狂热背后，对庞大算力基础设施支出与长期盈利兑现能力的审慎权衡。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.newscientist.com/article/2528235-pancreatic-cancer-halted-by-virus-injection-in-three-patients/">Pancreatic cancer halted by virus injection in three patients</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50563066">(comments)</a></span>
+<div class="summary"><p>美国一项初步安全性临床试验显示，研究人员通过内窥镜超声引导向三名胰腺癌患者肿瘤内直接注射低剂量工程化腺病毒，成功遏制了肿瘤生长，受试者病情稳定最长已达一年。该腺病毒被设计为依赖肿瘤细胞中高表达的环氧合酶-2（COX-2）进行特异性复制与裂解杀伤，并有望通过释放肿瘤抗原激活全身免疫反应。研发团队计划在后续试验中提高给药剂量并尝试与免疫疗法联合，但医学专家也指出当前样本量较小且缺乏对照组，其确切疗效仍需更严谨的大规模后期临床验证。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-11-19.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+    <item>
+      <title>Daily Hacker News for 2026-11-18</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-11-18.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-11-18.html</guid>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on November 18, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://www.ft.com/content/dbde7a30-548c-4f9d-a4be-7898a0c24dcf">Nvidia stopped disclosing Singapore sales as revenues hit $104B</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50534631">(comments)</a></span>
+<div class="summary"><p>据《金融时报》（Financial Times）报道，在总营收突破 1040 亿美元且通过新加坡记账的收入同比激增 70% 之际，英伟达（Nvidia）调整了财务报告方式，停止单独披露新加坡地区的销售数据。同时，因该网页设有付费墙，提取到的正文片段主要为各类数字订阅套餐及会员促销信息，未能获取更多报道细节。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://phrack.org/issues/73/introduction_md">Phrack 73</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50535992">(comments)</a></span>
+<div class="summary"><p>第 73 期黑客期刊《Phrack》正式发布，由新编辑团队策划且规模进一步扩大，收录了 23 篇核心研究论文与 8 篇短文。本期技术成果涵盖 vDSO 容器逃逸、Chromium 沙箱逃逸、UAF 漏洞利用、Linux 内核研究、机器学习后门机制等多领域，并刊发了对知名逆向专家 Halvar Flake 的专访。面对已能自主逆向二进制并挖掘漏洞的 AI 智能体发展浪潮，编辑部强调人类经验沉淀的创造力、直觉以及黑客共同体的探索分享精神在自动化时代更具不可替代的核心价值。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://calif.io/java4shell/">Java4Shell: RCE in OpenJDK when processing Base64</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50538240">(comments)</a></span>
+<div class="summary"><p>研究人员披露了 OpenJDK HotSpot 中的严重漏洞“Java4Shell”，该漏洞源于 C2 JIT 编译器的 x86-64 Base64 解码 intrinsic 在处理填充字符（&#39;=&#39;）时出现掩码计算下溢，从而引发堆内存越界写入。尽管漏洞初始仅能写入固定字节，但攻击者利用远程堆风水（Heap Feng Shui）技术绕过 TLAB 与 G1 限制，通过覆写相邻缓冲区长度构建出受控读写原语。该利用链不仅可导致堆敏感数据泄漏（JavaBleed），还能进一步修改 JVM 内部钩子与代码缓存，最终实现远程代码执行（RCE）。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://blog.cloudflare.com/quad9-withdrawal-from-france/">Quad9&#39;s withdrawal from France: A canary in the coal mine</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50538994">(comments)</a></span>
+<div class="summary"><p>瑞士非营利机构 Quad9 因拒绝执行法国法院要求其屏蔽侵权域名的判决并面临高额罚款，决定停止在法国提供免费公共 DNS 解析服务并退出该国市场。Cloudflare 发文指出，强制公共 DNS 阻断不仅极易被绕过且无法消除盗版源头，还会导致全域名误伤，甚至让预设该服务的医院、学校及政企机构面临突发断网风险。文章强调，将版权维权压力转嫁至公共基础设施不仅会迫使合规解析器退出并损害用户隐私与网络开放性，版权方更应聚焦于要求内容托管主机商下架侵权资源。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://revscope.co/blog/search-seo-geo-2026/">Google&#39;s AI answers reducing search traffic by 40%</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50540178">(comments)</a></span>
+<div class="summary"><p>一项针对美国桌面用户的随机对照实验显示，谷歌搜索中的 AI Overviews（AI 摘要）使外部网站点击量减少约 40%，并导致零点击搜索比例从 54% 升至 73%。监测数据显示，AI 摘要在关键词中的覆盖比例已从两年前的约 6% 激增至 61% 以上，致使桌面端排名第一的自然搜索结果点击率缩水过半。尽管业界尝试通过生成式引擎优化（GEO）争取 AI 答案引用，但当前 AI 回流流量极低且被引用页面与传统排名的关联度不断下降，尚无法弥补网站所损失的搜索流量。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://consumerrights.wiki/w/ID.me_terms_required_for_IRS_sign-in">ID.me terms required for IRS sign-in</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50540437">(comments)</a></span>
+<div class="summary"><p>纳税人通过私营服务商 ID.me 登录美国国税局（IRS）等系统时须遵循其用户条款，其中规定争议须经中立仲裁解决且放弃陪审团与集体诉讼，用户仅在接受条款后 30 天内享有选择退出的权利。尽管其隐私政策声明未经同意不会将政府验证信息用于其导购平台 ID.me Shop 的营销，但 ID.me 仍保留了出于营销使用信息、在并购交易中转移数据以及在注销后留存验证记录最长 3 年的权限。针对财政部与 IRS 在已有联邦政府自建平台 Login.gov 的情况下仍继续推广并依赖 ID.me 的做法，已有参议员展开质询并引发关于用户数据安全与隐私权的担忧。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://nicolasbouliane.com/blog/death-by-ai">AI is killing All About Berlin</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50542705">(comments)</a></span>
+<div class="summary"><p>柏林生活指南网站 All About Berlin 在运营 8 年后，因 Google AI Overviews 抓取其原创内容生成摘要并前置展示广告，导致网站搜索流量暴跌 70% 至 75%。作者指出流量骤减使其难以仅靠四分之一的受众维持生计，不仅被迫停止撰写新指南并筹划转行，也丧失了长年建立的社区声誉与读者联结。许多独立站长面临相似困境并选择放弃更新或设立付费墙，作者担忧 Google 进一步用内置广告的 AI 问答全面取代搜索结果将彻底摧毁独立网站生态。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://techstackups.com/articles/quad9-leaves-france-dns-blocking/">DNS resolvers are the wrong place to fight piracy</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50545958">(comments)</a></span>
+<div class="summary"><p>瑞士非营利性公共 DNS 解析器 Quad9 因拒绝执行法国法院针对 beIN Sports 盗版流媒体域名的封锁令并面临持续罚款，宣布将于 2026 年 11 月 24 日起停止向法国用户提供解析服务。该争议根源在于法国《体育法典》将动态及自动化反盗版封锁义务扩展至 DNS 解析器，使不记录用户日志的 Quad9 面临无法有效执行地域封锁、若全球封锁则侵犯他国主权且难以承担海量诉讼成本的合规困境。文章指出 DNS 仅充当网络指针且极易被绕过，强制公共解析器审查内容不仅无法根除侵权，反而会对互联网底层基础设施造成严重的误伤与附带损害。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities">Unauthenticated remote code execution in Nginx</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50547374">(comments)</a></span>
+<div class="summary"><p>Wiz Research 等多家安全研究团队独立披露了 NGINX 中两个严重的未授权远程代码执行漏洞（CVE-2026-123633 和 CVE-2026-123007），CVSS 4.0 评分均高达 9.2。两处内存安全缺陷均源于 HTTP/2 处理机制，分别涉及连接释放后使用（UAF）以及潜伏代码中超过十年的发送窗口整数下溢，攻击者无需认证即可绕过 ASLR 执行任意代码，甚至在纯静态文件服务场景下也可被利用。F5 已发布修复版本，官方建议受影响用户尽快升级至最新稳定版或主线版，若无法立即更新则应临时关闭 HTTP/2 功能以降低风险。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.inside-db.com/">Inside Deutsche Bank</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50547620">(comments)</a></span>
+<div class="summary"><p>全球联合调查项目“Inside Deutsche Bank”泄露的逾1500万份内部文件，揭露了德意志银行在反金融犯罪、制裁监控及客户风控等核心职能上的系统性失效与利润至上的文化。泄密档案显示该行深涉多起跨国洗钱与贪污丑闻，包括为一马公司案核心嫌疑人刘特佐（Jho Low）转移逾1.7亿欧元、协助俄罗斯寡头洗钱，以及处理爱泼斯坦高达6亿美元的异常款项。此外，该行还涉嫌违规向冲突地区武器交易提供融资，并协助中东王室与高风险政商关联实体搭建离岸架构。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-11-18.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+    <item>
+      <title>Daily Hacker News for 2026-11-17</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-11-17.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-11-17.html</guid>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on November 17, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://www.theregister.com/saas/2026/11/16/microsoft-blames-monster-email-outage-on-software-defect-introduced-in-july-fix/5310026">Microsoft blames monster email outage on software defect introduced in July fix</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50517321">(comments)</a></span>
+<div class="summary"><p>微软发布的初步事故调查报告表明，导致上周大规模 Exchange Online 及 Microsoft 365 服务瘫痪的原因，是 7 月针对网络网关服务器更新中引入的一项潜在软件缺陷。该缺陷因此前负载测试主要侧重低规格硬件而未被发现，在多核新硬件环境下会诱发内部进程锁争用并彻底耗尽 CPU 与内存资源。故障在 Teams 故障转移带来的突发流量与部分网关容量离线共同作用下被触发，并迅速演变成全网级联故障，导致峰值时期超过 80% 的网关服务器失去响应。由于问题代码已上线数月无法直接回滚，微软工程师历经十余小时排查后，通过紧急发布回退至已知良好状态的新补丁才逐步使服务恢复正常。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://trmnl.com/blog/introducing-frame">Frame – 31.5&quot; color ePaper display</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50519354">(comments)</a></span>
+<div class="summary"><p>TRMNL 推出第三款硬件产品 Frame，这是一款配备 31.5 英寸全彩电子纸屏幕（Spectra 6）并采用自制手工实木外框的日程与艺术显示设备。硬件支持横竖双向壁挂、定点定时刷新以降低闪烁并省电、microSD 离线运行以及专用 USB-C 持续供电，并搭载了自研且计划开源的 Lazarus 颜色转换引擎以提升色准。首批预购限量约 470 台并完全由团队自建供应链组装交付，同时官方还上线了 Local Art 插件以支持本地艺术家展示与售卖作品。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://burntsushi.net/jiff/">Jiff 1.0: A datetime library for Rust</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50519744">(comments)</a></span>
+<div class="summary"><p>Andrew Gallant 正式发布了 Rust 日期时间处理库 Jiff 1.0，并承诺长期保持 API 兼容与稳定，使其成为 Rust 生态可靠的基础依赖构建块。该库已被 uv、Cargo、Starship、Nushell 及 AWS LLRT 等众多知名项目在生产环境中广泛采用。Jiff 致力于封装时间领域的固有复杂度，通过洋葱般层层递进的类型系统（如 civil::DateTime 与 ZonedDateTime），将时区以及夏令时引发的歧义转换处理置于核心，帮助开发者避免常见错误。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.bugmenot.com/">BugMeNot has closed</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50523601">(comments)</a></span>
+<div class="summary"><p>网络共享账号平台 BugMeNot 宣布正式关闭。其官方页面仅留下一句向憧憬更好互联网的人们致谢的简短声明，并在正文附带了一长串由大写字母组成的加密或校验编码文本。这标志着该长期协助网民绕过强制注册登录墙的服务已停止运营。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://xusheng.dev/posts/windows-coding-agent-telemetry/">Windows 11 is collecting data on which coding agents and developer tools you use</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50524736">(comments)</a></span>
+<div class="summary"><p>逆向工程研究发现 Windows 11 系统组件 MissionControlAggregator.dll 内置了针对特定 AI 编程助手（如 Codex、Claude、Copilot、Cursor）及常见开发工具的可执行文件名匹配逻辑。该组件通过订阅系统内核与 WSL 进程启动事件记录工具使用情况，并将其编码为位掩码存入本地及生成 ETW 诊断报告。只要用户未手动关闭默认启用的“可选诊断数据”，系统遥测服务 DiagTrack 就会将包含这些编程助手使用记录的数据打包上传至微软服务器。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://blog.report-uri.com/worlds-largest-brands-infected-with-malware-via-optimizely/">Optimizely compromised, served malware on Zoom, GitLab</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50524767">(comments)</a></span>
+<div class="summary"><p>攻击者入侵了 Optimizely Web 实验平台的 Project JavaScript 配置，导致包括 Zoom、GitLab、BBC 和 Salesforce 在内的 178 家知名机构网站被注入恶意脚本。该多功能恶意载荷不仅能实时篡改页面及剪贴板中的加密货币钱包地址、窃取表单信用卡信息与 Cookie 截图，还会针对特定 iOS 设备加载漏洞利用工具包。此次第三方脚本供应链攻击已造成实际的加密资产被盗，事件发生后绝大多数受污染的代码片段已被清理。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.nytimes.com/2026/11/17/upshot/school-phone-bans-study-scores.html">New Evidence Shows School Phone Bans Are Gradually Improving Test Scores</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50530163">(comments)</a></span>
+<div class="summary"><p>哈佛大学教育政策研究中心发布的一项涵盖 330 万名学生的大规模全国性研究显示，严格的校园手机禁令正逐步提升学生的学业成绩。在要求全天将手机锁入收纳袋的学校中，学生在数学和阅读测试中的进步相当于每年额外增加了一至两周的在校教学时间，挽回了疫情前学生平均年损失成绩的约一半。该改善在各成绩层级的学生中均有体现并有效遏制了阅读能力的滑坡，研究者认为禁令作为一种低成本干预手段，其积极影响会随年份逐渐累积并带动学生线下社交与心理状态的改善。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.cnn.com/2026/11/17/politics/highly-classified-national-security-communications-network-goes-down">Highly classified US national security communications network goes down</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50532849">(comments)</a></span>
+<div class="summary"><p>据知情人士及官方透露，美国国家安全局（NSA）用于内部机密通信的高密级网络 NSANet 出现系统故障与降级，经查系该机构修复上月曝光的严重 PHP 漏洞部署软件补丁所致，目前无迹象表明遭遇网络攻击。故障期间国安局总部一度启动“黄色代码”要求非紧急人员错峰到岗，但当晚已恢复正常出勤安排。官方及情报官员强调，得益于网络具备的多层冗余设计，核心安全防御任务未受影响，面向出访亚洲的总统紧急情报传送以及“五眼联盟”情报共享机制均运转正常。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://openai.com/index/introducing-gpt-6-2-astra-sol/">GPT‑6.2 Astra and Sol</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50535230">(comments)</a></span>
+<div class="summary"><p>该条目源自 OpenAI 页面《GPT-6.2 Astra and Sol》，原本旨在介绍 GPT-6.2 及其 Astra 与 Sol 版本。虽然抓取状态标记正常，但抓取到的实际页面内容显示为“500 Internal Server Error”内部服务器错误，导致文章主体内容缺失。抓取文本中仅包含全站导航及提及 GPT-6.2、GPT-6.1 Sol、GPT-6 Astra 与 GPT-5.6 等模型名称的菜单列表，无法获取具体的技术与发布细节。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://developer.apple.com/system-status/">Apple Services Down</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50535238">(comments)</a></span>
+<div class="summary"><p>Apple 开发者系统状态页面显示，多项开发者核心服务遭遇服务中断。其中，App Store Connect 发生持续中断并波及所有用户，Developer ID 公证服务（Notary Service）以及 App Store Connect 数据分析、销售趋势与 Apple Music 相关服务也处于故障状态，部分用户受到影响。此外，应用内购买（In-App Purchases）、Xcode Cloud 与 News Publisher 的中断问题已陆续修复，其余大部分开发者服务与 API 保持正常可用。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-11-17.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+    <item>
+      <title>Daily Hacker News for 2026-11-16</title>
+      <link>https://blog.raikiriww.xyz/hn-daily/2026-11-16.html</link>
+      <guid isPermaLink="true">https://blog.raikiriww.xyz/hn-daily/2026-11-16.html</guid>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[<p>The 10 highest-rated articles on <a href="https://news.ycombinator.com/">Hacker News</a> on November 16, 2026 are listed below, with Chinese summaries for quick reading.</p>
+<ul>
+<li>
+<span class="storylink"><a href="https://www.youtube.com/watch?v=WPj3aQ-xxpI">Claude Code and Codex reverse engineered my 1994 Jeep&#39;s ECU over a $3 Arduino [video]</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50463399">(comments)</a></span>
+<div class="summary"><p>作者针对缺乏 OBD2 接口及适用诊断仪的 1994 年款 Jeep Cherokee，将一块价值 3 美元的 Arduino 开发板连接至发动机车载电脑（ECU）。在 Claude Code 与 Codex 编程 Agent 的协助下，作者在约一周内完成了逆向工程，实现了实时读取数据、转储完整程序，甚至在 ECU 内运行自定义代码并控制燃油泵等部件。相关电路接线、代码及 Agent 交互指令已开源发布，可供 1991 至 1995 年款的 Jeep 及克莱斯勒车主参考使用。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://bruceroettgers.eu/blog/protomaps/">Protomaps: Self-hosting map tiles has gotten cheap and easy</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50509837">(comments)</a></span>
+<div class="summary"><p>作者介绍了基于 Protomaps 生态的 PMTiles 瓦片格式，该格式将地图数据打包为单文件并通过 HTTP Range 请求读取，能以极低门槛和极高便携性实现地图服务的自托管，从而避免 Mapbox 等商业 API 昂贵的用量收费。文章详细演示了通过 rclone 将每日构建的全球地图导入 Bunny.net 存储与 CDN，并配置 Range 请求缓存、防盗链与速率限制以防止账单失控的具体流程。最终只需在前端使用 MapLibre GL 配合 pmtiles 插件即可完成地图渲染，不仅具备高可用性，成本更可降至传统商业方案的百分之一左右。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://ductus.sorenblank.com/">Handwriting, as a Font</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50509972">(comments)</a></span>
+<div class="summary"><p>Ductus 是一款能将个人手写字迹转换为字体的工具。用户可以使用手指、触控笔或鼠标在设备上逐一书写 26 个字母，并支持字体的微调与导出。该工具注重隐私保护，所有字迹数据完全在本地手机或电脑设备上处理与校验，不会上传至云端服务器。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://steveblank.com/2026/11/15/whats-next-for-nvidia/">What&#39;s Next for Nvidia?</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50512235">(comments)</a></span>
+<div class="summary"><p>针对黄仁勋卸任英伟达 CEO 后的战略走向，文章指出失去身兼技术与商业敏锐度的远见型创始人后，企业极易陷入依赖执行型高管而压制创新的潜在危机。通过对比微软鲍尔默和苹果库克的历史经验，文章强调执行型管理者虽能凭借既有优势维持数年营收增长，但在各大科技巨头自研 AI 芯片等外部颠覆与复杂地缘监管面前，往往难以完成商业模式的自我重塑。英伟达董事会当前的核心挑战，在于如何在稳定现有组织与核心业务执行的同时，挑选出具备承担风险与开辟新市场能力的创新型领军者。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://iter.ca/post/ubo-uxss/">Universal XSS in uBlock Origin from website-driven element picker</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50513160">(comments)</a></span>
+<div class="summary"><p>安全研究员在 Firefox 版本的 uBlock Origin 元素选择器（element picker）中发现了一处一键通用跨站脚本（UXSS）漏洞，攻击者可借此诱导扩展添加任意受信任过滤器并在目标网站执行恶意 JavaScript。恶意网站首先通过 Hook 扩展脚本的 XHR 调用窃取随机生成的扩展内部 UUID，接着在隐藏 iframe 中嵌入选择器 UI 并通过 postMessage 利用换行符绕过限制注入特权脚本过滤器。最后，攻击者通过点击劫持诱骗用户点击不可见的“创建”按钮即可使规则生效，该漏洞目前已通过引入通信认证密钥等机制完成修复。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://qwen.ai/blog?id=qwen4-max">Qwen4-Max</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50513215">(comments)</a></span>
+<div class="summary"><p>Qwen 团队推出基于全新架构的大模型 Qwen4-Max，拥有 2.4 万亿主干参数（单 token 激活 710 亿参数）、原生视觉能力与 100 万 token 上下文窗口，并通过稀疏注意力及门控残差等技术升级实现了出色的计算效率与预训练稳定性。相较于前代 Qwen3.8-Max，该模型在长程任务和代码执行中大幅降低了 token 消耗，在 Work360 评测中使平均单任务成本下降约 62%。依托 Work360 产业评估框架，Qwen4-Max 不仅能协同专业软件完成 3D 建模、游戏引擎端到端开发与工业零件数控编程，更在金融投研、法律尽调及重症医疗等高壁垒场景中展现出强大的工具调用与全链条证据溯源能力。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://pub.cba.mit.edu/863.26/site/">How to make almost anything</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50514470">(comments)</a></span>
+<div class="summary"><p>该页面展示了麻省理工学院经典实践课程“如何制造（几乎）任何东西”（HTMAA）的教学大纲与日程安排。课程内容涵盖计算机辅助设计（CAD/CAM）、数控切割、3D 扫描打印、嵌入式编程、电子设计自动化（EDA）以及边缘 AI 等硬件与制造技术的实践。各教学周系统推进机械结构设计、翻模铸造、网络通信与系统集成等专题，最终以学生自主研发的软硬件综合项目展示与成果开放日结课。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="http://groundworkcollaborative.org/news/amazons-decoy-deals-groundwork-investigation-reveals-nearly-1-in-3-black-friday-and-cyber-monday-deals-advertised-by-amazon-offered-no-savings-to-shoppers-nearly-1-in-10-w/">Many of Amazon’s Black Friday and Cyber Monday “deals” offered no savings</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50517488">(comments)</a></span>
+<div class="summary"><p>Groundwork Collaborative 发布的调查报告指出，亚马逊在黑色星期五与网络星期一促销中宣传的“精选特惠”存在严重误导，近三分之一的促销商品价格在节前一个月持平或更低，并未带来实际省钱效果。研究追踪 350 多款推荐商品发现，近十分之一的“促销”商品价格反而比节前更高，部分鞋靴等产品涨幅甚至达 59% 至 83%，此类劣质交易的促销中位数价格比节前高出 19%。该机构批评此类虚假促销让消费者承受价格欺诈，并呼吁监管机构介入严打，强制要求零售商在促销时明示过去 30 天的历史最低价。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://apnews.com/article/bank-outage-chase-wells-fargo-truist-50fee2693c22f597fa6ca51a97ef2cda">Technical issue at JPMorgan Chase triggers online banking delays for US banks</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50521045">(comments)</a></span>
+<div class="summary"><p>摩根大通（JPMorgan Chase）因本地硬件系统的软件漏洞出现技术故障，导致数千名客户访问在线账户及使用 Zelle 转账时出现延迟。该故障引发连锁波及，导致与大通银行有业务往来的其他主要美国银行客户在跨行及 Zelle 支付时遭遇交易延迟，但涉事其他银行自身系统并未受到直接影响。大通银行发言人澄清该故障并非网络攻击且属于独立事件，正全力争取在周一结束前全面恢复在线银行服务。</p></div>
+</li>
+<li>
+<span class="storylink"><a href="https://www.cs.cmu.edu/learn/">Carnegie Mellon is putting computer science courses on YouTube for free</a></span><br>
+<span class="postlink"><a href="https://news.ycombinator.com/item?id=50522980">(comments)</a></span>
+<div class="summary"><p>卡内基梅隆大学（CMU）计算机科学学院推出了免费在线学习项目 CS Learn，将其七大前沿院系的完整课堂讲座免费发布至 YouTube。首批上线及排播的课程涵盖《海量数据集机器学习》《机器学习系统》《软件构建原理》《AI Agents》等多个领域。后续平台还将推出基于真实课程的自主进度课件，并计划整合 AI 辅导功能提供即时反馈与答疑支持。</p></div>
+</li>
+</ul>
+<p><a href="https://blog.raikiriww.xyz/hn-daily/2026-11-16.html">Read this daily page</a> | <a href="https://blog.raikiriww.xyz/hn-daily/index.html">Archive home</a></p>]]></description>
+    </item>
+  </channel>
+</rss>
