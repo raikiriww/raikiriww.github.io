@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Hacker News Daily - 2026-11-05</title>
+  <link rel="alternate" type="application/rss+xml" title="Hacker News Daily RSS" href="./index.rss">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body class="notranslate">
+  <div class="page">
+    <header class="site-header">
+      <h1><a href="./index.html">Hacker News Daily</a></h1>
+      <p>Daily top stories from Hacker News | <a href="./index.rss">RSS</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Site navigation" data-sidebar-root></aside>
+      <main class="content">
+        <section class="report-block">
+  <h2><a href="./2026-11-05.html">Daily Hacker News for 2026-11-05</a></h2>
+  <p class="report-intro">The 10 highest-rated articles on <a href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">Hacker News</a> on November 05, 2026 which have not appeared on any previous <a href="./index.html">Hacker News Daily</a> are listed below, with Chinese summaries for quick reading.</p>
+  <ol class="stories"><li class="story-item">
+  <a class="story-link" href="https://news.ycombinator.com/item?id=50366117" target="_blank" rel="noopener noreferrer">Ask HN: What&#39;s your current AI agentic setup?</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50366117" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该讨论帖发起了一项关于当前日常 AI Agent 配置与工作流的调查，旨在了解社区成员相较往年的工具演进与实际使用现状。提问聚焦于个人付费订阅（如 Claude、ChatGPT、Cursor）与外部模型方案（如按量计费 API、OpenRouter、本地模型）的选型搭配。此外，发起者重点征集了开发者在编码辅助框架（如 Aider、OpenCode 等 CLI/IDE 工具）、Agent 编排或集群工具以及更广泛 Agent 平台上的具体落地场景与技术迁移原因。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://huggingface.co/moonshotai/Kimi-K3.1-Pro" target="_blank" rel="noopener noreferrer">Kimi K3.1 Pro model weights are out</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50366999" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>月之暗面（Moonshot AI）正式开源原生多模态 Agent 模型 Kimi K3.1 Pro 的权重，该模型总参数量达 2.8T（激活参数 104B），并支持 100 万 token 的上下文窗口。其架构采用 MoE 结合 KDA 与门控稀疏注意力（Gated DSA）机制以优化长上下文建模效率，并搭载 401M 参数的 MoonViT-V2 视觉编码器及 MXFP4/MXFP8 量化训练。模型在代码生成、工具调用及复杂 Agent 任务基准评测中表现出顶尖能力，目前已提供兼容 API 并支持在 vLLM 与 SGLang 等主流推理引擎上部署运行。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://go.dev/blog/jsonv2" target="_blank" rel="noopener noreferrer">A new Go API for JSON</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50369106" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Go 1.27 正式引入了全新的标准库包 encoding/json/v2 及其底层语法支持包 encoding/json/jsontext，旨在彻底解决旧版 API 在语法规范性、易用性及性能上的固有缺陷。新设计修复了旧版容忍非法 UTF-8 与重复键名、nil 切片与 map 默认编码为 null、大小写不敏感匹配等行为隐患，大幅提升了数据交换的安全性与合规性。架构上将语法解析与语义映射完全解耦，引入了零分配的纯流式 Encoder/Decoder 以及 MarshalJSONTo/UnmarshalJSONFrom 等新接口，并使配置项成为一等公民，兼顾了高效性能与平滑迁移体验。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://openai.com/index/a-thousand-fewer-paths-to-root/" target="_blank" rel="noopener noreferrer">A thousand fewer paths to root</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50372929" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>OpenAI 针对 Linux 内核构建了一套由前沿网络安全模型驱动的自主研究流水线，涵盖漏洞扫描、动态验证、可利用性评估、补丁生成及人工审核全流程。该系统从 2,308 个候选对象中动态复现了 1,724 个真实漏洞，并针对其中 948 个可获取 root 权限的本地提权（LPE）漏洞成功开发了利用程序与修复补丁。OpenAI 已开始协同 Linux 维护者推进关键漏洞的排查与合并，同时公开了各阶段的 API 成本以证明 AI 规模化赋能软件防御的可行性。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://markblah.github.io/lemmings/" target="_blank" rel="noopener noreferrer">Lemmings CSS Animation</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50375354" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该项目是一个基于交互动画的网页小人游乐场（Walker Playground），用户可生成、拖拽或抛掷模拟经典旅鼠（Lemmings）的行走小人。页面中的按钮、边框、卡片等网页元素均具备物理碰撞实体属性，小人可在其表面站立行走，调整窗口大小时元素折行移动还会将小人弹射抛起。每一行排版文本也都被设计为可承载且可穿透下落的接触平面，配合各类实体阻挡物与底部托底平台，构建出富有趣味的 DOM 交互物理场。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://sshhole.com/" target="_blank" rel="noopener noreferrer">sshole</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50378228" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>该漏洞（称为 sshole）影响在基于 musl libc（如 Alpine Linux、OpenWrt 等）且未启用 PAM 的系统上运行的 OpenSSH 服务。由于 musl 的 sha512 crypt 实现对超过 256 字节的密码直接返回代表失败的单字符“*”，而 OpenSSH 为防范计时攻击会借用其他有效账户的 salt 对无密码账户进行哈希验证，导致影子文件中以“*”锁定的账户与 musl 失败时返回的“*”产生意外匹配。攻击者向此类无密码账户输入 257 至 1024 字符的任意密码即可成功登录，受影响环境需升级至 OpenSSH 10.6p2 或通过禁用密码认证进行防护。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://www.theverge.com/news/1027379/discord-ditching-electron-web-app" target="_blank" rel="noopener noreferrer">Discord is ditching Electron and its new app uses less RAM</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50378625" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>据 The Verge 报道，Discord 宣布将彻底放弃高内存占用的 Electron 跨平台框架，把桌面客户端完全迁移至 Rust 语言以提升性能。首席技术官 Stanislav Vishnevskiy 表示，重构将一并取代 React Native，移动端在保持原生界面的同时将通过 Rust 与桌面端共享应用逻辑代码。测试截图显示新版 Windows 客户端内存占用已骤降至约 290MB，相较现有版本动辄突破 1GB 有显著改善，官方预计很快面向用户开展测试。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/" target="_blank" rel="noopener noreferrer">Alpine Linux Security Advisory: OpenSSH-server password authentication bypass</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50379704" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Alpine Linux 发布安全通告指出，未启用 PAM 构建的 openssh-server 存在密码认证绕过漏洞，攻击者无需密码即可登录密码字段为星号（*）的无密码或纯公钥账户。该漏洞源于系统存在其他含密码散列的用户时，攻击者若输入超过 256 字节的超长密码，musl libc 的 crypt() 函数会返回星号错误标识，导致与借用盐值的目标账户字段错误匹配而放行登录。该问题影响 Alpine 3.16 至 3.24 及 edge 版本，官方建议立即更新 openssh 软件包并手动重启 sshd，或将配置中的 PasswordAuthentication 设置为 no 以阻断攻击。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://motorolanews.com/motorola-signature-27-2/" target="_blank" rel="noopener noreferrer">Motorola Signature 27 with GrapheneOS support</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50380810" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>摩托罗拉推出全新旗舰手机 motorola signature 27，搭载骁龙 8 至尊版 Gen 6 平台与 7000mAh 大电池（支持 90W 有线及 50W 无线快充），具备 IP68/IP69 防护等级并承诺提供 7 年系统更新。该机搭载经 DXOMARK 金标认证的影像系统（涵盖 50MP 索尼主摄、200MP 潜望长焦与首款专用 EVS 动作传感器），并配备峰值亮度达 12,000 尼特的串联 AMOLED 屏幕及 Bang &amp; Olufsen 调音立体声。在智能化与安全性方面，新机深度整合 Gemini Intelligence 等 AI 能力，同时成为摩托罗拉首款支持高安全性开源系统 GrapheneOS 的智能手机。</p></div>
+</li>
+<li class="story-item">
+  <a class="story-link" href="https://kagi.com/changelog#11820" target="_blank" rel="noopener noreferrer">Search for everyone</a>
+  <div class="story-meta"><a href="https://news.ycombinator.com/item?id=50383740" target="_blank" rel="noopener noreferrer">comments</a></div>
+  <div class="story-summary"><p>Kagi 宣布向所有用户开放免账号试用，访问者无需注册即可直接进行前 50 次无广告搜索，注册后可再获 100 次试用额度。针对谷歌计划在学校账户联动关闭搜索与 AI 功能的举措，Kagi 发声批评并将自身作为替代方案向教育界推广。此外，本次更新还重构了 Android 应用的主屏幕、原生搜索栏与语音搜索功能，并对 Kagi Assistant、News 及 Translate 进行了多项体验优化与漏洞修复。</p></div>
+</li></ol>
+  <p class="report-meta">Posted at 2026-11-06 00:00 | <a href="./2026-11-05.html">Permanent link</a> | <a href="https://www.daemonology.net/hn-daily/2026-11-05.html" target="_blank" rel="noopener noreferrer">原链接</a></p>
+</section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
